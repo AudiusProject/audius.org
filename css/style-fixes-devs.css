@@ -1,0 +1,243 @@
+#dev-details .content {
+  padding-top: 200px;
+}
+
+#dev-details .dev-header {
+  margin: 0px auto 60px;
+  top: 8px;
+  left: 20px;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mask-animation-container {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Short Description Section */
+
+.short-description {
+  margin: 61px auto 0px;
+  background-image: url(../img/simple-callout-bg.png);
+  background-size: 478px 394px;
+  height: 394px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.short-description .interested {
+  color: #12063D;
+  max-width: 531px;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 70px;
+  text-align: center;
+}
+
+
+/* Squiggle Styles */
+.content  .squiggle {
+  margin: 50px auto;
+}
+
+/* Long Description Styles */
+
+.long-description {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 72px;
+}
+
+.long-description .stake {
+  max-width: 532px;
+  color: #12063D;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 33px;
+  text-align: center;
+  margin: 0px auto 72px;
+}
+
+.long-description .getting-started {
+  border-radius: 30.5px;
+  background-color: #CC0FE0;
+  box-shadow: 0 5px 6px -3px rgba(0,0,0,0.15);
+  padding: 14px 32px;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0px auto 13px;
+  display: inline-flex;
+}
+
+.long-description .getting-started:hover {
+  background-color: #A116B7;
+  box-shadow: 0 10px 8px -5px rgba(0,0,0,0.15);
+}
+
+.long-description .building-dapp {
+  max-width: 813px;
+  color: #12063D;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 0.23px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.long-description .github {
+  margin-left: 8px;
+}
+
+
+/* Dapp Styles */
+.dapp {
+  position: relative;
+  height: 520px;
+  width: 100%;
+  background: linear-gradient(180deg, #F33470 0%, #6301EB 100%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dapp .background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #F33470 0%, #6301EB 100%);
+}
+
+.dapp .hedgehogLogo {
+  z-index: 1;
+  margin: 65px 0px 43px;
+}
+
+.dapp .building-header {
+  z-index: 1;
+  max-width: 1056px;
+  color: #FFFFFF;
+  font-size: 46px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 70px;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+.dapp .building-description {
+  z-index: 1;
+  max-width: 1056px;
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.dapp .shapes {
+  position: absolute;
+  z-index: 0;
+  top: 24%;
+  left: 50%;
+  right: -36%;
+}
+
+.dapp .shapes img {
+  width:100%;
+}
+
+.dapp .learn-more {
+  z-index: 1;
+  border: 0 solid #FFFFFF;
+  border-radius: 39px;
+  background-color: #FFFFFF;
+
+  color: #16172B;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+  padding: 16px 32px;
+}
+
+.dapp .learn-more:hover {
+  box-shadow: 0 15px 15px -2px rgba(0,0,0,0.25);
+}
+
+.block-string-container {
+  margin-bottom: 78px;
+}
+
+@media screen and (max-width: 1019px) {
+  #dev-details .content {
+    padding-top: 16px;
+  }
+ 
+  #dev-details .header {
+    margin-bottom: 16px;
+  }
+ 
+  
+  /* Short Description Section */
+
+  .short-description {
+    margin: 0px;
+    background-image: url(../img/simple-callout-bg.png);
+    background-size: 380px;
+    height: 380px;
+  }
+
+  .short-description .interested {
+    font-size: 32px;
+    line-height: inherit;
+  }
+ 
+  /* Squiggle Styles */
+  .content  .squiggle {
+    margin: 0px auto 16px
+  }
+
+  .long-description {
+    margin-bottom: 32px;
+  }
+ 
+  .dapp .hedgehogLogo {
+    margin: 48px 0px 32px;
+  }
+  
+  .dapp .building-header {
+    padding: 0px 16px;
+    line-height: inherit;
+    font-size: 28px;
+  }
+  
+  .dapp .building-description {
+    padding: 0px 16px;
+    font-size: 20px;
+  }
+  
+  .dapp .shapes {
+    top: 10%;
+    left: 10%;
+    right: -10%;
+    opacity: 0.2;
+  }
+  
+}

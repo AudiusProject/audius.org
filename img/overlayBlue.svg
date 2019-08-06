@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>overlayBlue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="98.3493555%" y1="50%" x2="31.2788577%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#00B3FF" offset="0%"></stop>
+            <stop stop-color="#1421BC" stop-opacity="0.25" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25">
+        <g id="Audius.org-Hero" fill="url(#linearGradient-1)">
+            <g id="overlayBlue" transform="translate(719.683426, 511.622882) rotate(30.000000) translate(-719.683426, -511.622882) translate(-241.816574, -310.377118)">
+                <rect id="Rectangle" x="0.0121038072" y="0.788913602" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="0.938420258" y="292.393341" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="0.0871685741" y="546.91893" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="0.26408311" y="475.225355" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="1.91283143" y="734.08107" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="0.60709707" y="1025.81947" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="1.98789619" y="1280.21109" width="1920" height="363"></rect>
+                <rect id="Rectangle" x="2.03083613" y="1206.28546" width="1920" height="363"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

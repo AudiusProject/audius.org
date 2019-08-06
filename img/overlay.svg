@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>overlay</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="98.3493555%" y1="50%" x2="31.2788577%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#00B3FF" offset="0%"></stop>
+            <stop stop-color="#1421BC" stop-opacity="0.25" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="46.5254274%" x2="64.1255602%" y2="52.6321851%" id="linearGradient-2">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="47.706773%" x2="64.1255602%" y2="51.7372491%" id="linearGradient-3">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="47.98797%" x2="64.1255602%" y2="51.5242264%" id="linearGradient-4">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="46.972607%" x2="64.1255602%" y2="52.2934213%" id="linearGradient-5">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Audius.org-Hero">
+            <g id="overlay" transform="translate(-524.130454, -681.377118)">
+                <g id="overlayBlue" transform="translate(1243.813880, 1193.000000) rotate(30.000000) translate(-1243.813880, -1193.000000) translate(282.313880, 371.000000)" fill="url(#linearGradient-1)" opacity="0.5">
+                    <rect id="Rectangle" x="0.0121038072" y="0.788913602" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="0.938420258" y="292.393341" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="0.0871685741" y="546.91893" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="0.26408311" y="475.225355" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="1.91283143" y="734.08107" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="0.60709707" y="1025.81947" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="1.98789619" y="1280.21109" width="1920" height="363"></rect>
+                    <rect id="Rectangle" x="2.03083613" y="1206.28546" width="1920" height="363"></rect>
+                </g>
+                <g id="overlayPink" transform="translate(1285.500000, 1222.031274) rotate(-30.000000) translate(-1285.500000, -1222.031274) translate(235.000000, 646.531274)">
+                    <rect id="Rectangle" fill="url(#linearGradient-2)" opacity="0.5" x="42.022061" y="0.326894028" width="2058" height="661"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-3)" opacity="0.4" x="0.353553391" y="449.197312" width="2058" height="537"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-4)" opacity="0.4" x="0.353553391" y="341.717081" width="2058" height="503"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-5)" opacity="0.5" x="0.0294549147" y="533.448983" width="2058" height="617"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
