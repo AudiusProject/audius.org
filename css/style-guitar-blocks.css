@@ -1,0 +1,142 @@
+/* All classes are related to building the guitars string like blocks ie. 
+ *             ___________
+ * ----------- |         | ------------
+ * ----------- |         | ------------
+ * ----------- |         | ------------
+ *             ___________
+ */
+
+.block-string-container {
+  overflow: hidden;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.block-string-container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+  min-width: 1500px;
+  background-size: 492px 82px;
+  background-image: url(../img/roadmap-date-row-bg.svg);
+  background-repeat: repeat-x;
+  background-position: center center;
+}
+
+.block-string-container .tile {
+  margin: 0 .5%;
+  border-radius: 8px
+}
+
+.block-string-container .tile.text-content {
+  width: 23%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 30px;
+}
+
+.block-string-container .tile .tile-content {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  max-width: 250px;
+}
+
+.block-string-container .tile.text-content.header {
+  position: relative;
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  line-height: 31px;
+  text-align: center;
+}
+
+.block-string-container .tile.text-content.header h4 {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+}
+
+/* Tile Colors */
+.block-string-container .orange {
+  background-image: linear-gradient(#f87d70, #fbae4c);
+}
+
+.block-string-container .purple {
+  background-image: linear-gradient(#6500ea, #cc00f8);
+}
+.block-string-container .teal {
+  background-image: linear-gradient(#06bcd4, #3fe5d8);
+}
+
+.block-string-container .blank {
+  background-color: rgba(221,223,247,0.2);
+}
+
+/* Tile Sizes */
+
+.block-string-container .large {
+  width: 351px;
+}
+
+.block-string-container .medium {
+  width: 123px;
+}
+
+.block-string-container .tile {
+  height: 133px;
+}
+
+@media screen and (max-width: 1019px) {
+  .block-string-container {
+    overflow: hidden;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .block-string-container .row {
+    min-width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: inherit;
+    padding: 0px 24px;
+    margin: 0px;
+  }
+  
+  .block-string-container .blank {
+    display: none;
+  }
+
+  .block-string-container .tile.text-content {
+    width:100%;
+    position: relative;
+  }
+
+  .block-string-container .tile.text-content:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 82px;
+    width: 1020px;
+    background-size: 492px 82px;
+    background-image: url(../img/roadmap-date-row-bg.svg);
+    background-repeat: repeat-x;
+    background-position: center center;
+    z-index: -1;
+  } 
+}

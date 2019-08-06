@@ -34,7 +34,10 @@
         <!--Main Stylesheet-->
 
         <link rel="stylesheet" href="css/style.min.css">
-        <link rel="stylesheet" href="css/style-fixes-token.css">
+        <link rel="stylesheet" href="css/style-global-changes.css">
+        <link rel="stylesheet" href="css/style-mask-animation.css">
+        <link rel="stylesheet" href="css/style-guitar-blocks.css">
+        <link rel="stylesheet" href="css/style-fixes-devs.css">
 
         <!-- Tags -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120325397-1"></script>
@@ -96,7 +99,7 @@
                         <li><a href="developers.html" class="active">Developers</a></li>
                         <li><a href="token.html">Token</a></li>
                         <li><a href="team.html">Team</a></li>
-                        <li><a class="standard-button purple" href="https://whitepaper.audius.co/" target="_blank" rel="noopener">Whitepaper</a></li>
+                        <li><a class="standard-button purple" href="https://whitepaper.audius.co/" target="_blank" rel="noopener">White Paper</a></li>
                     </ul>
                 </div>
                 <span class="bg-shapes">
@@ -113,24 +116,79 @@
             >>================================================================================>
             -->
 
-            <section id="newsletter">
-                <div class="container">
-                    <div class="content">
-                        <div class="header">
-                            <h3>Want to contribute to Audius?</h3>
-                            <p>Join the Audius movement! As a developer, you can:</p>
-                            <p>1) build a dapp on the Audius protocol - play music from the world's only open, artist-owned protocol - link to audius lib</p>
-                            <p>a) build your own music recommendation system!</p>
-                            <p>b) build your own music visualizer!
-                            <p>c) or anything else you can imagine! the Audius catalog is fully open, meaning that as a developer, you can build anything you can come up with</p>
-                            <p>2) build with Hedgehog! Audius developed Hedgehog....</p>
-                            <p>3) add new features to Audius! check out our github to </p>
+            <section id="dev-details">
+                <div class="content">
+                    <div class="dev-header">
+                        <div class="mask-animation-container">
+                            <img src="img/maskDevs@2x.png" data-rjs="2" alt="Devs" class="mask">
+                            <span class="animation">
+                                <span class="sphere orange"></span>
+                                <span class="sphere orange-opaque"></span>
+                                <span class="sphere teal"></span>
+                                <span class="sphere purple-glow"></span>
+                            </span>
                         </div>
                     </div>
+                    <div class="short-description">
+                            <h2 class="interested">Want to Contribute to Audius?</h2>
+                        </div>
+                        <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
+                        </svg>
+                        <div class="long-description">
+                            <p class="stake">The Audius catalog is fully open, meaning developers have the freedom to build whatever they want on Audius.</p>
+                            <div class="block-string-container">
+                                <div class="row">
+                                    <div class="tile blank medium"></div>
+                                    <div class="tile purple text-content header">
+                                        <div class="tile-content">
+                                            <h4>Build Your Own Music Recommendation System</h4>
+                                        </div>
+                                    </div>
+                                    <div class="tile blank medium"></div>
+                                    <div class="tile teal text-content header">
+                                        <div class="tile-content">
+                                            <h4>Customize the UI</h4>
+                                        </div>
+                                    </div>
+                                    <div class="tile blank medium"></div>
+                                    <div class="tile blank medium"></div>
+                                </div>
+                                <div class="row">
+                                        <div class="tile blank medium"></div>
+                                        <div class="tile blank medium"></div>
+                                        <div class="tile orange text-content header">
+                                            <div class="tile-content">
+                                                <h4>Create Your Own Visualizer</h4>
+                                            </div>
+                                        </div>
+                                        <div class="tile blank medium"></div>
+                                        <div class="tile purple text-content header">
+                                            <div class="tile-content">
+                                                <h4>Or Anything Else You Can Imagine!</h4>
+                                            </div>
+                                        </div>
+                                        <div class="tile blank medium"></div>
+                                    </div>
+                                </div>
+                            <p class="building-dapp">Build your DApp on the Audius protocol and gain access to the world's only open, artist-owned, music library</p>
+                            <button class="getting-started" onclick="window.location.href ='https://github.com/AudiusProject'">Checkout Out Our Github <img src="img/iconGithub.svg" class="github"/> </button>
+                        </div>
+    
+                        <div class="dapp">
+                            <div class="background"></div>
+                            <span class="shapes" data-parallax="2" data-parallax-x="-50%">
+                                <img src="img/newsletter-shapes.png" alt="" data-rjs="2">
+                            </span>
+                            <img src="img/hedgehogLogoHorizontal.svg" class="hedgehogLogo" />
+                            <h3 class="building-header">Building Your Own DApp? Use Audius Hedgehog</h3>
+                            <p class="building-description">
+                                    Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. 
+                                    Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
+                            </p>
+                            <button class="learn-more" onclick="window.location.href = 'https://hedgehog.audius.co/'">Learn More</button>
+                        </div>    
                 </div>
-                <span class="shapes" data-parallax="2" data-parallax-x="-50%">
-                    <img src="img/newsletter-shapes.png" alt="" data-rjs="2">
-                </span>
             </section>
         </main>
 
@@ -157,7 +215,7 @@
                                 <li><a href="developers.html" class="active">Developers</a></li>
                                 <li><a href="token.html">Token</a></li>
                                 <li><a href="team.html">Team</a></li>
-                                <li><a href="https://whitepaper.audius.co" target="_blank" rel="noopener">Whitepaper</a></li>
+                                <li><a href="https://whitepaper.audius.co" target="_blank" rel="noopener">White Paper</a></li>
                             </ul>
                         </nav>
                         <nav class="social">

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>overlayPink</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="31.9042849%" y1="46.5254274%" x2="64.1255602%" y2="52.6321851%" id="linearGradient-1">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="47.706773%" x2="64.1255602%" y2="51.7372491%" id="linearGradient-2">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="47.98797%" x2="64.1255602%" y2="51.5242264%" id="linearGradient-3">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.9042849%" y1="46.972607%" x2="64.1255602%" y2="52.2934213%" id="linearGradient-4">
+            <stop stop-color="#0048FF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FF00B8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Audius.org-Hero">
+            <g id="overlayPink" transform="translate(761.369546, 540.654156) rotate(-30.000000) translate(-761.369546, -540.654156) translate(-289.130454, -34.845844)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" opacity="0.25" x="42.022061" y="0.326894028" width="2058" height="661"></rect>
+                <rect id="Rectangle" fill="url(#linearGradient-2)" opacity="0.2" x="0.353553391" y="449.197312" width="2058" height="537"></rect>
+                <rect id="Rectangle" fill="url(#linearGradient-3)" opacity="0.2" x="0.353553391" y="341.717081" width="2058" height="503"></rect>
+                <rect id="Rectangle" fill="url(#linearGradient-4)" opacity="0.25" x="0.0294549147" y="533.448983" width="2058" height="617"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

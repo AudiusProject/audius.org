@@ -1,0 +1,28 @@
+body {
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+a, button, input[type=submit], path {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, fill 0.15s ease
+}
+
+.notification-bar {
+  position: fixed;
+  top: 86px;
+  left: 0;
+  right: 0;
+}
+
+.notification-bar .content {
+  min-height: 40px;
+  max-width: 720px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #12063D;
+  margin: 0px auto;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  text-align: center;
+}

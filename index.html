@@ -34,6 +34,7 @@
         <!--Main Stylesheet-->
 
         <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/style-global-changes.css">
         <link rel="stylesheet" href="css/style-index-changes.css">
 
         <!-- Tags -->
@@ -83,8 +84,8 @@
         <header class="main-header">
             <h1 class="logo">
                 <a href="index.html">
-                    <img src="img/audius.png" data-rjs="2" alt="Audius">
-                    <span>Audius</span>
+                    <img src="img/logoAudius.svg" class="large-logo" data-rjs="2" alt="Audius">
+                    <img src="img/audius.png" class="small-logo" data-rjs="2" alt="Audius">
                 </a>
             </h1>
             <nav class="menu">
@@ -96,7 +97,7 @@
                         <li><a href="developers.html">Developers</a></li>
                         <li><a href="token.html">Token</a></li>
                         <li><a href="team.html">Team</a></li>
-                        <li><a class="standard-button purple" href="https://whitepaper.audius.co/" target="_blank" rel="noopener">Whitepaper</a></li>
+                        <li><a class="standard-button purple" href="https://whitepaper.audius.co/" target="_blank" rel="noopener">White Paper</a></li>
                     </ul>
                 </div>
                 <span class="bg-shapes">
@@ -128,12 +129,28 @@
             -->
 
             <section id="intro">
+                <div class="background"></div>
+                <img src="./img/overlay.png" class="overlay" />
                 <div class="header">
-                    <h2>Freedom to share and listen</h2>
-                    <p>Audius is a decentralized, community-owned audio sharing protocol.</p>
-                    <p>CTA cards to 1) try the app, 2) operate a service ("stakers") or 3) check out the code (developers)</p>
-                </div>
-                <a class="white-paper standard-button purple mobile-only" href="https://whitepaper.audius.co/">Whitepaper</a>
+                    <div class="main-content">
+                        <h2>Freedom to Share & Listen</h2>
+                        <div class="divider"></div>
+                        <div class="description">
+                            <p>Audius is a decentralized, community-owned, audio sharing protocol.</p>
+                        </div>
+                    </div>
+                    <div class="button-options">
+                        <button class="button operate-service">Operate Service</button>
+                        <button class="button view-code">View Code</button>
+                    </div>
+                    <button class="music-player">
+                        <span class="player-description">Looking For Our Music Player?</span>
+                        <span class="click">
+                            Click Here 
+                            <img alt="open music player" class="icon-open" src="./img/iconOpen.svg"/>
+                        </span>
+                    </button>
+                    </div>
             </section>
 
             <!--
@@ -406,7 +423,7 @@
                                 <li><a href="developers.html">Developers</a></li>
                                 <li><a href="token.html">Token</a></li>
                                 <li><a href="team.html">Team</a></li>
-                                <li><a href="https://whitepaper.audius.co" target="_blank" rel="noopener">Whitepaper</a></li>
+                                <li><a href="https://whitepaper.audius.co" target="_blank" rel="noopener">White Paper</a></li>
                             </ul>
                         </nav>
                         <nav class="social">

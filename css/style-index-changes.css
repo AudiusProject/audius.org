@@ -1,9 +1,128 @@
-#intro .header h2 {
-    color: #170d52; 
+.small-logo {
+    display: none;
 }
 
+.main-header .menu>div>ul>li>a:not(.standard-button) {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    line-height: 16px;
+}
+
+.main-header .menu>div>ul>li>a.standard-button {
+    height: 54px;
+    width: 158.3px;
+    border: 0 solid #FFFFFF;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+
+    color: #16172B;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-header .menu>div>ul>li>a.standard-button:hover {
+    color: #FFFFFF;
+    background-color: #A116B7;
+}
+
+.sticky-menu .main-header .menu>div>ul>li>a:not(.standard-button) {
+    color: #16172B;
+    font-weight: 700;
+}
+
+.sticky-menu .main-header .menu>div>ul>li>a.standard-button {
+    color: #FFFFFF;
+    background-color: #12063d;
+    font-weight: 700;
+}
+
+.sticky-menu .main-header .menu>div>ul>li>a.standard-button:hover {
+    background-color: #a116b7;
+}
+
+
+.sticky-menu .small-logo {
+    display: block;
+}
+.sticky-menu .large-logo {
+    display: none;
+}
+
+
 #intro {
-  background-color: purple;
+    overflow: hidden;
+    min-height: 920px;
+}
+
+#intro .header {
+    top: 332px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: calc(100vh - 332px);
+}
+
+#intro .header .main-content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+#intro .header .main-content h2 {
+    flex: 0 1 637px;
+    color: #FFFFFF;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 110px;
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+
+#intro .divider {
+    margin: 0px 48px;
+    border-right: 4px solid #FFFFFF;
+    height: 192px;
+}
+
+
+#intro .background {
+    background: url("../img/hero-background-1.png");
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 920px;
+}
+
+#intro .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 920px;
+}
+
+#intro .description {
+    max-width: 348px;
+    text-align: left;
+}
+
+#intro .description p {
+    color: #FFFFFF;
+    line-height: 44px;
+    font-size: 33px;
+    font-weight: bold;
 }
 
 #video-modal {
@@ -15,4 +134,196 @@
 .active#video-modal {
     height: 100%;
     width: 100%;
+}
+
+
+.button-options {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1; 
+}
+
+
+.button-options .button {
+    transition: all 0.07s ease-in-out;
+    margin: 8px 25px;
+    padding: 14px 31px;
+    border-radius: 30.5px;
+    width: 242px;
+
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.button-options .button:hover {
+    transform: scale3d(1.04, 1.04, 1.04);
+}
+.button-options .button:active {
+    transform: scale3d(0.99, 0.99, 0.99);
+}
+
+.button-options .button.operate-service {
+    background-color: #CC0FE0;
+    box-shadow: 0 5px 6px -3px rgba(0,0,0,0.15);
+    margin-top: 10px;
+}
+
+.button-options .button.operate-service:hover {
+    background-color: #A116B7;
+    box-shadow: 0 10px 8px -5px rgba(0,0,0,0.15);
+}
+
+.view-code {
+    box-sizing: border-box;
+    border: 2px solid #FFFFFF;
+}
+
+.view-code:hover {
+    border: 2px solid #A116B7;
+}
+
+.music-player {
+    transition: all 0.07s ease-in-out;
+    border-radius: 35.5px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 8px -2px rgba(0,0,0,0.2);
+    padding: 18px 32px;
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:64px; 
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.music-player:hover {
+    box-shadow: 0 15px 15px -2px rgba(0,0,0,0.25);
+    transform: scale3d(1.04, 1.04, 1.04);
+}
+
+.music-player:active {
+    transform: scale3d(0.99, 0.99, 0.99);
+}
+
+.music-player .player-description {
+    color: #858199;
+    margin-right: 8px;
+}
+
+.music-player .click {
+    color: #B031E7;
+    display: inline-flex;
+    align-items: center;
+}
+
+.music-player .click:hover {
+    text-decoration: underline;
+}
+
+.icon-open {
+    margin-left: 16px;
+}
+
+
+@media screen and (max-width: 1019px) {
+
+    .main-header .menu>div>ul>li>a:not(.standard-button) {
+        color: #fff;
+        letter-spacing: 8px;
+        font-size: 23px;
+        text-transform: uppercase;
+    }
+
+    .small-logo {
+        display: block;
+    }
+    .large-logo {
+        display: none;
+    }
+
+    #intro {
+        overflow: hidden;
+        height: calc(100vh - 115px);
+        min-height: 615px;
+    }
+    
+    #intro .header {
+        top: 32px;
+        height: calc(100vh - 115px);
+    }
+    
+    #intro .header .main-content {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    
+    #intro .header .main-content h2 {
+        flex: 1 0;
+        text-align: center;
+        font-size: 48px;
+        line-height: inherit;
+        margin-bottom: 12px;
+    }
+    
+    
+    #intro .divider {
+        display: none;
+    }
+    
+    
+    #intro .background {
+        background: url("../img/hero-background-1.png");
+        background-repeat: repeat-x;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 115px);
+    }
+    
+    #intro .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: calc(100vh - 115px);
+    }
+    
+    #intro .description {
+        max-width: 100%;
+        text-align: center;
+        padding: 0px 32px;
+    }
+    
+    #intro .description p {
+        line-height: inherit;
+        font-size: 24px;
+    }
+
+    .button-options {
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+        flex: inherit;
+    }
+    .button-options .button {
+        font-size: 16px;
+    }
+
+    .music-player {
+        font-size: 15px;
+        padding: 16px 20px;
+    }
+
+    .icon-open {
+        height: 16px;
+        margin-left: 4px;
+    }
+
 }
