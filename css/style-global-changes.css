@@ -26,3 +26,7 @@ a, button, input[type=submit], path {
   letter-spacing: 0.14px;
   text-align: center;
 }
+
+.about #subpage-intro h1 img {
+  height: unset !important;
+}

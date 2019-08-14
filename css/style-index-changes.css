@@ -64,7 +64,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    user-select: none;
     height: calc(100vh - 332px);
 }
 
