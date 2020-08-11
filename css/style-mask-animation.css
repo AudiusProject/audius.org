@@ -18,7 +18,7 @@
 }
 
 
-.sphere {
+.sphere:not(.parallax-sphere) {
   position: absolute;
   z-index: 3;
   -webkit-animation-duration: 30s;
@@ -31,14 +31,14 @@
   animation-timing-function: linear;
 }
 
-.sphere.orange {
+.sphere:not(.parallax-sphere).orange {
   -webkit-transform-origin: top right;
   transform-origin: top right;
   top: 0;
   left: 0;
 }
 
-.sphere.orange-opaque {
+.sphere:not(.parallax-sphere).orange-opaque {
   -webkit-transform-origin: center right;
   transform-origin: center right;
   top: 0;
@@ -51,7 +51,7 @@
   height: 193px;
 }
 
-.sphere.teal {
+.sphere:not(.parallax-sphere).teal {
   -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
   top: 0;
@@ -63,7 +63,7 @@
   height: 311px;
 }
 
-.sphere.purple-glow {
+.sphere:not(.parallax-sphere).purple-glow {
   -webkit-transform-origin: center right;
   transform-origin: center right;
   top: 0;
@@ -78,22 +78,22 @@
 @media not all, 
 (-webkit-min-device-pixel-ratio: 1.3), 
 not all, (min-resolution: 1.3dppx) {
-  .sphere.orange {
+  .sphere:not(.parallax-sphere).orange {
     background-image: url(../img/sphere-orange@2x.png);
     background-size: 366px 366px;
   }
 
-  .sphere.orange-opaque {
+  .sphere:not(.parallax-sphere).orange-opaque {
     background-image: url(../img/sphere-orange-opaque@2x.png);
     background-size: 193px 193px;
   }
 
-  .sphere.teal {
+  .sphere:not(.parallax-sphere).teal {
     background-image: url(../img/sphere-teal@2x.png);
     background-size: 311px 311px;
   }
 
-  .sphere.purple-glow {
+  .sphere:not(.parallax-sphere).purple-glow {
     background-image: url(../img/sphere-purple-glow@2x.png);
     background-size: 414px 414px;
   }
