@@ -1,6 +1,11 @@
+#subpage-intro .container,
+#subpage-intro h1,
+#subpage-intro img {
+  height: 100% !important;
+}
+
 #stakers-details .content {
   background: #FFF;
-  padding-top: 200px;
 }
 
 #stakers-details .header {

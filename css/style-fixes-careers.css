@@ -1,20 +1,7 @@
-#careers-details .content {
-  background: #FFF;
-  padding-top: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-  margin-bottom: 120px;
-}
-
-#careers-details .header {
-  margin: 0px auto 0px;
-  top: 8px;
-  left: 20px;
-  display: inline-flex;
-  justify-content: center;
-  width: 100%;
+#subpage-intro .container,
+#subpage-intro h1,
+#subpage-intro img {
+  height: 100% !important;
 }
 
 .mask-animation-container {
@@ -22,7 +9,7 @@
   display: inline-flex;
 }
 
-#who-we-are h2 {
+#who-w-are h2 {
   margin: 0;
 }
 
