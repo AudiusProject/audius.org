@@ -3,7 +3,7 @@
 }
 
 .main-header .menu>div>ul>li>a:not(.standard-button) {
-    color: #FFFFFF;
+    color: #12063D;
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 1.4px;
@@ -15,9 +15,9 @@
     width: 158.3px;
     border: 0 solid #FFFFFF;
     border-radius: 30px;
-    background-color: #FFFFFF;
+    background-color: #12063d;
 
-    color: #16172B;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
     text-align: center;
@@ -53,12 +53,12 @@
 
 
 #intro {
-    overflow: hidden;
+    /* overflow: hidden; */
     min-height: 920px;
 }
 
 #intro .header {
-    top: 332px;
+    top: 240px;
     width: 100%;
     display: inline-flex;
     flex-direction: column;
@@ -76,18 +76,22 @@
 
 #intro .header .main-content h2 {
     flex: 0 1 637px;
-    color: #FFFFFF;
-    font-size: 96px;
     font-weight: 800;
+    font-size: 96px;
     line-height: 110px;
     text-align: right;
-    margin-bottom: 0px;
+    background-image: linear-gradient(315deg, #5B23E1 2.04%, #A22FEB 100%);
+    text-shadow: 0px 4px 10px rgba(126, 27, 204, 0.1);
+    user-select: none;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 
 #intro .divider {
     margin: 0px 48px;
-    border-right: 4px solid #FFFFFF;
+    border-right: 4px solid #E7E6EB;
     height: 192px;
 }
 
@@ -118,10 +122,14 @@
 }
 
 #intro .description p {
-    color: #FFFFFF;
     line-height: 44px;
-    font-size: 33px;
+    font-style: normal;
     font-weight: bold;
+    font-size: 33px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    color: #858199;
 }
 
 #video-modal {
@@ -146,13 +154,12 @@
 
 .button-options .button {
     transition: all 0.07s ease-in-out;
-    margin: 8px 25px;
-    padding: 14px 31px;
+    margin: 8px 12px;
+    padding: 14px 0;
     border-radius: 30.5px;
-    width: 270px;
-
-    color: #FFFFFF;
     font-size: 24px;
+    color: #FFFFFF;
+    width: 320px;
     font-weight: 800;
     text-align: center;
 }
@@ -164,13 +171,28 @@
     transform: scale3d(0.99, 0.99, 0.99);
 }
 
-.button-options .button.operate-service {
-    background-color: #CC0FE0;
-    box-shadow: 0 5px 6px -3px rgba(0,0,0,0.15);
+.button-options .button.dashboard {
+    background: linear-gradient(93.46deg, #DD0CF3 0%, #E44CF4 100%);
+    border: 3px solid #CD3BDC;
+    box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.15);
+    border-radius: 30.5px;
     margin-top: 10px;
 }
 
-.button-options .button.operate-service:hover {
+.button-options .button.dashboard:hover {
+    background-color: #A116B7;
+    box-shadow: 0 10px 8px -5px rgba(0,0,0,0.15);
+}
+
+.button-options .button.discord {
+    background: linear-gradient(93.46deg, #8D11EE 0%, #A246EB 100%);
+    border: 3px solid #903DD4;
+    box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.15);
+    border-radius: 30.5px;
+    margin-top: 10px;
+}
+
+.button-options .button.discord:hover {
     background-color: #A116B7;
     box-shadow: 0 10px 8px -5px rgba(0,0,0,0.15);
 }
@@ -191,9 +213,8 @@
     box-shadow: 0 5px 8px -2px rgba(0,0,0,0.2);
     padding: 22px 36px;
 
-    font-size: 23px;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom:64px; 
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -325,4 +346,14 @@
         margin-left: 4px;
     }
 
+}
+
+@media screen and (min-width: 1020px) {
+    #intro .animation {
+        bottom: -520px;
+    }
+
+    #value {
+        padding-top: 500px;
+    }
 }

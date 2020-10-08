@@ -7,3 +7,11 @@
     justify-content: center !important;
   }
 }
+
+.row.three-columns {
+  justify-content: center !important;
+}
+
+#investors ul {
+  justify-content: center !important;
+}

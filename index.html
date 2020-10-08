@@ -63,6 +63,7 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
+
         <!--
         >>================================================================================>
         GUI
@@ -88,7 +89,7 @@
         <header class="main-header">
             <h1 class="logo">
                 <a href="index.html">
-                    <img src="img/logoAudius.svg" class="large-logo" alt="Audius">
+                    <img src="img/audius@2x.png" class="large-logo" alt="Audius">
                     <img src="img/audius.png" class="small-logo" data-rjs="2" alt="Audius">
                 </a>
             </h1>
@@ -96,7 +97,6 @@
                 <div>
                     <ul>
                         <li class="mobile-only"><a href="/index.html">Home</a></li>
-                        <li><a href="/about/">About</a></li>
                         <li><a href="/stakers/">Stakers</a></li>
                         <li><a href="/developers/">Developers</a></li>
                         <li><a href="/token/">Token</a></li>
@@ -112,6 +112,56 @@
         </header>
 
         <main>
+
+            <!-- SECURITIES NOTICE MODAL -->
+            <div id="person-modal" class="modal" aria-hidden="true">
+                <div class="modal-container" style="max-width: 720px; background: #ffffff; box-shadow: 0px 16px 20px rgba(133, 129, 153, 0.15); border-radius: 12px;">
+                    <div class="modal-frame">
+                        <div id="securities-notice" style="text-align: center; padding: 30px 0px;">
+                            <p style="font-size: 23px; line-height: 40px; text-align: center; color: #12063D;">
+                                $AUDIO have not been registered under the U.S.<br />
+                                Securities Act of 1933 (“Securities Act”), as amended, and<br />
+                                may not be offered or sold in the United States or to a U.S.<br />
+                                person (as defined in Regulation S promulgated under the<br />
+                                Securities Act) absent registration or an applicable<br />
+                                exemption from the registration requirements. 
+                            </p>
+                            <button
+                                class="close-modal"
+                                style="position: unset; width: unset; height: unset; margin: 20px auto 0px; user-select: none;"
+                                onclick="window.localStorage.setItem('securities-notice-seen', true)"
+                            >
+                                <a class="standard-button purple" rel="noopener">Accept</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TRIGGER -->
+            <div id="trigger-popup" class="person" data-modal="person-modal">
+                <div class="description">
+                    <div class="bio"><p></p></div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function(){
+                    const seen = window.localStorage.getItem('securities-notice-seen')
+                    if (!seen) {
+                        const el = document.getElementById('trigger-popup')
+                        fetch('https://ipapi.co/json/')
+                            .then(res => res.json())
+                            .then(json => {
+                                if (json.country === "US") {
+                                    el.click()
+                                }
+                            })
+                            .catch((e) => {
+                                console.error(e)
+                                el.click()
+                            })
+                    }
+                })
+            </script>
 
             <!--
             >>================================================================================>
@@ -134,28 +184,71 @@
             -->
 
             <section id="intro">
-                <div class="background"></div>
-                <img src="/img/overlay.png" class="overlay" />
                 <div class="header">
                     <div class="main-content">
                         <h2>Freedom to Share & Listen</h2>
                         <div class="divider"></div>
                         <div class="description">
-                            <p>Audius is a decentralized, community-owned audio sharing protocol.</p>
+                            <p>Giving everyone the freedom to distribute, monetize, and stream unstoppable audio</p>
                         </div>
                     </div>
                     <div class="button-options">
-                        <button onclick="window.location = '/stakers'" class="button operate-service">Operate a Service</button>
-                        <button onclick="window.location = 'https://github.com/AudiusProject/audius-protocol/wiki'" class="button view-code">See the Code</button>
+                        <button onclick="window.open('https://dashboard.audius.org', '_blank')" class="button dashboard">Explore The Dashboard</button>
+                        <button onclick="window.open('https://discord.gg/kZkT9ZK', '_blank')" class="button discord">Join The Discord</button>
                     </div>
-                    <button onclick="window.location = 'https://audius.co'" class="music-player">
+                    <button onclick="window.open('https://audius.co', '_blank')" class="music-player">
                         <span class="player-description">Looking For Our Music Player?</span>
                         <span class="click">
                             Click Here 
                             <img alt="open music player" class="icon-open" src="/img/iconOpen.svg"/>
                         </span>
                     </button>
+                </div>
+                <div class="animation">
+                    <div id="intro-animation">
+                        <span class="wave-bg"></span>
+                        <span class="bars-bg">
+                            <span class="bars"></span>
+                        </span>
+                        <span class="scrubber"></span>
+                        <div class="wave-1">
+                            <div class="wave-container">
+                                <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2033px" height="289.3px" viewBox="0 0 2033 289.3" style="enable-background:new 0 0 2033 289.3;" xml:space="preserve">
+                                    <path d="M0,0.6c169.4,0,169.4,270.1,338.8,270.1c169.4,0,169.4-255.6,338.8-255.6c169.4,0,169.4,231,338.8,231 c169.4,0,169.4-168.5,338.8-168.5c169.4,0,169.4,211,338.8,211c169.4,0,169.4-288.1,338.9-288.1"/>
+                                </svg>
+                                <span class="dot one"><span></span></span>
+                                <span class="dot two"><span></span></span>
+                                <span class="dot three"><span></span></span>
+                            </div>
+                        </div>
+                        <div class="wave-2">
+                            <div class="wave-container">
+                                <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2211.1px" height="161.6px" viewBox="0 0 2211.1 161.6" style="enable-background:new 0 0 2211.1 161.6;" xml:space="preserve">
+                                    <path d="M0,161.6c175.4,0,239.5-101.9,387.7-101.9c145.7,0,170,101.9,333.3,101.9C876.1,161.6,930.1,0,1105.5,0 s216.8,161.6,376.5,161.6c163.3,0,195.7-101.9,341.4-101.9c148.2,0,212.3,101.9,387.7,101.9"/>
+                                </svg>
+
+                                <span class="dot one"><span></span></span>
+                                <span class="dot two"><span></span></span>
+                                <span class="dot three"><span></span></span>
+                                <span class="dot four"><span></span></span>
+                            </div>
+                        </div>
+                        <div class="wave-3">
+                            <div class="wave-container">
+                                <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2410px" height="66.2px" viewBox="0 0 2410 66.2" style="enable-background:new 0 0 2410 66.2;" xml:space="preserve">
+                                    <path d="M2410,58.1c-30.9,0-36.2-4.6-51.2-4.6c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-15.2-66.5-15.2 c-25,0-31.3,15.2-59.3,15.2c-27.4,0-33.8-37.4-63.9-37.4c-30.1,0-36.5,37.4-63.9,37.4c-28,0-34.3-15.2-59.3-15.2 c-25.4,0-36.4,15.2-66.5,15.2c-30.1,0-39.5-24.1-60.1-24.1c-14.9,0-20.3,16.7-51.2,16.7l-1,0c-30.9,0-36.2-4.6-51.2-4.6 c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-32.5-66.5-32.5c-25,0-31.3,32.5-59.3,32.5c-27.4,0-33.8-65-63.9-65 c-30.1,0-36.5,65-63.9,65c-28,0-34.3-32.5-59.3-32.5c-25.4,0-36.4,32.5-66.5,32.5c-30.1,0-39.5-12.1-60.1-12.1 c-14.9,0-20.3,4.6-51.2,4.6l-1,0c-30.9,0-36.2-4.6-51.2-4.6c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-15.2-66.5-15.2 c-25,0-31.3,15.2-59.3,15.2c-27.4,0-33.8-37.4-63.9-37.4c-30.1,0-36.5,37.4-63.9,37.4c-28,0-34.3-15.2-59.3-15.2 c-25.4,0-36.4,15.2-66.5,15.2c-30.1,0-39.5-24.1-60.1-24.1c-14.9,0-20.3,16.7-51.2,16.7l-1,0c-30.9,0-36.2-4.6-51.2-4.6 c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-32.5-66.5-32.5c-25,0-31.3,32.5-59.3,32.5c-27.4,0-33.8-65-63.9-65 c-30.1,0-36.5,65-63.9,65c-28,0-34.3-32.5-59.3-32.5c-25.4,0-36.4,32.5-66.5,32.5c-30.1,0-39.5-12.1-60.1-12.1 c-14.9,0-20.3,4.6-51.2,4.6"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="wave-4">
+                            <div class="wave-container">
+                                <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2410px" height="66.2px" viewBox="0 0 2410 66.2" style="enable-background:new 0 0 2410 66.2;" xml:space="preserve">
+                                    <path d="M2410,58.1c-30.9,0-36.2-4.6-51.2-4.6c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-15.2-66.5-15.2 c-25,0-31.3,15.2-59.3,15.2c-27.4,0-33.8-37.4-63.9-37.4c-30.1,0-36.5,37.4-63.9,37.4c-28,0-34.3-15.2-59.3-15.2 c-25.4,0-36.4,15.2-66.5,15.2c-30.1,0-39.5-24.1-60.1-24.1c-14.9,0-20.3,16.7-51.2,16.7l-1,0c-30.9,0-36.2-4.6-51.2-4.6 c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-32.5-66.5-32.5c-25,0-31.3,32.5-59.3,32.5c-27.4,0-33.8-65-63.9-65 c-30.1,0-36.5,65-63.9,65c-28,0-34.3-32.5-59.3-32.5c-25.4,0-36.4,32.5-66.5,32.5c-30.1,0-39.5-12.1-60.1-12.1 c-14.9,0-20.3,4.6-51.2,4.6l-1,0c-30.9,0-36.2-4.6-51.2-4.6c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-15.2-66.5-15.2 c-25,0-31.3,15.2-59.3,15.2c-27.4,0-33.8-37.4-63.9-37.4c-30.1,0-36.5,37.4-63.9,37.4c-28,0-34.3-15.2-59.3-15.2 c-25.4,0-36.4,15.2-66.5,15.2c-30.1,0-39.5-24.1-60.1-24.1c-14.9,0-20.3,16.7-51.2,16.7l-1,0c-30.9,0-36.2-4.6-51.2-4.6 c-20.6,0-30,12.1-60.1,12.1c-30.1,0-41.1-32.5-66.5-32.5c-25,0-31.3,32.5-59.3,32.5c-27.4,0-33.8-65-63.9-65 c-30.1,0-36.5,65-63.9,65c-28,0-34.3-32.5-59.3-32.5c-25.4,0-36.4,32.5-66.5,32.5c-30.1,0-39.5-12.1-60.1-12.1 c-14.9,0-20.3,4.6-51.2,4.6"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
+                </div>
             </section>
 
             <!--
@@ -251,14 +344,14 @@
                                         <img src="img/value-distribution-icon.png" alt="" data-rjs="2">
                                     </div>
                                     <div class="title">
-                                        <h3>Distribution</h3>
+                                        <h3>Security</h3>
                                         <h4>Own Your Content</h4>
                                     </div>
                                 </div>
                                 <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
                                 </svg>
-                                <p>Using Audius, creators can generate immutable and timestamped records for their creative works. Because the network is decentralized and secured by the blockchain, the attribution metadata remains safe, verifiable, and immutable.</p>
+                                <p>With Audius, creators can generate immutable and timestamped records for their creative works, secured by a decentralized network of node operators.</p>
                             </div>
                         </div>
                     </div>
@@ -334,14 +427,14 @@
                                         <img src="img/value-attribution-icon.png" alt="" data-rjs="2">
                                     </div>
                                     <div class="title">
-                                        <h3>Attribution</h3>
+                                        <h3>Features</h3>
                                         <h4>An Open Network</h4>
                                     </div>
                                 </div>
                                 <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
                                 </svg>
-                                <p>Providing a transparent network in a space traditionally controlled by third parties, Audius builds a bridge between creators and consumers. Discover new content or verify authenticity, authorized through a truly transparent system of attribution.</p>
+                                <p>Unlock premium features for curated engagement by using our native platform token, $AUDIO. From gated content to artist tokens and remix contests, Audius is here to give fans the exclusivity they deserve.</p>
                             </div>
                         </div>
                     </div>
@@ -390,14 +483,14 @@
                                         <img class="icon" src="img/value-monetization-icon.png" alt="" data-rjs="2">
                                     </div>
                                     <div class="title">
-                                        <h3>Monetization</h3>
-                                        <h4>Create and Issue Licenses</h4>
+                                        <h3>Governance</h3>
+                                        <h4>Empowering All Participants</h4>
                                     </div>
                                 </div>
                                 <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
                                 </svg>
-                                <p>Audius uses the blockchain to ensure that artists get paid safely & instantly as consumers listen to content. Choose from pre-existing license terms or create your own and automate the payments, transfers and issuance of licenses.</p>
+                                <p>As a platform owned and operated by its users, the future of Audius is entirely driven by $AUDIO governance. Everything about Audius is governable, with voting weight directly correlated to $AUDIO staked for value-added services.</p>
                             </div>
                         </div>
                     </div>
@@ -423,7 +516,6 @@
                     <div class="navigation">
                         <nav class="sitemap">
                             <ul>
-                                <li><a href="about/">About</a></li>
                                 <li><a href="stakers/">Stakers</a></li>
                                 <li><a href="developers/">Developers</a></li>
                                 <li><a href="token/">Token</a></li>
@@ -493,34 +585,6 @@
                 </div>
             </div>
         </footer>
-
-        <!--
-        >>================================================================================>
-        Video Modal
-        >>================================================================================>
-        -->
-
-        <div id="video-modal" class="modal">
-            <button class="close-modal mobile-only">
-                <svg aria-hidden="true" height="13.6" viewBox="0 0 13.6 13.6" width="13.6" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.6 2l-2-2-4.8 4.8-4.8-4.8-2 2 4.8 4.8-4.8 4.8 2 2 4.8-4.8 4.8 4.8 2-2-4.8-4.8z"/>
-                </svg>
-                <span>Close Modal</span>
-            </button>
-            <div class="modal-container">
-                <div class="modal-frame">
-                    <button class="close-modal desktop-only">
-                        <svg aria-hidden="true" height="13.6" viewBox="0 0 13.6 13.6" width="13.6" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.6 2l-2-2-4.8 4.8-4.8-4.8-2 2 4.8 4.8-4.8 4.8 2 2 4.8-4.8 4.8 4.8 2-2-4.8-4.8z"/>
-                        </svg>
-                        <span>Close Modal</span>
-                    </button>
-                    <div class="modal-content">
-                        <iframe src="https://player.vimeo.com/video/283890922" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>

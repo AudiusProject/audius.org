@@ -190,6 +190,66 @@
   margin-bottom: 78px;
 }
 
+.api {
+  background: url('../img/apiBG@2x.png');
+  background-size: cover;
+  box-shadow: 0px 4px 30px -2px rgba(107, 29, 236, 0.4);
+  border-radius: 12px;
+  width: 1024px;
+  height: 468px;
+  margin-bottom: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.api > img {
+  width: 250px;
+}
+
+.api-docs {
+  transition: all 0.07s ease-in-out;
+  border-radius: 35.5px;
+  background-color: #FFFFFF;
+  color: #B031E7;
+  box-shadow: 0 5px 8px -2px rgba(0,0,0,0.2);
+  padding: 22px 36px;
+
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom:64px; 
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.api-docs:hover {
+  box-shadow: 0 15px 15px -2px rgba(0,0,0,0.25);
+  transform: scale3d(1.04, 1.04, 1.04);
+}
+
+.api-docs:active {
+  transform: scale3d(0.99, 0.99, 0.99);
+}
+
+.api-docs .player-description {
+  margin-right: 8px;
+}
+
+.api-docs .click {
+  display: inline-flex;
+  align-items: center;
+}
+
+.api-docs .click:hover {
+  text-decoration: underline;
+}
+
+.icon-open {
+  margin-left: 16px;
+}
+
 @media screen and (max-width: 1019px) {
   #dev-details .content {
     padding-top: 16px;

@@ -96,7 +96,6 @@
                 <div>
                     <ul>
                         <li class="mobile-only"><a href="/index.html">Home</a></li>
-                        <li><a href="/about/">About</a></li>
                         <li><a href="/stakers/">Stakers</a></li>
                         <li><a href="/developers/">Developers</a></li>
                         <li><a href="/token/" class="active">Token</a></li>
@@ -112,6 +111,55 @@
         </header>
 
         <main>
+            <!-- SECURITIES NOTICE MODAL -->
+            <div id="person-modal" class="modal" aria-hidden="true">
+                <div class="modal-container" style="max-width: 720px; background: #ffffff; box-shadow: 0px 16px 20px rgba(133, 129, 153, 0.15); border-radius: 12px;">
+                    <div class="modal-frame">
+                        <div id="securities-notice" style="text-align: center; padding: 30px 0px;">
+                            <p style="font-size: 23px; line-height: 40px; text-align: center; color: #12063D;">
+                                $AUDIO have not been registered under the U.S.<br />
+                                Securities Act of 1933 (“Securities Act”), as amended, and<br />
+                                may not be offered or sold in the United States or to a U.S.<br />
+                                person (as defined in Regulation S promulgated under the<br />
+                                Securities Act) absent registration or an applicable<br />
+                                exemption from the registration requirements. 
+                            </p>
+                            <button
+                                class="close-modal"
+                                style="position: unset; width: unset; height: unset; margin: 20px auto 0px; user-select: none;"
+                                onclick="window.localStorage.setItem('securities-notice-seen', true)"
+                            >
+                                <a class="standard-button purple" rel="noopener">Accept</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TRIGGER -->
+            <div id="trigger-popup" class="person" data-modal="person-modal">
+                <div class="description">
+                    <div class="bio"><p></p></div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function(){
+                    const seen = window.localStorage.getItem('securities-notice-seen')
+                    if (!seen) {
+                        const el = document.getElementById('trigger-popup')
+                        fetch('https://ipapi.co/json/')
+                            .then(res => res.json())
+                            .then(json => {
+                                if (json.country === "US") {
+                                    el.click()
+                                }
+                            })
+                            .catch((e) => {
+                                console.error(e)
+                                el.click()
+                            })
+                    }
+                })
+            </script>
 
             <!--
             >>================================================================================>
@@ -141,10 +189,6 @@
                             <span class="sphere purple-glow"></span>
                         </span>
                     </h1>
-                    <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
-                    </svg>
-                    <p>The Audius protocol involves two different tokens to operate: a governance token called “<a href="#audius">Audius</a>”, and a platform token called “<a href="#loud">Loud</a>” (which is 1-1 backed by 3rd-party stablecoins).</p>
                 </div>
             </section>
 
@@ -153,6 +197,48 @@
             Token Features
             >>================================================================================>
             -->
+            <section id="top" class="simple-callout">
+                <div class="container">
+                    <div class="content">
+                        <div class="copy">
+                            <p>Introducing <em>$AUDIO</em>,<br />
+                               The Audius Platform<br />
+                               Token
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dashboard-link" class="token-features">
+                <a class="standard-button purple" href="https://dashboard.audius.org" target="_blank" rel="noopener">Explore the Dashboard</a>
+            </section>
+
+            <section id="about" class="bios">
+                <div class="container">
+                    <div class="header">
+                        <h2>About</h2>
+                    </div>
+                    <div class="content">
+                      <p>
+                        $AUDIO enables network security, exclusive feature access, and community-owned governance.
+The Audius protocol gives everyone the freedom to share, monetize, and listen to any audio. Thanks to $AUDIO, our users can earn a voice in the platform’s future through active contributions to the network.
+                        <br />
+                        <br />
+
+Our SoundCloud alternative helps artists monetize their work in creative ways by better engaging true fans. We’re here to create the future of streaming by giving users the means to shape Audius as the recipients of $AUDIO tokens.
+<br />
+<br />
+
+The protocol will live forever, owned and operated by a decentralized community of creators, developers, and listeners collaborating to defend the world’s music catalog.
+                      </p>
+                    </div>
+                </div>
+              </section>
+
+            <section id="dashboard-link" class="token-features">
+                <a class="standard-button purple" href="https://discord.gg/kZkT9ZK" target="_blank" rel="noopener">Join the Conversation on Discord</a>
+            </section>
 
             <section id="audius" class="token-features">
                 <div class="container">
@@ -170,9 +256,9 @@
                                     </svg>
                                 </div>
                                 <span class="seal">
-                                    <img src="/img/token-audius-animation-1-seal.png" data-rjs="2" alt="">
+                                    <img src="/img/platformToken@2x.png" data-rjs="2" alt="">
                                 </span>
-                                <p>Value accrual token.</p>
+                                <p>Users stake $AUDIO to secure the platform, and in return receive a share of network fees, governance weight, and exclusive feature unlocks.</p>
                             </div>
                         </div>
                         <div class="animation two">
@@ -250,7 +336,7 @@
                             </div>
                         </div>
                         <a class="page-scroll has-title teal" href="#audius-features">
-                            <span>Features</span>
+                            <span>Stake $AUDIO</span>
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9.4" height="26.7" viewBox="0 0 9.4 26.7">
                                 <path d="M7.8 19.3l-2.3 2.9v-22.2h-2v21.9l-1.9-2.7-1.6 1.2 4.5 6.3 4.9-6.1z"/>
                             </svg>
@@ -261,43 +347,34 @@
                             <div class="feature">
                                 <div class="icon">
                                     <div>
-                                        <img src="/img/token-audius-icon-erc20.png" alt="Icon for ECR20" data-rjs="2">
+                                        <img src="/img/iconNodes@2x.png" alt="Icon for Nodes" data-rjs="2">
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <p>Staked by service providers to operate services in the network or propose governance changes</p>
+                                    <p><b>To run discovery or content nodes.</b></p>
+                                    <p>Providers get a higher probability of listener discovery and a share of network fees for securing the network.</p>
                                 </div>
                             </div>
                             <div class="feature">
                                 <div class="icon">
                                     <div>
-                                        <img src="/img/iconPig.png" alt="Icon for Ownership" data-rjs="2">
+                                        <img src="/img/iconFeatures@2x.png" alt="Icon for Features" data-rjs="2">
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <p>Stakers of Audius tokens earn a proportional amount of the inflation in the Audius token supply and proceeds from the network fee pool (aggregated from listener payments)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/token-audius-icon-power.png" alt="Icon for Power" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p>Align governance and service provider incentives with increased protocol usage and long-term value creation</p>
+                                    <p><b>To unlock exclusive features and services.</b></p>
+                                    <p>Creators may unlock services like artist tokens and badges, and receive voting power from fans who want to share in their success.</p>
                                 </div>
                             </div>
                             <div class="feature">
                                 <div class="icon">
                                     <div>
-                                        <img src="/img/token-audius-icon-ownership.png" alt="Icon for Ownership" data-rjs="2">
+                                        <img src="/img/iconGov@2x.png" alt="Icon for Gov" data-rjs="2">
                                     </div>
                                 </div>
                                 <div class="description">
-                                    <p>Stakers of Audius tokens earn voting power in protocol changes</p>
+                                    <p><b>To participate in protocol governance and shape the future of Audius.</b></p>
+                                    <p>Every aspect of Audius is governable, creating a truly community-owned and operated streaming service.</p>
                                 </div>
                             </div>
                         </div>
@@ -315,212 +392,23 @@
                 <div class="container">
                     <div class="content">
                         <div class="copy">
-                            <h3>Audius connects listeners directly with creators in a familiar music player interface, removing all intermediaries. Learn more about our tokens.</h3>
+                            <p>Want to learn more?</p>
                         </div>
-                        <a class="standard-button purple" href="https://whitepaper.audius.co" target="_blank" rel="noopener">White Paper</a>
+                        <a class="standard-button purple" href="https://whitepaper.audius.co" target="_blank" rel="noopener">Read More White Paper</a>
                     </div>
                 </div>
             </section>
 
-            <!--
-            >>================================================================================>
-            Token Features
-            >>================================================================================>
-            -->
-
-            <section id="loud" class="token-features">
-                <div class="container">
-                    <div class="animations">
-                        <div class="animation one">
-                            <div id="token-loud-animation-1">
-                                <div class="wave-1">
-                                    <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2033px" height="289.3px" viewBox="0 0 2033 289.3" style="enable-background:new 0 0 2033 289.3;" xml:space="preserve">
-                                        <path d="M0,0.6c169.4,0,169.4,270.1,338.8,270.1c169.4,0,169.4-255.6,338.8-255.6c169.4,0,169.4,231,338.8,231 c169.4,0,169.4-168.5,338.8-168.5c169.4,0,169.4,211,338.8,211c169.4,0,169.4-288.1,338.9-288.1"/>
-                                    </svg>
-                                </div>
-                                <div class="wave-2">
-                                    <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2211.1px" height="161.6px" viewBox="0 0 2211.1 161.6" style="enable-background:new 0 0 2211.1 161.6;" xml:space="preserve">
-                                        <path d="M0,161.6c175.4,0,239.5-101.9,387.7-101.9c145.7,0,170,101.9,333.3,101.9C876.1,161.6,930.1,0,1105.5,0 s216.8,161.6,376.5,161.6c163.3,0,195.7-101.9,341.4-101.9c148.2,0,212.3,101.9,387.7,101.9"/>
-                                    </svg>
-                                </div>
-                                <span class="seal">
-                                    <img src="/img/token-loud-animation-1-seal.png" data-rjs="2" alt="">
-                                </span>
-                                <p>Used by listeners &amp; content creators to interact with the Audius protocol. Price-stable.</p>
-                            </div>
-                        </div>
-                        <div class="animation two">
-                            <div id="token-loud-animation-2">
-                                <span class="hands">
-                                    <img src="/img/token-loud-animation-2-hands.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin one">
-                                    <img src="/img/token-loud-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin two">
-                                    <img src="/img/token-loud-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin three">
-                                    <img src="/img/token-loud-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin four">
-                                    <img src="/img/token-loud-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="radio">
-                                    <img src="/img/token-loud-animation-2-radio.png" data-rjs="2" alt="">
-                                </span>
-                                
-                                <span class="symbol one">
-                                    <img src="/img/token-loud-animation-2-twitter.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol two">
-                                    <img src="/img/token-loud-animation-2-facebook.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol three">
-                                    <img src="/img/token-loud-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol four">
-                                    <img src="/img/token-loud-animation-2-facebook.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol five">
-                                    <img src="/img/token-loud-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol six">
-                                    <img src="/img/token-loud-animation-2-twitter.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol seven">
-                                    <img src="/img/token-loud-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol eight">
-                                    <img src="/img/token-loud-animation-2-facebook.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol nine">
-                                    <img src="/img/token-loud-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol ten">
-                                    <img src="/img/token-loud-animation-2-twitter.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="dial"></span>
-                                <span class="antenna">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </span>
-                                <svg class="coin-path one" height="545.9" viewBox="0 0 274 545.9" width="274" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M274 0v234.6s-44.6 1.1-86.5 1.1c-128.5 53-170.7 186.3-187.5 310.2"/>
-                                </svg>
-                                <svg class="coin-path two" height="545.9" viewBox="0 0 271.3 545.9" width="271.3" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="st0" d="M270.8 0v201.5s-55.1 1.1-97 1.1c-128.5 52.9-156.5 219.4-173.3 343.3"/>
-                                </svg>
-                                <svg class="coin-path three" height="545.9" viewBox="0 0 340.1 545.9" width="340.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="st0" d="M.5 0v201.5s55.1 1.1 97 1.1c128.5 52.9 225.3 219.4 242.1 343.3"/>
-                                </svg>
-                                <svg class="coin-path four" height="545.9" viewBox="0 0 324 545.9" width="324" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="st0" d="M.5 0v181.3s39 1.1 80.9 1.1c128.5 53 225.3 239.6 242.1 363.5"/>
-                                </svg>
-                                <div class="waves">
-                                    <div class="wave-1">
-                                        <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2033px" height="289.3px" viewBox="0 0 2033 289.3" style="enable-background:new 0 0 2033 289.3;" xml:space="preserve">
-                                            <path d="M0,0.6c169.4,0,169.4,270.1,338.8,270.1c169.4,0,169.4-255.6,338.8-255.6c169.4,0,169.4,231,338.8,231 c169.4,0,169.4-168.5,338.8-168.5c169.4,0,169.4,211,338.8,211c169.4,0,169.4-288.1,338.9-288.1"/>
-                                        </svg>
-                                    </div>
-                                    <div class="wave-2">
-                                        <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2211.1px" height="161.6px" viewBox="0 0 2211.1 161.6" style="enable-background:new 0 0 2211.1 161.6;" xml:space="preserve">
-                                            <path d="M0,161.6c175.4,0,239.5-101.9,387.7-101.9c145.7,0,170,101.9,333.3,101.9C876.1,161.6,930.1,0,1105.5,0 s216.8,161.6,376.5,161.6c163.3,0,195.7-101.9,341.4-101.9c148.2,0,212.3,101.9,387.7,101.9"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <span class="bg">
-                                    <img src="/img/token-loud-animation-2-bg.png" data-rjs="2" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <a class="page-scroll has-title orange" href="#loud-features">
-                            <span>Features</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9.4" height="26.7" viewBox="0 0 9.4 26.7">
-                                <path d="M7.8 19.3l-2.3 2.9v-22.2h-2v21.9l-1.9-2.7-1.6 1.2 4.5 6.3 4.9-6.1z"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div id="loud-features" class="row two-columns features">
-                        <div class="column">
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/token-loud-icon-transferrable.png" alt="Icon for Transferrable" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p>Native protocol token that is backed by / exchangeable for 3rd-party stablecoins.</p>
-                                </div>
-                            </div>
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/token-loud-icon-listeners.png" alt="Icon for Listeners and Creators" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p>Spent by listeners and creators, earned by all protocol users.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/token-loud-icon-reposts.png" alt="Icon for Reposts" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p>Creators can curate content and earn a cut when their reposts or playlists are listened to.</p>
-                                </div>
-                            </div>
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/token-loud-icon-tokens.png" alt="Icon for Tokens" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p>Service providers earn fees for streaming revenue they enable.</p>
-                                </div>
-                            </div>
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/iconVote.png" alt="Icon for Tokens" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p>Earnings of Loud tokens (for artists and curators) correlate to voting power in protocol changes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--
-            >>================================================================================>
-            Non-Fungible
-            >>================================================================================>
-            -->
-
-            <section id="non-fungible">
+            <section id="distribution" class="bios">
                 <div class="container">
                     <div class="header">
-                        <h3>Non-Fungible Tokens</h3>
-                        <p>We also plan to launch a few classes of non-fungible tokens in future.</p>
+                        <h2>$AUDIO Distribution</h2>
                     </div>
-                    <ul class="row">
-                        <li class="creator"><span>Creator</span> Token</li>
-                        <li class="compilation"><span>Compilation</span> Token</li>
-                        <li class="tour"><span>Tour / Festival</span> Token</li>
-                    </ul>
+                    <div class="content">
+                        <img src="../img/distroChart@2x.png" alt="distribution" />
+                    </div>
                 </div>
-            </section>
+              </section>
 
             <!--
             >>================================================================================>
@@ -565,7 +453,6 @@
                     <div class="navigation">
                         <nav class="sitemap">
                             <ul>
-                                <li><a href="/about/">About</a></li>
                                 <li><a href="/stakers/">Stakers</a></li>
                                 <li><a href="/developers/">Developers</a></li>
                                 <li><a class="active" href="/token/">Token</a></li>

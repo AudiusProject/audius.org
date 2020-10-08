@@ -105,7 +105,7 @@
 /* Contact Styles */
 .contact {
   position: relative;
-  height: 400px;
+  height: 440px;
   width: 100%;
   display: inline-flex;
   flex-direction: column;
@@ -211,6 +211,7 @@
  
   .long-description {
     margin-bottom: 32px;
+    padding: 0px 8px;
   }
  
   .contact .shapes {
