@@ -4,11 +4,11 @@
   height: 100% !important;
 }
 
-#stakers-details .content {
+#protocol-details .content {
   background: #FFF;
 }
 
-#stakers-details .header {
+#protocol-details .header {
   margin: 0px auto 60px;
   top: 8px;
   left: 20px;
@@ -186,11 +186,11 @@
 }
 
 @media screen and (max-width: 1019px) {
-  #stakers-details .content {
+  #protocol-details .content {
     padding-top: 16px;
   }
  
-  #stakers-details .header {
+  #protocol-details .header {
     margin-bottom: 16px;
   }
  
@@ -225,4 +225,93 @@
     width: 100%;
   }
   
+}
+
+
+/* Dapp Styles */
+.dapp {
+  position: relative;
+  height: 520px;
+  width: 100%;
+  background: #FAFAFA;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1019px) {
+  .dapp {
+    height: auto;
+    margin-bottom: 40px;
+    padding: 0px 24px;
+  }
+}
+
+.dapp .hedgehogLogo {
+  z-index: 1;
+  margin: 65px 0px 43px;
+}
+
+.dapp .building-header {
+  z-index: 1;
+  max-width: 1056px;
+  color: #16172B;
+  font-size: 46px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  line-height: 70px;
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+@media screen and (max-width: 1019px) {
+  .dapp .building-header {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.dapp .building-description {
+  z-index: 1;
+  max-width: 1056px;
+  color: #16172B;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 33px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1019px) {
+  .dapp .building-description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.dapp .shapes {
+  position: absolute;
+  z-index: 0;
+  top: 24%;
+  left: 50%;
+  right: -36%;
+}
+
+.dapp .learn-more {
+  z-index: 1;
+  border-radius: 39px;
+  background-color: #CC0FE0;
+  transition: all 0.17s ease-in-out;
+
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+  padding: 16px 32px;
+}
+
+.dapp .learn-more:hover {
+  box-shadow: 0 15px 15px -2px rgba(0,0,0,0.25);
 }

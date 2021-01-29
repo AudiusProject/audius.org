@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Token</title>
+        <title>API</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
@@ -21,7 +21,7 @@
 
         <!--Facebook-->
 
-        <meta property="og:url" content="https://audius.org/token">
+        <meta property="og:url" content="https://audius.org/api">
         <meta property="og:type" content="product">
         <meta property="og:title" content="Audius">
         <meta property="og:description" content="Decentralized Audio Distribution, Attribution & Monetization">
@@ -35,7 +35,9 @@
 
         <link rel="stylesheet" href="/css/style.min.css">
         <link rel="stylesheet" href="/css/style-global-changes.css">
-        <link rel="stylesheet" href="/css/style-fixes-token.css">
+        <link rel="stylesheet" href="/css/style-mask-animation-fix.css">
+        <link rel="stylesheet" href="/css/style-guitar-blocks.css">
+        <link rel="stylesheet" href="/css/style-fixes-devs.css">
 
         <!-- Tags -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120325397-4"></script>
@@ -55,9 +57,64 @@
         })(window,document,'script','dataLayer','GTM-TTM6CHS');</script>
         <!-- End Google Tag Manager -->
 
+        <script>
+            const selectFrame = (thisId, frameId) => {
+                document.querySelector('iframe.show').classList.remove('show')
+                document.getElementById(frameId).classList.add('show')
+                document.querySelector('button.active').classList.remove('active')
+                document.getElementById(thisId).classList.add('active')
+            }
+
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                const makeApp = (appInfo) => {
+                    return `
+                    <div class="person has-bio" data-modal="person-modal">
+                        <div class="content">
+                            <div class="headshot">
+                                <a class="person-link" href="${appInfo.link}" target="_blank" rel="noopener">
+                                    <svg class="link" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.51729 10.8785L4.86499 9.55526C5.22235 9.20429 5.83755 9.43756 5.85607 9.93334C5.87952 10.5736 5.99807 11.2071 6.20798 11.8138C6.28123 12.0208 6.22795 12.2507 6.0707 12.4062L5.59532 12.8731C4.57846 13.8718 4.54577 15.5004 5.55355 16.5112C6.0425 17.0001 6.70994 17.2769 7.40765 17.2804C8.10535 17.2838 8.77557 17.0135 9.26945 16.5294L11.7085 14.1315C12.7288 13.1287 12.7288 11.5036 11.7085 10.5008C11.5928 10.3882 11.4671 10.2859 11.333 10.1951C11.1811 10.093 11.0875 9.92634 11.0806 9.74573C11.0648 9.3481 11.2194 8.96218 11.5069 8.68175L12.2717 7.93273C12.4725 7.73659 12.7877 7.71042 13.0191 7.87066C14.3552 8.78691 15.211 10.236 15.3575 11.8299C15.5039 13.4239 14.926 15 13.7785 16.1364L13.7654 16.1496L11.325 18.5464C9.17249 20.6605 5.67049 20.6601 3.51693 18.5464C1.36336 16.4328 1.36481 12.9922 3.51729 10.8785Z" fill="#12063D"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8046 9.12718C17.8215 8.12848 17.8542 6.49988 16.8464 5.48905C16.3573 5.0003 15.6898 4.72355 14.9921 4.72027C14.2944 4.71699 13.6243 4.98744 13.1305 5.47157L10.6915 7.86881C9.67114 8.87158 9.67114 10.4967 10.6915 11.4995C10.8072 11.6121 10.9328 11.7144 11.067 11.8051C11.2187 11.9073 11.3122 12.074 11.319 12.2545C11.3351 12.6522 11.1805 13.0382 10.893 13.3185L10.1282 14.0693C9.92738 14.2653 9.61229 14.2915 9.38081 14.1314C8.0441 13.2152 7.18785 11.7657 7.0414 10.1713C6.89495 8.57683 7.47326 7.00029 8.62143 5.86392L8.63451 5.85072L11.075 3.45383C13.2275 1.33979 16.7294 1.34015 18.883 3.45383C21.0366 5.56752 21.0355 9.00733 18.883 11.1224L17.5353 12.4457C17.178 12.7967 16.5628 12.5634 16.5442 12.0676C16.5208 11.4274 16.4022 10.7939 16.1923 10.1872C16.1191 9.98021 16.1723 9.75029 16.3296 9.59479L16.8046 9.12718Z" fill="#12063D"/>
+                                    </svg>
+                                    <span>Link</span>
+                                </a>
+                                <img class="photo" src="${appInfo.image}" alt="">
+                            </div>
+                            <div class="description">
+                                <h4 class="name">${appInfo.name}</h4>
+                                <h5 class="title">${appInfo.shortDescription}</h5>
+                                <div class="bio">
+                                    <p>${appInfo.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                }
+                const getApps = async() => {
+                    const apps = await fetch('./apps.json')
+                    const appsJson = await apps.json()
+    
+                    const appContent = document.getElementById('appContent')
+                    let html = ''
+                    appsJson.forEach(app => {
+                        html += makeApp(app)
+                    })
+                    appContent.innerHTML = html
+                }
+                getApps()
+
+                // Load main JS after fetching content.
+                var newScript = document.createElement('script')
+                newScript.type = 'text/javascript'
+                newScript.src = '/js/scripts.min.js'
+                document.body.appendChild(newScript)
+            })
+        </script>
+        <!-- <script src="/js/scripts.min.js"></script> -->
     </head>
 
-    <body class="token">
+    <body class="team">
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTM6CHS"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -97,8 +154,8 @@
                     <ul>
                         <li class="mobile-only"><a href="/">Home</a></li>
                         <li><a href="/protocol/">Protocol</a></li>
-                        <li><a href="/api/">API</a></li>
-                        <li><a href="/token/" class="active">Token</a></li>
+                        <li><a href="/api/" class="active">API</a></li>
+                        <li><a href="/token/">Token</a></li>
                         <li><a href="/team/">Team</a></li>
                         <li><a href="/careers/">Careers</a></li>
                         <li><a class="standard-button purple" href="https://whitepaper.audius.co/" target="_blank" rel="noopener">White Paper</a></li>
@@ -163,25 +220,15 @@
 
             <!--
             >>================================================================================>
-            Parallax Elements
-            >>================================================================================>
-            -->
-            
-            <span class="parallax-sphere sphere purple-glow" data-parallax="1"></span>
-            <span class="parallax-sphere sphere teal" data-parallax="1"></span>
-            <span class="parallax-sphere sphere teal-opaque" data-parallax="2"></span>
-
-            <!--
-            >>================================================================================>
-            Subpage Intro
+            Staking Email signup
             >>================================================================================>
             -->
 
             <section id="subpage-intro">
                 <div class="container">
                     <h1>
-                        <span class="visually-hidden">Token</span>
-                        <img src="/img/intro-token-mask.png" data-rjs="2" alt="Token">
+                        <span class="visually-hidden">Devs</span>
+                        <img src="/img/headerAPI@2x.png" data-rjs="2" alt="Devs" class="mask">
                         <span class="animation">
                             <span class="sphere orange"></span>
                             <span class="sphere orange-opaque"></span>
@@ -192,238 +239,178 @@
                 </div>
             </section>
 
-            <!--
-            >>================================================================================>
-            Token Features
-            >>================================================================================>
-            -->
-            <section id="top" class="simple-callout">
+            <section id="dev-details">
+                <div class="content">
+                    <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
+                    </svg>
+                    <div class="why">
+                        <div class="left">
+                            Why Choose Audius?
+                        </div>
+                        <div class="right">
+                            <div class="reason">
+                                <div class="circle">
+                                    <img src="../img/iconCheck.svg" />
+                                </div>
+                                <div>More Than 200K Tracks</div>
+                            </div>
+                            <div class="reason">
+                                <div class="circle">
+                                    <img src="../img/iconCheck.svg" />
+                                </div>
+                                <div>Zero Rate Limits</div>
+                            </div>
+                            <div class="reason">
+                                <div class="circle">
+                                    <img src="../img/iconCheck.svg" />
+                                </div>
+                                <div>Totally Free</div>
+                            </div>
+                            <div class="reason">
+                                <div class="circle">
+                                    <img src="../img/iconCheck.svg" />
+                                </div>
+                                <div>320kbps High Quality Audio</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="long-description">
+                        <div class="block-string-container">
+                            <div class="row">
+                                <div class="tile blank medium"></div>
+                                <div class="tile purple text-content header">
+                                    <div class="tile-content">
+                                        <h4>Need Music For<br />Your Game?</h4>
+                                    </div>
+                                </div>
+                                <div class="tile blank medium"></div>
+                                <div class="tile teal text-content header">
+                                    <div class="tile-content">
+                                        <h4>Dream Of Building Your<br />Own Music Player</h4>
+                                    </div>
+                                </div>
+                                <div class="tile blank medium"></div>
+                                <div class="tile blank medium"></div>
+                            </div>
+                            <div class="row">
+                                    <div class="tile blank medium"></div>
+                                    <div class="tile blank medium"></div>
+                                    <div class="tile orange text-content header">
+                                        <div class="tile-content">
+                                            <h4>Always Wanted to Create Your Own Visualizer?</h4>
+                                        </div>
+                                    </div>
+                                    <div class="tile blank medium"></div>
+                                    <div class="tile purple text-content header">
+                                        <div class="tile-content">
+                                            <h4>Have an idea we<br />haven't thought of yet?</h4>
+                                        </div>
+                                    </div>
+                                    <div class="tile blank medium"></div>
+                                </div>
+                            </div>
+                            <button class="button" onclick="window.location.href ='http://audiusproject.github.io/api-docs'">
+                                Read The Docs
+                            </button>
+                        </div>
+
+                        <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
+                        </svg>
+                </div>
+            </section>
+            <section id="top" class="simple-callout inspiration">
                 <div class="container">
                     <div class="content">
                         <div class="copy">
-                            <p>Introducing <em>$AUDIO</em>,<br />
-                               The Audius Platform<br />
-                               Token
-                            </p>
+                            Looking for inspiration? Take a look at these outstanding apps, all built using our free API
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="dashboard-link" class="token-features">
-                <a class="standard-button purple" href="https://dashboard.audius.org" target="_blank" rel="noopener">Explore the Dashboard</a>
-            </section>
-
-            <section id="about" class="bios">
+            <section id="apps" class="bios">
                 <div class="container">
                     <div class="header">
-                        <h2>About</h2>
+                        <h2>Built On Audius</h2>
                     </div>
-                    <div class="content">
-                      <p>
-                        $AUDIO enables network security, exclusive feature access, and community-owned governance.
-The Audius protocol gives everyone the freedom to share, monetize, and listen to any audio. Thanks to $AUDIO, our users can earn a voice in the platform’s future through active contributions to the network.
-                        <br />
-                        <br />
 
-Our SoundCloud alternative helps artists monetize their work in creative ways by better engaging true fans. We’re here to create the future of streaming by giving users the means to shape Audius as the recipients of $AUDIO tokens.
-<br />
-<br />
+                    <div id="appContent" class="row three-columns">
+                    </div>
 
-The protocol will live forever, owned and operated by a decentralized community of artists, api, and fans collaborating to defend the world’s music catalog.
-                      </p>
+                    <div class="bottom">
+                        <button class="button" onclick="window.location.href ='mailto:api@audius.co'">Submit Your Own App</button>
+                        <p onclick="window.location = 'https://audiusproject.github.io/api-docs/'">Learn More About The API</p>
                     </div>
                 </div>
-              </section>
-
-            <section id="dashboard-link" class="token-features">
-                <a class="standard-button purple" href="https://discord.gg/kZkT9ZK" target="_blank" rel="noopener">Join the Conversation on Discord</a>
             </section>
 
-            <section id="audius" class="token-features">
+            <section id="demo" class="bios">
                 <div class="container">
-                    <div class="animations">
-                        <div class="animation one">
-                            <div id="token-audius-animation-1">
-                                <div class="wave-1">
-                                    <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2033px" height="289.3px" viewBox="0 0 2033 289.3" style="enable-background:new 0 0 2033 289.3;" xml:space="preserve">
-                                        <path d="M0,0.6c169.4,0,169.4,270.1,338.8,270.1c169.4,0,169.4-255.6,338.8-255.6c169.4,0,169.4,231,338.8,231 c169.4,0,169.4-168.5,338.8-168.5c169.4,0,169.4,211,338.8,211c169.4,0,169.4-288.1,338.9-288.1"/>
-                                    </svg>
-                                </div>
-                                <div class="wave-2">
-                                    <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2211.1px" height="161.6px" viewBox="0 0 2211.1 161.6" style="enable-background:new 0 0 2211.1 161.6;" xml:space="preserve">
-                                        <path d="M0,161.6c175.4,0,239.5-101.9,387.7-101.9c145.7,0,170,101.9,333.3,101.9C876.1,161.6,930.1,0,1105.5,0 s216.8,161.6,376.5,161.6c163.3,0,195.7-101.9,341.4-101.9c148.2,0,212.3,101.9,387.7,101.9"/>
-                                    </svg>
-                                </div>
-                                <span class="seal">
-                                    <img src="/img/platformToken@2x.png" data-rjs="2" alt="">
-                                </span>
-                                <p>Users stake $AUDIO to secure the platform, and in return receive a share of network fees, governance weight, and exclusive feature unlocks.</p>
-                            </div>
+                    <div class="header">
+                        <h2>See For Yourself</h2>
+                    </div>
+                    <div class="content">
+                        <div class="frame">
+                            <iframe id="playtrack" class="show" width="100%" height="400" src="//jsfiddle.net/rayaudius/pyx9ckbf/33/embedded/js,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            <iframe id="getpopularplaylists" width="100%" height="400" src="//jsfiddle.net/rayaudius/hqgkw2rz/2/embedded/js,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            <iframe id="searchusers" width="100%" height="400" src="//jsfiddle.net/rayaudius/r5e10fqo/embedded/js,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            <iframe id="getallbyartist" width="100%" height="400" src="//jsfiddle.net/rayaudius/w8rx67b0/1/embedded/js,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                         </div>
-                        <div class="animation two">
-                            <div id="token-audius-animation-2">
-                                <span class="hands">
-                                    <img src="/img/token-audius-animation-2-hands.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin one">
-                                    <img src="/img/token-audius-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin two">
-                                    <img src="/img/token-audius-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin three">
-                                    <img src="/img/token-audius-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="coin four">
-                                    <img src="/img/token-audius-animation-2-coin.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="radio">
-                                    <img src="/img/token-audius-animation-2-radio.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol one">
-                                    <img src="/img/token-audius-animation-2-thumb.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol two">
-                                    <img src="/img/token-audius-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol three">
-                                    <img src="/img/token-audius-animation-2-note.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol four">
-                                    <img src="/img/token-audius-animation-2-heart.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol five">
-                                    <img src="/img/token-audius-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol six">
-                                    <img src="/img/token-audius-animation-2-thumb.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol seven">
-                                    <img src="/img/token-audius-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol eight">
-                                    <img src="/img/token-audius-animation-2-heart.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol nine">
-                                    <img src="/img/token-audius-animation-2-plus.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="symbol ten">
-                                    <img src="/img/token-audius-animation-2-thumb.png" data-rjs="2" alt="">
-                                </span>
-                                <span class="dial"></span>
-                                <span class="antenna">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </span>
-                                <div class="waves">
-                                    <div class="wave-1">
-                                        <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2033px" height="289.3px" viewBox="0 0 2033 289.3" style="enable-background:new 0 0 2033 289.3;" xml:space="preserve">
-                                            <path d="M0,0.6c169.4,0,169.4,270.1,338.8,270.1c169.4,0,169.4-255.6,338.8-255.6c169.4,0,169.4,231,338.8,231 c169.4,0,169.4-168.5,338.8-168.5c169.4,0,169.4,211,338.8,211c169.4,0,169.4-288.1,338.9-288.1"/>
-                                        </svg>
-                                    </div>
-                                    <div class="wave-2">
-                                        <svg class="wave" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="2211.1px" height="161.6px" viewBox="0 0 2211.1 161.6" style="enable-background:new 0 0 2211.1 161.6;" xml:space="preserve">
-                                            <path d="M0,161.6c175.4,0,239.5-101.9,387.7-101.9c145.7,0,170,101.9,333.3,101.9C876.1,161.6,930.1,0,1105.5,0 s216.8,161.6,376.5,161.6c163.3,0,195.7-101.9,341.4-101.9c148.2,0,212.3,101.9,387.7,101.9"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <span class="bg">
-                                    <img src="/img/token-audius-animation-2-bg.png" data-rjs="2" alt="">
-                                </span>
-                            </div>
+                        <div class="selections">
+                            <h2>Example API Requests</h2>
+                            <button id="playtrackbtn" onclick="selectFrame(this.id,'playtrack')" class="active">Play The #1 Trending Track</button>
+                            <button id="getpopularplaylistsbtn" onclick="selectFrame(this.id,'getpopularplaylists')">Get Popular Playlists</button>
+                            <button id="searchusersbtn" onclick="selectFrame(this.id,'searchusers')">Search For Artist</button>
+                            <button id="getallbyartistbtn" onclick="selectFrame(this.id,'getallbyartist')">Get All Songs By Artist</button>
+                            <button class="tiny" onclick="window.location.href='https://audiusproject.github.io/api-docs'">Full API Reference</button>
                         </div>
-                        <a class="page-scroll has-title teal" href="#audius-features">
-                            <span>Stake $AUDIO</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9.4" height="26.7" viewBox="0 0 9.4 26.7">
-                                <path d="M7.8 19.3l-2.3 2.9v-22.2h-2v21.9l-1.9-2.7-1.6 1.2 4.5 6.3 4.9-6.1z"/>
+                    </div>
+                </div>
+            </section>
+
+            <div id="person-modal" class="modal" aria-hidden="true">
+                <div class="modal-container">
+                    <div class="modal-frame">
+                        <button class="close-modal">
+                            <svg height="13.6" viewBox="0 0 13.6 13.6" width="13.6" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.6 2l-2-2-4.8 4.8-4.8-4.8-2 2 4.8 4.8-4.8 4.8 2 2 4.8-4.8 4.8 4.8 2-2-4.8-4.8z"/>
                             </svg>
-                        </a>
-                    </div>
-                    <div id="audius-features" class="row two-columns">
-                        <div class="column">
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/iconNodes@2x.png" alt="Icon for Nodes" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p><b>To run discovery or content nodes.</b></p>
-                                    <p>Providers get a higher probability of fan discovery and a share of network fees for securing the network.</p>
-                                </div>
+                            <span>Close</span>
+                        </button>
+                        <div class="modal-content">
+                            <div class="headshot">
+                                <a class="person-link" href="" target="_blank" rel="noopener">
+                                    <svg class="link" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.51729 10.8785L4.86499 9.55526C5.22235 9.20429 5.83755 9.43756 5.85607 9.93334C5.87952 10.5736 5.99807 11.2071 6.20798 11.8138C6.28123 12.0208 6.22795 12.2507 6.0707 12.4062L5.59532 12.8731C4.57846 13.8718 4.54577 15.5004 5.55355 16.5112C6.0425 17.0001 6.70994 17.2769 7.40765 17.2804C8.10535 17.2838 8.77557 17.0135 9.26945 16.5294L11.7085 14.1315C12.7288 13.1287 12.7288 11.5036 11.7085 10.5008C11.5928 10.3882 11.4671 10.2859 11.333 10.1951C11.1811 10.093 11.0875 9.92634 11.0806 9.74573C11.0648 9.3481 11.2194 8.96218 11.5069 8.68175L12.2717 7.93273C12.4725 7.73659 12.7877 7.71042 13.0191 7.87066C14.3552 8.78691 15.211 10.236 15.3575 11.8299C15.5039 13.4239 14.926 15 13.7785 16.1364L13.7654 16.1496L11.325 18.5464C9.17249 20.6605 5.67049 20.6601 3.51693 18.5464C1.36336 16.4328 1.36481 12.9922 3.51729 10.8785Z" fill="#12063D"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8046 9.12718C17.8215 8.12848 17.8542 6.49988 16.8464 5.48905C16.3573 5.0003 15.6898 4.72355 14.9921 4.72027C14.2944 4.71699 13.6243 4.98744 13.1305 5.47157L10.6915 7.86881C9.67114 8.87158 9.67114 10.4967 10.6915 11.4995C10.8072 11.6121 10.9328 11.7144 11.067 11.8051C11.2187 11.9073 11.3122 12.074 11.319 12.2545C11.3351 12.6522 11.1805 13.0382 10.893 13.3185L10.1282 14.0693C9.92738 14.2653 9.61229 14.2915 9.38081 14.1314C8.0441 13.2152 7.18785 11.7657 7.0414 10.1713C6.89495 8.57683 7.47326 7.00029 8.62143 5.86392L8.63451 5.85072L11.075 3.45383C13.2275 1.33979 16.7294 1.34015 18.883 3.45383C21.0366 5.56752 21.0355 9.00733 18.883 11.1224L17.5353 12.4457C17.178 12.7967 16.5628 12.5634 16.5442 12.0676C16.5208 11.4274 16.4022 10.7939 16.1923 10.1872C16.1191 9.98021 16.1723 9.75029 16.3296 9.59479L16.8046 9.12718Z" fill="#12063D"/>
+                                    </svg>
+                                </a>
+                                <img class="photo" src="" alt="Photo of Team Member">
                             </div>
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/iconFeatures@2x.png" alt="Icon for Features" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p><b>To unlock exclusive features and services.</b></p>
-                                    <p>Artists may unlock services like artist tokens and badges, and receive voting power from fans who want to share in their success.</p>
-                                </div>
-                            </div>
-                            <div class="feature">
-                                <div class="icon">
-                                    <div>
-                                        <img src="/img/iconGov@2x.png" alt="Icon for Gov" data-rjs="2">
-                                    </div>
-                                </div>
-                                <div class="description">
-                                    <p><b>To participate in protocol governance and shape the future of Audius.</b></p>
-                                    <p>Every aspect of Audius is governable, creating a truly community-owned and operated streaming service.</p>
-                                </div>
+                            <div class="description">
+                                <h4 class="name"></h4>
+                                <h5 class="title"></h5>
+                                <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
+                                </svg>
+                                <div class="bio"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!--
-            >>================================================================================>
-            Callout
-            >>================================================================================>
-            -->
-
-            <section class="simple-callout">
-                <div class="container">
-                    <div class="content">
-                        <div class="copy">
-                            <p>Want to learn more?</p>
-                        </div>
-                        <a class="standard-button purple" href="https://whitepaper.audius.co" target="_blank" rel="noopener">Read the Whitepaper</a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="distribution" class="bios">
-                <div class="container">
-                    <div class="content">
-                        <img src="../img/circulatingSupply@2x.png" alt="distribution" />
-                    </div>
-                </div>
-              </section>
-
-            <!--
-            >>================================================================================>
-            Newsletter
-            >>================================================================================>
-            -->
+            </div>
 
             <section id="newsletter">
                 <div class="container">
                     <div class="content">
+                        <img src="../img/apiLogo@2x.png" />
                         <div class="header">
-                            <h3>Empowering Artists Like Never Before</h3>
-                            <p>Get the latest news about Audius in your inbox.</p>
+                            <h3>It’s easy to build your<br />own app on Audius</h3>
                         </div>
-                        <form action="https://Audius.us18.list-manage.com/subscribe/post?u=f351897a27ff0a641b8acd9ab&amp;id=f064864764" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-                            <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="standard-button purple">
-                        </form>
+                        <button class="learn-more" onclick="window.location.href = 'https://audius.co/'">Learn More About The Audius API</button>
                     </div>
                 </div>
                 <span class="shapes" data-parallax="2" data-parallax-x="-50%">
@@ -451,11 +438,11 @@ The protocol will live forever, owned and operated by a decentralized community 
                         <nav class="sitemap">
                             <ul>
                                 <li><a href="/protocol/">Protocol</a></li>
-                                <li><a href="/api/">API</a></li>
-                                <li><a class="active" href="/token/">Token</a></li>
+                                <li><a href="/api/" class="active">API</a></li>
+                                <li><a href="/token/">Token</a></li>
                                 <li><a href="/team/">Team</a></li>
                                 <li><a href="/careers/">Careers</a></li>
-                                <li><a href="https://whitepaper.audius.co" target="_blank" rel="noopener">Whitepaper</a></li>
+                                <li><a href="https://whitepaper.audius.co" target="_blank" rel="noopener">White Paper</a></li>
                             </ul>
                         </nav>
                         <nav class="social">
@@ -522,6 +509,5 @@ The protocol will live forever, owned and operated by a decentralized community 
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-        <script src="/js/scripts.min.js"></script>
     </body>
 </html>

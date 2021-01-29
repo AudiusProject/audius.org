@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Developers</title>
+        <title>Protocol</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
@@ -21,7 +21,7 @@
 
         <!--Facebook-->
 
-        <meta property="og:url" content="https://audius.org/developers">
+        <meta property="og:url" content="https://audius.org/protocol">
         <meta property="og:type" content="product">
         <meta property="og:title" content="Audius">
         <meta property="og:description" content="Decentralized Audio Distribution, Attribution & Monetization">
@@ -36,8 +36,7 @@
         <link rel="stylesheet" href="/css/style.min.css">
         <link rel="stylesheet" href="/css/style-global-changes.css">
         <link rel="stylesheet" href="/css/style-mask-animation-fix.css">
-        <link rel="stylesheet" href="/css/style-guitar-blocks.css">
-        <link rel="stylesheet" href="/css/style-fixes-devs.css">
+        <link rel="stylesheet" href="/css/style-fixes-stakers.css">
 
         <!-- Tags -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120325397-4"></script>
@@ -98,8 +97,8 @@
                 <div>
                     <ul>
                         <li class="mobile-only"><a href="/">Home</a></li>
-                        <li><a href="/stakers/">Stakers</a></li>
-                        <li><a href="/developers/" class="active">Developers</a></li>
+                        <li><a href="/protocol/" class="active">Protocol</a></li>
+                        <li><a href="/api/">API</a></li>
                         <li><a href="/token/">Token</a></li>
                         <li><a href="/team/">Team</a></li>
                         <li><a href="/careers/">Careers</a></li>
@@ -172,8 +171,8 @@
             <section id="subpage-intro">
                 <div class="container">
                     <h1>
-                        <span class="visually-hidden">Devs</span>
-                        <img src="/img/maskDevs@2x.png" data-rjs="2" alt="Devs" class="mask">
+                        <span class="visually-hidden">Protocol</span>
+                        <img src="/img/headerProtocol@2x.png" data-rjs="2" alt="Protocol" class="mask">
                         <span class="animation">
                             <span class="sphere orange"></span>
                             <span class="sphere orange-opaque"></span>
@@ -181,79 +180,47 @@
                             <span class="sphere purple-glow"></span>
                         </span>
                     </h1>
-                </div>
+                </div>    
             </section>
 
-            <section id="dev-details">
+            <section id="protocol-details">
                 <div class="content">
                     <div class="short-description">
-                            <h2 class="interested">Want to Build<br/>On Audius?</h2>
+                        <h2 class="interested">Interested in operating a service on the Audius network?</h2>
+                    </div>
+                    <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
+                    </svg>
+                    <div class="long-description">
+                        <p class="stake">Stake Audius tokens on your hosted service and earn revenue from the network.</p>
+                        <button onclick="window.location = 'https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources'" class="getting-started">Getting Started Guide</button>
+                        <p class="wiki">Check out our wiki for more information on how to get started</p>
+                    </div>
+
+                    <div class="dapp">
+                        <div class="background"></div>
+                        <img src="/img/hedgehogLogoHorizontal.svg" class="hedgehogLogo" />
+                        <h3 class="building-header">Building Your Own DApp? Use Audius Hedgehog</h3>
+                        <p class="building-description">
+                                Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. 
+                                Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
+                        </p>
+                        <button class="learn-more" onclick="window.location.href = 'https://hedgehog.audius.co/'">Learn More</button>
+                    </div>
+
+                    <div class="contact">
+                        <div class="background"></div>
+                        <span class="shapes" data-parallax="2" data-parallax-x="-50%">
+                            <img src="/img/newsletter-shapes.png" alt="" data-rjs="2">
+                        </span>
+                        <h3 class="help">Need support onboarding? We’re here to help.</h3>
+                        <div class="form-container">
+                            <form id="mc-embedded-staker-form" name="mc-embedded-staker-form" class="validate" target="_blank" novalidate>
+                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+                                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="standard-button purple">
+                            </form>
                         </div>
-                        <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
-                        </svg>
-                        <div class="long-description">
-                            <p class="stake">The Audius catalog is fully open, meaning developers have the freedom to build whatever they want on Audius.</p>
-                            <div class="api">
-                                <img src="../img/apiLogo@2x.png" alt="api" />
-                                <button onclick="window.location = 'https://audiusproject.github.io/api-docs'" class="api-docs">
-                                    <span class="player-description">Dive in to the Docs</span>
-                                    <span class="click">
-                                        <img alt="open music player" class="icon-open" src="/img/iconOpen.svg"/>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="block-string-container">
-                                <div class="row">
-                                    <div class="tile blank medium"></div>
-                                    <div class="tile purple text-content header">
-                                        <div class="tile-content">
-                                            <h4>Need Music For<br />Your Game?</h4>
-                                        </div>
-                                    </div>
-                                    <div class="tile blank medium"></div>
-                                    <div class="tile teal text-content header">
-                                        <div class="tile-content">
-                                            <h4>Build Your Own<br />Music Player</h4>
-                                        </div>
-                                    </div>
-                                    <div class="tile blank medium"></div>
-                                    <div class="tile blank medium"></div>
-                                </div>
-                                <div class="row">
-                                        <div class="tile blank medium"></div>
-                                        <div class="tile blank medium"></div>
-                                        <div class="tile orange text-content header">
-                                            <div class="tile-content">
-                                                <h4>Create Your Own Visualizer</h4>
-                                            </div>
-                                        </div>
-                                        <div class="tile blank medium"></div>
-                                        <div class="tile purple text-content header">
-                                            <div class="tile-content">
-                                                <h4>Or Anything Else You Can Imagine!</h4>
-                                            </div>
-                                        </div>
-                                        <div class="tile blank medium"></div>
-                                    </div>
-                                </div>
-                            <p class="building-dapp">Build your DApp on the Audius protocol and gain access to the world's only open, artist-owned music library</p>
-                            <button class="getting-started" onclick="window.location.href ='https://github.com/AudiusProject/audius-protocol/wiki'">Check Out Our Github <img src="/img/iconGithub.svg" class="github"/> </button>
-                        </div>
-    
-                        <div class="dapp">
-                            <div class="background"></div>
-                            <span class="shapes" data-parallax="2" data-parallax-x="-50%">
-                                <img src="/img/newsletter-shapes.png" alt="" data-rjs="2">
-                            </span>
-                            <img src="/img/hedgehogLogoHorizontal.svg" class="hedgehogLogo" />
-                            <h3 class="building-header">Building Your Own DApp? Use Audius Hedgehog</h3>
-                            <p class="building-description">
-                                    Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. 
-                                    Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
-                            </p>
-                            <button class="learn-more" onclick="window.location.href = 'https://hedgehog.audius.co/'">Learn More</button>
-                        </div>    
+                    </div>
                 </div>
             </section>
         </main>
@@ -276,8 +243,8 @@
                     <div class="navigation">
                         <nav class="sitemap">
                             <ul>
-                                <li><a href="/stakers/">Stakers</a></li>
-                                <li><a href="/developers/" class="active">Developers</a></li>
+                                <li><a href="/protocol/" class="active">Protocol</a></li>
+                                <li><a href="/api/">API</a></li>
                                 <li><a href="/token/">Token</a></li>
                                 <li><a href="/team/">Team</a></li>
                                 <li><a href="/careers/">Careers</a></li>
@@ -349,5 +316,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
         <script src="/js/scripts.min.js"></script>
+        <script src="/js/protocol.js"></script>
     </body>
 </html>
