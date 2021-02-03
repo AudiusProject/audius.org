@@ -608,6 +608,7 @@
   padding: 0;
   border-radius: 33px;
   overflow: hidden;
+  transform: translateZ(0);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 
