@@ -516,7 +516,7 @@
   width: 100%;
 }
 
-#newsletter img {
+#newsletter .content img {
   width: 230px;
 }
 
@@ -593,10 +593,14 @@
   margin-bottom: 8px !important;
   border-radius: unset !important;
   top: 0 !important;
+
+  display: flex;
+  align-items: center;
 }
 
 .person .description {
   padding: 0 24px;
+  height: 130px;
 }
 
 .person .content {
