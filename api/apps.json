@@ -2,43 +2,64 @@
   {
     "name": "Music Racer",
     "shortDescription": "A musical arcade game, where you race at full speed while dodging obstacles to the rhythm of the music.",
-    "description": "Audis discover new music,new artists and mixes from all around the planet over Audius.org FREE API. Audius is a revolutionary open source API from audius.org. Enjoy this FREE App with no Ads or subscription.",
-    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307nkgzZNYp0cQh-P-EDBCMzxrMoeejiH5g9A1lKP001tsRZQNjpzGexoXoCZKU07XgswdWi6KU4hxNBDElsn6-bc6qoWX.png",
-    "link": "https://store.steampowered.com/app/893030/Music_Racer/"
+    "description": "Available on Desktop (Steam), XBox One, Playstation 4, and Nintendo Switch.",
+    "image": "appShowcase_MusicRacer@2x.png",
+    "link": "https://store.steampowered.com/app/893030/Music_Racer"
   },
   {
-    "name": "Music Racer",
-    "shortDescription": "A musical arcade game, where you race at full speed while dodging obstacles to the rhythm of the music.",
-    "description": "Audis discover new music,new artists and mixes from all around the planet over Audius.org FREE API. Audius is a revolutionary open source API from audius.org. Enjoy this FREE App with no Ads or subscription.",
-    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307nkgzZNYp0cQh-P-EDBCMzxrMoeejiH5g9A1lKP001tsRZQNjpzGexoXoCZKU07XgswdWi6KU4hxNBDElsn6-bc6qoWX.png",
-    "link": "https://store.steampowered.com/app/893030/Music_Racer/"
+    "name": "Stereoload",
+    "shortDescription": "Grow your fanbase for free using fangate follow for download campaigns!",
+    "description": "Get more followers, grow your mailing list, and 100% free for creators. Trusted by 40,000+ artists, sign up today!",
+    "image": "appShowcase_StereoLoad@2x.png",
+    "link": "https://stereoload.com"
   },
   {
-    "name": "Music Racer",
-    "shortDescription": "A musical arcade game, where you race at full speed while dodging obstacles to the rhythm of the music.",
-    "description": "Audis discover new music,new artists and mixes from all around the planet over Audius.org FREE API. Audius is a revolutionary open source API from audius.org. Enjoy this FREE App with no Ads or subscription.",
-    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307nkgzZNYp0cQh-P-EDBCMzxrMoeejiH5g9A1lKP001tsRZQNjpzGexoXoCZKU07XgswdWi6KU4hxNBDElsn6-bc6qoWX.png",
-    "link": "https://store.steampowered.com/app/893030/Music_Racer/"
+    "name": "Songlink / Odesli",
+    "shortDescription": "Automated, on demand smart links for songs, albums, podcasts and more.",
+    "description": "For artists, for fans, for free.",
+    "image": "appShowcase_SonglinkOdesli@2x.png",
+    "link": "https://odesli.co"
   },
   {
-    "name": "Music Racer",
-    "shortDescription": "A musical arcade game, where you race at full speed while dodging obstacles to the rhythm of the music.",
-    "description": "Audis discover new music,new artists and mixes from all around the planet over Audius.org FREE API. Audius is a revolutionary open source API from audius.org. Enjoy this FREE App with no Ads or subscription.",
-    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307nkgzZNYp0cQh-P-EDBCMzxrMoeejiH5g9A1lKP001tsRZQNjpzGexoXoCZKU07XgswdWi6KU4hxNBDElsn6-bc6qoWX.png",
-    "link": "https://store.steampowered.com/app/893030/Music_Racer/"
+    "name": "Audius WordPress Plugin",
+    "shortDescription": "WordPress plugin makes it incredibly easy to embed tracks from Audius.co using your favorite track URL.",
+    "description": "Easily choose between the compact and card embed layouts. Multiple Audius embeds can be added to your posts and pages; simply add a new block!",
+    "image": "appShowcase_Wordpress@2x.png",
+    "link": "https://wordpress.org/plugins/audius-block/"
   },
   {
-    "name": "Music Racer",
-    "shortDescription": "A musical arcade game, where you race at full speed while dodging obstacles to the rhythm of the music.",
-    "description": "Audis discover new music,new artists and mixes from all around the planet over Audius.org FREE API. Audius is a revolutionary open source API from audius.org. Enjoy this FREE App with no Ads or subscription.",
-    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307nkgzZNYp0cQh-P-EDBCMzxrMoeejiH5g9A1lKP001tsRZQNjpzGexoXoCZKU07XgswdWi6KU4hxNBDElsn6-bc6qoWX.png",
-    "link": "https://store.steampowered.com/app/893030/Music_Racer/"
+    "name": "Music Killer",
+    "shortDescription": "The very first music adapting first-person shooter is here!",
+    "description": "Always wanted to shoot mobs while listening to your own favorite music tracks? Now you can.",
+    "image": "appShowcase_MusicKiller@2x.png",
+    "link": "https://store.steampowered.com/app/930620/Music_Killer"
   },
   {
-    "name": "Music Racer",
-    "shortDescription": "A musical arcade game, where you race at full speed while dodging obstacles to the rhythm of the music.",
-    "description": "Audis discover new music,new artists and mixes from all around the planet over Audius.org FREE API. Audius is a revolutionary open source API from audius.org. Enjoy this FREE App with no Ads or subscription.",
-    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307nkgzZNYp0cQh-P-EDBCMzxrMoeejiH5g9A1lKP001tsRZQNjpzGexoXoCZKU07XgswdWi6KU4hxNBDElsn6-bc6qoWX.png",
-    "link": "https://store.steampowered.com/app/893030/Music_Racer/"
-  }
+    "name": "YouTube to Audius Importer",
+    "shortDescription": "Dive into Audius using your existing YouTube videos.",
+    "description": "Jump-start your Audius migration! Enter a url and the tool will import your video into Audius as an audio track!",
+    "image": "appShowcase_YTtoAudius@2x.png",
+    "link": "https://audius.bryce.id"
+  },
+  {
+    "name": "Songwhip",
+    "shortDescription": "Smart music links that reach every platform.",
+    "description": "Increase streams with beautiful landing pages made instantly - no login, no limits, free.",
+    "image": "appShowcase_Songwhip@2x.png",
+    "link": "https://songwhip.com"
+  },
+  {
+    "name": "Bass Booster Volume EQ",
+    "shortDescription": "The best all-in-one iOS music player app that gives you full control to improve sound quality.",
+    "description": "Stream, download from the cloud or listen to radio. Boost the bass and improve the overall sound with a 10-band equalizer.",
+    "image": "appShowcase_BassBoooster@2x.png",
+    "link": "https://apps.apple.com/us/app/bass-booster-volume-booster-eq/id1475414196"
+  },
+  {
+    "name": "Audis",
+    "shortDescription": "Discover new music, artists, and mixes from all around the planet using the Audius.org free API",
+    "description": "Enjoy this free app with no ads or subscription!",
+    "image": "appShowcase_Audis@2x.png",
+    "link": "https://apps.apple.com/us/app/audis/id1535477762"
+  }  
 ]
