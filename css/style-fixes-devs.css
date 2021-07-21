@@ -21,6 +21,10 @@
   display: inline-flex;
 }
 
+#trigger-popup {
+  height: 0;
+}
+
 /* Short Description Section */
 
 .short-description {

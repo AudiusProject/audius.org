@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Protocol</title>
+        <title>Security</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
@@ -21,11 +21,11 @@
 
         <!--Facebook-->
 
-        <meta property="og:url" content="https://audius.org/protocol">
+        <meta property="og:url" content="https://audius.org/security">
         <meta property="og:type" content="product">
-        <meta property="og:title" content="Audius">
-        <meta property="og:description" content="Decentralized Audio Distribution, Attribution & Monetization">
-        <meta property="og:image" content="https://audius.org/img/og-image.png">
+        <meta property="og:title" content="Audius Security">
+        <meta property="og:description" content="">
+        <meta name="twitter:card" content="summary" />
 
         <!--Fonts-->
 
@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="/css/style.min.css">
         <link rel="stylesheet" href="/css/style-global-changes.css">
         <link rel="stylesheet" href="/css/style-mask-animation-fix.css">
-        <link rel="stylesheet" href="/css/style-fixes-stakers.css">
+        <link rel="stylesheet" href="/css/style-fixes-security.css">
 
         <!-- Tags -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120325397-4"></script>
@@ -58,12 +58,12 @@
 
     </head>
 
-    <body class="token">
+    <body class="team">
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTM6CHS"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
+        
         <!--
         >>================================================================================>
         GUI
@@ -97,7 +97,7 @@
                 <div>
                     <ul>
                         <li class="mobile-only"><a href="/">Home</a></li>
-                        <li><a href="/protocol/" class="active">Protocol</a></li>
+                        <li><a href="/protocol/">Protocol</a></li>
                         <li><a href="/api/">API</a></li>
                         <li><a href="/token/">Token</a></li>
                         <li><a href="/team/">Team</a></li>
@@ -164,9 +164,15 @@
 
             <!--
             >>================================================================================>
-            Staking Email signup
+            Parallax Elements
             >>================================================================================>
             -->
+            
+            <span class="parallax-sphere sphere orange" data-parallax="3"></span>
+            <span class="parallax-sphere sphere orange-opaque" data-parallax="1"></span>
+            <span class="parallax-sphere sphere purple-glow" data-parallax="2"></span>
+            <span class="parallax-sphere sphere teal" data-parallax="5"></span>
+            <span class="parallax-sphere sphere teal-opaque" data-parallax="6"></span>
 
             <section id="subpage-intro">
                 <div class="container">
@@ -177,51 +183,77 @@
                             <span class="sphere teal"></span>
                             <span class="sphere purple-glow"></span>
                         </span>
-                        <span class="header-cut-out">Protocol</span>
+                        <span class="header-cut-out">Security</span>
                     </h1>
-                </div>    
-            </section>
-
-            <section id="protocol-details">
-                <div class="content">
-                    <div class="short-description">
-                        <h2 class="interested">Interested in operating a service on the Audius network?</h2>
-                    </div>
                     <svg class="squiggle" aria-hidden="true" height="6.6" viewBox="0 0 46 6.6" width="46" xmlns="http://www.w3.org/2000/svg">
                         <path d="M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z"/>
                     </svg>
-                    <div class="long-description">
-                        <p class="stake">Stake Audius tokens on your hosted service and earn revenue from the network.</p>
-                        <button onclick="window.location = 'https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources'" class="getting-started">Getting Started Guide</button>
-                        <p class="wiki">Check out our wiki for more information on how to get started</p>
-                    </div>
-
-                    <div class="dapp">
-                        <div class="background"></div>
-                        <img src="/img/hedgehogLogoHorizontal.svg" class="hedgehogLogo" />
-                        <h3 class="building-header">Building Your Own DApp? Use Audius Hedgehog</h3>
-                        <p class="building-description">
-                                Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. 
-                                Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
-                        </p>
-                        <button class="learn-more" onclick="window.location.href = 'https://hedgehog.audius.co/'">Learn More</button>
-                    </div>
-
-                    <div class="contact">
-                        <div class="background"></div>
-                        <span class="shapes" data-parallax="2" data-parallax-x="-50%">
-                            <img src="/img/newsletter-shapes.png" alt="" data-rjs="2">
-                        </span>
-                        <h3 class="help">Need support onboarding? We’re here to help.</h3>
-                        <div class="form-container">
-                            <form id="mc-embedded-staker-form" name="mc-embedded-staker-form" class="validate" target="_blank" novalidate>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-                                <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="standard-button purple">
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </section>
+
+            <section id="" class="section bios">
+                <div class="container">
+                    <div class="content">
+                      <p>
+                        Security is vital to Audius' mission. We work hard to ensure that data is always safe.
+                        Our <a href="https://audius.co/legal/privacy-policy">Privacy Policy</a> and <a href="https://audius.co/legal/terms-of-use">Terms of Use</a> describe our data-use practices, and we encourage third-parties to explore our <a href="https://github.com/AudiusProject">Codebases</a> and respectfully disclose vulnerabilities & issues.
+                      </p>
+                    </div>
+                </div>
+              </section>
+
+            <section id="bounty" class="section bios">
+              <div class="container">
+                  <div class="header">
+                      <h2>Bug Bounty Policy</h2>
+                      <p>We generally adhere to HackerOne's <a href="https://www.hackerone.com/disclosure-guidelines">disclosure guidelines</a>.</p>
+                  </div>
+                  <div class="content">
+                    <h2>Disclosure process</h2>
+                    <ol>
+                        <li>Safely disclose issue and applicable proof-of-concept or steps for reproduction to <a href="mailto:security@audius.co">security@audius.co</a></li>
+                        <li>We determine severity of issue together, following informal CVSS guidelines (<a href="https://www.atlassian.com/trust/security/security-severity-levels">example</a>), producing classification (low, medium, high, critical)</li>
+                        <li>Bounty is paid out</li>
+                        <li>Fix is produced, rolled out, and reporter can disclose issue publicly</li>
+                        <li>We produce & publish documentation of issue</li>
+                    </ol>
+                    <h2>Bounty</h2>
+                    <ul>
+                        <li>"Critical" - $5,000</li>
+                        <li>"High" - $2,000</li>
+                        <li>"Medium" - $500</li>
+                        <li>"Low" - $0 - $100</li>
+                    </ul>
+                    <h2>Not eligible for reward</h2>
+                    <ul>
+                        <li>Third-party applications that use Audius APIs</li>
+                        <li>XSS requiring legacy browsers</li>
+                        <li>Self-XSS</li>
+                        <li>SSL/TLS best practices</li>
+                        <li>Missing HTTP header which does not lead to a direct vulnerability</li>
+                        <li>Missing cookie flags, unless the absence can be abused by a legitimate workflow</li>
+                        <li>Clickjacking without demonstration of impact</li>
+                        <li>Account enumeration through brute-force attacks</li>
+                        <li>CSV command execution</li>
+                        <li>Best practice recommendations with no proof-of-concept</li>
+                    </ul>
+                  </div>
+              </div>
+            </section>
+
+            <section id="" class="section bios">
+                <div class="container">
+                    <div class="header">
+                        <h2>Other Concerns</h2>
+                    </div>
+                    <div class="content">
+                      <p>
+                        All other security concerns should be directed at <a href="mailto:security@audius.co">security@audius.co</a>.
+                      </p>
+                    </div>
+                </div>
+              </section>
+
         </main>
 
         <!--
@@ -237,12 +269,12 @@
                         <div class="logo">
                             <img src="/img/audius-footer.png" data-rjs="2" alt="Audius">
                         </div>
-                        <h3>Empowering Artists</h3>
+                        <h3>Empowering Creators</h3>
                     </div>
                     <div class="navigation">
                         <nav class="sitemap">
                             <ul>
-                                <li><a href="/protocol/" class="active">Protocol</a></li>
+                                <li><a href="/protocol/">Protocol</a></li>
                                 <li><a href="/api/">API</a></li>
                                 <li><a href="/token/">Token</a></li>
                                 <li><a href="/team/">Team</a></li>
@@ -315,6 +347,5 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
         <script src="/js/scripts.min.js"></script>
-        <script src="/js/protocol.js"></script>
     </body>
 </html>

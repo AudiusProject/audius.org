@@ -30,3 +30,33 @@ a, button, input[type=submit], path {
 .about #subpage-intro h1 img {
   height: unset !important;
 }
+
+.page-header {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-background {
+  mix-blend-mode: screen;
+}
+
+.header-cut-out {
+  font-size: 200px;
+  font-weight: 900;
+  -webkit-text-stroke: 4px black;
+  text-stroke: 4px black;
+  letter-spacing: 4px;
+  background: white;
+  margin: 0 auto;
+  flex: 1;
+}
+
+@media screen and (max-width: 1020px) {
+  .header-cut-out {
+    -webkit-text-stroke: 2px black;
+    text-stroke: epx black;
+    letter-spacing: 2px;
+    font-size: 60px;
+  }
+}

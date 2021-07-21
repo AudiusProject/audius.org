@@ -1,0 +1,46 @@
+#subpage-intro .container,
+#subpage-intro h1,
+#subpage-intro img {
+  height: 100% !important;
+}
+
+.mask-animation-container {
+  position: relative;
+  display: inline-flex;
+}
+
+#who-w-are h2 {
+  margin: 0;
+}
+
+.section .header {
+  margin-bottom: 32px !important;
+}
+
+.section p {
+  max-width: 1024px;
+  margin: 0 auto;
+  font-size: 23px;
+  line-height: 40px;
+  text-align: center;
+  color: #12063d;
+}
+
+.section h2 {
+  color: #12063d;
+  font-size: 26px;
+}
+
+.section ul, ol {
+  margin-bottom: 32px;
+}
+
+.section li {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+#bounty .content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
