@@ -35,6 +35,7 @@ a, button, input[type=submit], path {
   display: flex;
   margin: 0 auto;
   text-align: center;
+  user-select: none;
 }
 
 .header-background {
