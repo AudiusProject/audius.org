@@ -24,15 +24,16 @@ const MyApp = ({ Component, pageProps }) => (
       <Component {...pageProps} />
     </PageLayout>
 
-    <Script
+    <script
       src='https://code.jquery.com/jquery-3.3.1.min.js'
       integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
       crossOrigin='anonymous'
     />
-    <Script>
+    {/* TODO: jquery fallback */}
+    {/* <script>
       window.jQuery || document.write('
       <script src='/js/vendor/jquery-3.3.1.min.js'></script>')
-    </Script>
+    </script> */}
     <Script src='/js/scripts.min.js'></Script>
   </>
 )
