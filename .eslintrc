@@ -25,7 +25,6 @@
         ],
         "pathGroupsExcludedImportTypes": ["builtin"]
       }
-    ],
-    "import/no-default-export": "error"
+    ]
   }
 }
