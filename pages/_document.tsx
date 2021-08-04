@@ -55,20 +55,6 @@ class MyDocument extends Document {
           />
           <meta name='theme-color' content='#ffffff' />
 
-          {/* Facebook */}
-
-          <meta property='og:url' content='https://audius.org' />
-          <meta property='og:type' content='product' />
-          <meta property='og:title' content='Audius' />
-          <meta
-            property='og:description'
-            content='Decentralized Audio Distribution, Attribution & Monetization'
-          />
-          <meta
-            property='og:image'
-            content='https://audius.org/img/og-image.png'
-          />
-
           {/* Fonts */}
 
           <link rel='stylesheet' href='https://use.typekit.net/ksb1lvi.css' />
