@@ -3,30 +3,9 @@
 # dependencies
 /node_modules
 
-# exposed public scripts except sw.js
-/public/scripts/*
-!/public/scripts/sw.js
-
-# env
-.env/.env.dev.local
-
-# testing
-/coverage
-
 # build
-/build
-/build-development
-/build-demo
-/build-staging
-/build-mobile-staging
-/build-ci
-/build-production
-/build-mobile-production
-/storybook-static
-/build-ipfs-staging
-/build-ipfs-staging.zip
-/build-ipfs-production
-/build-ipfs-production.zip
+/out
+/.next
 
 # distribution
 /dist
