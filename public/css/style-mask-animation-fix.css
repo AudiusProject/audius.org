@@ -1,14 +1,4 @@
-.mask {
-  /* max-height: 300px;
-  position: relative;
-  z-index: 5;
-  display: block;
-  max-width: 100%;
-  object-fit: contain;
-  overflow: hidden; */
-}
-
-.animation {
+.mask-animation-fix .animation {
   position: absolute;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
@@ -18,8 +8,7 @@
   overflow: hidden;
 }
 
-
-.sphere:not(.parallax-sphere) {
+.mask-animation-fix .sphere:not(.parallax-sphere) {
   position: absolute;
   z-index: 3;
   -webkit-animation-duration: 30s;
@@ -32,14 +21,14 @@
   animation-timing-function: linear;
 }
 
-.sphere:not(.parallax-sphere).orange {
+.mask-animation-fix .sphere:not(.parallax-sphere).orange {
   -webkit-transform-origin: top right;
   transform-origin: top right;
   top: 0;
   left: 0;
 }
 
-.sphere:not(.parallax-sphere).orange-opaque {
+.mask-animation-fix .sphere:not(.parallax-sphere).orange-opaque {
   -webkit-transform-origin: center right;
   transform-origin: center right;
   top: 0;
@@ -52,7 +41,7 @@
   height: 193px;
 }
 
-.sphere:not(.parallax-sphere).teal {
+.mask-animation-fix .sphere:not(.parallax-sphere).teal {
   -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
   top: 0;
@@ -64,7 +53,7 @@
   height: 311px;
 }
 
-.sphere:not(.parallax-sphere).purple-glow {
+.mask-animation-fix .sphere:not(.parallax-sphere).purple-glow {
   -webkit-transform-origin: center right;
   transform-origin: center right;
   top: 0;
@@ -76,27 +65,27 @@
   height: 414px;
 }
 
-@media not all, 
-(-webkit-min-device-pixel-ratio: 1.3), 
-not all, (min-resolution: 1.3dppx) {
-  .sphere:not(.parallax-sphere).orange {
+@media not all,
+  (-webkit-min-device-pixel-ratio: 1.3),
+  not all,
+  (min-resolution: 1.3dppx) {
+  .mask-animation-fix .sphere:not(.parallax-sphere).orange {
     background-image: url(../img/sphere-orange@2x.png);
     background-size: 366px 366px;
   }
 
-  .sphere:not(.parallax-sphere).orange-opaque {
+  .mask-animation-fix .sphere:not(.parallax-sphere).orange-opaque {
     background-image: url(../img/sphere-orange-opaque@2x.png);
     background-size: 193px 193px;
   }
 
-  .sphere:not(.parallax-sphere).teal {
+  .mask-animation-fix .sphere:not(.parallax-sphere).teal {
     background-image: url(../img/sphere-teal@2x.png);
     background-size: 311px 311px;
   }
 
-  .sphere:not(.parallax-sphere).purple-glow {
+  .mask-animation-fix .sphere:not(.parallax-sphere).purple-glow {
     background-image: url(../img/sphere-purple-glow@2x.png);
     background-size: 414px 414px;
   }
 }
-

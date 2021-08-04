@@ -9,6 +9,8 @@ import { PageLayout } from 'components/PageLayout'
 import 'public/css/style.min.css'
 import 'public/css/style-global-changes.css'
 import 'public/css/style-index-changes.css'
+import 'public/css/style-mask-animation-fix.css'
+import 'public/css/style-fixes-stakers.css'
 
 const MyApp = ({ Component, pageProps }) => (
   // TODO: add GTM
@@ -19,6 +21,16 @@ const MyApp = ({ Component, pageProps }) => (
         name='viewport'
         content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'
       />
+      {/* Facebook */}
+
+      <meta property='og:url' content='https://audius.org' />
+      <meta property='og:type' content='product' />
+      <meta property='og:title' content='Audius' />
+      <meta
+        property='og:description'
+        content='Decentralized Audio Distribution, Attribution & Monetization'
+      />
+      <meta property='og:image' content='https://audius.org/img/og-image.png' />
     </Head>
     <PageLayout>
       <Component {...pageProps} />
