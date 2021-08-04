@@ -6,5 +6,5 @@ route = "audius.org/*"
 zone_id = "5a3ccccef96ba8b3380b78451ec164e6"
 
 [site]
-bucket = "./"
+bucket = "./out"
 entry-point = "workers-site"
