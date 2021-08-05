@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Roneil Rumburg",
+    "title": "Co-Founder & Chief Executive Officer",
+    "description": "Roneil most recently co-founded Kleiner Perkins' early-stage seed fund. At KP, he was responsible for seed investments into Blockchain and AI companies, including Lightning Labs. Roneil attended Stanford University and previously co-founded a Bitcoin peer to peer payment company called Backslash.",
+    "imageUrl": "/img/roneil-rumburg.png",
+    "linkedInUrl": "https://www.linkedin.com/in/roneilr"
+  },
+  {
+    "name": "Forrest Browning",
+    "title": "Co-Founder & Chief Product Officer",
+    "description": "Forrest is a Forbes 30 Under 30 recipient, and most recently was a Co-Founder of StacksWare, an enterprise datacenter management platform started from a Stanford University research project. The company provides analytics at scale for Fortune 500 customers, and was successfully acquired in late 2017.",
+    "imageUrl": "/img/forrest-browning.png",
+    "linkedInUrl": "https://www.linkedin.com/in/forrestbrowning"
+  }
+]

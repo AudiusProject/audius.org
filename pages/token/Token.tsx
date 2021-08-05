@@ -2,7 +2,7 @@ import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 import Head from 'next/head'
 import React from 'react'
-import Newsletter from './Newsletter'
+import Newsletter from 'components/Newsletter'
 import WhitepaperCallout from './Whitepaper'
 
 const TokenPage = () => {

@@ -5,14 +5,7 @@ import Script from 'next/script'
 
 import { PageLayout } from 'components/PageLayout'
 
-import 'public/styles/styles.scss'
-
-import 'public/styles/mask-animation-fix.scss'
-
-import 'public/styles/home-page.scss'
-import 'public/styles/protocol-page.scss'
-import 'public/styles/api-page.scss'
-import 'public/styles/token-page.scss'
+import 'public/styles/index.scss'
 
 const MyApp = ({ Component, pageProps }) => (
   // TODO: add GTM
