@@ -44,7 +44,7 @@ const Header = () => {
                 <StyledLink href='/protocol'>Protocol</StyledLink>
               </li>
               <li>
-                <StyledLink href='/api'>API</StyledLink>
+                <StyledLink href='/audius-api'>API</StyledLink>
               </li>
               <li>
                 <StyledLink href='/token'>Token</StyledLink>

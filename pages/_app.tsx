@@ -5,12 +5,13 @@ import Script from 'next/script'
 
 import { PageLayout } from 'components/PageLayout'
 
-// TODO: rename since it is no longer minified
 import 'public/css/style.min.css'
 import 'public/css/style-global-changes.css'
 import 'public/css/style-index-changes.css'
 import 'public/css/style-mask-animation-fix.css'
 import 'public/css/style-fixes-stakers.css'
+import 'public/css/style-guitar-blocks.css'
+import 'public/css/style-fixes-devs.css'
 
 const MyApp = ({ Component, pageProps }) => (
   // TODO: add GTM
@@ -21,16 +22,6 @@ const MyApp = ({ Component, pageProps }) => (
         name='viewport'
         content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'
       />
-      {/* Facebook */}
-
-      <meta property='og:url' content='https://audius.org' />
-      <meta property='og:type' content='product' />
-      <meta property='og:title' content='Audius' />
-      <meta
-        property='og:description'
-        content='Decentralized Audio Distribution, Attribution & Monetization'
-      />
-      <meta property='og:image' content='https://audius.org/img/og-image.png' />
     </Head>
     <PageLayout>
       <Component {...pageProps} />
@@ -46,7 +37,12 @@ const MyApp = ({ Component, pageProps }) => (
       window.jQuery || document.write('
       <script src='/js/vendor/jquery-3.3.1.min.js'></script>')
     </script> */}
-    <Script src='/js/scripts.min.js'></Script>
+    <Script src='/build/js/modernizr-custom.min.js'></Script>
+    <Script src='/build/js/MorphSVGPlugin.min.js'></Script>
+    <Script src='/build/js/TweenMax.min.js'></Script>
+    <Script src='/build/js/player.js'></Script>
+    <Script src='/build/js/retina.js'></Script>
+    <Script src='/build/js/main.js'></Script>
   </>
 )
 

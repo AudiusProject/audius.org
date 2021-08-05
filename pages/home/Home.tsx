@@ -4,12 +4,14 @@ import Head from 'next/head'
 
 import Intro from './Intro'
 import Value from './Value'
+import OpenGraphTags from 'components/OpenGraphTags'
 
 function HomePage() {
   return (
     <div>
       <Head>
         <title>Audius</title>
+        <OpenGraphTags />
       </Head>
 
       <span className='parallax-sphere sphere orange' data-parallax='3'></span>

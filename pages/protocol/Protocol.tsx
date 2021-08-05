@@ -1,13 +1,16 @@
 import React from 'react'
 
 import Head from 'next/head'
+
 import SubpageIntro from 'components/SubpageIntro'
+import OpenGraphTags from 'components/OpenGraphTags'
 
 function ProtocolPage() {
   return (
     <div className='mask-animation-fix'>
       <Head>
         <title>Protocol</title>
+        <OpenGraphTags title='Audius | Protocol' path='/protocol' />
       </Head>
 
       <SubpageIntro title='Protocol' />
