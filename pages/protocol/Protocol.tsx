@@ -7,7 +7,7 @@ import OpenGraphTags from 'components/OpenGraphTags'
 
 function ProtocolPage() {
   return (
-    <div className='mask-animation-fix'>
+    <div className='protocol-page mask-animation-fix'>
       <Head>
         <title>Protocol</title>
         <OpenGraphTags title='Audius | Protocol' path='/protocol' />

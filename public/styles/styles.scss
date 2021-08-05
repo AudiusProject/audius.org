@@ -6177,4 +6177,71 @@ section.bios .person .description h5 {
     display: none;
   }
 }
-/*# sourceMappingURL=style.min.css.map */
+
+body {
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+a,
+button,
+input[type='submit'],
+path {
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, opacity 0.15s ease, fill 0.15s ease;
+}
+
+.notification-bar {
+  position: fixed;
+  top: 86px;
+  left: 0;
+  right: 0;
+}
+
+.notification-bar .content {
+  min-height: 40px;
+  max-width: 720px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #12063d;
+  margin: 0px auto;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  text-align: center;
+}
+
+.about #subpage-intro h1 img {
+  height: unset !important;
+}
+
+.page-header {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  user-select: none;
+}
+
+.header-background {
+  mix-blend-mode: screen;
+}
+
+.header-cut-out {
+  font-size: 200px;
+  font-weight: 900;
+  -webkit-text-stroke: 4px black;
+  text-stroke: 4px black;
+  letter-spacing: 4px;
+  background: white;
+  margin: 0 auto;
+  flex: 1;
+}
+
+@media screen and (max-width: 1020px) {
+  .header-cut-out {
+    -webkit-text-stroke: 2px black;
+    text-stroke: epx black;
+    letter-spacing: 2px;
+    font-size: 60px;
+  }
+}

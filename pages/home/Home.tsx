@@ -8,7 +8,7 @@ import OpenGraphTags from 'components/OpenGraphTags'
 
 function HomePage() {
   return (
-    <div>
+    <div className='home-page'>
       <Head>
         <title>Audius</title>
         <OpenGraphTags />

@@ -1,84 +1,87 @@
-@media screen and (min-width: 1020px) {
-#non-fungible ul li:not(:last-child):after {
-    content: '+';
-    position: absolute;
-    color: #6d00e8;
-    font-size: 30px;
-    right: -78px;
-    top: 48px;
-}
-}
+.token-page {
+  @media screen and (min-width: 1020px) {
+    #non-fungible ul li:not(:last-child):after {
+      content: '+';
+      position: absolute;
+      color: #6d00e8;
+      font-size: 30px;
+      right: -78px;
+      top: 48px;
+    }
+  }
 
-.simple-callout .container {
+  .simple-callout .container {
     margin: 100px;
-}
+  }
 
-.simple-callout .copy p {
+  .simple-callout .copy p {
     font-style: normal;
     font-weight: 600;
     font-size: 46px;
     line-height: 70px;
     text-align: center;
     letter-spacing: 0.4px;
-}
+  }
 
-.simple-callout .copy p em {
-    color: #B031E7;
+  .simple-callout .copy p em {
+    color: #b031e7;
     font-style: normal;
     font-weight: 1000;
-}
+  }
 
-.simple-callout {
+  .simple-callout {
     margin-bottom: 90px !important;
-}
+  }
 
-#dashboard-link {
+  #dashboard-link {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 0px !important;
-}
+  }
 
-#about h2 {
+  #about h2 {
     margin: 0;
-}
+  }
 
-#about .header {
+  #about .header {
     margin-bottom: 32px;
-}
+  }
 
-#about p {
+  #about p {
     max-width: 1024px;
     margin: 0 auto;
     font-size: 23px;
     line-height: 40px;
     text-align: center;
     color: #12063d;
-}
+  }
 
-#audius-features .column, #audius-features .description {
+  #audius-features .column,
+  #audius-features .description {
     width: 100% !important;
     max-width: unset !important;
-}
+  }
 
-#distribution {
+  #distribution {
     padding-bottom: 100px;
-}
+  }
 
-#distribution .header {
+  #distribution .header {
     margin-bottom: 0px !important;
-}
+  }
 
-#distribution .container {
+  #distribution .container {
     padding-bottom: 40px !important;
-}
+  }
 
-#token-audius-animation-1 .seal,
-#token-audius-animation-1 .seal img {
+  #token-audius-animation-1 .seal,
+  #token-audius-animation-1 .seal img {
     height: 300px !important;
-}
+  }
 
-#token-audius-animation-1 p {
+  #token-audius-animation-1 p {
     width: 386px !important;
     bottom: 8px !important;
+  }
 }

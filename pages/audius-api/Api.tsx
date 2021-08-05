@@ -78,7 +78,7 @@ const ApiPage = () => {
   }
 
   return (
-    <>
+    <div className='api-page'>
       <Head>
         <title>API</title>
         <OpenGraphTags
@@ -375,7 +375,7 @@ const ApiPage = () => {
           <img src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
         </span>
       </section>
-    </>
+    </div>
   )
 }
 

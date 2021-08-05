@@ -5,13 +5,14 @@ import Script from 'next/script'
 
 import { PageLayout } from 'components/PageLayout'
 
-import 'public/css/style.min.css'
-import 'public/css/style-global-changes.css'
-import 'public/css/style-index-changes.css'
-import 'public/css/style-mask-animation-fix.css'
-import 'public/css/style-fixes-stakers.css'
-import 'public/css/style-guitar-blocks.css'
-import 'public/css/style-fixes-devs.css'
+import 'public/styles/styles.scss'
+
+import 'public/styles/mask-animation-fix.scss'
+
+import 'public/styles/home-page.scss'
+import 'public/styles/protocol-page.scss'
+import 'public/styles/api-page.scss'
+import 'public/styles/token-page.scss'
 
 const MyApp = ({ Component, pageProps }) => (
   // TODO: add GTM
@@ -37,9 +38,9 @@ const MyApp = ({ Component, pageProps }) => (
       window.jQuery || document.write('
       <script src='/js/vendor/jquery-3.3.1.min.js'></script>')
     </script> */}
-    <Script src='/build/js/modernizr-custom.min.js'></Script>
-    <Script src='/build/js/MorphSVGPlugin.min.js'></Script>
-    <Script src='/build/js/TweenMax.min.js'></Script>
+    <script src='/build/js/modernizr-custom.min.js'></script>
+    <script src='/build/js/MorphSVGPlugin.min.js'></script>
+    <script src='/build/js/TweenMax.min.js'></script>
     <Script src='/build/js/player.js'></Script>
     <Script src='/build/js/retina.js'></Script>
     <Script src='/build/js/main.js'></Script>
