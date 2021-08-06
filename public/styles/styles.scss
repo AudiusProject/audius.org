@@ -370,7 +370,7 @@ main {
 .love {
   display: inline-block;
   vertical-align: middle;
-  background-image: url(../img/heart.svg);
+  background-image: url(/img/heart.svg);
   background-size: cover;
   text-indent: -9999px;
   overflow: hidden;
@@ -514,7 +514,7 @@ main {
   }
 }
 .sphere.orange {
-  background-image: url(../img/sphere-orange.png);
+  background-image: url(/img/sphere-orange.png);
   width: 366px;
   height: 366px;
 }
@@ -523,12 +523,12 @@ main {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .sphere.orange {
-    background-image: url('../img/sphere-orange@2x.png');
+    background-image: url('/img/sphere-orange@2x.png');
     background-size: 366px 366px;
   }
 }
 .sphere.orange-opaque {
-  background-image: url(../img/sphere-orange-opaque.png);
+  background-image: url(/img/sphere-orange-opaque.png);
   width: 193px;
   height: 193px;
 }
@@ -537,12 +537,12 @@ main {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .sphere.orange-opaque {
-    background-image: url('../img/sphere-orange-opaque@2x.png');
+    background-image: url('/img/sphere-orange-opaque@2x.png');
     background-size: 193px 193px;
   }
 }
 .sphere.purple-glow {
-  background-image: url(../img/sphere-purple-glow.png);
+  background-image: url(/img/sphere-purple-glow.png);
   width: 414px;
   height: 414px;
 }
@@ -551,12 +551,12 @@ main {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .sphere.purple-glow {
-    background-image: url('../img/sphere-purple-glow@2x.png');
+    background-image: url('/img/sphere-purple-glow@2x.png');
     background-size: 414px 414px;
   }
 }
 .sphere.teal {
-  background-image: url(../img/sphere-teal.png);
+  background-image: url(/img/sphere-teal.png);
   width: 311px;
   height: 311px;
 }
@@ -565,12 +565,12 @@ main {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .sphere.teal {
-    background-image: url('../img/sphere-teal@2x.png');
+    background-image: url('/img/sphere-teal@2x.png');
     background-size: 311px 311px;
   }
 }
 .sphere.teal-opaque {
-  background-image: url(../img/sphere-teal-opaque.png);
+  background-image: url(/img/sphere-teal-opaque.png);
   width: 156px;
   height: 156px;
 }
@@ -579,12 +579,12 @@ main {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .sphere.teal-opaque {
-    background-image: url('../img/sphere-teal-opaque.png');
+    background-image: url('/img/sphere-teal-opaque.png');
     background-size: 156px 156px;
   }
 }
 .sphere.purple {
-  background-image: url(../img/sphere-purple.png);
+  background-image: url(/img/sphere-purple.png);
   width: 298px;
   height: 298px;
 }
@@ -593,7 +593,7 @@ main {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .sphere.purple {
-    background-image: url('../img/sphere-purple@2x.png');
+    background-image: url('/img/sphere-purple@2x.png');
     background-size: 298px 298px;
   }
 }
@@ -806,12 +806,12 @@ main {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   margin-left: -35px;
-  background-image: url(../img/reuseable-divider-wave-alt.svg);
+  background-image: url(/img/reuseable-divider-wave-alt.svg);
 }
 .page-scroll.has-waves:after {
   top: -20px;
   margin-left: 70px;
-  background-image: url(../img/reuseable-divider-wave.svg);
+  background-image: url(/img/reuseable-divider-wave.svg);
 }
 @media screen and (min-width: 1020px) {
   #menu-button {
@@ -945,7 +945,7 @@ main {
   .main-header .menu > div > ul > li > span:after {
     content: '';
     position: absolute;
-    background-image: url(../img/down-arrow-pink.svg);
+    background-image: url(/img/down-arrow-pink.svg);
     background-size: 10px 7px;
     width: 10px;
     height: 7px;
@@ -996,13 +996,13 @@ main {
     background-position: right 10px center;
   }
   .main-header .menu > div > ul > li > ul li.language.english {
-    background-image: url(../img/flag-english.png);
+    background-image: url(/img/flag-english.png);
   }
   .main-header .menu > div > ul > li > ul li.language.chinese {
-    background-image: url(../img/flag-chinese.png);
+    background-image: url(/img/flag-chinese.png);
   }
   .main-header .menu > div > ul > li > ul li.language.japanese {
-    background-image: url(../img/flag-japanese.png);
+    background-image: url(/img/flag-japanese.png);
   }
   .no-touchevents .main-header .menu > div > ul > li:hover > ul,
   .main-header .menu > div > ul > li.active > ul {
@@ -1096,7 +1096,7 @@ main {
     position: absolute;
     width: 64px;
     height: 73px;
-    background-image: url(../img/audius-white.svg);
+    background-image: url(/img/audius-white.svg);
     background-size: 64px 73px;
     left: 50%;
     top: 20px;
@@ -1134,7 +1134,7 @@ main {
   .main-header .menu > div > ul > li > span:after {
     content: '';
     position: absolute;
-    background-image: url(../img/down-arrow-white.svg);
+    background-image: url(/img/down-arrow-white.svg);
     background-size: 15px 10px;
     width: 15px;
     height: 10px;
@@ -1172,13 +1172,13 @@ main {
     background-position: center right 10px;
   }
   .main-header .menu > div > ul > li > ul > li.language.english a {
-    background-image: url(../img/flag-english.png);
+    background-image: url(/img/flag-english.png);
   }
   .main-header .menu > div > ul > li > ul > li.language.chinese a {
-    background-image: url(../img/flag-chinese.png);
+    background-image: url(/img/flag-chinese.png);
   }
   .main-header .menu > div > ul > li > ul > li.language.japanese a {
-    background-image: url(../img/flag-japanese.png);
+    background-image: url(/img/flag-japanese.png);
   }
   .main-header .menu > div > ul > li > ul > li a {
     display: block;
@@ -1207,7 +1207,7 @@ main {
     position: fixed;
     width: 642px;
     height: 559px;
-    background-image: url(../img/menu-bg-shapes.png);
+    background-image: url(/img/menu-bg-shapes.png);
     top: 150px;
     left: 28%;
     -webkit-transform: translateX(-50%);
@@ -1219,7 +1219,7 @@ main {
   screen and (max-width: 1019px) and (min-device-pixel-ratio: 1.3),
   screen and (max-width: 1019px) and (min-resolution: 1.3dppx) {
   .main-header .menu .bg-shapes span {
-    background-image: url('../img/menu-bg-shapes@2x.png');
+    background-image: url('/img/menu-bg-shapes@2x.png');
     background-size: 642px 559px;
   }
 }
@@ -1456,14 +1456,14 @@ main {
   overflow: hidden;
   background-repeat: repeat-x;
   background-position: center;
-  background-image: url(../img/intro-animation-wave-bg.png);
+  background-image: url(/img/intro-animation-wave-bg.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #intro-animation {
-    background-image: url('../img/intro-animation-wave-bg@2x.png');
+    background-image: url('/img/intro-animation-wave-bg@2x.png');
     background-size: 4000px 1002px;
   }
 }
@@ -1569,14 +1569,14 @@ main {
   position: absolute;
   width: 2023px;
   height: 460px;
-  background-image: url(../img/intro-animation-bars-bg.png);
+  background-image: url(/img/intro-animation-bars-bg.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #intro-animation .bars-bg .bars {
-    background-image: url('../img/intro-animation-bars-bg@2x.png');
+    background-image: url('/img/intro-animation-bars-bg@2x.png');
     background-size: 2023px 460px;
   }
 }
@@ -1600,20 +1600,20 @@ main {
   height: 290px;
 }
 #intro-animation .wave-1 .dot.one span {
-  background-image: url(../img/intro-animation-heart.svg);
+  background-image: url(/img/intro-animation-heart.svg);
 }
 #intro-animation .wave-1 .dot.two span {
-  background-image: url(../img/intro-animation-thumb.svg);
+  background-image: url(/img/intro-animation-thumb.svg);
 }
 #intro-animation .wave-1 .dot.three span {
-  background-image: url(../img/intro-animation-heart.svg);
+  background-image: url(/img/intro-animation-heart.svg);
 }
 #intro-animation .wave-1 .dot.four span {
-  background-image: url(../img/intro-animation-thumb.svg);
+  background-image: url(/img/intro-animation-thumb.svg);
 }
 #intro-animation .wave-1 .dot:before,
 #intro-animation .wave-1 .dot:after {
-  background-image: url(../img/intro-animation-orange-dot.png);
+  background-image: url(/img/intro-animation-orange-dot.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
@@ -1621,7 +1621,7 @@ main {
   (min-resolution: 1.3dppx) {
   #intro-animation .wave-1 .dot:before,
   #intro-animation .wave-1 .dot:after {
-    background-image: url('../img/intro-animation-orange-dot@2x.png');
+    background-image: url('/img/intro-animation-orange-dot@2x.png');
     background-size: 95px 95px;
   }
 }
@@ -1645,20 +1645,20 @@ main {
   height: 162px;
 }
 #intro-animation .wave-2 .dot.one span {
-  background-image: url(../img/intro-animation-music-1.svg);
+  background-image: url(/img/intro-animation-music-1.svg);
 }
 #intro-animation .wave-2 .dot.two span {
-  background-image: url(../img/intro-animation-music-2.svg);
+  background-image: url(/img/intro-animation-music-2.svg);
 }
 #intro-animation .wave-2 .dot.three span {
-  background-image: url(../img/intro-animation-music-3.svg);
+  background-image: url(/img/intro-animation-music-3.svg);
 }
 #intro-animation .wave-2 .dot.four span {
-  background-image: url(../img/intro-animation-music-2.svg);
+  background-image: url(/img/intro-animation-music-2.svg);
 }
 #intro-animation .wave-2 .dot:before,
 #intro-animation .wave-2 .dot:after {
-  background-image: url(../img/intro-animation-purple-dot.png);
+  background-image: url(/img/intro-animation-purple-dot.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
@@ -1666,7 +1666,7 @@ main {
   (min-resolution: 1.3dppx) {
   #intro-animation .wave-2 .dot:before,
   #intro-animation .wave-2 .dot:after {
-    background-image: url('../img/intro-animation-purple-dot@2x.png');
+    background-image: url('/img/intro-animation-purple-dot@2x.png');
     background-size: 95px 95px;
   }
 }
@@ -1825,7 +1825,7 @@ body.modal-active {
     max-width: 1030px;
   }
   .modal#person-modal .modal-container .modal-frame .modal-content {
-    background-image: url(../img/person-modal-bg.png);
+    background-image: url(/img/person-modal-bg.png);
     background-position: center right;
     background-repeat: no-repeat;
     display: flex;
@@ -1839,7 +1839,7 @@ body.modal-active {
   screen and (min-width: 1020px) and (min-device-pixel-ratio: 1.3),
   screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
   .modal#person-modal .modal-container .modal-frame .modal-content {
-    background-image: url('../img/person-modal-bg@2x.png');
+    background-image: url('/img/person-modal-bg@2x.png');
     background-size: 252px 460px;
   }
 }
@@ -2067,7 +2067,7 @@ body.modal-active {
   #value {
     position: relative;
     padding-top: 375px;
-    background-image: url(../img/value-bg.jpg);
+    background-image: url(/img/value-bg.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
   }
@@ -2732,7 +2732,7 @@ body.modal-active {
 #features header h2:before,
 #features header h2:after {
   content: '';
-  background-image: url(../img/reuseable-divider-wave.svg);
+  background-image: url(/img/reuseable-divider-wave.svg);
   background-size: 1875px 50px;
   position: absolute;
   width: 1875px;
@@ -2755,14 +2755,14 @@ body.modal-active {
   height: 100%;
   background-position: bottom left;
   background-repeat: repeat-x;
-  background-image: url(../img/feature-header-bars.png);
+  background-image: url(/img/feature-header-bars.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #features .feature-list .header:before {
-    background-image: url('../img/feature-header-bars@2x.png');
+    background-image: url('/img/feature-header-bars@2x.png');
     background-size: 528px 87px;
   }
 }
@@ -2889,7 +2889,7 @@ body.modal-active {
 #newsletter {
   background-repeat: repeat-x;
   background-position: top center;
-  background-image: url(../img/newsletter-wave-bg.png);
+  background-image: url(/img/newsletter-wave-bg.png);
   overflow: hidden;
   position: relative;
 }
@@ -2898,7 +2898,7 @@ body.modal-active {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #newsletter {
-    background-image: url('../img/newsletter-wave-bg@2x.png');
+    background-image: url('/img/newsletter-wave-bg@2x.png');
     background-size: 4000px 1352px;
   }
 }
@@ -3629,7 +3629,7 @@ body.modal-active {
 #token-loud-animation-1 {
   position: relative;
   background-color: #12063d;
-  background-image: url(../img/token-loud-animation-1-bg.png);
+  background-image: url(/img/token-loud-animation-1-bg.png);
   overflow: hidden;
 }
 #token-loud-animation-1 p {
@@ -3973,7 +3973,7 @@ body.modal-active {
 #token-audius-animation-1 {
   position: relative;
   background-color: #12063d;
-  background-image: url(../img/token-audius-animation-1-bg.png);
+  background-image: url(/img/token-audius-animation-1-bg.png);
   background-position: center;
   overflow: hidden;
 }
@@ -4350,7 +4350,7 @@ body.modal-active {
 .simple-callout {
   position: relative;
   min-height: 394px;
-  background-image: url(../img/simple-callout-bg.png);
+  background-image: url(/img/simple-callout-bg.png);
   background-position: top center;
   background-repeat: no-repeat;
   text-align: center;
@@ -4360,7 +4360,7 @@ body.modal-active {
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   .simple-callout {
-    background-image: url('../img/simple-callout-bg@2x.png');
+    background-image: url('/img/simple-callout-bg@2x.png');
     background-size: 478px 394px;
   }
 }
@@ -4460,50 +4460,50 @@ body.modal-active {
   letter-spacing: 1.5px;
 }
 #non-fungible ul li.erc721 span {
-  background-image: url(../img/non-fungible-erc721.png);
+  background-image: url(/img/non-fungible-erc721.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #non-fungible ul li.erc721 span {
-    background-image: url('../img/non-fungible-erc721@2x.png');
+    background-image: url('/img/non-fungible-erc721@2x.png');
     background-size: 191px 167px;
   }
 }
 #non-fungible ul li.artist span {
-  background-image: url(../img/non-fungible-creator.png);
+  background-image: url(/img/non-fungible-creator.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #non-fungible ul li.artist span {
-    background-image: url('../img/non-fungible-creator@2x.png');
+    background-image: url('/img/non-fungible-creator@2x.png');
     background-size: 191px 167px;
   }
 }
 #non-fungible ul li.compilation span {
-  background-image: url(../img/non-fungible-compilation.png);
+  background-image: url(/img/non-fungible-compilation.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #non-fungible ul li.compilation span {
-    background-image: url('../img/non-fungible-compilation@2x.png');
+    background-image: url('/img/non-fungible-compilation@2x.png');
     background-size: 191px 167px;
   }
 }
 #non-fungible ul li.tour span {
-  background-image: url(../img/non-fungible-tour.png);
+  background-image: url(/img/non-fungible-tour.png);
 }
 @media (min--moz-device-pixel-ratio: 1.3),
   (-webkit-min-device-pixel-ratio: 1.3),
   (min-device-pixel-ratio: 1.3),
   (min-resolution: 1.3dppx) {
   #non-fungible ul li.tour span {
-    background-image: url('../img/non-fungible-tour@2x.png');
+    background-image: url('/img/non-fungible-tour@2x.png');
     background-size: 191px 167px;
   }
 }
@@ -4657,7 +4657,7 @@ body.modal-active {
     transform: translateX(-50%);
     min-width: 1500px;
     background-size: 492px 82px;
-    background-image: url(../img/roadmap-date-row-bg.svg);
+    background-image: url(/img/roadmap-date-row-bg.svg);
     background-repeat: repeat-x;
     background-position: center center;
   }
@@ -4730,7 +4730,7 @@ body.modal-active {
     height: 82px;
     width: 1020px;
     background-size: 492px 82px;
-    background-image: url(../img/roadmap-date-row-bg.svg);
+    background-image: url(/img/roadmap-date-row-bg.svg);
     background-repeat: repeat-x;
     background-position: center center;
     z-index: -1;
@@ -4747,7 +4747,7 @@ body.modal-active {
 }
 #architecture {
   background-image: linear-gradient(#fff, #f8f9fd);
-  background-image: url(../img/architecture-bg.jpg);
+  background-image: url(/img/architecture-bg.jpg);
   background-position: top center;
   background-repeat: repeat-x;
 }
@@ -4875,7 +4875,7 @@ body.modal-active {
   }
   #architecture .line.one:before {
     content: '';
-    background-image: url(../img/roadmap-arrow.svg);
+    background-image: url(/img/roadmap-arrow.svg);
     width: 11px;
     height: 6px;
     position: absolute;
@@ -4906,7 +4906,7 @@ body.modal-active {
   }
   #architecture .line.two:before {
     content: '';
-    background-image: url(../img/roadmap-arrow.svg);
+    background-image: url(/img/roadmap-arrow.svg);
     width: 11px;
     height: 6px;
     position: absolute;
@@ -4933,7 +4933,7 @@ body.modal-active {
   }
   #architecture .line.three:before {
     content: '';
-    background-image: url(../img/roadmap-arrow.svg);
+    background-image: url(/img/roadmap-arrow.svg);
     width: 11px;
     height: 6px;
     position: absolute;
@@ -4966,7 +4966,7 @@ body.modal-active {
   }
   #architecture .line.four:before {
     content: '';
-    background-image: url(../img/roadmap-arrow.svg);
+    background-image: url(/img/roadmap-arrow.svg);
     width: 11px;
     height: 6px;
     position: absolute;
@@ -5005,7 +5005,7 @@ body.modal-active {
   }
   #architecture .line.five:before {
     content: '';
-    background-image: url(../img/roadmap-arrow.svg);
+    background-image: url(/img/roadmap-arrow.svg);
     width: 11px;
     height: 6px;
     position: absolute;
@@ -5030,7 +5030,7 @@ body.modal-active {
   }
   #architecture .line.six:before {
     content: '';
-    background-image: url(../img/roadmap-arrow.svg);
+    background-image: url(/img/roadmap-arrow.svg);
     width: 11px;
     height: 6px;
     position: absolute;
