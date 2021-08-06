@@ -2,17 +2,17 @@ import React from 'react'
 
 import Head from 'next/head'
 
+import Investors from 'components/Investors'
+import Newsletter from 'components/Newsletter'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
+import Bio from './Bio'
+import advisors from './advisors.json'
 import leadership from './leadership.json'
 import teamMembers from './teamMembers.json'
-import advisors from './advisors.json'
-import Bio from './Bio'
-import Investors from 'components/Investors'
-import Newsletter from 'components/Newsletter'
 
-const TeamPage = () => {
+const Team = () => {
   return (
     <div className='team-page mask-animation-fix'>
       <Head>
@@ -27,7 +27,7 @@ const TeamPage = () => {
             Audius is a team of entrepreneurs, engineers, audiophiles, and
             blockchain experts. Our mission is to empower a new generation of
             audio artists on the decentralized web.{' '}
-            <a href='/careers/'>We're hiring!</a>
+            <a href='/careers/'>We&apos;re hiring!</a>
           </>
         }
       />
@@ -60,7 +60,7 @@ const TeamPage = () => {
               className='standard-button purple'
               href='mailto:careers@audius.co'
               target='_blank'
-              rel='noopener'
+              rel='noopener noreferrer'
             >
               Get In Touch
             </a>
@@ -83,4 +83,4 @@ const TeamPage = () => {
   )
 }
 
-export default TeamPage
+export default Team

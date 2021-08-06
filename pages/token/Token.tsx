@@ -1,11 +1,14 @@
+import React from 'react'
+
+import Head from 'next/head'
+
+import Newsletter from 'components/Newsletter'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
-import Head from 'next/head'
-import React from 'react'
-import Newsletter from 'components/Newsletter'
+
 import WhitepaperCallout from './Whitepaper'
 
-const TokenPage = () => {
+const Token = () => {
   return (
     <div className='token-page'>
       <Head>
@@ -44,7 +47,7 @@ const TokenPage = () => {
           className='standard-button purple'
           href='https://dashboard.audius.org'
           target='_blank'
-          rel='noopener'
+          rel="noopener noreferrer"
         >
           Explore the Dashboard
         </a>
@@ -83,7 +86,7 @@ const TokenPage = () => {
           className='standard-button purple'
           href='https://discord.gg/kZkT9ZK'
           target='_blank'
-          rel='noopener'
+          rel="noopener noreferrer"
         >
           Join the Conversation on Discord
         </a>
@@ -386,4 +389,4 @@ const TokenPage = () => {
   )
 }
 
-export default TokenPage
+export default Token

@@ -5893,11 +5893,7 @@ section.bios .person .headshot a svg {
 section.bios .person .headshot img {
   max-width: inherit;
   position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
   z-index: 1;
-  width: 368px;
 }
 section.bios .person .description h4 {
   color: #12063d;

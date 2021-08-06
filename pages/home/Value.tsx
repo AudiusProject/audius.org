@@ -5,7 +5,11 @@ const Value = () => {
     <section id='value'>
       <div className='container'>
         <header>
-          <img src='img/value-header.png' data-rjs='2' />
+          <img
+            src='img/value-header.png'
+            data-rjs='2'
+            alt='Audius value graphic'
+          />
           <h2>
             Audius connects fans directly with artists in a familiar music
             player interface

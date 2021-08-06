@@ -32,7 +32,7 @@ const Footer = () => {
                   <a
                     href='https://whitepaper.audius.co'
                     target='_blank'
-                    rel='noopener'
+                    rel="noopener noreferrer"
                   >
                     White Paper
                   </a>
@@ -45,7 +45,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel='noopener'
+                    rel="noopener noreferrer"
                     href='https://twitter.com/AudiusProject'
                   >
                     <svg
@@ -60,7 +60,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a target='_blank' rel='noopener' href='https://t.me/Audius'>
+                  <a target='_blank' rel="noopener noreferrer" href='https://t.me/Audius'>
                     <svg
                       className='telegram'
                       viewBox='0 0 17.6 15.3'
@@ -78,7 +78,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel='noopener'
+                    rel="noopener noreferrer"
                     href='https://www.linkedin.com/company/audius-project'
                   >
                     <svg
@@ -94,7 +94,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel='noopener'
+                    rel="noopener noreferrer"
                     href='https://github.com/AudiusProject'
                   >
                     <svg
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel='noopener'
+                    rel="noopener noreferrer"
                     href='https://medium.com/audius'
                   >
                     <svg
@@ -128,7 +128,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel='noopener'
+                    rel="noopener noreferrer"
                     href='https://www.reddit.com/r/audius'
                   >
                     <svg

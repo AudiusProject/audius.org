@@ -2,10 +2,10 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import SubpageIntro from 'components/SubpageIntro'
 import OpenGraphTags from 'components/OpenGraphTags'
+import SubpageIntro from 'components/SubpageIntro'
 
-function ProtocolPage() {
+const Protocol = () => {
   return (
     <div className='protocol-page mask-animation-fix'>
       <Head>
@@ -56,6 +56,7 @@ function ProtocolPage() {
             <img
               src='/img/hedgehogLogoHorizontal.svg'
               className='hedgehogLogo'
+              alt='Hedgehog logo'
             />
             <h3 className='building-header'>
               Building Your Own DApp? Use Audius Hedgehog
@@ -116,4 +117,4 @@ function ProtocolPage() {
   )
 }
 
-export default ProtocolPage
+export default Protocol

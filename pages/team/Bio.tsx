@@ -17,7 +17,7 @@ const Bio = ({ name, title, description, imageUrl, linkedInUrl }: BioProps) => {
             className='person-link'
             href={linkedInUrl}
             target='_blank'
-            rel='noopener'
+            rel='noreferrer'
           >
             <svg
               className='linkedin'

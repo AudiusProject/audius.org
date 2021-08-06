@@ -13,7 +13,7 @@ const Whitepaper = () => {
               className='standard-button purple'
               href='https://whitepaper.audius.co'
               target='_blank'
-              rel='noopener'
+              rel="noopener noreferrer"
             >
               Read the Whitepaper
             </a>

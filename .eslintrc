@@ -1,6 +1,10 @@
 {
   "extends": "next",
   "rules": {
+    // Using img elements during initial migration to next.js
+    // May revisit using Image in the future
+    "@next/next/no-img-element": "off",
+
     "import/order": [
       "error",
       {

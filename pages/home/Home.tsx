@@ -2,11 +2,12 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import Intro from './Intro'
-import Value from './Value'
 import OpenGraphTags from 'components/OpenGraphTags'
 
-function HomePage() {
+import Intro from './Intro'
+import Value from './Value'
+
+const Home = () => {
   return (
     <div className='home-page'>
       <Head>
@@ -43,4 +44,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default Home

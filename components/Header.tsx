@@ -60,7 +60,7 @@ const Header = () => {
                   className='standard-button purple'
                   href='https://whitepaper.audius.co/'
                   target='_blank'
-                  rel='noopener'
+                  rel="noopener noreferrer"
                 >
                   White Paper
                 </a>
