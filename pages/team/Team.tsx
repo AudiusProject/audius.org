@@ -14,7 +14,7 @@ import teamMembers from './teamMembers.json'
 
 const Team = () => {
   return (
-    <div className='team-page mask-animation-fix'>
+    <div className='team mask-animation-fix'>
       <Head>
         <title>Team</title>
         <OpenGraphTags title='Audius | Team' path='/team' />
@@ -79,6 +79,21 @@ const Team = () => {
 
       <Investors />
       <Newsletter />
+
+      <span className='parallax-sphere sphere orange' data-parallax='3'></span>
+      <span
+        className='parallax-sphere sphere orange-opaque'
+        data-parallax='1'
+      ></span>
+      <span
+        className='parallax-sphere sphere purple-glow'
+        data-parallax='2'
+      ></span>
+      <span className='parallax-sphere sphere teal' data-parallax='5'></span>
+      <span
+        className='parallax-sphere sphere teal-opaque'
+        data-parallax='6'
+      ></span>
     </div>
   )
 }

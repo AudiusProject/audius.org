@@ -1,11 +1,14 @@
+import React from 'react'
+
+import Head from 'next/head'
+
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
-import Head from 'next/head'
-import React from 'react'
+import SquiggleIcon from 'public/img/iconSquiggle.svg'
 
 const Careers = () => {
   return (
-    <div className='careers-page mask-animation-fix'>
+    <div className='careers mask-animation-fix'>
       <Head>
         <title>Careers</title>
         <OpenGraphTags
@@ -15,22 +18,7 @@ const Careers = () => {
         />
       </Head>
 
-      <SubpageIntro title='Careers' />
-
-      <span className='parallax-sphere sphere orange' data-parallax='3'></span>
-      <span
-        className='parallax-sphere sphere orange-opaque'
-        data-parallax='1'
-      ></span>
-      <span
-        className='parallax-sphere sphere purple-glow'
-        data-parallax='2'
-      ></span>
-      <span className='parallax-sphere sphere teal' data-parallax='5'></span>
-      <span
-        className='parallax-sphere sphere teal-opaque'
-        data-parallax='6'
-      ></span>
+      <SubpageIntro title='Careers' showDivider />
 
       <section id='who-we-are' className='bios'>
         <div className='container'>
@@ -153,6 +141,21 @@ const Careers = () => {
           />
         </span>
       </section>
+
+      <span className='parallax-sphere sphere orange' data-parallax='3'></span>
+      <span
+        className='parallax-sphere sphere orange-opaque'
+        data-parallax='1'
+      ></span>
+      <span
+        className='parallax-sphere sphere purple-glow'
+        data-parallax='2'
+      ></span>
+      <span className='parallax-sphere sphere teal' data-parallax='5'></span>
+      <span
+        className='parallax-sphere sphere teal-opaque'
+        data-parallax='6'
+      ></span>
     </div>
   )
 }

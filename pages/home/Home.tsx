@@ -9,11 +9,13 @@ import Value from './Value'
 
 const Home = () => {
   return (
-    <div className='home-page'>
+    <div className='home'>
       <Head>
         <title>Audius</title>
         <OpenGraphTags />
       </Head>
+      <Intro />
+      <Value />
 
       <span className='parallax-sphere sphere orange' data-parallax='3'></span>
       <span
@@ -37,9 +39,6 @@ const Home = () => {
         className='parallax-sphere sphere purple two'
         data-parallax='2'
       ></span>
-
-      <Intro />
-      <Value />
     </div>
   )
 }

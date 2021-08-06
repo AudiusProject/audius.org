@@ -7,24 +7,16 @@ import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
 import WhitepaperCallout from './Whitepaper'
+import ParallaxSpheres from 'components/ParallaxSpheres'
 
 const Token = () => {
   return (
-    <div className='token-page'>
+    <div className='token'>
       <Head>
         <title>Token</title>
         <OpenGraphTags title='Audius | Token' path='/token' />
       </Head>
 
-      <span
-        className='parallax-sphere sphere purple-glow'
-        data-parallax='1'
-      ></span>
-      <span className='parallax-sphere sphere teal' data-parallax='1'></span>
-      <span
-        className='parallax-sphere sphere teal-opaque'
-        data-parallax='2'
-      ></span>
       <SubpageIntro title='Token' />
 
       <section id='top' className='simple-callout'>
@@ -47,7 +39,7 @@ const Token = () => {
           className='standard-button purple'
           href='https://dashboard.audius.org'
           target='_blank'
-          rel="noopener noreferrer"
+          rel='noopener noreferrer'
         >
           Explore the Dashboard
         </a>
@@ -86,7 +78,7 @@ const Token = () => {
           className='standard-button purple'
           href='https://discord.gg/kZkT9ZK'
           target='_blank'
-          rel="noopener noreferrer"
+          rel='noopener noreferrer'
         >
           Join the Conversation on Discord
         </a>
@@ -385,6 +377,16 @@ const Token = () => {
 
       <WhitepaperCallout />
       <Newsletter />
+
+      <span
+        className='parallax-sphere sphere purple-glow'
+        data-parallax='1'
+      ></span>
+      <span className='parallax-sphere sphere teal' data-parallax='1'></span>
+      <span
+        className='parallax-sphere sphere teal-opaque'
+        data-parallax='2'
+      ></span>
     </div>
   )
 }
