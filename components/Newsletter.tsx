@@ -38,7 +38,11 @@ const Newsletter = () => {
           </div>
         </div>
         <span className='shapes' data-parallax='2' data-parallax-x='-50%'>
-          <img src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
+          <img
+            src='/img/newsletter-shapes.png'
+            alt='Audius newsletter graphic'
+            data-rjs='2'
+          />
         </span>
       </section>
     </div>
