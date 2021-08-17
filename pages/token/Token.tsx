@@ -5,9 +5,9 @@ import Head from 'next/head'
 import Newsletter from 'components/Newsletter'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
+import IconArrowDown from 'public/img/iconArrowDown.svg'
 
 import WhitepaperCallout from './Whitepaper'
-import ParallaxSpheres from 'components/ParallaxSpheres'
 
 const Token = () => {
   return (
@@ -293,15 +293,7 @@ const Token = () => {
             </div>
             <a className='page-scroll has-title teal' href='#audius-features'>
               <span>Stake $AUDIO</span>
-              <svg
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                width='9.4'
-                height='26.7'
-                viewBox='0 0 9.4 26.7'
-              >
-                <path d='M7.8 19.3l-2.3 2.9v-22.2h-2v21.9l-1.9-2.7-1.6 1.2 4.5 6.3 4.9-6.1z' />
-              </svg>
+              <IconArrowDown />
             </a>
           </div>
           <div id='audius-features' className='row two-columns'>

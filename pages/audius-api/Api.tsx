@@ -2,10 +2,10 @@ import React, { useMemo, useState } from 'react'
 
 import Head from 'next/head'
 
+import AppThumbnail from 'components/AppThumbnail'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 import CheckIcon from 'public/img/iconCheck.svg'
-import LinkIcon from 'public/img/iconLink.svg'
 import SquiggleIcon from 'public/img/iconSquiggle.svg'
 
 import apps from './apps.json'
@@ -34,38 +34,6 @@ const Api = () => {
     return frameUrls[selectedFrame]
   }, [selectedFrame])
 
-  const renderApp = ({ name, shortDescription, description, image, link }) => {
-    return (
-      <div className='person has-bio' data-modal='person-modal' key={name}>
-        <div className='content'>
-          <div className='headshot'>
-            <a
-              className='person-link'
-              href={link}
-              target='_blank'
-              rel='noreferrer'
-            >
-              <LinkIcon />
-              <span>Link</span>
-            </a>
-            <img
-              className='photo'
-              src={`/img/${image}`}
-              alt={`Picture of ${name}`}
-            />
-          </div>
-          <div className='description'>
-            <h4 className='name'>{name}</h4>
-            <h5 className='title'>{shortDescription}</h5>
-            <div className='bio'>
-              <p>{description}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className='api-page'>
       <Head>
@@ -81,16 +49,7 @@ const Api = () => {
 
       <section id='dev-details'>
         <div className='content'>
-          <svg
-            className='squiggle'
-            aria-hidden='true'
-            height='6.6'
-            viewBox='0 0 46 6.6'
-            width='46'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path d='M46 6.6c-1.9 0-3.1-1.5-4.2-2.9s-2.1-2.7-3.8-2.7-2.7 1.3-3.8 2.7c-1.1 1.4-2.3 2.9-4.2 2.9-2.1 0-3.3-1.5-4.4-2.9-1-1.2-1.8-2.3-3.1-2.3s-2.4 1.1-3.5 2.3c-1.3 1.4-2.7 2.9-4.9 2.9s-3.6-1.1-4.9-2c-.9-.7-1.7-1.3-2.7-1.3-.7 0-1.2.2-1.8.4-1.1.4-2.3.9-4.7.9v-1c2.2 0 3.3-.4 4.3-.8.7-.3 1.3-.5 2.2-.5 1.3 0 2.3.7 3.3 1.5 1.1.9 2.3 1.8 4.2 1.8 1.8 0 2.9-1.3 4.2-2.6 1.2-1.3 2.4-2.6 4.2-2.6 1.8 0 2.9 1.3 3.9 2.7 1 1.3 2 2.5 3.6 2.5 1.4 0 2.4-1.2 3.4-2.5 1.2-1.5 2.5-3.1 4.7-3.1s3.5 1.6 4.6 3.1c1 1.3 2 2.5 3.4 2.5v1z' />
-          </svg>
+          <SquiggleIcon />
           <div className='why'>
             <div className='left'>Why Choose Audius?</div>
             <div className='right'>
@@ -189,7 +148,7 @@ const Api = () => {
           </div>
 
           <div id='appContent' className='row three-columns'>
-            {apps.map(renderApp)}
+            {apps.map(AppThumbnail)}
           </div>
 
           <div className='bottom'>
