@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Head from 'next/head'
+import Link from 'next/link'
 
 import Investors from 'components/Investors'
 import Newsletter from 'components/Newsletter'
@@ -27,7 +28,9 @@ const Team = () => {
             Audius is a team of entrepreneurs, engineers, audiophiles, and
             blockchain experts. Our mission is to empower a new generation of
             audio artists on the decentralized web.{' '}
-            <a href='/careers/'>We&apos;re hiring!</a>
+            <Link href='/careers/'>
+              <a>We&apos;re hiring!</a>
+            </Link>
           </>
         }
       />

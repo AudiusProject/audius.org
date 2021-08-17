@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Head from 'next/head'
+import Link from 'next/link'
 
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
-import SquiggleIcon from 'public/img/iconSquiggle.svg'
 
 const Careers = () => {
   return (
@@ -85,7 +85,7 @@ const Careers = () => {
               className='standard-button purple'
               href='https://jobs.lever.co/audius'
               target='_blank'
-              rel='noopener'
+              rel='noreferrer'
             >
               Job Listings
             </a>
@@ -113,9 +113,9 @@ const Careers = () => {
               across the United States.
             </p>
           </div>
-          <a className='standard-button purple' href='/team/' rel='noopener'>
-            Check Out The Team
-          </a>
+          <Link href='/team/'>
+            <a className='standard-button purple'>Check Out The Team</a>
+          </Link>
         </div>
       </section>
 

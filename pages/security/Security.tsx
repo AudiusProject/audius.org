@@ -17,8 +17,8 @@ const Security = () => {
         title='Security'
         description={
           <p>
-            Security is vital to Audius' mission. We work hard to ensure that
-            data is always safe. Our{' '}
+            Security is vital to Audius&apos; mission. We work hard to ensure
+            that data is always safe. Our{' '}
             <a href='https://audius.co/legal/privacy-policy'>Privacy Policy</a>{' '}
             and <a href='https://audius.co/legal/terms-of-use'>Terms of Use</a>{' '}
             describe our data-use practices, and we encourage third-parties to
@@ -33,7 +33,7 @@ const Security = () => {
           <div className='header'>
             <h2>Bug Bounty Policy</h2>
             <p>
-              We generally adhere to HackerOne's{' '}
+              We generally adhere to HackerOne&apos;s{' '}
               <a href='https://www.hackerone.com/disclosure-guidelines'>
                 disclosure guidelines
               </a>
@@ -65,10 +65,10 @@ const Security = () => {
             </ol>
             <h2>Bounty</h2>
             <ul>
-              <li>"Critical" - $5,000</li>
-              <li>"High" - $2,000</li>
-              <li>"Medium" - $500</li>
-              <li>"Low" - $0 - $100</li>
+              <li>&quot;Critical&quot; - $5,000</li>
+              <li>&quot;High&quot; - $2,000</li>
+              <li>&quot;Medium&quot; - $500</li>
+              <li>&quot;Low&quot; - $0 - $100</li>
             </ul>
             <h2>Not eligible for reward</h2>
             <ul>
