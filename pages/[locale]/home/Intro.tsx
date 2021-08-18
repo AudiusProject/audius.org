@@ -1,11 +1,15 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
+
 const Intro = () => {
+  // const { t } = useTranslation()
+
   return (
     <section id='intro'>
       <div className='header'>
         <div className='main-content'>
-          <h2>Freedom to Share & Listen</h2>
+          <h2>{'headline'}</h2>
           <div className='divider'></div>
           <div className='description'>
             <p>

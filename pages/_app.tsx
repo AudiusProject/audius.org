@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 
+import { appWithTranslation } from 'next-i18next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import TagManager from 'react-gtm-module'
@@ -16,7 +17,7 @@ const tagManagerArgs = {
   }
 }
 
-const MyApp = ({ Component, pageProps }) => {
+const App = appWithTranslation(({ Component, pageProps }) => {
   useEffect(() => {
     TagManager.initialize(tagManagerArgs)
   }, [])
@@ -47,6 +48,6 @@ const MyApp = ({ Component, pageProps }) => {
       <script src='/js/vendor/TweenMax.min.js'></script>
     </>
   )
-}
+})
 
-export default MyApp
+export default App
