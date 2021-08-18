@@ -1,16 +1,26 @@
 import React, { useEffect } from 'react'
 
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Script from 'next/script'
+import TagManager from 'react-gtm-module'
 
 import { PageLayout } from 'components/PageLayout'
 import init from 'public/build/js/main'
-
 import 'public/styles/index.scss'
-import { useRouter } from 'next/router'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-TTM6CHS',
+  dataLayer: {
+    js: new Date(),
+    config: 'UA-120325397-4'
+  }
+}
 
 const MyApp = ({ Component, pageProps }) => {
-  // TODO: add GTM
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
+  }, [])
 
   const router = useRouter()
 
