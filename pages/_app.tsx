@@ -2,11 +2,10 @@ import React, { useEffect } from 'react'
 
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import Script from 'next/script'
 import TagManager from 'react-gtm-module'
 
 import { PageLayout } from 'components/PageLayout'
-import init from 'public/build/js/main'
+import init from 'public/js/main'
 import 'public/styles/index.scss'
 
 const tagManagerArgs = {
@@ -43,12 +42,9 @@ const MyApp = ({ Component, pageProps }) => {
       </PageLayout>
 
       <script src='/js/vendor/jquery-3.3.1.min.js'></script>
-      <script src='/build/js/modernizr-custom.min.js'></script>
-      <script src='/build/js/MorphSVGPlugin.min.js'></script>
-      <script src='/build/js/TweenMax.min.js'></script>
-      <Script src='/build/js/player.js'></Script>
-      <Script src='/build/js/retina.js'></Script>
-      {/* <Script src='/build/js/custom.js'></Script> */}
+      <script src='/js/vendor/modernizr-custom.min.js'></script>
+      <script src='/js/vendor/MorphSVGPlugin.min.js'></script>
+      <script src='/js/vendor/TweenMax.min.js'></script>
     </>
   )
 }

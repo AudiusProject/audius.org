@@ -24,7 +24,7 @@ const Modal = () => {
               <a className='person-link' href='' target='_blank' rel='noopener'>
                 <LinkIcon />
               </a>
-              <img className='photo' src='' alt='Photo of Team Member' />
+              <img className='photo' src='' alt='Photo' />
             </div>
             <div className='description'>
               <h4 className='name'></h4>
