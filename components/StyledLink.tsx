@@ -1,7 +1,9 @@
 import React, { ReactNode } from 'react'
 
-import Link, { LinkProps } from 'next/link'
+import { LinkProps } from 'next/link'
 import { useRouter } from 'next/router'
+
+import Link from 'components/Link'
 
 type StyledLinkProps = LinkProps & {
   activeClassName?: string
@@ -10,7 +12,7 @@ type StyledLinkProps = LinkProps & {
 /**
  * A wrapper around Link that applies an active className
  */
-export const StyledLink = ({
+const StyledLink = ({
   activeClassName = 'active',
   children,
   ...props
@@ -25,3 +27,5 @@ export const StyledLink = ({
     </Link>
   )
 }
+
+export default StyledLink

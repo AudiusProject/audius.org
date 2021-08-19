@@ -3,13 +3,13 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 
 const Intro = () => {
-  // const { t } = useTranslation()
+  const { t } = useTranslation('common')
 
   return (
     <section id='intro'>
       <div className='header'>
         <div className='main-content'>
-          <h2>{'headline'}</h2>
+          <h2>{t('headline')}</h2>
           <div className='divider'></div>
           <div className='description'>
             <p>

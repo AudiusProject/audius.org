@@ -18,17 +18,17 @@ const Index = ({ locales }) => {
 
   // language detection
   // not recommended for production, use server redirection instead of this
-  useEffect(() => {
-    for (const locale of locales) {
-      // eslint-disable-next-line no-undef
-      for (const lang of navigator.languages) {
-        if (lang.startsWith(locale)) {
-          router.replace('/' + locale)
-          return
-        }
-      }
-    }
-  }, [locales, router])
+  //   useEffect(() => {
+  //     for (const locale of locales) {
+  //       // eslint-disable-next-line no-undef
+  //       for (const lang of navigator.languages) {
+  //         if (lang.startsWith(locale)) {
+  //           router.replace('/' + locale)
+  //           return
+  //         }
+  //       }
+  //     }
+  //   }, [locales, router])
 
   return <></>
 }
