@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import TagManager from 'react-gtm-module'
 
-import { PageLayout } from 'components/PageLayout'
+import PageLayout from 'components/PageLayout'
 import init from 'public/js/main'
 import 'public/styles/index.scss'
 

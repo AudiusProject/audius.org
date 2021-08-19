@@ -851,7 +851,7 @@ main {
     opacity: 0;
     visibility: hidden;
   }
-  #menu-button .close-menu {
+  #menu-button .close {
     width: 16px;
     height: 16px;
     opacity: 0;
@@ -859,7 +859,7 @@ main {
     -webkit-transform: translate(-50%, -50%) scale(1.5);
     transform: translate(-50%, -50%) scale(1.5);
   }
-  .menu-active #menu-button .close-menu {
+  .menu-active #menu-button .close {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translate(-50%, -50%) scale(1);

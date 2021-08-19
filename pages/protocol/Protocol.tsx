@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
-import SquiggleIcon from 'public/img/iconSquiggle.svg'
+import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 const Protocol = () => {
   return (
@@ -23,7 +23,7 @@ const Protocol = () => {
               Interested in operating a service on the Audius network?
             </h2>
           </div>
-          <SquiggleIcon />
+          <IconSquiggle />
           <div className='long-description'>
             <p className='stake'>
               Stake Audius tokens on your hosted service and earn revenue from

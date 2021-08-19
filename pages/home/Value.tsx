@@ -10,7 +10,7 @@ const Value = () => {
       <div className='container'>
         <header>
           <img
-            src='img/value-header.png'
+            src='/img/value-header.png'
             data-rjs='2'
             alt='Audius value graphic'
           />
