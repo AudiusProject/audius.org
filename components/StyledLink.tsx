@@ -10,7 +10,7 @@ type StyledLinkProps = LinkProps & {
 /**
  * A wrapper around Link that applies an active className
  */
-export const StyledLink = ({
+const StyledLink = ({
   activeClassName = 'active',
   children,
   ...props
@@ -25,3 +25,5 @@ export const StyledLink = ({
     </Link>
   )
 }
+
+export default StyledLink

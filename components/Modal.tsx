@@ -1,7 +1,7 @@
 import React from 'react'
 
-import IconLink from 'public/img/iconLink.svg'
 import IconClose from 'public/img/iconClose.svg'
+import IconLink from 'public/img/iconLink.svg'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 const Modal = () => {
