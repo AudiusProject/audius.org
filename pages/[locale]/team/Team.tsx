@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Head from 'next/head'
-import Link from 'next/link'
 
 import Investors from 'components/Investors'
+import Link from 'components/Link'
 import Newsletter from 'components/Newsletter'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'

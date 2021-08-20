@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Head from 'next/head'
-import Link from 'next/link'
 
+import Link from 'components/Link'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
@@ -113,7 +113,7 @@ const Careers = () => {
               across the United States.
             </p>
           </div>
-          <Link href='/team/'>
+          <Link href='/team'>
             <a className='standard-button purple'>Check Out The Team</a>
           </Link>
         </div>
