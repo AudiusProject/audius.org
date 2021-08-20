@@ -40,7 +40,7 @@ const Api = () => {
         <title>API</title>
         <OpenGraphTags
           title='Audius | API'
-          path='/audius-api'
+          path='/api'
           description='It’s easy to build your own app on Audius'
         />
       </Head>

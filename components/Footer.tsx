@@ -20,7 +20,7 @@ const Footer = () => {
                   <Link href='/protocol'>Protocol</Link>
                 </li>
                 <li>
-                  <Link href='/audius-api'>API</Link>
+                  <Link href='/api'>API</Link>
                 </li>
                 <li>
                   <Link href='/token'>Token</Link>
