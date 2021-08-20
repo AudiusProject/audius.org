@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-import SquiggleIcon from 'public/img/iconSquiggle.svg'
+import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 type SubpageIntroProps = {
   title: string
@@ -25,7 +25,7 @@ const SubpageIntro = ({
           </span>
           <span className='header-cut-out'>{title}</span>
         </h1>
-        {showDivider || description ? <SquiggleIcon /> : null}
+        {showDivider || description ? <IconSquiggle /> : null}
         {description && <p>{description}</p>}
       </div>
     </section>

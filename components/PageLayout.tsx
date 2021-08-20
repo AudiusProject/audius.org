@@ -6,7 +6,7 @@ import Header from './Header'
 import Modal from './Modal'
 import SecuritiesNotice from './SecuritiesNotice'
 
-export const PageLayout: React.FC = ({ children }) => {
+const PageLayout: React.FC = ({ children }) => {
   return (
     <div>
       <Header />
@@ -17,3 +17,5 @@ export const PageLayout: React.FC = ({ children }) => {
     </div>
   )
 }
+
+export default PageLayout

@@ -5,8 +5,8 @@ import Head from 'next/head'
 import AppThumbnail from 'components/AppThumbnail'
 import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
-import CheckIcon from 'public/img/iconCheck.svg'
-import SquiggleIcon from 'public/img/iconSquiggle.svg'
+import IconCheck from 'public/img/iconCheck.svg'
+import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 import apps from './apps.json'
 
@@ -49,7 +49,7 @@ const Api = () => {
 
       <section id='dev-details'>
         <div className='content'>
-          <SquiggleIcon />
+          <IconSquiggle />
           <div className='why'>
             <div className='left'>Why Choose Audius?</div>
             <div className='right'>
@@ -61,7 +61,7 @@ const Api = () => {
               ].map((r) => (
                 <div className='reason' key={r}>
                   <div className='circle'>
-                    <CheckIcon />
+                    <IconCheck />
                   </div>
                   <div>{r}</div>
                 </div>
@@ -127,7 +127,7 @@ const Api = () => {
             </button>
           </div>
 
-          <SquiggleIcon />
+          <IconSquiggle />
         </div>
       </section>
       <section id='top' className='simple-callout inspiration'>

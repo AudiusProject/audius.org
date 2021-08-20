@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LinkIcon from 'public/img/iconLink.svg'
+import IconLink from 'public/img/iconLink.svg'
 
 type AppThumbnailProps = {
   name: string
@@ -27,7 +27,7 @@ const AppThumbnail = ({
             target='_blank'
             rel='noreferrer'
           >
-            <LinkIcon />
+            <IconLink />
             <span>Link</span>
           </a>
           <img
