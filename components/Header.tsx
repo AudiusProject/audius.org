@@ -15,7 +15,7 @@ const Header = () => {
 
       <header className='main-header'>
         <h1 className='logo'>
-          <StyledLink href='/'>
+          <StyledLink href='/home'>
             <img src='/img/audius.png' data-rjs='2' alt='Audius' />
             <span>Audius</span>
           </StyledLink>
@@ -24,7 +24,7 @@ const Header = () => {
           <div>
             <ul>
               <li className='mobile-only'>
-                <StyledLink href='/'>Home</StyledLink>
+                <StyledLink href='/home'>Home</StyledLink>
               </li>
               <li>
                 <StyledLink href='/protocol'>Protocol</StyledLink>

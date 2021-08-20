@@ -1,4 +1,5 @@
 import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler'
+import parser from 'accept-language-parser'
 
 /**
  * The DEBUG flag will do two things that help during development:
@@ -8,16 +9,20 @@ import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler'
  *    than the default 404.html page.
  */
 const DEBUG = false
+const LANGUAGES = ['en', 'es', 'zh']
+const DEFAULT_LANGUAGE = 'en'
 
-addEventListener('fetch', event => {
+const languageRegex = new RegExp(`^/(${LANGUAGES.join('|')})(/|$)`)
+
+addEventListener('fetch', (event) => {
   try {
     event.respondWith(handleEvent(event))
   } catch (e) {
     if (DEBUG) {
       return event.respondWith(
         new Response(e.message || e.toString(), {
-          status: 500,
-        }),
+          status: 500
+        })
       )
     }
     event.respondWith(new Response('Internal Error', { status: 500 }))
@@ -28,41 +33,70 @@ async function handleEvent(event) {
   const url = new URL(event.request.url)
   let options = {}
 
-  /**
-   * You can add custom logic to how we fetch your assets
-   * by configuring the function `mapRequestToAsset`
-   */
-  // options.mapRequestToAsset = handlePrefix(/^\/docs/)
+  const languageHeader = event.request.headers.get('Accept-Language')
+  const headerLanguage =
+    parser.pick(LANGUAGES, languageHeader) || DEFAULT_LANGUAGE
+
+  const getUrl = (requestUrl) => {
+    const url = new URL(requestUrl)
+
+    // If requesting a file, don't alter the path
+    if (url.pathname.includes('.')) {
+      return url
+    }
+
+    // Check if the language is specified in the path
+    const languageMatch = url.pathname.match(languageRegex)
+    const language = languageMatch ? languageMatch[1] : headerLanguage
+
+    // Remove the language from the path if necessary
+    const unlocalizedPathname = language
+      ? url.pathname.replace(`/${language}`, '')
+      : url.pathname
+    const isIndex = !unlocalizedPathname.length || unlocalizedPathname === '/'
+
+    const path = isIndex ? '/home' : unlocalizedPathname
+
+    url.pathname = `/${language}${path}.html`
+    return url
+  }
+
+  options.mapRequestToAsset = (request) => {
+    return mapRequestToAsset(new Request(getUrl(request.url), request))
+  }
 
   try {
     if (DEBUG) {
       // customize caching
       options.cacheControl = {
-        bypassCache: true,
-      };
+        bypassCache: true
+      }
     }
-    const page = await getAssetFromKV(event, options);
+    const page = await getAssetFromKV(event, options)
 
     // allow headers to be altered
-    const response = new Response(page.body, page);
+    const response = new Response(page.body, page)
 
-    response.headers.set("X-XSS-Protection", "1; mode=block");
-    response.headers.set("X-Content-Type-Options", "nosniff");
-    response.headers.set("X-Frame-Options", "DENY");
-    response.headers.set("Referrer-Policy", "unsafe-url");
-    response.headers.set("Feature-Policy", "none");
+    response.headers.set('X-XSS-Protection', '1; mode=block')
+    response.headers.set('X-Content-Type-Options', 'nosniff')
+    response.headers.set('X-Frame-Options', 'DENY')
+    response.headers.set('Referrer-Policy', 'unsafe-url')
+    response.headers.set('Feature-Policy', 'none')
 
-    return response;
-
+    return response
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
       try {
         let notFoundResponse = await getAssetFromKV(event, {
-          mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
+          mapRequestToAsset: (req) =>
+            new Request(`${new URL(req.url).origin}/404.html`, req)
         })
 
-        return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
+        return new Response(notFoundResponse.body, {
+          ...notFoundResponse,
+          status: 404
+        })
       } catch (e) {}
     }
 
@@ -78,7 +112,7 @@ async function handleEvent(event) {
  * to exist at a specific path.
  */
 function handlePrefix(prefix) {
-  return request => {
+  return (request) => {
     // compute the default (e.g. / -> index.html)
     let defaultAssetKey = mapRequestToAsset(request)
     let url = new URL(defaultAssetKey.url)

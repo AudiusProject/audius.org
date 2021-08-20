@@ -54,13 +54,13 @@ const Value = () => {
                 <span className='clock one'>
                   <span className='lock'>
                     <img
-                      src='img/value-distribution-animation-lock.png'
+                      src='/img/value-distribution-animation-lock.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <img
-                    src='img/value-distribution-animation-clock.png'
+                    src='/img/value-distribution-animation-clock.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -68,13 +68,13 @@ const Value = () => {
                 <span className='clock two'>
                   <span className='lock'>
                     <img
-                      src='img/value-distribution-animation-lock.png'
+                      src='/img/value-distribution-animation-lock.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <img
-                    src='img/value-distribution-animation-clock.png'
+                    src='/img/value-distribution-animation-clock.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -82,13 +82,13 @@ const Value = () => {
                 <span className='clock three'>
                   <span className='lock'>
                     <img
-                      src='img/value-distribution-animation-lock.png'
+                      src='/img/value-distribution-animation-lock.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <img
-                    src='img/value-distribution-animation-clock.png'
+                    src='/img/value-distribution-animation-clock.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -96,13 +96,13 @@ const Value = () => {
                 <span className='clock four'>
                   <span className='lock'>
                     <img
-                      src='img/value-distribution-animation-lock.png'
+                      src='/img/value-distribution-animation-lock.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <img
-                    src='img/value-distribution-animation-clock.png'
+                    src='/img/value-distribution-animation-clock.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -110,13 +110,13 @@ const Value = () => {
                 <span className='clock five'>
                   <span className='lock'>
                     <img
-                      src='img/value-distribution-animation-lock.png'
+                      src='/img/value-distribution-animation-lock.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <img
-                    src='img/value-distribution-animation-clock.png'
+                    src='/img/value-distribution-animation-clock.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -124,20 +124,20 @@ const Value = () => {
                 <span className='clock six'>
                   <span className='lock'>
                     <img
-                      src='img/value-distribution-animation-lock.png'
+                      src='/img/value-distribution-animation-lock.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <img
-                    src='img/value-distribution-animation-clock.png'
+                    src='/img/value-distribution-animation-clock.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='bg'>
                   <img
-                    src='img/value-distribution-animation-bg.png'
+                    src='/img/value-distribution-animation-bg.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -150,7 +150,7 @@ const Value = () => {
               <div className='header'>
                 <div className='icon'>
                   <img
-                    src='img/value-distribution-icon.png'
+                    src='/img/value-distribution-icon.png'
                     alt=''
                     data-rjs='2'
                   />
@@ -208,14 +208,14 @@ const Value = () => {
                 <span className='data'>
                   <span className='lines one'>
                     <img
-                      src='img/value-attribution-animation-data.png'
+                      src='/img/value-attribution-animation-data.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <span className='lines two'>
                     <img
-                      src='img/value-attribution-animation-data.png'
+                      src='/img/value-attribution-animation-data.png'
                       data-rjs='2'
                       alt=''
                     />
@@ -224,7 +224,7 @@ const Value = () => {
                 <span className='equalizer'>
                   <span>
                     <img
-                      src='img/value-attribution-animation-equalizer.png'
+                      src='/img/value-attribution-animation-equalizer.png'
                       data-rjs='2'
                       alt=''
                     />
@@ -232,14 +232,14 @@ const Value = () => {
                 </span>
                 <span className='device'>
                   <img
-                    src='img/value-attribution-animation-device.png'
+                    src='/img/value-attribution-animation-device.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='arms'>
                   <img
-                    src='img/value-attribution-animation-arms.png'
+                    src='/img/value-attribution-animation-arms.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -247,14 +247,14 @@ const Value = () => {
                 <span className='coin one'>
                   <span className='note'>
                     <img
-                      src='img/value-attribution-animation-note-one.png'
+                      src='/img/value-attribution-animation-note-one.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <span className='gold'>
                     <img
-                      src='img/value-attribution-animation-coin.png'
+                      src='/img/value-attribution-animation-coin.png'
                       data-rjs='2'
                       alt=''
                     />
@@ -263,14 +263,14 @@ const Value = () => {
                 <span className='coin two'>
                   <span className='note'>
                     <img
-                      src='img/value-attribution-animation-note-two.png'
+                      src='/img/value-attribution-animation-note-two.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <span className='gold'>
                     <img
-                      src='img/value-attribution-animation-coin.png'
+                      src='/img/value-attribution-animation-coin.png'
                       data-rjs='2'
                       alt=''
                     />
@@ -279,14 +279,14 @@ const Value = () => {
                 <span className='coin three'>
                   <span className='note'>
                     <img
-                      src='img/value-attribution-animation-note-three.png'
+                      src='/img/value-attribution-animation-note-three.png'
                       data-rjs='2'
                       alt=''
                     />
                   </span>
                   <span className='gold'>
                     <img
-                      src='img/value-attribution-animation-coin.png'
+                      src='/img/value-attribution-animation-coin.png'
                       data-rjs='2'
                       alt=''
                     />
@@ -294,7 +294,7 @@ const Value = () => {
                 </span>
                 <span className='bg'>
                   <img
-                    src='img/value-attribution-animation-bg.png'
+                    src='/img/value-attribution-animation-bg.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -307,7 +307,7 @@ const Value = () => {
               <div className='header'>
                 <div className='icon'>
                   <img
-                    src='img/value-attribution-icon.png'
+                    src='/img/value-attribution-icon.png'
                     alt=''
                     data-rjs='2'
                   />
@@ -335,56 +335,56 @@ const Value = () => {
                 <IconCreate />
                 <span className='document one'>
                   <img
-                    src='img/value-monetization-animation-document.png'
+                    src='/img/value-monetization-animation-document.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='document two'>
                   <img
-                    src='img/value-monetization-animation-document.png'
+                    src='/img/value-monetization-animation-document.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='document three'>
                   <img
-                    src='img/value-monetization-animation-document.png'
+                    src='/img/value-monetization-animation-document.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='document four'>
                   <img
-                    src='img/value-monetization-animation-document.png'
+                    src='/img/value-monetization-animation-document.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='mask-one one'>
                   <img
-                    src='img/value-monetization-animation-platform-mask-1.png'
+                    src='/img/value-monetization-animation-platform-mask-1.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='mask-one two'>
                   <img
-                    src='img/value-monetization-animation-platform-mask-1.png'
+                    src='/img/value-monetization-animation-platform-mask-1.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='mask-two'>
                   <img
-                    src='img/value-monetization-animation-platform-mask-2.png'
+                    src='/img/value-monetization-animation-platform-mask-2.png'
                     data-rjs='2'
                     alt=''
                   />
                 </span>
                 <span className='bg'>
                   <img
-                    src='img/value-monetization-animation-bg.png'
+                    src='/img/value-monetization-animation-bg.png'
                     data-rjs='2'
                     alt=''
                   />
@@ -398,7 +398,7 @@ const Value = () => {
                 <div className='icon'>
                   <img
                     className='icon'
-                    src='img/value-monetization-icon.png'
+                    src='/img/value-monetization-icon.png'
                     alt=''
                     data-rjs='2'
                   />

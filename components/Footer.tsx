@@ -1,4 +1,7 @@
 import React from 'react'
+
+import Link from 'components/Link'
+
 const Footer = () => {
   return (
     <footer id='footer'>
@@ -14,28 +17,31 @@ const Footer = () => {
             <nav className='sitemap'>
               <ul>
                 <li>
-                  <a href='protocol/'>Protocol</a>
+                  <Link href='/protocol'>Protocol</Link>
                 </li>
                 <li>
-                  <a href='api/'>API</a>
+                  <Link href='/audius-api'>API</Link>
                 </li>
                 <li>
-                  <a href='token/'>Token</a>
+                  <Link href='/token'>Token</Link>
                 </li>
                 <li>
-                  <a href='team/'>Team</a>
+                  <Link href='/team'>Team</Link>
                 </li>
                 <li>
-                  <a href='careers/'>Careers</a>
+                  <Link href='/careers'>Careers</Link>
                 </li>
                 <li>
                   <a
                     href='https://whitepaper.audius.co'
                     target='_blank'
-                    rel="noopener noreferrer"
+                    rel='noopener noreferrer'
                   >
                     White Paper
                   </a>
+                </li>
+                <li>
+                  <Link href='/security'>Security</Link>
                 </li>
               </ul>
             </nav>
@@ -45,7 +51,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel="noopener noreferrer"
+                    rel='noopener noreferrer'
                     href='https://twitter.com/AudiusProject'
                   >
                     <svg
@@ -60,7 +66,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a target='_blank' rel="noopener noreferrer" href='https://t.me/Audius'>
+                  <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://t.me/Audius'
+                  >
                     <svg
                       className='telegram'
                       viewBox='0 0 17.6 15.3'
@@ -78,7 +88,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel="noopener noreferrer"
+                    rel='noopener noreferrer'
                     href='https://www.linkedin.com/company/audius-project'
                   >
                     <svg
@@ -94,7 +104,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel="noopener noreferrer"
+                    rel='noopener noreferrer'
                     href='https://github.com/AudiusProject'
                   >
                     <svg
@@ -111,7 +121,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel="noopener noreferrer"
+                    rel='noopener noreferrer'
                     href='https://medium.com/audius'
                   >
                     <svg
@@ -128,7 +138,7 @@ const Footer = () => {
                 <li>
                   <a
                     target='_blank'
-                    rel="noopener noreferrer"
+                    rel='noopener noreferrer'
                     href='https://www.reddit.com/r/audius'
                   >
                     <svg

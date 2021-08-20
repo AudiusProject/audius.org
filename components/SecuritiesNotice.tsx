@@ -23,7 +23,7 @@ const SecuritiesNotice = () => {
 
   return (
     <>
-      <div id='video-modal' className='modal' aria-hidden='true'>
+      <div id='securities-modal' className='modal' aria-hidden='true'>
         <div
           className='modal-container'
           style={{
@@ -56,6 +56,7 @@ const SecuritiesNotice = () => {
               </p>
               <button
                 className='close-modal'
+                id='securities-notice-accept'
                 style={{
                   position: 'unset',
                   width: 'unset',
@@ -63,9 +64,6 @@ const SecuritiesNotice = () => {
                   margin: '20px auto 0px',
                   userSelect: 'none'
                 }}
-                onClick={() =>
-                  window.localStorage.setItem('securities-notice-seen', 'true')
-                }
               >
                 <a className='standard-button purple' rel='noopener'>
                   Accept
@@ -77,16 +75,9 @@ const SecuritiesNotice = () => {
       </div>
       <div
         id='trigger-popup'
-        className='person'
-        data-modal='video-modal'
+        data-modal='securities-modal'
         ref={triggerRef}
-      >
-        <div className='description'>
-          <div className='bio'>
-            <p></p>
-          </div>
-        </div>
-      </div>
+      ></div>
     </>
   )
 }
