@@ -284,6 +284,10 @@ export default function init() {
     }
   }
 
+  $('#securities-notice-accept').click(function () {
+    window.localStorage.setItem('securities-notice-seen', 'true')
+  })
+
   // Close Modal
 
   $('.close-modal, .modal').on('click', function () {

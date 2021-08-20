@@ -28,7 +28,7 @@ const Team = () => {
             Audius is a team of entrepreneurs, engineers, audiophiles, and
             blockchain experts. Our mission is to empower a new generation of
             audio artists on the decentralized web.{' '}
-            <Link href='/careers/'>
+            <Link href='/careers'>
               <a>We&apos;re hiring!</a>
             </Link>
           </>
