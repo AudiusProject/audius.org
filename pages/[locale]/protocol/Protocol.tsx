@@ -87,7 +87,6 @@ const Protocol = () => {
               >
                 <input
                   type='email'
-                  value=''
                   name='EMAIL'
                   className='required email'
                   id='mce-EMAIL'

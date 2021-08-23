@@ -3491,6 +3491,9 @@ body.modal-active {
     line-height: 31px;
     color: #12063d;
   }
+  .api #subpage-intro h1 {
+    margin-top: 22px;
+  }
   .token #subpage-intro {
     margin-bottom: 57px;
   }
@@ -3539,6 +3542,23 @@ body.modal-active {
     height: 87px;
   }
   .team #subpage-intro .squiggle {
+    margin-top: 20px;
+    margin-bottom: 19px;
+  }
+  .careers #subpage-intro {
+    margin-bottom: 60px;
+  }
+  .careers #subpage-intro h1 {
+    margin-top: 31px;
+    width: 287px;
+    height: 87px;
+    left: 9px;
+  }
+  .careers #subpage-intro h1 img {
+    width: 287px;
+    height: 87px;
+  }
+  .careers #subpage-intro .squiggle {
     margin-top: 20px;
     margin-bottom: 19px;
   }
@@ -6201,6 +6221,7 @@ path {
   top: 86px;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 .notification-bar .content {

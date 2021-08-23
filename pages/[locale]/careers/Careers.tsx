@@ -100,7 +100,7 @@ const Careers = () => {
           </div>
           <div className='content'>
             <p>
-              Audius is a 18-person team of entrepreneurs, engineers,
+              Audius is an 18-person team of entrepreneurs, engineers,
               audiophiles, and blockchain experts. Our benefits include
               unlimited PTO, high quality paid medical insurance, FSA, 401k,
               yearly learning stipend, equipment stipend and a home office setup

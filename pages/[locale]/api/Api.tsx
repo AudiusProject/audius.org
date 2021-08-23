@@ -35,7 +35,7 @@ const Api = () => {
   }, [selectedFrame])
 
   return (
-    <div className='api-page'>
+    <div className='api'>
       <Head>
         <title>API</title>
         <OpenGraphTags

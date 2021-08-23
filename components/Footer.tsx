@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Link from 'components/Link'
+import StyledLink from './StyledLink'
 
 const Footer = () => {
   return (
@@ -17,19 +17,19 @@ const Footer = () => {
             <nav className='sitemap'>
               <ul>
                 <li>
-                  <Link href='/protocol'>Protocol</Link>
+                  <StyledLink href='/protocol'>Protocol</StyledLink>
                 </li>
                 <li>
-                  <Link href='/api'>API</Link>
+                  <StyledLink href='/api'>API</StyledLink>
                 </li>
                 <li>
-                  <Link href='/token'>Token</Link>
+                  <StyledLink href='/token'>Token</StyledLink>
                 </li>
                 <li>
-                  <Link href='/team'>Team</Link>
+                  <StyledLink href='/team'>Team</StyledLink>
                 </li>
                 <li>
-                  <Link href='/careers'>Careers</Link>
+                  <StyledLink href='/careers'>Careers</StyledLink>
                 </li>
                 <li>
                   <a
@@ -41,7 +41,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <Link href='/security'>Security</Link>
+                  <StyledLink href='/security'>Security</StyledLink>
                 </li>
               </ul>
             </nav>

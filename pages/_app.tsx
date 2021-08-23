@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 import TagManager from 'react-gtm-module'
 
 import PageLayout from 'components/PageLayout'
@@ -43,9 +44,9 @@ const App = appWithTranslation(({ Component, pageProps }) => {
       </PageLayout>
 
       <script src='/js/vendor/jquery-3.3.1.min.js'></script>
-      <script src='/js/vendor/modernizr-custom.min.js'></script>
       <script src='/js/vendor/MorphSVGPlugin.min.js'></script>
       <script src='/js/vendor/TweenMax.min.js'></script>
+      <Script src='/js/vendor/modernizr-custom.min.js'></Script>
     </>
   )
 })

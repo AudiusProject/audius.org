@@ -2,13 +2,13 @@ import React from 'react'
 
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
-import IconSquiggle from 'public/img/iconSquiggle.svg'
+import IconSquiggleBold from 'public/img/iconSquiggleBold.svg'
 
 const Header = () => {
   return (
     <>
       <button id='menu-button' className='mobile-only'>
-        <IconSquiggle />
+        <IconSquiggleBold />
         <IconClose />
         <span>Show/Hide Main Menu</span>
       </button>

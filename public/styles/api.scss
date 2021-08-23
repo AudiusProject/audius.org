@@ -1,4 +1,4 @@
-.api-page {
+.api {
   @import './guitar-blocks';
 
   #subpage-intro .container,
@@ -566,18 +566,17 @@
     .person {
       width: 100%;
     }
+    .person:hover {
+      transform: scale(1.02);
+    }
+
+    .person:active {
+      transform: scale(0.98);
+    }
   }
 
   .person .content {
     margin: 0 10%;
-  }
-
-  .person:hover {
-    transform: scale(1.02);
-  }
-
-  .person:active {
-    transform: scale(0.98);
   }
 
   .person-link .link {
@@ -600,7 +599,6 @@
 
   .person .description {
     padding: 0 24px;
-    height: 130px;
   }
 
   .person .content {

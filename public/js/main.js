@@ -1,5 +1,3 @@
-/**/
-
 export default function init() {
   var viewportWidth
 
@@ -42,50 +40,17 @@ export default function init() {
    * >>========================================>
    */
 
-  $('#menu-button').on('click', function () {
-    $('body').toggleClass('menu-active')
-  })
+  $('#menu-button')
+    .off('click')
+    .on('click', function () {
+      $('body').toggleClass('menu-active')
+    })
 
-  $('nav.menu li').on('click', '> span', function () {
-    var $parent = $(this).parent()
-
-    if ($('html').hasClass('touchevents')) {
-      $parent.toggleClass('active')
-    }
-
-    if ($(window).width() < 1020) {
-      var $menu = $parent.find('>ul'),
-        menuHeight = 0
-
-      if ($parent.hasClass('active')) {
-        $menu.find('>li').each(function () {
-          menuHeight += $(this).outerHeight(true)
-        })
-        menuOpen = true
-      } else {
-        menuHeight = 0
-        menuOpen = false
-      }
-
-      TweenMax.to($menu, 0.4, { height: menuHeight, ease: Power1.easeInOut })
-    }
-  })
-
-  /*
-   * >>========================================>
-   * Smooth Scrolling
-   * >>========================================>
-   */
-
-  // $('a[href*="#"]').on('click', function(e){
-  // 	e.preventDefault();
-  // 	var $destination = $($(this).attr('href')),
-  // 	offset = $('.main-header.clone').height() || 0;
-
-  // 	if($destination.length){
-  // 		TweenMax.to('html,body', .8, {scrollTop: $destination.offset().top - offset, ease:Power1.easeInOut});
-  // 	}
-  // });
+  $('nav.menu li')
+    .off('click')
+    .on('click', '> a', function () {
+      $('body').toggleClass('menu-active')
+    })
 
   /*
    * >>========================================>
@@ -239,6 +204,10 @@ export default function init() {
   })
 
   $('*[data-modal]').on('click', function () {
+    if ($(window).width() < 1020) {
+      return
+    }
+
     var modalID = $(this).data('modal')
 
     // Set up person bio
