@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import { appWithTranslation } from 'next-i18next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import TagManager from 'react-gtm-module'
+import { useTransition, animated } from 'react-spring'
 
 import PageLayout from 'components/PageLayout'
 import init from 'public/js/main'
@@ -31,6 +32,14 @@ const App = appWithTranslation(({ Component, pageProps }) => {
     init()
   }, [router.pathname])
 
+  const transitions = useTransition(Component, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    config: {
+      duration: 500
+    }
+  })
+
   return (
     <>
       <Head>
@@ -40,7 +49,11 @@ const App = appWithTranslation(({ Component, pageProps }) => {
         />
       </Head>
       <PageLayout>
-        <Component {...pageProps} />
+        {transitions((styles, Component) => (
+          <animated.div style={styles}>
+            <Component {...pageProps} />
+          </animated.div>
+        ))}
       </PageLayout>
 
       <script src='/js/vendor/jquery-3.3.1.min.js'></script>

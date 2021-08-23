@@ -8,7 +8,7 @@ import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 const Protocol = () => {
   return (
-    <div className='protocol-page mask-animation-fix'>
+    <div className='protocol mask-animation-fix'>
       <Head>
         <title>Protocol</title>
         <OpenGraphTags title='Audius | Protocol' path='/protocol' />
