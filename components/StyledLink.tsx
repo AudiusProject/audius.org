@@ -21,7 +21,11 @@ const StyledLink = ({
 
   return (
     <Link {...props}>
-      <a className={router.pathname == props.href ? activeClassName : ''}>
+      <a
+        className={
+          router.pathname === `/[locale]${props.href}` ? activeClassName : ''
+        }
+      >
         {children}
       </a>
     </Link>
