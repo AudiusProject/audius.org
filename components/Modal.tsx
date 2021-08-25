@@ -3,15 +3,18 @@ import React from 'react'
 import IconClose from 'public/img/iconClose.svg'
 import IconLink from 'public/img/iconLink.svg'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
+import { useTranslation } from 'next-i18next'
 
 const Modal = () => {
+  const { t } = useTranslation()
+
   return (
     <div id='person-modal' className='modal' aria-hidden='true'>
       <div className='modal-container'>
         <div className='modal-frame'>
           <button className='close-modal'>
             <IconClose />
-            <span>Close</span>
+            <span>{t('modal-close')}</span>
           </button>
           <div className='modal-content'>
             <div className='headshot'>

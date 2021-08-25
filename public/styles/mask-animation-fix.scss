@@ -37,7 +37,7 @@
     -webkit-animation-duration: 50s;
     animation-duration: 50s;
     z-index: 4;
-    background-image: url(../img/sphere-orange-opaque.png);
+    background-image: url(/img/sphere-orange-opaque.png);
     width: 193px;
     height: 193px;
   }
@@ -49,7 +49,7 @@
     left: 0;
     -webkit-animation-duration: 40s;
     animation-duration: 40s;
-    background-image: url(../img/sphere-teal.png);
+    background-image: url(/img/sphere-teal.png);
     width: 311px;
     height: 311px;
   }
@@ -61,7 +61,7 @@
     right: 0;
     -webkit-animation-name: header-sphere-counter;
     animation-name: header-sphere-counter;
-    background-image: url(../img/sphere-purple-glow.png);
+    background-image: url(/img/sphere-purple-glow.png);
     width: 414px;
     height: 414px;
   }
@@ -71,22 +71,22 @@
     not all,
     (min-resolution: 1.3dppx) {
     .sphere:not(.parallax-sphere).orange {
-      background-image: url(../img/sphere-orange@2x.png);
+      background-image: url(/img/sphere-orange@2x.png);
       background-size: 366px 366px;
     }
 
     .sphere:not(.parallax-sphere).orange-opaque {
-      background-image: url(../img/sphere-orange-opaque@2x.png);
+      background-image: url(/img/sphere-orange-opaque@2x.png);
       background-size: 193px 193px;
     }
 
     .sphere:not(.parallax-sphere).teal {
-      background-image: url(../img/sphere-teal@2x.png);
+      background-image: url(/img/sphere-teal@2x.png);
       background-size: 311px 311px;
     }
 
     .sphere:not(.parallax-sphere).purple-glow {
-      background-image: url(../img/sphere-purple-glow@2x.png);
+      background-image: url(/img/sphere-purple-glow@2x.png);
       background-size: 414px 414px;
     }
   }

@@ -21,14 +21,14 @@
   position: relative;
   min-width: 1500px;
   background-size: 492px 82px;
-  background-image: url(../img/roadmap-date-row-bg.svg);
+  background-image: url(/img/roadmap-date-row-bg.svg);
   background-repeat: repeat-x;
   background-position: center center;
 }
 
 .block-string-container .tile {
-  margin: 0 .5%;
-  border-radius: 8px
+  margin: 0 0.5%;
+  border-radius: 8px;
 }
 
 .block-string-container .tile.text-content {
@@ -47,12 +47,12 @@
   justify-content: center;
   align-items: center;
   margin: 0px auto;
-  /* max-width: 250px; */
+  max-width: 250px;
 }
 
 .block-string-container .tile.text-content.header {
   position: relative;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 23px;
   font-weight: bold;
   letter-spacing: 0.2px;
@@ -79,7 +79,7 @@
 }
 
 .block-string-container .blank {
-  background-color: rgba(221,223,247,0.2);
+  background-color: rgba(221, 223, 247, 0.2);
 }
 
 /* Tile Sizes */
@@ -103,7 +103,7 @@
     width: 100%;
     flex-direction: column;
   }
-  
+
   .block-string-container .row {
     min-width: inherit;
     display: flex;
@@ -114,13 +114,13 @@
     padding: 0px 24px;
     margin: 0px;
   }
-  
+
   .block-string-container .blank {
     display: none;
   }
 
   .block-string-container .tile.text-content {
-    width:100%;
+    width: 100%;
     position: relative;
   }
 
@@ -133,10 +133,10 @@
     transform: translate(-50%, -50%);
     height: 82px;
     width: 1020px;
-    background-size: 492px 82px;
-    background-image: url(../img/roadmap-date-row-bg.svg);
+    background-size: 492p 82px;
+    background-image: url(/img/roadmap-date-row-bg.svg);
     background-repeat: repeat-x;
     background-position: center center;
     z-index: -1;
-  } 
+  }
 }

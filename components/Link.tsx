@@ -8,6 +8,8 @@ type LinkProps = NextLinkProps & {
   children: ReactNode
 }
 
+// TODO: SK - if the local is not specified in the url, don't prepend it to the link href
+
 /**
  * A wrapper around next Link that handles i18n
  */

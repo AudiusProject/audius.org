@@ -1,10 +1,14 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
+
 import IconCreate from 'public/img/iconCreate.svg'
 import IconPreexisting from 'public/img/iconPreexisting.svg'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 const Value = () => {
+  const { t } = useTranslation()
+
   return (
     <section id='value'>
       <div className='container'>
@@ -14,10 +18,7 @@ const Value = () => {
             data-rjs='2'
             alt='Audius value graphic'
           />
-          <h2>
-            Audius connects fans directly with artists in a familiar music
-            player interface
-          </h2>
+          <h2>{t('home-value')}</h2>
         </header>
         <div className='row two-columns'>
           <div className='column'>
@@ -156,16 +157,12 @@ const Value = () => {
                   />
                 </div>
                 <div className='title'>
-                  <h3>Security</h3>
-                  <h4>Own Your Content</h4>
+                  <h3>{t('home-security-headline')}</h3>
+                  <h4>{t('home-security-subtitle')}</h4>
                 </div>
               </div>
               <IconSquiggle />
-              <p>
-                With Audius, artists can generate immutable and timestamped
-                records for their creative works, secured by an
-                incentive-aligned decentralized network of node operators.
-              </p>
+              <p>{t('home-security-description')}</p>
             </div>
           </div>
         </div>
@@ -313,17 +310,12 @@ const Value = () => {
                   />
                 </div>
                 <div className='title'>
-                  <h3>Features</h3>
-                  <h4>An Open Network</h4>
+                  <h3>{t('home-features-headline')}</h3>
+                  <h4>{t('home-features-subtitle')}</h4>
                 </div>
               </div>
               <IconSquiggle />
-              <p>
-                Unlock premium features for curated engagement by using our
-                native platform token, $AUDIO. From gated content to artist
-                tokens and remix contests, Audius is here to give fans the
-                exclusivity they deserve.
-              </p>
+              <p>{t('home-features-description')}</p>
             </div>
           </div>
         </div>
@@ -404,17 +396,12 @@ const Value = () => {
                   />
                 </div>
                 <div className='title'>
-                  <h3>Governance</h3>
-                  <h4>Empowering All Participants</h4>
+                  <h3>{t('home-governance-headline')}</h3>
+                  <h4>{t('home-governance-subtitle')}</h4>
                 </div>
               </div>
               <IconSquiggle />
-              <p>
-                As a platform owned and operated by its users, the future of
-                Audius is entirely driven by $AUDIO governance. Everything about
-                Audius is governable, with voting weight directly correlated to
-                $AUDIO staked for value-added services.
-              </p>
+              <p>{t('home-governance-description')}</p>
             </div>
           </div>
         </div>

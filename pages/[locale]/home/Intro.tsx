@@ -3,19 +3,16 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 
 const Intro = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
 
   return (
     <section id='intro'>
       <div className='header'>
         <div className='main-content'>
-          <h2>{t('headline')}</h2>
+          <h2>{t('home-headline')}</h2>
           <div className='divider'></div>
           <div className='description'>
-            <p>
-              Giving everyone the freedom to distribute, monetize, and stream
-              unstoppable audio
-            </p>
+            <p>{t('home-subtitle')}</p>
           </div>
         </div>
         <div className='button-options'>
@@ -25,26 +22,24 @@ const Intro = () => {
             }
             className='button dashboard'
           >
-            Explore The Dashboard
+            {t('home-explore-dashboard')}
           </button>
           <button
             onClick={() => window.open('https://discord.gg/kZkT9ZK', '_blank')}
             className='button discord'
           >
-            Join The Discord
+            {t('home-join-discord')}
           </button>
         </div>
         <button
           onClick={() => window.open('https://audius.co', '_blank')}
           className='music-player'
         >
-          <span className='player-description'>
-            Looking For Our Music Player?
-          </span>
+          <span className='player-description'>{t('home-music-player')}</span>
           <span className='click'>
-            Click Here
+            {t('click-here')}
             <img
-              alt='open music player'
+              alt={t('home-open-music-player')}
               className='icon-open'
               src='/img/iconOpen.svg'
             />

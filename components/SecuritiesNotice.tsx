@@ -1,6 +1,9 @@
+import { useTranslation } from 'next-i18next'
 import React, { useEffect, useRef } from 'react'
 
 const SecuritiesNotice = () => {
+  const { t } = useTranslation()
+
   const triggerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -47,12 +50,7 @@ const SecuritiesNotice = () => {
                   padding: '0px 30px'
                 }}
               >
-                $AUDIO have not been registered under the U.S. Securities Act of
-                1933 (“Securities Act”), as amended, and may not be offered or
-                sold in the United States or to a U.S. person (as defined in
-                Regulation S promulgated under the Securities Act) absent
-                registration or an applicable exemption from the registration
-                requirements.
+                {t('securities-modal-content')}
               </p>
               <button
                 className='close-modal'
@@ -66,7 +64,7 @@ const SecuritiesNotice = () => {
                 }}
               >
                 <a className='standard-button purple' rel='noopener'>
-                  Accept
+                  {t('securities-modal-accept')}
                 </a>
               </button>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 
 import OpenGraphTags from 'components/OpenGraphTags'
@@ -7,28 +8,25 @@ import SubpageIntro from 'components/SubpageIntro'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
 
 const Protocol = () => {
+  const { t } = useTranslation()
+
   return (
     <div className='protocol mask-animation-fix'>
       <Head>
-        <title>Protocol</title>
+        <title>{t('navigation-protocol')}</title>
         <OpenGraphTags title='Audius | Protocol' path='/protocol' />
       </Head>
 
-      <SubpageIntro title='Protocol' />
+      <SubpageIntro title={t('navigation-protocol')} />
 
       <section id='protocol-details'>
         <div className='content'>
           <div className='short-description'>
-            <h2 className='interested'>
-              Interested in operating a service on the Audius network?
-            </h2>
+            <h2 className='interested'>{t('protocol-grabber')}</h2>
           </div>
           <IconSquiggle />
           <div className='long-description'>
-            <p className='stake'>
-              Stake Audius tokens on your hosted service and earn revenue from
-              the network.
-            </p>
+            <p className='stake'>{t('protocol-call-to-action')}</p>
             <button
               onClick={() =>
                 (window.location.href =
@@ -36,11 +34,9 @@ const Protocol = () => {
               }
               className='getting-started'
             >
-              Getting Started Guide
+              {t('protocol-getting-started')}
             </button>
-            <p className='wiki'>
-              Check out our wiki for more information on how to get started
-            </p>
+            <p className='wiki'>{t('protocol-wiki')}</p>
           </div>
 
           <div className='dapp'>
@@ -51,13 +47,10 @@ const Protocol = () => {
               alt='Hedgehog logo'
             />
             <h3 className='building-header'>
-              Building Your Own DApp? Use Audius Hedgehog
+              {t('protocol-hedgehog-call-to-action')}
             </h3>
             <p className='building-description'>
-              Hedgehog is an open-source, client-side Ethereum wallet that uses
-              a username and password. Allow users to interact with your DApp
-              just like they would any other website, no extensions required,
-              without centralizing control of keys.
+              {t('protocol-hedgehog-description')}
             </p>
             <button
               className='learn-more'
@@ -65,7 +58,7 @@ const Protocol = () => {
                 (window.location.href = 'https://hedgehog.audius.co/')
               }
             >
-              Learn More
+              {t('protocol-hedgehog-learn-more')}
             </button>
           </div>
 
@@ -74,9 +67,7 @@ const Protocol = () => {
             <span className='shapes' data-parallax='2' data-parallax-x='-50%'>
               <img src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
             </span>
-            <h3 className='help'>
-              Need support onboarding? We’re here to help.
-            </h3>
+            <h3 className='help'>{t('protocol-onboarding')}</h3>
             <div className='form-container'>
               <form
                 id='mc-embedded-staker-form'

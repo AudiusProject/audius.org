@@ -1,8 +1,10 @@
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import StyledLink from './StyledLink'
 
 const Footer = () => {
+  const { t } = useTranslation()
   return (
     <footer id='footer'>
       <div className='container'>
@@ -11,25 +13,29 @@ const Footer = () => {
             <div className='logo'>
               <img src='/img/audius-footer.png' data-rjs='2' alt='Audius' />
             </div>
-            <h3>Empowering Artists</h3>
+            <h3>{t('footer-headline')}</h3>
           </div>
           <div className='navigation'>
             <nav className='sitemap'>
               <ul>
                 <li>
-                  <StyledLink href='/protocol'>Protocol</StyledLink>
+                  <StyledLink href='/protocol'>
+                    {t('navigation-protocol')}
+                  </StyledLink>
                 </li>
                 <li>
-                  <StyledLink href='/api'>API</StyledLink>
+                  <StyledLink href='/api'>{t('navigation-api')}</StyledLink>
                 </li>
                 <li>
-                  <StyledLink href='/token'>Token</StyledLink>
+                  <StyledLink href='/token'>{t('navigation-token')}</StyledLink>
                 </li>
                 <li>
-                  <StyledLink href='/team'>Team</StyledLink>
+                  <StyledLink href='/team'>{t('navigation-team')}</StyledLink>
                 </li>
                 <li>
-                  <StyledLink href='/careers'>Careers</StyledLink>
+                  <StyledLink href='/careers'>
+                    {t('navigation-careers')}
+                  </StyledLink>
                 </li>
                 <li>
                   <a
@@ -37,16 +43,18 @@ const Footer = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    White Paper
+                    {t('whitepaper')}
                   </a>
                 </li>
                 <li>
-                  <StyledLink href='/security'>Security</StyledLink>
+                  <StyledLink href='/security'>
+                    {t('navigation-security')}
+                  </StyledLink>
                 </li>
               </ul>
             </nav>
             <nav className='social'>
-              <h4>Connect</h4>
+              <h4>{t('footer-connect')}</h4>
               <ul>
                 <li>
                   <a

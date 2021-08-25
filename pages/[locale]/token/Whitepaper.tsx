@@ -1,21 +1,25 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
+
 const Whitepaper = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <section className='simple-callout'>
         <div className='container'>
           <div className='content'>
             <div className='copy'>
-              <p>Want to learn more?</p>
+              <p>{t('whitepaper-learn-more')}</p>
             </div>
             <a
               className='standard-button purple'
               href='https://whitepaper.audius.co'
               target='_blank'
-              rel="noopener noreferrer"
+              rel='noopener noreferrer'
             >
-              Read the Whitepaper
+              {t('whitepaper-read')}
             </a>
           </div>
         </div>

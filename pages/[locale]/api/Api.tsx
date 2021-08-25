@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react'
 
+import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 
 import AppThumbnail from 'components/AppThumbnail'
@@ -20,15 +21,17 @@ const frameUrls = {
 
 type Frame = keyof typeof frameUrls
 
-const frameButtons: { frame: Frame; text: string }[] = [
-  { frame: 'playTrack', text: 'Play The #1 Trending Track' },
-  { frame: 'getPopularPlaylists', text: 'Get Popular Playlists' },
-  { frame: 'searchUsers', text: 'Search For Artist' },
-  { frame: 'getAllByArtist', text: 'Get All Songs By Artist' }
-]
-
 const Api = () => {
+  const { t } = useTranslation()
+
   const [selectedFrame, setSelectedFrame] = useState<Frame>('playTrack')
+
+  const frameButtons: { frame: Frame; text: string }[] = [
+    { frame: 'playTrack', text: 'Play The #1 Trending Track' },
+    { frame: 'getPopularPlaylists', text: 'Get Popular Playlists' },
+    { frame: 'searchUsers', text: 'Search For Artist' },
+    { frame: 'getAllByArtist', text: 'Get All Songs By Artist' }
+  ]
 
   const frameUrl = useMemo(() => {
     return frameUrls[selectedFrame]
@@ -37,7 +40,7 @@ const Api = () => {
   return (
     <div className='api'>
       <Head>
-        <title>API</title>
+        <title>{t('navigation-api')}</title>
         <OpenGraphTags
           title='Audius | API'
           path='/api'
@@ -45,19 +48,19 @@ const Api = () => {
         />
       </Head>
 
-      <SubpageIntro title='API' />
+      <SubpageIntro title={t('navigation-api')} />
 
       <section id='dev-details'>
         <div className='content'>
           <IconSquiggle />
           <div className='why'>
-            <div className='left'>Why Choose Audius?</div>
+            <div className='left'>{t('api-subtitle')}</div>
             <div className='right'>
               {[
-                'More Then 450K Tracks',
-                'Zero Rate Limits',
-                'Totally Free',
-                '320kbps High Quality Audio'
+                t('api-reason-1'),
+                t('api-reason-2'),
+                t('api-reason-3'),
+                t('api-reason-4')
               ].map((r) => (
                 <div className='reason' key={r}>
                   <div className='circle'>
@@ -75,21 +78,13 @@ const Api = () => {
                 <div className='tile blank medium'></div>
                 <div className='tile purple text-content header'>
                   <div className='tile-content'>
-                    <h4>
-                      Need Music For
-                      <br />
-                      Your Game?
-                    </h4>
+                    <h4>{t('api-use-case-1')}</h4>
                   </div>
                 </div>
                 <div className='tile blank medium'></div>
                 <div className='tile teal text-content header'>
                   <div className='tile-content'>
-                    <h4>
-                      Dream Of Building Your
-                      <br />
-                      Own Music Player?
-                    </h4>
+                    <h4>{t('api-use-case-2')}</h4>
                   </div>
                 </div>
                 <div className='tile blank medium'></div>
@@ -100,17 +95,13 @@ const Api = () => {
                 <div className='tile blank medium'></div>
                 <div className='tile orange text-content header'>
                   <div className='tile-content'>
-                    <h4>Always Wanted to Create Your Own Visualizer?</h4>
+                    <h4>{t('api-use-case-3')}</h4>
                   </div>
                 </div>
                 <div className='tile blank medium'></div>
                 <div className='tile purple text-content header'>
                   <div className='tile-content'>
-                    <h4>
-                      Have an idea we
-                      <br />
-                      have&apos;t thought of yet?
-                    </h4>
+                    <h4>{t('api-use-case-4')}</h4>
                   </div>
                 </div>
                 <div className='tile blank medium'></div>
@@ -123,7 +114,7 @@ const Api = () => {
                   'http://audiusproject.github.io/api-docs')
               }
             >
-              Read The Docs
+              {t('api-docs')}
             </button>
           </div>
 
@@ -133,10 +124,7 @@ const Api = () => {
       <section id='top' className='simple-callout inspiration'>
         <div className='container'>
           <div className='content'>
-            <div className='copy'>
-              Looking for inspiration? Take a look at these outstanding apps,
-              all built using our free API
-            </div>
+            <div className='copy'>{t('api-inspiration')}</div>
           </div>
         </div>
       </section>
@@ -144,7 +132,7 @@ const Api = () => {
       <section id='apps' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Built On Audius</h2>
+            <h2>{t('api-built-on-audius')}</h2>
           </div>
 
           <div id='appContent' className='row three-columns'>
@@ -156,7 +144,7 @@ const Api = () => {
               className='button'
               onClick={() => (window.location.href = 'mailto:api@audius.co')}
             >
-              Submit Your Own App
+              {t('api-submit-app')}
             </button>
             <p
               onClick={() =>
@@ -164,7 +152,7 @@ const Api = () => {
                   'https://audiusproject.github.io/api-docs/')
               }
             >
-              Learn More About The API
+              {t('api-learn-more')}
             </p>
           </div>
         </div>
@@ -173,7 +161,7 @@ const Api = () => {
       <section id='demo' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>See For Yourself</h2>
+            <h2>{t('api-example-headline')}</h2>
           </div>
           <div className='content'>
             <div className='frame'>
@@ -187,7 +175,7 @@ const Api = () => {
               ></iframe>
             </div>
             <div className='selections'>
-              <h2>Example API Requests</h2>
+              <h2>{t('api-example-requests')}</h2>
               {frameButtons.map(({ frame, text }) => (
                 <button
                   className={selectedFrame === frame ? 'active' : ''}
@@ -204,7 +192,7 @@ const Api = () => {
                     'https://audiusproject.github.io/api-docs')
                 }
               >
-                Full API Reference
+                {t('api-full-reference')}
               </button>
             </div>
           </div>
@@ -216,11 +204,7 @@ const Api = () => {
           <div className='content'>
             <img src='../img/apiLogo@2x.png' alt='Audius API logo' />
             <div className='header'>
-              <h3>
-                It’s easy to build your
-                <br />
-                own app on Audius
-              </h3>
+              <h3>{t('api-conclusion')}</h3>
             </div>
             <button
               className='learn-more'
@@ -229,7 +213,7 @@ const Api = () => {
                   'https://audiusproject.github.io/api-docs')
               }
             >
-              Learn More About The Audius API
+              {t('api-learn-more-variant')}
             </button>
           </div>
         </div>
