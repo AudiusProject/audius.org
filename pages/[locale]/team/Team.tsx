@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 
 import Investors from 'components/Investors'
@@ -14,22 +15,21 @@ import leadership from './leadership.json'
 import teamMembers from './teamMembers.json'
 
 const Team = () => {
+  const { t } = useTranslation()
   return (
     <div className='team mask-animation-fix'>
       <Head>
-        <title>Team</title>
+        <title>{t('navigation-team')}</title>
         <OpenGraphTags title='Audius | Team' path='/team' />
       </Head>
 
       <SubpageIntro
-        title='Team'
+        title={t('navigation-team')}
         description={
           <>
-            Audius is a team of entrepreneurs, engineers, audiophiles, and
-            blockchain experts. Our mission is to empower a new generation of
-            audio artists on the decentralized web.{' '}
+            {t('team-description')}{' '}
             <Link href='/careers'>
-              <a>We&apos;re hiring!</a>
+              <a>{t('team-hiring')}</a>
             </Link>
           </>
         }
@@ -52,12 +52,8 @@ const Team = () => {
         <div className='container'>
           <div className='content'>
             <div className='copy'>
-              <h3>Join Our Team</h3>
-              <p>
-                Want to help empower artists
-                <br />
-                across the globe?
-              </p>
+              <h3>{t('team-join')}</h3>
+              <p>{t('team-mission')}</p>
             </div>
             <a
               className='standard-button purple'
@@ -65,7 +61,7 @@ const Team = () => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              Get In Touch
+              {t('team-contact')}
             </a>
           </div>
         </div>
@@ -74,7 +70,7 @@ const Team = () => {
       <section id='advisors' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Advisors</h2>
+            <h2>{t('team-advisors-headline')}</h2>
           </div>
           <div className='row three-columns'>{advisors.map(Bio)}</div>
         </div>

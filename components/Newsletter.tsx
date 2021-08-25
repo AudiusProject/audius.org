@@ -11,7 +11,7 @@ const Newsletter = () => {
           <div className='content'>
             <div className='header'>
               <h3>{t('newsletter-headline')}</h3>
-              <p>{t('newletters-subtitle')}</p>
+              <p>{t('newsletter-subtitle')}</p>
             </div>
             <form
               action='https://Audius.us18.list-manage.com/subscribe/post?u=f351897a27ff0a641b8acd9ab&amp;id=f064864764'

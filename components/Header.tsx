@@ -1,16 +1,19 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
 import IconSquiggleBold from 'public/img/iconSquiggleBold.svg'
 
 const Header = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <button id='menu-button' className='mobile-only'>
         <IconSquiggleBold />
         <IconClose />
-        <span>Show/Hide Main Menu</span>
+        <span>{t('navigation-show-menu')}</span>
       </button>
 
       <header className='main-header'>
@@ -24,22 +27,26 @@ const Header = () => {
           <div>
             <ul>
               <li className='mobile-only'>
-                <StyledLink href='/home'>Home</StyledLink>
+                <StyledLink href='/home'>{t('navigation-home')}</StyledLink>
               </li>
               <li>
-                <StyledLink href='/protocol'>Protocol</StyledLink>
+                <StyledLink href='/protocol'>
+                  {t('navigation-protocol')}
+                </StyledLink>
               </li>
               <li>
-                <StyledLink href='/api'>API</StyledLink>
+                <StyledLink href='/api'>{t('navigation-api')}</StyledLink>
               </li>
               <li>
-                <StyledLink href='/token'>Token</StyledLink>
+                <StyledLink href='/token'>{t('navigation-token')}</StyledLink>
               </li>
               <li>
-                <StyledLink href='/team'>Team</StyledLink>
+                <StyledLink href='/team'>{t('navigation-team')}</StyledLink>
               </li>
               <li>
-                <StyledLink href='/careers'>Careers</StyledLink>
+                <StyledLink href='/careers'>
+                  {t('navigation-careers')}
+                </StyledLink>
               </li>
               <li>
                 <a
@@ -48,7 +55,7 @@ const Header = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  White Paper
+                  {t('whitepaper')}
                 </a>
               </li>
             </ul>

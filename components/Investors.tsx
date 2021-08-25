@@ -1,11 +1,15 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
+
 const Investors = () => {
+  const { t } = useTranslation()
+
   return (
     <section id='investors'>
       <div className='container'>
         <div className='header'>
-          <h2>Investors</h2>
+          <h2>{t('team-investors-headline')}</h2>
         </div>
         <div className='logos'>
           <ul>

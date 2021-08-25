@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useTranslation } from 'next-i18next'
+import { useTranslation, Trans } from 'next-i18next'
 import Head from 'next/head'
 
 import Newsletter from 'components/Newsletter'
@@ -13,8 +13,6 @@ import WhitepaperCallout from './Whitepaper'
 
 const Token = () => {
   const { t } = useTranslation()
-
-  const intro = t('token-introduction').split('$AUDIO')
 
   return (
     <div className='token'>
@@ -30,7 +28,9 @@ const Token = () => {
           <div className='content'>
             <div className='copy'>
               <p>
-                {intro[0]}$AUDIO{intro[1]}
+                <Trans i18nKey='token-introduction'>
+                  Introducing <em>$AUDIO</em>, The Audius Platform Token
+                </Trans>
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Token = () => {
       <section id='dashboard-link' className='token-features'>
         <a
           className='standard-button purple'
-          href='https://discord.gg/kZkT9ZK'
+          href='https://discord.gg/audius'
           target='_blank'
           rel='noopener noreferrer'
         >

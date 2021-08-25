@@ -25,7 +25,7 @@ const Intro = () => {
             {t('home-explore-dashboard')}
           </button>
           <button
-            onClick={() => window.open('https://discord.gg/kZkT9ZK', '_blank')}
+            onClick={() => window.open('https://discord.gg/audius', '_blank')}
             className='button discord'
           >
             {t('home-join-discord')}

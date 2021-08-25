@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 
 import Link from 'components/Link'
@@ -7,10 +8,12 @@ import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
 const Careers = () => {
+  const { t } = useTranslation()
+
   return (
     <div className='careers mask-animation-fix'>
       <Head>
-        <title>Careers</title>
+        <title>{t('navigation-careers')}</title>
         <OpenGraphTags
           title='Audius | Careers'
           path='/careers'
@@ -18,32 +21,17 @@ const Careers = () => {
         />
       </Head>
 
-      <SubpageIntro title='Careers' showDivider />
+      <SubpageIntro title={t('navigation-careers')} showDivider />
 
       <section id='who-we-are' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Who We Are</h2>
+            <h2>{t('careers-headline')}</h2>
           </div>
           <div className='content'>
-            <p>
-              Audius is a digital streaming service that connects fans directly
-              with artists and exclusive new music.
-              <br />
-              <br />
-              It does this by being fully decentralized: Audius is owned and run
-              by a vibrant, open-source community of artists, fans, and api all
-              around the world. Audius gives artists the power to share
-              never-before-heard music and monetize streams directly. With the
-              Audius API, developers can build their own apps on top of Audius,
-              giving them access to one of the most unique audio catalogs in
-              existence.
-              <br />
-              <br />
-              Backed by an all-star team of investors, Audius was founded in
-              2018 and serves millions of streams every month, making it the
-              largest non-financial crypto application ever built.
-            </p>
+            <p>{t('careers-about-1')}</p>
+            <p>{t('careers-about-2')}</p>
+            <p>{t('careers-about-3')}</p>
           </div>
         </div>
       </section>
@@ -74,12 +62,8 @@ const Careers = () => {
         <div className='container'>
           <div className='content'>
             <div className='copy'>
-              <h3>Join Our Team</h3>
-              <p>
-                Want to help empower artists
-                <br />
-                across the globe?
-              </p>
+              <h3>{t('team-join')}</h3>
+              <p>{t('team-mission')}</p>
             </div>
             <a
               className='standard-button purple'
@@ -87,7 +71,7 @@ const Careers = () => {
               target='_blank'
               rel='noreferrer'
             >
-              Job Listings
+              {t('careers-listings')}
             </a>
           </div>
         </div>
@@ -96,25 +80,14 @@ const Careers = () => {
       <section id='about-the-company' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>About The Company</h2>
+            <h2>{t('careers-description-headline')}</h2>
           </div>
           <div className='content'>
-            <p>
-              Audius is an 18-person team of entrepreneurs, engineers,
-              audiophiles, and blockchain experts. Our benefits include
-              unlimited PTO, high quality paid medical insurance, FSA, 401k,
-              yearly learning stipend, equipment stipend and a home office setup
-              credit (whatever you need to be productive!). We also have a
-              monthly stipend for music-related activities (concerts, lessons,
-              etc.).
-              <br />
-              <br />
-              Our company is fully remote and our team is currently distributed
-              across the United States.
-            </p>
+            <p>{t('careers-description-1')}</p>
+            <p>{t('careers-description-2')}</p>
           </div>
           <Link href='/team'>
-            <a className='standard-button purple'>Check Out The Team</a>
+            <a className='standard-button purple'>{t('careers-team')}</a>
           </Link>
         </div>
       </section>
@@ -123,12 +96,12 @@ const Careers = () => {
         <div className='container'>
           <div className='content'>
             <div className='header'>
-              <h3>See What All The Buzz Is About</h3>
+              <h3>{t('careers-launch-app-headline')}</h3>
               <button
                 className='learn-more'
                 onClick={() => (window.location.href = 'https://audius.co/')}
               >
-                Launch The App
+                {t('careers-launch-app')}
               </button>
             </div>
           </div>
