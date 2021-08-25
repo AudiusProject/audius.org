@@ -80,7 +80,7 @@
   "security-disclosure-guidelines": "We generally adhere to HackerOne's <2>disclosure guidelines</2>.",
   "security-disclosure-process": "Disclosure process",
   "security-disclosure-process-1": "Safely disclose issue and applicable proof-of-concept or steps for reproduction to <2>security@audius.co</2>",
-  "security-disclosure-process-2": "We determine severity of issue together, following informal CVSS guidelines (<1>example</1>), producing classNameification (low, medium, high, critical)",
+  "security-disclosure-process-2": "We determine severity of issue together, following informal CVSS guidelines (<1>example</1>), producing classification (low, medium, high, critical)",
   "security-disclosure-process-3": "Bounty is paid out",
   "security-disclosure-process-4": "Fix is produced, rolled out, and reporter can disclose issue publicly",
   "security-disclosure-process-5": "We produce & publish documentation of issue",
