@@ -1,57 +1,46 @@
 [
   {
     "name": "deadmau5",
-    "title": "Electronic Music Producer",
     "imageUrl": "/img/deadmau5.png"
   },
   {
     "name": "RAC",
-    "title": "Electronic Music Producer",
     "imageUrl": "/img/RAC.png"
   },
   {
     "name": "3LAU",
-    "title": "Electronic Music Producer",
     "imageUrl": "/img/3lau.png"
   },
   {
     "name": "Adam Goldberg",
-    "title": "Co-Founder & Managing Director, Standard Crypto",
     "imageUrl": "/img/Adam-Goldberg.png"
   },
   {
     "name": "Bing Gordon",
-    "title": "Co-Founder of EA Games",
     "imageUrl": "/img/bing-gordon.png"
   },
   {
     "name": "Tom Schmidt",
-    "title": "Partner at Dragonfly Capital",
     "imageUrl": "/img/tom-schmidt.png"
   },
   {
     "name": "Greg Hazel",
-    "title": "Chief Architect at BitTorrent",
     "imageUrl": "/img/greg-hazel.png"
   },
   {
     "name": "Ash Pournouri",
-    "title": "Avicii's Fmr. Manager",
     "imageUrl": "/img/ash-pournouri.png"
   },
   {
     "name": "Justin Kan",
-    "title": "Co-Founder of Twitch",
     "imageUrl": "/img/justin-kan.png"
   },
   {
     "name": "Robb McDaniels",
-    "title": "CEO at Beatport",
     "imageUrl": "/img/robb-mcdaniels.png"
   },
   {
     "name": "Jesse Grushack",
-    "title": "Senior Strategy & Product at ConsenSys",
     "imageUrl": "/img/Jesse-Grushack.png"
   }
 ]

@@ -1,16 +1,17 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
 import IconLinkedIn from 'public/img/iconLinkedIn.svg'
 
 type BioProps = {
   name: string
-  title: string
-  description: string
   imageUrl: string
   linkedInUrl: string
 }
 
-const Bio = ({ name, title, description, imageUrl, linkedInUrl }: BioProps) => {
+const Bio = ({ name, imageUrl, linkedInUrl }: BioProps) => {
+  const nameKey = name.replace(/ /g, '-').toLowerCase()
+  const { t } = useTranslation('people')
   return (
     <div key={name}>
       <div className='person' data-modal='person-modal'>
@@ -28,9 +29,9 @@ const Bio = ({ name, title, description, imageUrl, linkedInUrl }: BioProps) => {
         </div>
         <div className='description'>
           <h4 className='name'>{name}</h4>
-          <h5 className='title'>{title}</h5>
+          <h5 className='title'>{t(`${nameKey}-title`)}</h5>
           <div className='bio'>
-            <p>{description}</p>
+            <p>{t(`${nameKey}-description`)}</p>
           </div>
         </div>
       </div>
