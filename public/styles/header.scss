@@ -6,21 +6,45 @@
     text-transform: uppercase;
     cursor: pointer;
     user-select: none;
+
+    a {
+      color: black;
+      &.active {
+        color: #c4cbd7;
+        cursor: not-allowed;
+
+        svg {
+          path {
+            fill: #c4cbd7;
+          }
+        }
+      }
+    }
   }
 
-  .nav-popup-container {
-    position: absolute;
-    left: 50%;
-    margin-top: 8px;
+  .menu .menu-item-label {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 12px;
+    }
   }
 
   .nav-popup {
-    position: relative;
-    left: -50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 8px;
     padding: 16px;
+    white-space: nowrap;
     background: white;
     border: 1px solid #e7e6eb;
     border-radius: 8px;
     box-shadow: 0px 16px 20px 0px #85819926;
+
+    .menu-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }

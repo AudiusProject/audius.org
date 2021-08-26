@@ -1,12 +1,21 @@
-import React, { useRef, useState } from 'react'
+import React, { ReactNode, useRef, useState } from 'react'
 
+import { useTranslation } from 'next-i18next'
 import { useTransition, animated } from 'react-spring'
 
+import StyledLink from './StyledLink'
+
 type NavPopupProps = {
-  label: string
+  labelKey: string
+  items: {
+    labelKey: string
+    icon: any
+    href: string
+  }[]
 }
 
-const NavPopup: React.FC<NavPopupProps> = ({ label }) => {
+const NavPopup: React.FC<NavPopupProps> = ({ items, labelKey }) => {
+  const { t } = useTranslation()
   const [isPopupVisible, setIsPopupVisible] = useState(false)
   const anchorRef = useRef<HTMLDivElement>()
 
@@ -22,19 +31,28 @@ const NavPopup: React.FC<NavPopupProps> = ({ label }) => {
       onMouseLeave={() => setIsPopupVisible(false)}
     >
       <div className='menu-item' ref={anchorRef}>
-        {label}
+        <div>{t(labelKey)}</div>
       </div>
 
       {transitions(
-        (styles, item) =>
-          item && (
+        (styles, visible) =>
+          visible && (
             <animated.div style={styles}>
-              <div className='nav-popup-container'>
-                <div className='nav-popup'>
-                  <ul>
-                    <li className='menu-item'>Hello</li>
-                  </ul>
-                </div>
+              <div className='nav-popup'>
+                <ul>
+                  {items.map(({ labelKey: itemLabelKey, icon: Icon, href }) => {
+                    return (
+                      <li className='menu-item'>
+                        <StyledLink href={href}>
+                          <div className='menu-item-label'>
+                            <Icon height={21} width={21} />
+                            <div>{t(itemLabelKey)}</div>
+                          </div>
+                        </StyledLink>
+                      </li>
+                    )
+                  })}
+                </ul>
               </div>
             </animated.div>
           )
