@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react'
-
+import React, { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -9,6 +8,7 @@ import { useTransition, animated } from 'react-spring'
 
 import PageLayout from 'components/PageLayout'
 import init from 'public/js/main'
+
 import 'public/styles/index.scss'
 
 const tagManagerArgs = {

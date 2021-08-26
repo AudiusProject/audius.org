@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
+
+import NavPopup from 'components/NavPopup'
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
 import IconSquiggleBold from 'public/img/iconSquiggleBold.svg'
@@ -26,36 +28,19 @@ const Header = () => {
         <nav className='menu'>
           <div>
             <ul>
-              <li className='mobile-only'>
-                <StyledLink href='/home'>{t('navigation-home')}</StyledLink>
-              </li>
               <li>
-                <StyledLink href='/protocol'>
-                  {t('navigation-protocol')}
-                </StyledLink>
-              </li>
-              <li>
-                <StyledLink href='/api'>{t('navigation-api')}</StyledLink>
-              </li>
-              <li>
-                <StyledLink href='/token'>{t('navigation-token')}</StyledLink>
-              </li>
-              <li>
-                <StyledLink href='/team'>{t('navigation-team')}</StyledLink>
-              </li>
-              <li>
-                <StyledLink href='/careers'>
-                  {t('navigation-careers')}
-                </StyledLink>
+                <NavPopup label='Developers'>
+                  <StyledLink href='/home'>{t('navigation-home')}</StyledLink>
+                </NavPopup>
               </li>
               <li>
                 <a
                   className='standard-button purple'
-                  href='https://whitepaper.audius.co/'
+                  href='https://audius.gitbook.io/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  {t('whitepaper')}
+                  {t('navigation-docs')}
                 </a>
               </li>
             </ul>
