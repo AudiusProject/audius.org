@@ -19,7 +19,7 @@ const Security = () => {
       <SubpageIntro
         title={t('navigation-security')}
         description={
-          <p>
+          <>
             <Trans i18nKey='security-description'>
               Security is vital to Audius&apos; mission. We work hard to ensure
               that data is always safe. Our{' '}
@@ -33,7 +33,7 @@ const Security = () => {
               <a href='https://github.com/AudiusProject'>Codebases</a> and
               respectfully disclose vulnerabilities & issues.
             </Trans>
-          </p>
+          </>
         }
       />
 

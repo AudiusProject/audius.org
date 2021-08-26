@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
+
 import IconLink from 'public/img/iconLink.svg'
 
 type AppThumbnailProps = {
