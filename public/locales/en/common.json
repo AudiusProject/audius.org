@@ -104,6 +104,7 @@
   "security-not-eligible-8": "Account enumeration through brute-force attacks",
   "security-not-eligible-9": "CSV command execution",
   "security-not-eligible-10": "Best practice recommendations with no proof-of-concept",
+  "security-not-eligible-11": "Token reuse, password poisoning, or account revocation with regard to the documented security considerations in <1>Hedgehog</1>",
   "security-other-concerns": "Other Concerns",
   "security-other-concerns-description": "All other security concerns should be directed at <2>security@audius.co</2>.",
   "submit": "Submit",

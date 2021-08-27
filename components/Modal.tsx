@@ -1,9 +1,10 @@
 import React from 'react'
 
+import { useTranslation } from 'next-i18next'
+
 import IconClose from 'public/img/iconClose.svg'
 import IconLink from 'public/img/iconLink.svg'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
-import { useTranslation } from 'next-i18next'
 
 const Modal = () => {
   const { t } = useTranslation()

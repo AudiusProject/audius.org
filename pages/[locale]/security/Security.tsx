@@ -19,7 +19,7 @@ const Security = () => {
       <SubpageIntro
         title={t('navigation-security')}
         description={
-          <p>
+          <>
             <Trans i18nKey='security-description'>
               Security is vital to Audius&apos; mission. We work hard to ensure
               that data is always safe. Our{' '}
@@ -33,7 +33,7 @@ const Security = () => {
               <a href='https://github.com/AudiusProject'>Codebases</a> and
               respectfully disclose vulnerabilities & issues.
             </Trans>
-          </p>
+          </>
         }
       />
 
@@ -94,6 +94,15 @@ const Security = () => {
               <li>{t('security-not-eligible-8')}</li>
               <li>{t('security-not-eligible-9')}</li>
               <li>{t('security-not-eligible-10')}</li>
+              <li>
+                <Trans i18nKey='security-not-eligible-11'>
+                  Token reuse, password poisoning, or account revocation with
+                  regard to the documented security considerations in
+                  <a href='https://audiusproject.github.io/hedgehog-docs/'>
+                    Hedgehog
+                  </a>
+                </Trans>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,6 @@
-import { useTranslation } from 'next-i18next'
 import React from 'react'
+
+import { useTranslation } from 'next-i18next'
 
 import StyledLink from './StyledLink'
 

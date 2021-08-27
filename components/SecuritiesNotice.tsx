@@ -1,5 +1,6 @@
-import { useTranslation } from 'next-i18next'
 import React, { useEffect, useRef } from 'react'
+
+import { useTranslation } from 'next-i18next'
 
 const SecuritiesNotice = () => {
   const { t } = useTranslation()
