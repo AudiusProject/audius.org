@@ -8,6 +8,7 @@ type NavPopupProps = {
   label: string
   icon?: () => ReactNode
   variant?: 'primary' | 'secondary'
+  xOffset?: number
   items: {
     label: string
     icon: () => ReactNode
@@ -20,7 +21,8 @@ const NavPopup: React.FC<NavPopupProps> = ({
   items,
   label,
   icon,
-  variant = 'primary'
+  variant = 'primary',
+  xOffset
 }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false)
   const anchorRef = useRef<HTMLDivElement>()
@@ -50,26 +52,32 @@ const NavPopup: React.FC<NavPopupProps> = ({
         (styles, visible) =>
           visible && (
             <animated.div style={styles}>
-              <div className='nav-popup'>
-                <ul>
-                  {items.map(
-                    ({ label: itemLabel, icon: itemIcon, href, locale }) => {
-                      return (
-                        <StyledLink href={href} locale={locale} key={itemLabel}>
-                          <li className='menu-item'>
-                            <div
-                              className='menu-item-label'
-                              onClick={() => setIsPopupVisible(false)}
-                            >
-                              {itemIcon()}
-                              <div>{itemLabel}</div>
-                            </div>
-                          </li>
-                        </StyledLink>
-                      )
-                    }
-                  )}
-                </ul>
+              <div className='nav-popup' style={{ marginLeft: xOffset }}>
+                <div className='nav-popup-menu'>
+                  <ul>
+                    {items.map(
+                      ({ label: itemLabel, icon: itemIcon, href, locale }) => {
+                        return (
+                          <StyledLink
+                            href={href}
+                            locale={locale}
+                            key={itemLabel}
+                          >
+                            <li className='menu-item'>
+                              <div
+                                className='menu-item-label'
+                                onClick={() => setIsPopupVisible(false)}
+                              >
+                                {itemIcon()}
+                                <div>{itemLabel}</div>
+                              </div>
+                            </li>
+                          </StyledLink>
+                        )
+                      }
+                    )}
+                  </ul>
+                </div>
               </div>
             </animated.div>
           )

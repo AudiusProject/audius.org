@@ -48,7 +48,7 @@ const LocalePicker = () => {
 
   return (
     <div>
-      <NavPopup {...locale} items={items} />
+      <NavPopup {...locale} items={items} variant='secondary' xOffset={6} />
     </div>
   )
 }
