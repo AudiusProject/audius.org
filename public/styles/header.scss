@@ -10,13 +10,12 @@
     user-select: none;
 
     &.menu-item-label {
-      ::after {
+      &::after {
         content: url(/img/iconNavigationCaret.svg);
         position: absolute;
         right: -4px;
         top: 10px;
-        opacity: 1;
-        transition: opacity 250ms;
+        transition: top 250ms;
       }
     }
   }
@@ -24,9 +23,15 @@
   .menu-item-label {
     display: flex;
     align-items: center;
+    height: 18px;
 
-    svg {
+    svg,
+    .icon {
       margin-right: 12px;
+    }
+
+    .icon {
+      height: 26px;
     }
   }
 
@@ -34,8 +39,8 @@
     padding: 12px;
     &:hover {
       .menu-item-label {
-        ::after {
-          opacity: 0;
+        &::after {
+          top: 12px;
         }
       }
     }

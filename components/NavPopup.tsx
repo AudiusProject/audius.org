@@ -1,21 +1,27 @@
-import React, { useRef, useState } from 'react'
+import React, { ReactNode, useRef, useState } from 'react'
 
-import { useTranslation } from 'next-i18next'
 import { useTransition, animated } from 'react-spring'
 
 import StyledLink from './StyledLink'
 
 type NavPopupProps = {
-  labelKey: string
+  label: string
+  icon?: () => ReactNode
+  variant?: 'primary' | 'secondary'
   items: {
-    labelKey: string
-    icon: any
+    label: string
+    icon: () => ReactNode
     href: string
+    locale?: string
   }[]
 }
 
-const NavPopup: React.FC<NavPopupProps> = ({ items, labelKey }) => {
-  const { t } = useTranslation()
+const NavPopup: React.FC<NavPopupProps> = ({
+  items,
+  label,
+  icon,
+  variant = 'primary'
+}) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false)
   const anchorRef = useRef<HTMLDivElement>()
 
@@ -33,10 +39,11 @@ const NavPopup: React.FC<NavPopupProps> = ({ items, labelKey }) => {
     <div
       onMouseEnter={() => setIsPopupVisible(true)}
       onMouseLeave={() => setIsPopupVisible(false)}
-      className='nav-popup-container'
+      className={`nav-popup-container ${variant}`}
     >
       <div className='menu-item menu-item-label' ref={anchorRef}>
-        <div>{t(labelKey)}</div>
+        {icon?.()}
+        <div>{label}</div>
       </div>
 
       {transitions(
@@ -45,21 +52,23 @@ const NavPopup: React.FC<NavPopupProps> = ({ items, labelKey }) => {
             <animated.div style={styles}>
               <div className='nav-popup'>
                 <ul>
-                  {items.map(({ labelKey: itemLabelKey, icon: Icon, href }) => {
-                    return (
-                      <StyledLink href={href}>
-                        <li className='menu-item'>
-                          <div
-                            className='menu-item-label'
-                            onClick={() => setIsPopupVisible(false)}
-                          >
-                            <Icon height={21} width={21} />
-                            <div>{t(itemLabelKey)}</div>
-                          </div>
-                        </li>
-                      </StyledLink>
-                    )
-                  })}
+                  {items.map(
+                    ({ label: itemLabel, icon: itemIcon, href, locale }) => {
+                      return (
+                        <StyledLink href={href} locale={locale} key={itemLabel}>
+                          <li className='menu-item'>
+                            <div
+                              className='menu-item-label'
+                              onClick={() => setIsPopupVisible(false)}
+                            >
+                              {itemIcon()}
+                              <div>{itemLabel}</div>
+                            </div>
+                          </li>
+                        </StyledLink>
+                      )
+                    }
+                  )}
                 </ul>
               </div>
             </animated.div>

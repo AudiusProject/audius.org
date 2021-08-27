@@ -14,6 +14,9 @@ import IconNavigationStaking from 'public/img/iconNavigationStaking.svg'
 import IconNavigationRunningNode from 'public/img/iconNavigationRunningNode.svg'
 import IconNavigationCareer from 'public/img/iconNavigationCareer.svg'
 import IconNavigationTeam from 'public/img/iconNavigationTeam.svg'
+import LocalePicker from './LocalePicker'
+
+const renderIcon = (Icon: any) => () => <Icon height={21} width={21} />
 
 const Header = () => {
   const { t } = useTranslation()
@@ -38,16 +41,16 @@ const Header = () => {
             <ul>
               <li>
                 <NavPopup
-                  labelKey='navigation-developers'
+                  label={t('navigation-developers')}
                   items={[
                     {
-                      labelKey: 'navigation-api',
-                      icon: IconNavigationApi,
+                      label: t('navigation-api'),
+                      icon: renderIcon(IconNavigationApi),
                       href: '/api'
                     },
                     {
-                      labelKey: 'navigation-3rd-party-docs',
-                      icon: IconNavigationDocs,
+                      label: t('navigation-3rd-party-docs'),
+                      icon: renderIcon(IconNavigationDocs),
                       href: 'https://audius.gitbook.io/'
                     }
                   ]}
@@ -55,21 +58,21 @@ const Header = () => {
               </li>
               <li>
                 <NavPopup
-                  labelKey='navigation-token'
+                  label={t('navigation-token')}
                   items={[
                     {
-                      labelKey: 'navigation-whitepaper',
-                      icon: IconNavigationWhitepaper,
+                      label: t('navigation-whitepaper'),
+                      icon: renderIcon(IconNavigationWhitepaper),
                       href: 'https://whitepaper.audius.co/'
                     },
                     {
-                      labelKey: 'navigation-tokenomics',
-                      icon: IconNavigationTokenomics,
+                      label: t('navigation-tokenomics'),
+                      icon: renderIcon(IconNavigationTokenomics),
                       href: '/token'
                     },
                     {
-                      labelKey: 'navigation-staking',
-                      icon: IconNavigationStaking,
+                      label: t('navigation-staking'),
+                      icon: renderIcon(IconNavigationStaking),
                       href: 'https://audius.gitbook.io/docs/token/staking'
                     }
                   ]}
@@ -77,11 +80,11 @@ const Header = () => {
               </li>
               <li>
                 <NavPopup
-                  labelKey='navigation-protocol'
+                  label={t('navigation-protocol')}
                   items={[
                     {
-                      labelKey: 'navigation-running-node',
-                      icon: IconNavigationRunningNode,
+                      label: t('navigation-running-node'),
+                      icon: renderIcon(IconNavigationRunningNode),
                       href: 'https://audius.gitbook.io/docs/token/running-a-node'
                     }
                   ]}
@@ -89,20 +92,23 @@ const Header = () => {
               </li>
               <li>
                 <NavPopup
-                  labelKey='navigation-about'
+                  label={t('navigation-about')}
                   items={[
                     {
-                      labelKey: 'navigation-careers',
-                      icon: IconNavigationCareer,
+                      label: t('navigation-careers'),
+                      icon: renderIcon(IconNavigationCareer),
                       href: '/careers'
                     },
                     {
-                      labelKey: 'navigation-team',
-                      icon: IconNavigationTeam,
+                      label: t('navigation-team'),
+                      icon: renderIcon(IconNavigationTeam),
                       href: '/team'
                     }
                   ]}
                 />
+              </li>
+              <li>
+                <LocalePicker />
               </li>
               <li>
                 <a
