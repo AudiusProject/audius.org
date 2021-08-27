@@ -94,6 +94,15 @@ const Security = () => {
               <li>{t('security-not-eligible-8')}</li>
               <li>{t('security-not-eligible-9')}</li>
               <li>{t('security-not-eligible-10')}</li>
+              <li>
+                <Trans i18nKey='security-not-eligible-11'>
+                  Token reuse, password poisoning, or account revocation with
+                  regard to the documented security considerations in
+                  <a href='https://audiusproject.github.io/hedgehog-docs/'>
+                    Hedgehog
+                  </a>
+                </Trans>
+              </li>
             </ul>
           </div>
         </div>
