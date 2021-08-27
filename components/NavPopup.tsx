@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import { useTranslation } from 'next-i18next'
 import { useTransition, animated } from 'react-spring'
@@ -20,17 +20,22 @@ const NavPopup: React.FC<NavPopupProps> = ({ items, labelKey }) => {
   const anchorRef = useRef<HTMLDivElement>()
 
   const transitions = useTransition(isPopupVisible, {
-    from: { height: '0%', opacity: 0 },
-    enter: { height: '100%', opacity: 1 },
-    leave: { height: '0%', opacity: 0 }
+    from: { opacity: 0, transform: `scale(0)` },
+    enter: { opacity: 1, transform: `scale(1)` },
+    leave: { opacity: 0, transform: `scale(0)` },
+    config: {
+      tension: 250,
+      clamp: true
+    }
   })
 
   return (
     <div
       onMouseEnter={() => setIsPopupVisible(true)}
       onMouseLeave={() => setIsPopupVisible(false)}
+      className='nav-popup-container'
     >
-      <div className='menu-item' ref={anchorRef}>
+      <div className='menu-item menu-item-label' ref={anchorRef}>
         <div>{t(labelKey)}</div>
       </div>
 
@@ -42,14 +47,17 @@ const NavPopup: React.FC<NavPopupProps> = ({ items, labelKey }) => {
                 <ul>
                   {items.map(({ labelKey: itemLabelKey, icon: Icon, href }) => {
                     return (
-                      <li className='menu-item'>
-                        <StyledLink href={href}>
-                          <div className='menu-item-label'>
+                      <StyledLink href={href}>
+                        <li className='menu-item'>
+                          <div
+                            className='menu-item-label'
+                            onClick={() => setIsPopupVisible(false)}
+                          >
                             <Icon height={21} width={21} />
                             <div>{t(itemLabelKey)}</div>
                           </div>
-                        </StyledLink>
-                      </li>
+                        </li>
+                      </StyledLink>
                     )
                   })}
                 </ul>
