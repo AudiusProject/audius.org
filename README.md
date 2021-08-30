@@ -41,4 +41,3 @@ To add a new locale:
 1. Add the locale to [`/next-i18next.config.js`](/next-i18next.config.js)
 2. Add the locale to [`/workers-site/index.js`](/workers-site/index.js)
 3. Add the locale resources in [`/public/locales`](/public/locales)
-4. Add the locale to [`/components/LocalePicker.tsx`](/components/LocalePicker.tsx)
