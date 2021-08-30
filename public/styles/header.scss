@@ -1,13 +1,14 @@
 .main-header {
   .menu-item {
-    a {
-      color: black;
-    }
     font-weight: 800;
     letter-spacing: 1.4px;
     font-size: 16px;
     text-transform: uppercase;
     user-select: none;
+
+    a {
+      color: black;
+    }
 
     &.menu-item-label {
       &::after {
@@ -32,6 +33,7 @@
 
     .icon {
       height: 26px;
+      width: 26px;
     }
   }
 
@@ -44,6 +46,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+
     &::before {
       content: '';
       height: 12px;
@@ -71,11 +74,16 @@
           }
         }
       }
+
+      &:not(:last-child) .menu-item {
+        margin-bottom: 4px;
+      }
     }
 
     .menu-item {
       padding: 8px;
       border-radius: 8px;
+
       &:hover {
         background-color: #f4f4f6;
       }

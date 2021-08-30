@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
+
 import IconLinkedIn from 'public/img/iconLinkedIn.svg'
 
 type BioProps = {
@@ -10,7 +11,7 @@ type BioProps = {
 }
 
 const Bio = ({ name, imageUrl, linkedInUrl }: BioProps) => {
-  const nameKey = name.replace(/ /g, '-').toLowerCase()
+  const nameKey = name?.replace(/ /g, '-').toLowerCase()
   const { t } = useTranslation('people')
   return (
     <div key={name}>
