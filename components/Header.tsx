@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
+
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
 import IconSquiggleBold from 'public/img/iconSquiggleBold.svg'
