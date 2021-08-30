@@ -5,6 +5,7 @@
     font-size: 16px;
     text-transform: uppercase;
     user-select: none;
+    cursor: pointer;
 
     a {
       color: black;
@@ -66,7 +67,6 @@
       color: black;
       &.active {
         color: #c4cbd7;
-        cursor: not-allowed;
 
         svg {
           path {

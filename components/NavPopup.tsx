@@ -32,7 +32,8 @@ const NavPopup: React.FC<NavPopupProps> = ({
     enter: { opacity: 1, transform: `scale(1)` },
     leave: { opacity: 0, transform: `scale(0)` },
     config: {
-      tension: 250,
+      tension: 310,
+      friction: 25,
       clamp: true
     }
   })
