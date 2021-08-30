@@ -3,6 +3,7 @@ import React, { ReactNode, useRef, useState } from 'react'
 import { useTransition, animated } from 'react-spring'
 
 import IconNavigationCaret from '/public/img/iconNavigationCaret.svg'
+
 import StyledLink from './StyledLink'
 
 type NavPopupProps = {
