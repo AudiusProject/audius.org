@@ -19,10 +19,6 @@ const Link = (props: LinkProps) => {
 
   const locale = props.locale || i18n.language || ''
 
-  if (String(props.href).match(/^http/)) {
-    return <NextLink {...props} />
-  }
-
   if (!locale) {
     const href = props.href || router.asPath
     return <NextLink {...props} href={href} />

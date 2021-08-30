@@ -57,21 +57,35 @@ const NavPopup: React.FC<NavPopupProps> = ({
                   <ul>
                     {items.map(
                       ({ label: itemLabel, icon: itemIcon, href, locale }) => {
-                        return (
+                        const renderMenuItem = () => (
+                          <li className='menu-item'>
+                            <div
+                              className='menu-item-label'
+                              onClick={() => setIsPopupVisible(false)}
+                            >
+                              {itemIcon()}
+                              <div>{itemLabel}</div>
+                            </div>
+                          </li>
+                        )
+
+                        const isExternal = String(href).match(/^http/)
+
+                        return isExternal ? (
+                          <a
+                            href={href}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            {renderMenuItem()}
+                          </a>
+                        ) : (
                           <StyledLink
                             href={href}
                             locale={locale}
                             key={itemLabel}
                           >
-                            <li className='menu-item'>
-                              <div
-                                className='menu-item-label'
-                                onClick={() => setIsPopupVisible(false)}
-                              >
-                                {itemIcon()}
-                                <div>{itemLabel}</div>
-                              </div>
-                            </li>
+                            {renderMenuItem()}
                           </StyledLink>
                         )
                       }
