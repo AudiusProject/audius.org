@@ -8,14 +8,15 @@ type BioProps = {
   name?: string
   imageUrl: string
   linkedInUrl?: string
+  disableModal?: boolean
 }
 
-const Bio = ({ name, imageUrl, linkedInUrl }: BioProps) => {
+const Bio = ({ name, imageUrl, linkedInUrl, disableModal }: BioProps) => {
   const nameKey = name?.replace(/ /g, '-').toLowerCase()
   const { t } = useTranslation('people')
   return (
     <div key={name}>
-      <div className='person' data-modal='person-modal'>
+      <div className='person' data-modal={!disableModal && 'person-modal'}>
         <div className='headshot'>
           {linkedInUrl && (
             <a
