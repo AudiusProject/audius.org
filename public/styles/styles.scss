@@ -899,7 +899,7 @@ main {
     position: relative;
   }
   .main-header .menu > div > ul > li:not(:first-child) {
-    margin-left: 58px;
+    margin-left: 24px;
   }
   .main-header .menu > div > ul > li > a:not(.standard-button) {
     color: #12063d;
@@ -1032,11 +1032,16 @@ main {
     left: 51px;
   }
   .main-header.clone .menu {
-    top: 26px;
+    top: 20px;
   }
-  .sticky-menu .main-header.clone {
+  .main-header.clone {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-header .menu > div > ul > li:not(:first-child) {
+    margin-left: 58px;
   }
 }
 @media screen and (max-width: 1019px) {

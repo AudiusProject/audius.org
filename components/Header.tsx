@@ -18,7 +18,12 @@ import LocalePicker from './LocalePicker'
 
 const renderIcon = (Icon: any) => () => <Icon height={21} width={21} />
 
-const Header = () => {
+type HeaderProps = {
+  // The clone is the sticky version of the header
+  isClone?: boolean
+}
+
+const Header = ({ isClone }: HeaderProps) => {
   const { t } = useTranslation()
 
   return (
@@ -29,7 +34,7 @@ const Header = () => {
         <span>{t('navigation-show-menu')}</span>
       </button>
 
-      <header className='main-header'>
+      <header className={`main-header ${isClone ? 'clone' : ''}`}>
         <h1 className='logo'>
           <StyledLink href='/home'>
             <img src='/img/audius.png' data-rjs='2' alt='Audius' />

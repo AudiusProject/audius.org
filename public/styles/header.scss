@@ -86,22 +86,18 @@
     padding: 7px 24px 7px 12px;
 
     &.secondary {
-      background-color: #d6d5df1a;
+      background-color: #fbfbfc;
       border: 1px solid #d6d5df80;
       border-radius: 7px;
 
       .nav-popup-menu {
-        background-color: #d6d5df1a;
+        background-color: #fbfbfc;
         border: 1px solid #d6d5df80;
       }
     }
+  }
 
-    &:hover {
-      .menu-item-label {
-        &::after {
-          top: 7px;
-        }
-      }
-    }
+  .standard-button {
+    padding: 12px 36px;
   }
 }
