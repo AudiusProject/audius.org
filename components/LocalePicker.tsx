@@ -3,27 +3,31 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 
+import IconFlagChina from 'public/img/iconFlagChina.svg'
+import IconFlagMexico from 'public/img/iconFlagMexico.svg'
+import IconFlagUnitedKingdom from 'public/img/iconFlagUnitedKingdom.svg'
+
 import NavPopup from './NavPopup'
 
-const renderFlag = (src: string) => () =>
+const renderFlag = (Icon: any) => () =>
   (
     <div className='icon'>
-      <img src={src} alt='language flag' />
+      <Icon></Icon>
     </div>
   )
 
 const localeDetails = {
   en: {
     label: 'ENG',
-    icon: renderFlag('/img/iconFlagUnitedKingdom.png')
+    icon: renderFlag(IconFlagUnitedKingdom)
   },
   es: {
     label: 'SPA',
-    icon: renderFlag('/img/iconFlagMexico.png')
+    icon: renderFlag(IconFlagMexico)
   },
   zh: {
     label: 'CHN',
-    icon: renderFlag('/img/iconFlagChina.png')
+    icon: renderFlag(IconFlagChina)
   }
 }
 
