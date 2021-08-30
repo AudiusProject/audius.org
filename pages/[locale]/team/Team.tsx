@@ -72,7 +72,11 @@ const Team = () => {
           <div className='header'>
             <h2>{t('team-advisors-headline')}</h2>
           </div>
-          <div className='row three-columns'>{advisors.map(Bio)}</div>
+          <div className='row three-columns'>
+            {advisors.map((a) => (
+              <Bio {...a} disableModal />
+            ))}
+          </div>
         </div>
       </section>
 

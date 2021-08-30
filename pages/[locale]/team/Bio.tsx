@@ -5,27 +5,30 @@ import { useTranslation } from 'next-i18next'
 import IconLinkedIn from 'public/img/iconLinkedIn.svg'
 
 type BioProps = {
-  name: string
+  name?: string
   imageUrl: string
-  linkedInUrl: string
+  linkedInUrl?: string
+  disableModal?: boolean
 }
 
-const Bio = ({ name, imageUrl, linkedInUrl }: BioProps) => {
+const Bio = ({ name, imageUrl, linkedInUrl, disableModal }: BioProps) => {
   const nameKey = name?.replace(/ /g, '-').toLowerCase()
   const { t } = useTranslation('people')
   return (
     <div key={name}>
-      <div className='person' data-modal='person-modal'>
+      <div className='person' data-modal={!disableModal && 'person-modal'}>
         <div className='headshot'>
-          <a
-            className='person-link'
-            href={linkedInUrl}
-            target='_blank'
-            rel='noreferrer'
-          >
-            <IconLinkedIn />
-            <span>LinkedIn</span>
-          </a>
+          {linkedInUrl && (
+            <a
+              className='person-link'
+              href={linkedInUrl}
+              target='_blank'
+              rel='noreferrer'
+            >
+              <IconLinkedIn />
+              <span>LinkedIn</span>
+            </a>
+          )}
           <img className='photo' src={imageUrl} alt={`Photo of ${name}`} />
         </div>
         <div className='description'>
