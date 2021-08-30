@@ -2,27 +2,30 @@ import React, { ReactNode, useRef, useState } from 'react'
 
 import { useTransition, animated } from 'react-spring'
 
+import IconNavigationCaret from '/public/img/iconNavigationCaret.svg'
 import StyledLink from './StyledLink'
 
 type NavPopupProps = {
-  label: string
+  disableHover?: boolean
   icon?: () => ReactNode
+  label: string
   variant?: 'primary' | 'secondary'
   xOffset?: number
   items: {
-    label: string
-    icon: () => ReactNode
     href: string
+    icon: () => ReactNode
+    label: string
     locale?: string
   }[]
 }
 
 const NavPopup: React.FC<NavPopupProps> = ({
+  disableHover,
+  icon,
   items,
   label,
-  icon,
   variant = 'primary',
-  xOffset
+  xOffset = -8
 }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false)
   const anchorRef = useRef<HTMLDivElement>()
@@ -40,13 +43,17 @@ const NavPopup: React.FC<NavPopupProps> = ({
 
   return (
     <div
-      onMouseEnter={() => setIsPopupVisible(true)}
+      onMouseEnter={disableHover ? undefined : () => setIsPopupVisible(true)}
+      onClick={() => setIsPopupVisible(true)}
       onMouseLeave={() => setIsPopupVisible(false)}
       className={`nav-popup-container ${variant}`}
     >
-      <div className='menu-item menu-item-label' ref={anchorRef}>
+      <div className='menu-item menu-dropdown-trigger' ref={anchorRef}>
         {icon?.()}
         <div>{label}</div>
+        <div className='caret'>
+          <IconNavigationCaret />
+        </div>
       </div>
 
       {transitions(
@@ -59,14 +66,12 @@ const NavPopup: React.FC<NavPopupProps> = ({
                     {items.map(
                       ({ label: itemLabel, icon: itemIcon, href, locale }) => {
                         const renderMenuItem = () => (
-                          <li className='menu-item'>
-                            <div
-                              className='menu-item-label'
-                              onClick={() => setIsPopupVisible(false)}
-                            >
-                              {itemIcon()}
-                              <div>{itemLabel}</div>
-                            </div>
+                          <li
+                            className='menu-item'
+                            onClick={() => setIsPopupVisible(false)}
+                          >
+                            {itemIcon()}
+                            <div>{itemLabel}</div>
                           </li>
                         )
 

@@ -5,42 +5,27 @@
     font-size: 16px;
     text-transform: uppercase;
     user-select: none;
-    cursor: pointer;
-
-    a {
-      color: black;
-    }
-
-    &.menu-item-label {
-      &::after {
-        content: url(/img/iconNavigationCaret.svg);
-        position: absolute;
-        right: 10px;
-        top: 5px;
-        transition: top 250ms;
-      }
-    }
-  }
-
-  .menu-item-label {
     display: flex;
     align-items: center;
-    height: 18px;
 
-    svg,
     .icon {
       margin-right: 12px;
     }
 
+    a {
+      color: black;
+    }
+  }
+
+  .menu-dropdown-trigger {
     .icon {
       height: 26px;
       width: 26px;
     }
-  }
 
-  .nav-popup-spacer {
-    height: 12px;
-    visibility: hidden;
+    .caret {
+      margin-left: 4px;
+    }
   }
 
   .nav-popup {
@@ -50,7 +35,7 @@
 
     &::before {
       content: '';
-      height: 12px;
+      height: 4px;
       display: block;
     }
   }
@@ -65,16 +50,6 @@
 
     a {
       color: black;
-      &.active {
-        color: #c4cbd7;
-
-        svg {
-          path {
-            fill: #c4cbd7;
-          }
-        }
-      }
-
       &:not(:last-child) .menu-item {
         margin-bottom: 4px;
       }
@@ -90,13 +65,28 @@
     }
   }
 
+  .locale-picker {
+    .nav-popup-menu {
+      .menu-item {
+        padding: 4px 8px;
+      }
+    }
+  }
+
   .nav-popup-container {
-    padding: 7px 24px 7px 12px;
+    &:not(.secondary) {
+      padding: 24px;
+      cursor: pointer;
+    }
 
     &.secondary {
-      background-color: #fbfbfc;
-      border: 1px solid #d6d5df80;
-      border-radius: 7px;
+      .menu-dropdown-trigger {
+        cursor: pointer;
+        padding: 4px 12px;
+        background-color: #fbfbfc;
+        border: 1px solid #d6d5df80;
+        border-radius: 7px;
+      }
 
       .nav-popup-menu {
         background-color: #fbfbfc;
@@ -107,5 +97,6 @@
 
   .standard-button {
     padding: 12px 36px;
+    margin-left: 32px;
   }
 }

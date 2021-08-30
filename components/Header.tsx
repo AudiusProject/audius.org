@@ -17,7 +17,8 @@ import IconSquiggleBold from 'public/img/iconSquiggleBold.svg'
 
 import LocalePicker from './LocalePicker'
 
-const renderIcon = (Icon: any) => () => <Icon height={21} width={21} />
+const renderIcon = (Icon: any) => () =>
+  <Icon height={21} width={21} className='icon' />
 
 type HeaderProps = {
   // The clone is the sticky version of the header
