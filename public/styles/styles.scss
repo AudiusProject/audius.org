@@ -826,13 +826,16 @@ main {
     fill: #fff;
     transition: all 300ms ease;
   }
-  #menu-button .squiggle {
+  #menu-button .icon-kebab svg {
     width: 30px;
-    height: 7px;
+    height: 30px;
     opacity: 1;
     visibility: visible;
   }
-  .menu-active #menu-button .squiggle {
+  #menu-button .icon-kebab svg path {
+    fill: #fff;
+  }
+  .menu-active #menu-button .icon-kebab svg {
     opacity: 0;
     visibility: hidden;
   }

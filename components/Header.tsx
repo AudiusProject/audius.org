@@ -2,9 +2,11 @@ import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 
+import LocalePicker from 'components/LocalePicker'
 import NavPopup from 'components/NavPopup'
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
+import IconKebabHorizontal from 'public/img/iconKebabHorizontal.svg'
 import IconNavigationApi from 'public/img/iconNavigationApi.svg'
 import IconNavigationCareer from 'public/img/iconNavigationCareer.svg'
 import IconNavigationDocs from 'public/img/iconNavigationDocs.svg'
@@ -13,9 +15,6 @@ import IconNavigationStaking from 'public/img/iconNavigationStaking.svg'
 import IconNavigationTeam from 'public/img/iconNavigationTeam.svg'
 import IconNavigationTokenomics from 'public/img/iconNavigationTokenomics.svg'
 import IconNavigationWhitepaper from 'public/img/iconNavigationWhitepaper.svg'
-import IconSquiggleBold from 'public/img/iconSquiggleBold.svg'
-
-import LocalePicker from './LocalePicker'
 
 const renderIcon = (Icon: any) => () =>
   <Icon height={21} width={21} className='icon' />
@@ -31,7 +30,9 @@ const Header = ({ isClone }: HeaderProps) => {
   return (
     <>
       <button id='menu-button' className='mobile-only'>
-        <IconSquiggleBold />
+        <div className='icon-kebab'>
+          <IconKebabHorizontal />
+        </div>
         <IconClose />
         <span>{t('navigation-show-menu')}</span>
       </button>

@@ -1,3 +1,5 @@
+$mobile-breakpoint: 1020px;
+
 .main-header {
   .menu-item {
     font-weight: 800;
@@ -12,7 +14,8 @@
       margin-right: 12px;
     }
 
-    a {
+    color: white;
+    @media screen and (min-width: $mobile-breakpoint) {
       color: black;
     }
   }
@@ -25,6 +28,13 @@
 
     .caret {
       margin-left: 4px;
+
+      path {
+        fill: white;
+        @media screen and (min-width: $mobile-breakpoint) {
+          fill: black;
+        }
+      }
     }
   }
 
