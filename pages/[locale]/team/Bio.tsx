@@ -23,7 +23,10 @@ const Bio = ({
   const { t } = useTranslation('people')
   return (
     <div key={name}>
-      <div className='person' data-modal={!disableModal && 'person-modal'}>
+      <div
+        className='person'
+        data-modal={!disableModal ? 'person-modal' : undefined}
+      >
         <div className='headshot'>
           {linkedInUrl && (
             <a
