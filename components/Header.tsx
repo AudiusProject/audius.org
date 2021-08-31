@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useTranslation } from 'next-i18next'
 
@@ -24,8 +24,26 @@ type HeaderProps = {
   isClone?: boolean
 }
 
+const initialPopupState = {
+  developers: false,
+  token: false,
+  protocol: false,
+  about: false,
+  localePicker: false
+}
+
 const Header = ({ isClone }: HeaderProps) => {
   const { t } = useTranslation()
+  const [popupState, setPopupState] = useState(initialPopupState)
+
+  // Close all other popups when one is opened
+  const updatePopupState =
+    (key: keyof typeof initialPopupState) => (open: boolean) => {
+      setPopupState({
+        ...initialPopupState,
+        [key]: open
+      })
+    }
 
   return (
     <>
@@ -62,6 +80,8 @@ const Header = ({ isClone }: HeaderProps) => {
                       href: 'https://audius.gitbook.io/'
                     }
                   ]}
+                  isOpen={popupState.developers}
+                  setIsOpen={updatePopupState('developers')}
                 />
               </li>
               <li>
@@ -84,6 +104,8 @@ const Header = ({ isClone }: HeaderProps) => {
                       href: 'https://audius.gitbook.io/docs/token/staking'
                     }
                   ]}
+                  isOpen={popupState.token}
+                  setIsOpen={updatePopupState('token')}
                 />
               </li>
               <li>
@@ -96,6 +118,8 @@ const Header = ({ isClone }: HeaderProps) => {
                       href: 'https://audius.gitbook.io/docs/token/running-a-node'
                     }
                   ]}
+                  isOpen={popupState.protocol}
+                  setIsOpen={updatePopupState('protocol')}
                 />
               </li>
               <li>
@@ -113,10 +137,15 @@ const Header = ({ isClone }: HeaderProps) => {
                       href: '/team'
                     }
                   ]}
+                  isOpen={popupState.about}
+                  setIsOpen={updatePopupState('about')}
                 />
               </li>
               <li>
-                <LocalePicker />
+                <LocalePicker
+                  isOpen={popupState.localePicker}
+                  setIsOpen={updatePopupState('localePicker')}
+                />
               </li>
               <li>
                 <a

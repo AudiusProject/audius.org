@@ -11,16 +11,32 @@ $mobile-breakpoint: 1020px;
     align-items: center;
 
     .icon {
+      path {
+        @media screen and (max-width: $mobile-breakpoint) {
+          fill: white;
+        }
+      }
       margin-right: 12px;
     }
 
     color: white;
+
     @media screen and (min-width: $mobile-breakpoint) {
       color: black;
     }
   }
 
   .menu-dropdown-trigger {
+    letter-spacing: 8px;
+    font-size: 23px;
+    justify-content: center;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      letter-spacing: 1.4px;
+      font-size: 16px;
+      justify-content: normal;
+    }
+
     .icon {
       height: 26px;
       width: 26px;
@@ -28,6 +44,11 @@ $mobile-breakpoint: 1020px;
 
     .caret {
       margin-left: 4px;
+      transition: transform 250ms;
+      transform: rotate(-90deg);
+      @media screen and (min-width: $mobile-breakpoint) {
+        transform: rotate(0);
+      }
 
       path {
         fill: white;
@@ -39,10 +60,11 @@ $mobile-breakpoint: 1020px;
   }
 
   .nav-popup {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-
+    @media screen and (min-width: $mobile-breakpoint) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
     &::before {
       content: '';
       height: 4px;
@@ -53,10 +75,13 @@ $mobile-breakpoint: 1020px;
   .nav-popup-menu {
     padding: 8px;
     white-space: nowrap;
-    background-color: white;
-    border: 1px solid #e7e6eb;
-    border-radius: 8px;
-    box-shadow: 0px 16px 20px 0px #85819926;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      background-color: white;
+      border: 1px solid #e7e6eb;
+      border-radius: 8px;
+      box-shadow: 0px 16px 20px 0px #85819926;
+    }
 
     a {
       color: black;
@@ -68,9 +93,15 @@ $mobile-breakpoint: 1020px;
     .menu-item {
       padding: 8px;
       border-radius: 8px;
+      margin-left: 16px;
+      @media screen and (min-width: $mobile-breakpoint) {
+        margin-left: 0;
+      }
 
-      &:hover {
-        background-color: #f4f4f6;
+      @media screen and (min-width: $mobile-breakpoint) {
+        &:hover {
+          background-color: #f4f4f6;
+        }
       }
     }
   }
@@ -84,23 +115,41 @@ $mobile-breakpoint: 1020px;
   }
 
   .nav-popup-container {
+    &.open {
+      .caret {
+        transform: rotate(0);
+      }
+    }
     &:not(.secondary) {
       padding: 24px;
       cursor: pointer;
     }
 
     &.secondary {
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 140px;
+        margin: auto;
+      }
+
+      .menu-item {
+        letter-spacing: 1.4px;
+        font-size: 16px;
+      }
+
       .menu-dropdown-trigger {
         cursor: pointer;
         padding: 4px 12px;
-        background-color: #fbfbfc;
-        border: 1px solid #d6d5df80;
         border-radius: 7px;
       }
 
+      .menu-dropdown-trigger,
       .nav-popup-menu {
-        background-color: #fbfbfc;
+        border-radius: 7px;
         border: 1px solid #d6d5df80;
+        background-color: #fbfbfc10;
+        @media screen and (min-width: $mobile-breakpoint) {
+          background-color: #fbfbfc;
+        }
       }
     }
   }
@@ -108,5 +157,12 @@ $mobile-breakpoint: 1020px;
   .standard-button {
     padding: 12px 36px;
     margin-left: 32px;
+    color: white;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 140px;
+      margin: auto;
+      justify-content: center;
+    }
   }
 }

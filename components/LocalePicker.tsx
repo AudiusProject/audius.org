@@ -7,7 +7,7 @@ import IconFlagChina from 'public/img/iconFlagChina.svg'
 import IconFlagMexico from 'public/img/iconFlagMexico.svg'
 import IconFlagUnitedKingdom from 'public/img/iconFlagUnitedKingdom.svg'
 
-import NavPopup from './NavPopup'
+import NavPopup, { NavPopupProps } from 'components/NavPopup'
 
 const renderFlag = (Icon: any) => () =>
   (
@@ -31,7 +31,9 @@ const localeDetails = {
   }
 }
 
-const LocalePicker = () => {
+type LocalePickerProps = Pick<NavPopupProps, 'isOpen' | 'setIsOpen'>
+
+const LocalePicker = (props: LocalePickerProps) => {
   const router = useRouter()
   const { i18n } = useTranslation()
 
@@ -47,6 +49,7 @@ const LocalePicker = () => {
   return (
     <div className='locale-picker'>
       <NavPopup
+        {...props}
         {...locale}
         items={items}
         variant='secondary'

@@ -6,9 +6,11 @@ import IconNavigationCaret from '/public/img/iconNavigationCaret.svg'
 
 import StyledLink from './StyledLink'
 
-type NavPopupProps = {
+export type NavPopupProps = {
   disableHover?: boolean
   icon?: () => ReactNode
+  isOpen: boolean
+  setIsOpen: (open: boolean) => void
   label: string
   variant?: 'primary' | 'secondary'
   xOffset?: number
@@ -24,14 +26,27 @@ const NavPopup: React.FC<NavPopupProps> = ({
   disableHover,
   icon,
   items,
+  isOpen,
   label,
+  setIsOpen,
   variant = 'primary',
   xOffset = -8
 }) => {
-  const [isPopupVisible, setIsPopupVisible] = useState(false)
   const anchorRef = useRef<HTMLDivElement>()
 
-  const transitions = useTransition(isPopupVisible, {
+  const mobile = (callback: () => void) => {
+    if (window.innerWidth < 1200) {
+      callback()
+    }
+  }
+
+  const desktop = (callback: () => void) => {
+    if (window.innerWidth >= 1200) {
+      callback()
+    }
+  }
+
+  const transitions = useTransition(isOpen, {
     from: { opacity: 0, transform: `scale(0)` },
     enter: { opacity: 1, transform: `scale(1)` },
     leave: { opacity: 0, transform: `scale(0)` },
@@ -42,12 +57,36 @@ const NavPopup: React.FC<NavPopupProps> = ({
     }
   })
 
+  const handleMouseEnter = () => {
+    if (disableHover) {
+      return
+    }
+
+    if (window.innerWidth >= 1200) {
+      setIsOpen(true)
+    }
+  }
+
+  const handleClick = () => {
+    if (window.innerWidth < 1200) {
+      setIsOpen(!isOpen)
+    } else {
+      setIsOpen(true)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (window.innerWidth >= 1200) {
+      setIsOpen(false)
+    }
+  }
+
   return (
     <div
-      onMouseEnter={disableHover ? undefined : () => setIsPopupVisible(true)}
-      onClick={() => setIsPopupVisible(true)}
-      onMouseLeave={() => setIsPopupVisible(false)}
-      className={`nav-popup-container ${variant}`}
+      onMouseEnter={handleMouseEnter}
+      onClick={handleClick}
+      onMouseLeave={handleMouseLeave}
+      className={`nav-popup-container ${variant} ${isOpen ? 'open' : ''}`}
     >
       <div className='menu-item menu-dropdown-trigger' ref={anchorRef}>
         {icon?.()}
@@ -69,7 +108,12 @@ const NavPopup: React.FC<NavPopupProps> = ({
                         const renderMenuItem = () => (
                           <li
                             className='menu-item'
-                            onClick={() => setIsPopupVisible(false)}
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              if (window.innerWidth >= 1200) {
+                                setIsOpen(false)
+                              }
+                            }}
                           >
                             {itemIcon()}
                             <div>{itemLabel}</div>
@@ -83,6 +127,7 @@ const NavPopup: React.FC<NavPopupProps> = ({
                             href={href}
                             target='_blank'
                             rel='noopener noreferrer'
+                            key={itemLabel}
                           >
                             {renderMenuItem()}
                           </a>
