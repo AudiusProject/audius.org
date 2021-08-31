@@ -8,8 +8,6 @@ type LinkProps = NextLinkProps & {
   children: ReactNode
 }
 
-// TODO: SK - if the local is not specified in the url, don't prepend it to the link href
-
 /**
  * A wrapper around next Link that handles i18n
  */
@@ -17,7 +15,7 @@ const Link = (props: LinkProps) => {
   const { i18n } = useTranslation()
   const router = useRouter()
 
-  const locale = props.locale || i18n.language || ''
+  const locale = props.locale || (router.query.locale as string) || ''
 
   if (!locale) {
     const href = props.href || router.asPath
