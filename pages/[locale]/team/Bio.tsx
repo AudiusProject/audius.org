@@ -9,9 +9,16 @@ type BioProps = {
   imageUrl: string
   linkedInUrl?: string
   disableModal?: boolean
+  hideDescription?: boolean
 }
 
-const Bio = ({ name, imageUrl, linkedInUrl, disableModal }: BioProps) => {
+const Bio = ({
+  name,
+  imageUrl,
+  linkedInUrl,
+  disableModal,
+  hideDescription
+}: BioProps) => {
   const nameKey = name?.replace(/ /g, '-').toLowerCase()
   const { t } = useTranslation('people')
   return (
@@ -34,9 +41,11 @@ const Bio = ({ name, imageUrl, linkedInUrl, disableModal }: BioProps) => {
         <div className='description'>
           <h4 className='name'>{name}</h4>
           <h5 className='title'>{t(`${nameKey}-title`)}</h5>
-          <div className='bio'>
-            <p>{t(`${nameKey}-description`)}</p>
-          </div>
+          {!hideDescription && (
+            <div className='bio'>
+              <p>{t(`${nameKey}-description`)}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
