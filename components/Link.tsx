@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 
-import { useTranslation } from 'next-i18next'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -12,10 +11,12 @@ type LinkProps = NextLinkProps & {
  * A wrapper around next Link that handles i18n
  */
 const Link = (props: LinkProps) => {
-  const { i18n } = useTranslation()
   const router = useRouter()
 
-  const locale = props.locale || (router.query.locale as string) || ''
+  // Only prepend the locale if it is explicitly specified in the url
+  const localeRegex = new RegExp(`^/(${router.query.locale})(/|$)`)
+  const routeLocale = router.asPath.match(localeRegex)?.[1]
+  const locale = props.locale || routeLocale
 
   if (!locale) {
     const href = props.href || router.asPath
