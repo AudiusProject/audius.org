@@ -4,29 +4,22 @@ import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 
 import NavPopup, { NavPopupProps } from 'components/NavPopup'
-import IconFlagChina from 'public/img/iconFlagChina.svg'
-import IconFlagMexico from 'public/img/iconFlagMexico.svg'
-import IconFlagUnitedKingdom from 'public/img/iconFlagUnitedKingdom.svg'
 
-const renderFlag = (Icon: any) => () =>
-  (
-    <div className='icon'>
-      <Icon></Icon>
-    </div>
-  )
+const renderFlag = (flag: string) => () =>
+  <div className={`icon ${flag}`}></div>
 
 const localeDetails = {
   en: {
     label: 'ENG',
-    icon: renderFlag(IconFlagUnitedKingdom)
+    icon: renderFlag('united-kingdom')
   },
   es: {
     label: 'SPA',
-    icon: renderFlag(IconFlagMexico)
+    icon: renderFlag('mexico')
   },
   zh: {
     label: 'CHN',
-    icon: renderFlag(IconFlagChina)
+    icon: renderFlag('china')
   }
 }
 

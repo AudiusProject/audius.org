@@ -12,15 +12,22 @@ $mobile-breakpoint: 1020px;
     justify-content: center;
 
     .icon {
-      svg {
-        -webkit-transform: translate3d(0, 0, 0);
-      }
       path {
         @media screen and (max-width: $mobile-breakpoint) {
           fill: white;
         }
       }
       margin-right: 12px;
+
+      &.united-kingdom {
+        background-image: url(/img/iconFlagUnitedKingdom.png);
+      }
+      &.mexico {
+        background-image: url(/img/iconFlagMexico.png);
+      }
+      &.china {
+        background-image: url(/img/iconFlagChina.png);
+      }
     }
 
     color: white;
@@ -111,6 +118,11 @@ $mobile-breakpoint: 1020px;
       .menu-item {
         padding: 4px 8px;
       }
+    }
+
+    .icon {
+      height: 26px;
+      width: 26px;
     }
   }
 
