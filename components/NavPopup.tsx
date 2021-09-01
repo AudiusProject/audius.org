@@ -37,13 +37,17 @@ const NavPopup: React.FC<NavPopupProps> = ({
     typeof window !== 'undefined' && window.innerWidth >= 1200
 
   const transitions = useTransition(isOpen, {
-    from: { opacity: 0, transform: `scale(0)` },
-    enter: { opacity: 1, transform: `scale(1)` },
     ...(isDesktop()
       ? {
+          from: { opacity: 0, transform: `scale(0)` },
+          enter: { opacity: 1, transform: `scale(1)` },
           leave: { opacity: 0, transform: `scale(0)` }
         }
-      : {}),
+      : {
+          from: { opacity: 0, height: 0 },
+          enter: { opacity: 1, height: items.length * 50 },
+          leave: { opacity: 0, height: 0 }
+        }),
     config: {
       tension: 310,
       friction: 25,
