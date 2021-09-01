@@ -9,6 +9,7 @@ $mobile-breakpoint: 1020px;
     user-select: none;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .icon {
       path {
@@ -23,6 +24,7 @@ $mobile-breakpoint: 1020px;
 
     @media screen and (min-width: $mobile-breakpoint) {
       color: black;
+      justify-content: start;
     }
   }
 
@@ -34,7 +36,6 @@ $mobile-breakpoint: 1020px;
     @media screen and (min-width: $mobile-breakpoint) {
       letter-spacing: 1.4px;
       font-size: 16px;
-      justify-content: normal;
     }
 
     .icon {
@@ -93,10 +94,6 @@ $mobile-breakpoint: 1020px;
     .menu-item {
       padding: 8px;
       border-radius: 8px;
-      margin-left: 16px;
-      @media screen and (min-width: $mobile-breakpoint) {
-        margin-left: 0;
-      }
 
       @media screen and (min-width: $mobile-breakpoint) {
         &:hover {

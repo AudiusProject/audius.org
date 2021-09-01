@@ -3,11 +3,10 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 
+import NavPopup, { NavPopupProps } from 'components/NavPopup'
 import IconFlagChina from 'public/img/iconFlagChina.svg'
 import IconFlagMexico from 'public/img/iconFlagMexico.svg'
 import IconFlagUnitedKingdom from 'public/img/iconFlagUnitedKingdom.svg'
-
-import NavPopup, { NavPopupProps } from 'components/NavPopup'
 
 const renderFlag = (Icon: any) => () =>
   (

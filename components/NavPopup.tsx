@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState } from 'react'
+import React, { ReactNode, useRef } from 'react'
 
 import { useTransition, animated } from 'react-spring'
 
@@ -33,23 +33,17 @@ const NavPopup: React.FC<NavPopupProps> = ({
   xOffset = -8
 }) => {
   const anchorRef = useRef<HTMLDivElement>()
-
-  const mobile = (callback: () => void) => {
-    if (window.innerWidth < 1200) {
-      callback()
-    }
-  }
-
-  const desktop = (callback: () => void) => {
-    if (window.innerWidth >= 1200) {
-      callback()
-    }
-  }
+  const isDesktop = () =>
+    typeof window !== 'undefined' && window.innerWidth >= 1200
 
   const transitions = useTransition(isOpen, {
     from: { opacity: 0, transform: `scale(0)` },
     enter: { opacity: 1, transform: `scale(1)` },
-    leave: { opacity: 0, transform: `scale(0)` },
+    ...(isDesktop()
+      ? {
+          leave: { opacity: 0, transform: `scale(0)` }
+        }
+      : {}),
     config: {
       tension: 310,
       friction: 25,
@@ -62,21 +56,21 @@ const NavPopup: React.FC<NavPopupProps> = ({
       return
     }
 
-    if (window.innerWidth >= 1200) {
+    if (isDesktop()) {
       setIsOpen(true)
     }
   }
 
   const handleClick = () => {
-    if (window.innerWidth < 1200) {
-      setIsOpen(!isOpen)
-    } else {
+    if (isDesktop()) {
       setIsOpen(true)
+    } else {
+      setIsOpen(!isOpen)
     }
   }
 
   const handleMouseLeave = () => {
-    if (window.innerWidth >= 1200) {
+    if (isDesktop()) {
       setIsOpen(false)
     }
   }
