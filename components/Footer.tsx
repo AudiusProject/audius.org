@@ -20,12 +20,25 @@ const Footer = () => {
             <nav className='sitemap'>
               <ul>
                 <li>
-                  <StyledLink href='/protocol'>
-                    {t('navigation-protocol')}
-                  </StyledLink>
+                  <StyledLink href='/api'>{t('navigation-api')}</StyledLink>
                 </li>
                 <li>
-                  <StyledLink href='/api'>{t('navigation-api')}</StyledLink>
+                  <a
+                    href='https://audius.gitbook.io/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {t('navigation-3rd-party-docs')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='https://whitepaper.audius.co'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {t('whitepaper')}
+                  </a>
                 </li>
                 <li>
                   <StyledLink href='/token'>{t('navigation-token')}</StyledLink>
@@ -37,15 +50,6 @@ const Footer = () => {
                   <StyledLink href='/careers'>
                     {t('navigation-careers')}
                   </StyledLink>
-                </li>
-                <li>
-                  <a
-                    href='https://whitepaper.audius.co'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {t('whitepaper')}
-                  </a>
                 </li>
                 <li>
                   <StyledLink href='/security'>
