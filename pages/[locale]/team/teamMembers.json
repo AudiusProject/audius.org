@@ -83,5 +83,25 @@
     "name": "Kiara Hatcher",
     "imageUrl": "/img/Kiara-Hatcher.png",
     "linkedInUrl": "https://www.linkedin.com/in/kiara-hatcher-78358187"
+  },
+  {
+    "name": "Marcus Pasell",
+    "imageUrl": "/img/Marcus-Pasell.png",
+    "linkedInUrl": "https://www.linkedin.com/in/marcuspasell"
+  },
+  {
+    "name": "KJ Shanks",
+    "imageUrl": "/img/KJ-Shanks.png",
+    "linkedInUrl": "https://www.linkedin.com/in/kyle-shanks-27088174"
+  },
+  {
+    "name": "Sebastian Klingler",
+    "imageUrl": "/img/Sebastian-Klingler.png",
+    "linkedInUrl": "https://www.linkedin.com/in/sliptype"
+  },
+  {
+    "name": "Isaac Solo",
+    "imageUrl": "/img/Isaac-Solo-Chien.png",
+    "linkedInUrl": "https://www.linkedin.com/in/isaacsolo"
   }
 ]
