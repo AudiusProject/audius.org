@@ -5,21 +5,25 @@ import { useRouter } from 'next/router'
 
 import NavPopup, { NavPopupProps } from 'components/NavPopup'
 
-const renderFlag = (flag: string) => () =>
-  <div className={`icon ${flag}`}></div>
+const renderFlag = (src: string) => () =>
+  (
+    <div className='icon'>
+      <img src={src} />
+    </div>
+  )
 
 const localeDetails = {
   en: {
     label: 'ENG',
-    icon: renderFlag('united-kingdom')
+    icon: renderFlag('/img/iconFlagUnitedKingdom.png')
   },
   es: {
     label: 'SPA',
-    icon: renderFlag('mexico')
+    icon: renderFlag('/img/iconFlagMexico.png')
   },
   zh: {
     label: 'CHN',
-    icon: renderFlag('china')
+    icon: renderFlag('/img/iconFlagChina.png')
   }
 }
 
@@ -48,6 +52,13 @@ const LocalePicker = (props: LocalePickerProps) => {
         xOffset={1}
         disableHover
       />
+
+      {/* Preload the flag pngs */}
+      {Object.values(localeDetails).map(({ label, icon }) => (
+        <div key={label} style={{ display: 'none' }}>
+          {icon()}
+        </div>
+      ))}
     </div>
   )
 }
