@@ -80,7 +80,7 @@ const Team = () => {
           </div>
           <div className='row three-columns'>
             {advisors.map((a) => (
-              <Bio {...a} key={a.name} disableModal />
+              <Bio {...a} key={a.name} disableModal hideDescription />
             ))}
           </div>
         </div>
