@@ -12,6 +12,9 @@ $mobile-breakpoint: 1020px;
     justify-content: center;
 
     .icon {
+      svg {
+        -webkit-transform: translate3d(0, 0, 0);
+      }
       path {
         @media screen and (max-width: $mobile-breakpoint) {
           fill: white;
