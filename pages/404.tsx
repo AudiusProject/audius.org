@@ -1,9 +1,10 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React from 'react'
+
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import i18nextConfig from '../next-i18next.config'
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
   return {
     props: {
       ...(await serverSideTranslations(
