@@ -1,9 +1,8 @@
 import React from 'react'
 
 import { useTranslation, Trans } from 'next-i18next'
-import Head from 'next/head'
 
-import OpenGraphTags from 'components/OpenGraphTags'
+import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 
 const Security = () => {
@@ -11,10 +10,7 @@ const Security = () => {
 
   return (
     <div className='security mask-animation-fix'>
-      <Head>
-        <title>{t('navigation-security')}</title>
-        <OpenGraphTags title='Audius | Security' path='/security' />
-      </Head>
+      <Head title={t('navigation-security')} path='/security' />
 
       <SubpageIntro
         title={t('navigation-security')}

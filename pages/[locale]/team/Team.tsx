@@ -1,12 +1,11 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import Head from 'next/head'
 
+import Head from 'components/Head'
 import Investors from 'components/Investors'
 import Link from 'components/Link'
 import Newsletter from 'components/Newsletter'
-import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
 import Bio from './Bio'
@@ -18,10 +17,7 @@ const Team = () => {
   const { t } = useTranslation()
   return (
     <div className='team mask-animation-fix'>
-      <Head>
-        <title>{t('navigation-team')}</title>
-        <OpenGraphTags title='Audius | Team' path='/team' />
-      </Head>
+      <Head title={t('navigation-team')} path='/team' />
 
       <SubpageIntro
         title={t('navigation-team')}
