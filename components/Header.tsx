@@ -77,7 +77,7 @@ const Header = ({ isClone }: HeaderProps) => {
                     {
                       label: t('navigation-3rd-party-docs'),
                       icon: renderIcon(IconNavigationDocs),
-                      href: 'https://audius.gitbook.io/'
+                      href: 'https://docs.audius.org/'
                     }
                   ]}
                   isOpen={popupState.developers}
@@ -101,7 +101,7 @@ const Header = ({ isClone }: HeaderProps) => {
                     {
                       label: t('navigation-staking'),
                       icon: renderIcon(IconNavigationStaking),
-                      href: 'https://audius.gitbook.io/docs/token/staking'
+                      href: 'https://docs.audius.org/token/staking'
                     }
                   ]}
                   isOpen={popupState.token}
@@ -115,7 +115,7 @@ const Header = ({ isClone }: HeaderProps) => {
                     {
                       label: t('navigation-running-node'),
                       icon: renderIcon(IconNavigationRunningNode),
-                      href: 'https://audius.gitbook.io/docs/token/running-a-node'
+                      href: 'https://docs.audius.org/token/running-a-node/introduction'
                     }
                   ]}
                   isOpen={popupState.protocol}
@@ -150,7 +150,7 @@ const Header = ({ isClone }: HeaderProps) => {
               <li>
                 <a
                   className='standard-button menu-item purple'
-                  href='https://audius.gitbook.io/'
+                  href='https://docs.audius.org/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
