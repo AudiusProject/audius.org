@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import Head from 'next/head'
 
+import Head from 'components/Head'
 import Link from 'components/Link'
-import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
 const Careers = () => {
@@ -12,14 +11,11 @@ const Careers = () => {
 
   return (
     <div className='careers mask-animation-fix'>
-      <Head>
-        <title>{t('navigation-careers')}</title>
-        <OpenGraphTags
-          title='Audius | Careers'
-          path='/careers'
-          description='Want to help empower artists across the globe?'
-        />
-      </Head>
+      <Head
+        title={t('navigation-careers')}
+        path='/careers'
+        description='Want to help empower artists across the globe?'
+      />
 
       <SubpageIntro title={t('navigation-careers')} showDivider />
 

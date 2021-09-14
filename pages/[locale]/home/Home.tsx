@@ -1,8 +1,6 @@
 import React from 'react'
 
-import Head from 'next/head'
-
-import OpenGraphTags from 'components/OpenGraphTags'
+import Head from 'components/Head'
 
 import Intro from './Intro'
 import Value from './Value'
@@ -10,10 +8,7 @@ import Value from './Value'
 const Home = () => {
   return (
     <div className='home'>
-      <Head>
-        <title>Audius</title>
-        <OpenGraphTags />
-      </Head>
+      <Head />
       <Intro />
       <Value />
 
