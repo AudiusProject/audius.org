@@ -34,7 +34,7 @@ const NavPopup: React.FC<NavPopupProps> = ({
 }) => {
   const anchorRef = useRef<HTMLDivElement>()
   const isDesktop = () =>
-    typeof window !== 'undefined' && window.innerWidth >= 1200
+    typeof window !== 'undefined' && window.innerWidth >= 1020
 
   const transitions = useTransition(isOpen, {
     ...(isDesktop()
