@@ -24,7 +24,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href='https://docs.audius.org/'
+                    href='https://docs.audius.org'
                     target='_blank'
                     rel='noopener noreferrer'
                   >

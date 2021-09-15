@@ -77,7 +77,7 @@ const Header = ({ isClone }: HeaderProps) => {
                     {
                       label: t('navigation-3rd-party-docs'),
                       icon: renderIcon(IconNavigationDocs),
-                      href: 'https://docs.audius.org/'
+                      href: 'https://docs.audius.org'
                     }
                   ]}
                   isOpen={popupState.developers}
@@ -91,7 +91,7 @@ const Header = ({ isClone }: HeaderProps) => {
                     {
                       label: t('navigation-whitepaper'),
                       icon: renderIcon(IconNavigationWhitepaper),
-                      href: 'https://whitepaper.audius.co/'
+                      href: 'https://whitepaper.audius.co'
                     },
                     {
                       label: t('navigation-tokenomics'),
@@ -150,7 +150,7 @@ const Header = ({ isClone }: HeaderProps) => {
               <li>
                 <a
                   className='standard-button menu-item purple'
-                  href='https://docs.audius.org/'
+                  href='https://docs.audius.org'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
