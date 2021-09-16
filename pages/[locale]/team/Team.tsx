@@ -1,12 +1,11 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import Head from 'next/head'
 
+import Head from 'components/Head'
 import Investors from 'components/Investors'
 import Link from 'components/Link'
 import Newsletter from 'components/Newsletter'
-import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 
 import Bio from './Bio'
@@ -18,10 +17,7 @@ const Team = () => {
   const { t } = useTranslation()
   return (
     <div className='team mask-animation-fix'>
-      <Head>
-        <title>{t('navigation-team')}</title>
-        <OpenGraphTags title='Audius | Team' path='/team' />
-      </Head>
+      <Head title={t('navigation-team')} path='/team' />
 
       <SubpageIntro
         title={t('navigation-team')}
@@ -41,10 +37,16 @@ const Team = () => {
             <h2>Leadership</h2>
           </div>
           <div className='row two-columns three-columns leadership'>
-            {leadership.map(Bio)}
+            {leadership.map((l) => (
+              <Bio {...l} key={l.name} />
+            ))}
           </div>
 
-          <div className='row three-columns'>{teamMembers.map(Bio)}</div>
+          <div className='row three-columns'>
+            {teamMembers.map((m) => (
+              <Bio {...m} key={m.name} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -72,7 +74,11 @@ const Team = () => {
           <div className='header'>
             <h2>{t('team-advisors-headline')}</h2>
           </div>
-          <div className='row three-columns'>{advisors.map(Bio)}</div>
+          <div className='row three-columns'>
+            {advisors.map((a) => (
+              <Bio {...a} key={a.name} disableModal hideDescription />
+            ))}
+          </div>
         </div>
       </section>
 

@@ -30,7 +30,6 @@ addEventListener('fetch', (event) => {
 })
 
 async function handleEvent(event) {
-  const url = new URL(event.request.url)
   let options = {}
 
   const languageHeader = event.request.headers.get('Accept-Language')
@@ -55,7 +54,7 @@ async function handleEvent(event) {
       : url.pathname
     const isIndex = !unlocalizedPathname.length || unlocalizedPathname === '/'
 
-    const path = isIndex ? '/home' : unlocalizedPathname
+    const path = isIndex ? '/home' : unlocalizedPathname.replace(/\/$/, '')
 
     url.pathname = `/${language}${path}.html`
     return url

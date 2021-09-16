@@ -1,9 +1,8 @@
 import React from 'react'
 
 import { useTranslation, Trans } from 'next-i18next'
-import Head from 'next/head'
 
-import OpenGraphTags from 'components/OpenGraphTags'
+import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 
 const Security = () => {
@@ -11,10 +10,7 @@ const Security = () => {
 
   return (
     <div className='security mask-animation-fix'>
-      <Head>
-        <title>{t('navigation-security')}</title>
-        <OpenGraphTags title='Audius | Security' path='/security' />
-      </Head>
+      <Head title={t('navigation-security')} path='/security' />
 
       <SubpageIntro
         title={t('navigation-security')}
@@ -94,6 +90,15 @@ const Security = () => {
               <li>{t('security-not-eligible-8')}</li>
               <li>{t('security-not-eligible-9')}</li>
               <li>{t('security-not-eligible-10')}</li>
+              <li>
+                <Trans i18nKey='security-not-eligible-11'>
+                  Token reuse, password poisoning, or account revocation with
+                  regard to the documented security considerations in
+                  <a href='https://audiusproject.github.io/hedgehog-docs/'>
+                    Hedgehog
+                  </a>
+                </Trans>
+              </li>
             </ul>
           </div>
         </div>

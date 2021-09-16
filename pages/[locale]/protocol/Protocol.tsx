@@ -1,9 +1,8 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import Head from 'next/head'
 
-import OpenGraphTags from 'components/OpenGraphTags'
+import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
 
@@ -12,10 +11,7 @@ const Protocol = () => {
 
   return (
     <div className='protocol mask-animation-fix'>
-      <Head>
-        <title>{t('navigation-protocol')}</title>
-        <OpenGraphTags title='Audius | Protocol' path='/protocol' />
-      </Head>
+      <Head title={t('navigation-protocol')} path='/protocol' />
 
       <SubpageIntro title={t('navigation-protocol')} />
 

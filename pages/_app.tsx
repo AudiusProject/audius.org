@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 
 import { appWithTranslation } from 'next-i18next'
 import Head from 'next/head'

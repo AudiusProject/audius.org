@@ -4,13 +4,13 @@ import Footer from 'components/Footer'
 
 import Header from './Header'
 import Modal from './Modal'
-import SecuritiesNotice from './SecuritiesNotice'
 
 const PageLayout: React.FC = ({ children }) => {
   return (
     <div>
       <Header />
-      <SecuritiesNotice />
+      {/* Disabling securities notice for now */}
+      {/* <SecuritiesNotice /> */}
       <main>{children}</main>
       <Modal />
       <Footer />

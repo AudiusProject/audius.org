@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { useTranslation, Trans } from 'next-i18next'
-import Head from 'next/head'
 
+import Head from 'components/Head'
 import Newsletter from 'components/Newsletter'
-import OpenGraphTags from 'components/OpenGraphTags'
 import SubpageIntro from 'components/SubpageIntro'
 import TokenAnimation from 'components/TokenAnimation'
 import IconArrowDown from 'public/img/iconArrowDown.svg'
@@ -16,10 +15,7 @@ const Token = () => {
 
   return (
     <div className='token'>
-      <Head>
-        <title>{t('navigation-token')}</title>
-        <OpenGraphTags title='Audius | Token' path='/token' />
-      </Head>
+      <Head title={t('navigation-token')} path='/token' />
 
       <SubpageIntro title='Token' />
 

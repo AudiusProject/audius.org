@@ -1,10 +1,9 @@
 import React, { useMemo, useState } from 'react'
 
 import { useTranslation } from 'next-i18next'
-import Head from 'next/head'
 
 import AppThumbnail from 'components/AppThumbnail'
-import OpenGraphTags from 'components/OpenGraphTags'
+import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 import IconCheck from 'public/img/iconCheck.svg'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
@@ -39,14 +38,11 @@ const Api = () => {
 
   return (
     <div className='api'>
-      <Head>
-        <title>{t('navigation-api')}</title>
-        <OpenGraphTags
-          title='Audius | API'
-          path='/api'
-          description='It’s easy to build your own app on Audius'
-        />
-      </Head>
+      <Head
+        title={t('navigation-api')}
+        path='/api'
+        description='It’s easy to build your own app on Audius'
+      />
 
       <SubpageIntro title={t('navigation-api')} />
 
