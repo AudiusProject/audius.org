@@ -9,6 +9,7 @@ import { useTransition, animated } from 'react-spring'
 
 import PageLayout from 'components/PageLayout'
 import init from 'public/js/main'
+
 import 'public/styles/index.scss'
 
 const tagManagerArgs = {
