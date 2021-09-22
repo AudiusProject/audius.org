@@ -20,12 +20,12 @@ const Link = (props: LinkProps) => {
 
   if (!locale) {
     const href = props.href || router.asPath
-    return <NextLink {...props} href={href}></NextLink>
+    return <NextLink {...props} href={href} />
   } else {
     const href = props.href
       ? `/${locale}${props.href}`
       : router.pathname.replace('[locale]', locale)
-    return <NextLink {...props} href={href} locale={undefined}></NextLink>
+    return <NextLink {...props} href={href} locale={undefined} />
   }
 }
 

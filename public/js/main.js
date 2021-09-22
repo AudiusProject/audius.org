@@ -284,27 +284,6 @@ export default function init() {
 
   /*
    * >>========================================>
-   * Sticky Navigation
-   * >>========================================>
-   */
-
-  $(window).on('scroll load', function () {
-    if ($(window).scrollTop() > $(window).height() / 2) {
-      if (!$('.main-header.clone').length) {
-        $('.main-header').clone(true, true).addClass('clone').appendTo('body')
-        setTimeout(function () {
-          $('body').addClass('sticky-menu')
-        }, 10)
-      } else {
-        $('body').addClass('sticky-menu')
-      }
-    } else {
-      $('body').removeClass('sticky-menu')
-    }
-  })
-
-  /*
-   * >>========================================>
    * Centered Feature Alignment
    * >>========================================>
    */

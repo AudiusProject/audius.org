@@ -826,13 +826,16 @@ main {
     fill: #fff;
     transition: all 300ms ease;
   }
-  #menu-button .squiggle {
+  #menu-button .icon-kebab svg {
     width: 30px;
-    height: 7px;
+    height: 30px;
     opacity: 1;
     visibility: visible;
   }
-  .menu-active #menu-button .squiggle {
+  #menu-button .icon-kebab svg path {
+    fill: #fff;
+  }
+  .menu-active #menu-button .icon-kebab svg {
     opacity: 0;
     visibility: hidden;
   }
@@ -888,7 +891,7 @@ main {
     position: absolute;
     z-index: 9;
     right: 66px;
-    top: 68px;
+    top: 24px;
   }
   .main-header .menu > div > ul {
     display: flex;
@@ -899,7 +902,7 @@ main {
     position: relative;
   }
   .main-header .menu > div > ul > li:not(:first-child) {
-    margin-left: 58px;
+    margin-left: 0px;
   }
   .main-header .menu > div > ul > li > a:not(.standard-button) {
     color: #12063d;
@@ -1032,11 +1035,16 @@ main {
     left: 51px;
   }
   .main-header.clone .menu {
-    top: 26px;
+    top: 4px;
   }
-  .sticky-menu .main-header.clone {
+  .main-header.clone {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-header .menu > div > ul > li:not(:first-child) {
+    margin-left: 24px;
   }
 }
 @media screen and (max-width: 1019px) {
@@ -1097,7 +1105,7 @@ main {
     font-weight: 800;
   }
   .main-header .menu > div > ul > li:not(:last-child) {
-    margin-bottom: 74px;
+    margin-bottom: 32px;
   }
   .main-header .menu > div > ul > li:last-child {
     padding-top: 20px;
