@@ -7,11 +7,11 @@ import Modal from './Modal'
 
 const PageLayout: React.FC = ({ children }) => {
   const [showStickyHeader, setShowStickyHeader] = useState(false)
-  const isDesktop = () =>
-    typeof window !== 'undefined' && window.innerWidth >= 1020
 
   // Set up scroll listener for sticky header on desktop
   useEffect(() => {
+    const isDesktop = () =>
+      typeof window !== 'undefined' && window.innerWidth >= 1020
     if (isDesktop()) {
       const scrollListener = () => {
         if (window.scrollY > window.innerHeight / 2) {
@@ -24,7 +24,7 @@ const PageLayout: React.FC = ({ children }) => {
 
       return () => window.removeEventListener('scroll', scrollListener)
     }
-  }, [isDesktop])
+  }, [])
 
   return (
     <div>
