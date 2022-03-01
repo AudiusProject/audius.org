@@ -172,7 +172,7 @@ const Footer = () => {
         <div className='sign-off'>
           <p className='copyright'>
             <span className='mobile-break'>
-              © 2021 Audius, Inc. All Rights Reserved.
+              © {new Date().getFullYear()} Audius, Inc. All Rights Reserved.
             </span>
             <br />
             <span className='mobile-break'>
