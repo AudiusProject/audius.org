@@ -585,7 +585,7 @@ main {
 @media screen and (min-width: 1020px) {
   .container {
     padding: 0 55px;
-    max-width: 1310px;
+    max-width: 1596px;
   }
   .standard-button {
     border-radius: 30px;
@@ -642,6 +642,16 @@ main {
     max-width: 360px;
     padding: 0 15px;
   }
+  .row.five-columns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .row.five-columns > * {
+    width: 20%;
+  }
+  .row.five-columns > * > * {
+    margin: 0 auto;
+  }
   .love {
     width: 17px;
     height: 15px;
@@ -661,9 +671,13 @@ main {
   .row.three-columns {
     justify-content: space-between;
     display: flex;
-    justify-content: space-between;
     margin-right: -15px;
     margin-left: -15px;
+    flex-wrap: wrap;
+  }
+  .row.five-columns {
+    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
   }
 }
@@ -673,11 +687,22 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
+  .row.five-columns > * {
+    max-width: 280px;
+  }
 }
 @media screen and (max-width: 1019px) and (min-width: 600px) {
   .row.three-columns > * {
     padding: 0 15px;
     width: 50%;
+  }
+  .row.five-columns > * {
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .row.five-columns > * {
+    max-width: unset !important;
   }
 }
 @media screen and (max-width: 1019px) {
@@ -1839,11 +1864,15 @@ body.modal-active {
 @media screen and (min-width: 1020px) {
   .modal#person-modal .modal-container .modal-frame .modal-content .headshot {
     width: 369px;
-    height: 461px;
+    height: 100%;
     position: relative;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
+  }
+  .modal#person-modal .modal-container .modal-frame .modal-content .headshot img {
+    max-width: unset;
+    height: 100%;
   }
   .modal#person-modal
     .modal-container
@@ -5920,99 +5949,148 @@ section.bios .person .headshot a svg {
 .no-touchevents section.bios .person .headshot a:hover svg {
   fill: #fff;
 }
-section.bios .person .headshot img {
-  max-width: 100%;
+
+section.bios {
+  margin-top: 200px;
+}
+section.bios .header {
+  margin-bottom: 90px;
+}
+section.bios .header h2 {
+  font-size: 24px;
+  letter-spacing: 8px;
+}
+section.bios .person {
+  cursor: pointer;
+  margin: 12px;
+  border-radius: 16px;
+  overflow: hidden;
   position: relative;
-  z-index: 1;
 }
-section.bios .person .description h4 {
-  color: #12063d;
-  font-weight: 700;
+section.bios .person.nolink {
+  cursor: default;
 }
-section.bios .person .description h5 {
-  color: #12063d;
+section.bios .person .headshot .photo {
+  transition: transform 0.3s ease-in-out;
+  transform: scale3d(1.01, 1.01, 1.01);
+  transform-origin: bottom;
+}
+section.bios .person .headshot .photo:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+section.bios .person .headshot .description {
+  position: absolute;
+  bottom: 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  width: 100%;
+}
+section.bios .person .headshot .description h4 {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  text-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.15);
+  margin: 0 0 3px 0;
+}
+section.bios .person .headshot .description h5 {
   font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  text-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.15);
+  margin: 0;
 }
-@media screen and (min-width: 1020px) {
-  section.bios {
-    margin-top: 89px;
-    margin-bottom: 89px;
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  section.bios .person .headshot .description h4 {
+    font-size: 12px;
   }
-  section.bios .header {
-    margin-bottom: 90px;
+  section.bios .person .headshot .description h5 {
+    font-size: 10px;
   }
-  section.bios .header h2 {
-    font-size: 24px;
-    letter-spacing: 8px;
-  }
+}
+
+@media screen and (max-width: 800px) {
   section.bios .person {
-    margin-bottom: 45px;
-  }
-}
-@media screen and (min-width: 1020px) and (max-width: 1019px) {
-  section.bios .person {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 1020px) {
-  section.bios .person .headshot {
-    height: 383px;
-    border-radius: 25px;
+    margin: 48px auto;
+    border-radius: 32px;
     overflow: hidden;
-    margin-bottom: 26px;
-    top: 0;
-    transition: top 300ms ease;
-  }
-  .no-touchevents section.bios .person.has-bio:hover .headshot {
-    top: -10px;
-    cursor: pointer;
-  }
-  section.bios .person .description h4 {
-    font-size: 17px;
-    margin-bottom: 12px;
-  }
-  section.bios .person .description h5 {
-    color: #12063d;
-    font-size: 17px;
-  }
-  section.bios .person .description div {
-    display: none;
+    position: relative;
+    max-width: 400px;
   }
 }
-@media screen and (max-width: 1019px) {
-  section.bios {
-    margin-bottom: 75px;
-  }
-  section.bios .header {
-    margin-bottom: 37px;
-  }
-  section.bios .header h2 {
-    font-size: 24px;
-    letter-spacing: 8px;
-  }
-  section.bios .person {
-    margin-bottom: 43px;
-  }
-  section.bios .person .headshot {
-    border-radius: 20px;
-    overflow: hidden;
-    height: 373px;
-    margin-bottom: 26px;
-  }
-  section.bios .person .description h4 {
-    font-size: 16px;
-    margin-bottom: 11px;
-  }
-  section.bios .person .description h5 {
-    font-size: 16px;
-    margin-bottom: 18px;
-  }
-  section.bios .person .description p {
-    font-size: 16px;
-    line-height: 29px;
-  }
-}
+//   section.bios .person {
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+// }
+// @media screen and (min-width: 1020px) {
+//   section.bios .person .headshot {
+//     height: 300px;
+//     border-radius: 16px;
+//     overflow: hidden;
+//     margin: 12px;
+//     top: 0;
+//     transition: top 300ms ease;
+//   }
+//   .no-touchevents section.bios .person.has-bio:hover .headshot {
+//     top: -10px;
+//     cursor: pointer;
+//   }
+//   section.bios .person .description h4 {
+//     font-size: 17px;
+//     margin-bottom: 12px;
+//   }
+//   section.bios .person .description h5 {
+//     color: #12063d;
+//     font-size: 17px;
+//   }
+//   section.bios .person .description div {
+//     display: none;
+//   }
+// }
+// @media screen and (max-width: 1019px) {
+//   section.bios {
+//     margin-bottom: 75px;
+//   }
+//   section.bios .header {
+//     margin-bottom: 37px;
+//   }
+//   section.bios .header h2 {
+//     font-size: 24px;
+//     letter-spacing: 8px;
+//   }
+//   section.bios .person {
+//     margin-bottom: 24px;
+//   }
+//   section.bios .person .headshot {
+//     position: relative;
+//     border-radius: 8px;
+//     overflow: hidden;
+//     height: 300px;
+//     margin: 12px;
+//     margin-bottom: 26px;
+//   }
+//   section.bios .person .description {
+//     position: absolute;
+//     bottom: 0;
+//   }
+//   section.bios .person .description h4 {
+//     font-size: 16px;
+//     margin-bottom: 11px;
+//   }
+//   section.bios .person .description h5 {
+//     font-size: 16px;
+//     margin-bottom: 18px;
+//   }
+//   section.bios .person .description p {
+//     font-size: 16px;
+//     line-height: 29px;
+//   }
+// }
 #investors .header {
   text-align: center;
 }

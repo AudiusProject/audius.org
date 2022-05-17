@@ -1,107 +1,127 @@
 [
   {
     "name": "Sid Sethi",
-    "imageUrl": "/img/sid-sethi.png",
+    "imageUrl": "/img/Sid Sethi.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/sidsethi1"
   },
   {
     "name": "Julian Baker",
-    "imageUrl": "/img/julian-baker.png",
+    "imageUrl": "/img/Julian Baker.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/julianbaker"
   },
   {
     "name": "Hareesh Nagaraj",
-    "imageUrl": "/img/hareesh-nagara.png",
+    "imageUrl": "/img/Hareesh Nagaraj.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/hareesh-nagaraj"
   },
   {
     "name": "Christina Rowland",
-    "imageUrl": "/img/christina-rowland.png",
+    "imageUrl": "/img/Christina Rowland.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/christina-rowland-19085a58"
   },
   {
     "name": "Dheeraj Manjunath",
-    "imageUrl": "/img/dheeraj-manjunath.png",
+    "imageUrl": "/img/Dheeraj Manjunath.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/dheeraj-manjunath-52268114"
   },
   {
-    "name": "Ray Lee",
-    "imageUrl": "/img/ray-lee.png",
-    "linkedInUrl": "https://theravn.com"
-  },
-  {
     "name": "Ray Jacobson",
-    "imageUrl": "/img/ray-jacobson.png",
+    "imageUrl": "/img/Ray Jacobson.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/jacobsonraymond"
   },
   {
-    "name": "Joey Lee",
-    "imageUrl": "/img/joey-lee.png",
+    "name": "Joe Lee",
+    "imageUrl": "/img/Joe Lee.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/josephwhan"
   },
   {
     "name": "Michael Piazza",
-    "imageUrl": "/img/michael-piazza.png",
+    "imageUrl": "/img/Michael Piazza.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/michael-piazza-87525061"
   },
   {
     "name": "Clayton Blaha",
-    "imageUrl": "/img/clayton-blaha.png",
+    "imageUrl": "/img/Clayton Blaha.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/clayton-blaha-350196bb/"
   },
   {
     "name": "Vicky Guan",
-    "imageUrl": "/img/vicky-guan.jpg",
+    "imageUrl": "/img/Vicky Guan.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/guanvicky/"
   },
   {
     "name": "Cheran Senthilkumar",
-    "imageUrl": "/img/cheran-senthilkumar.png",
+    "imageUrl": "/img/Cheran Senthilkumar.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/cheran-senthil"
   },
   {
     "name": "Saliou Diallo",
-    "imageUrl": "/img/Saliou-Diallo.png",
+    "imageUrl": "/img/Saliou Diallo.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/sddioulde"
   },
   {
-    "name": "Shai Ben-David",
-    "imageUrl": "/img/Shai-Bendavid.png",
-    "linkedInUrl": "https://www.linkedin.com/in/shailee-ben-david-b60143122"
-  },
-  {
     "name": "Michael Cullen",
-    "imageUrl": "/img/Michael-Cullen.png",
+    "imageUrl": "/img/Michael Cullen.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/michaelculleniii"
   },
   {
     "name": "Kiara Hatcher",
-    "imageUrl": "/img/Kiara-Hatcher.png",
+    "imageUrl": "/img/Kiara Hatcher.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/kiara-hatcher-78358187"
   },
   {
     "name": "Marcus Pasell",
-    "imageUrl": "/img/Marcus-Pasell.png",
+    "imageUrl": "/img/Marcus Pasell.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/marcuspasell"
   },
   {
     "name": "KJ Shanks",
-    "imageUrl": "/img/KJ-Shanks.png",
+    "imageUrl": "/img/KJ Shanks.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/kyle-shanks-27088174"
   },
   {
     "name": "Sebastian Klingler",
-    "imageUrl": "/img/Sebastian-Klingler.png",
+    "imageUrl": "/img/Sebastian Klingler.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/sliptype"
   },
   {
     "name": "Isaac Solo",
-    "imageUrl": "/img/Isaac-Solo-Chien.png",
+    "imageUrl": "/img/Isaac Solo.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/isaacsolo"
   },
   {
     "name": "Christine Jiang",
-    "imageUrl": "/img/Christine-Jiang.png",
+    "imageUrl": "/img/Christine Jiang.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/christinesjiang"
+  },
+  {
+    "name": "Tucker Byars",
+    "imageUrl": "/img/Tucker Byars.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/tucker-byars-6721b3176"
+  },
+  {
+    "name": "Dylan Jeffers",
+    "imageUrl": "/img/Dylan Jeffers.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/dylan-jeffers-44b839214/"
+  },
+  {
+    "name": "Nikki Kang",
+    "imageUrl": "/img/Nikki Kang.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/nicoback/"
+  },
+  {
+    "name": "Steve Perkins",
+    "imageUrl": "/img/Steve Perkins.jpg",
+    "linkedInUrl": "https://github.com/stereosteve"
+  },
+  {
+    "name": "Theo Ilie",
+    "imageUrl": "/img/Theo Ilie.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/tilie/"
+  },
+  {
+    "name": "Johannes Naylor",
+    "imageUrl": "/img/Johannes Naylor.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/john-naylor/"
   }
 ]

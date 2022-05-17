@@ -1,50 +1,58 @@
 [
   {
     "name": "deadmau5",
-    "imageUrl": "/img/deadmau5.png"
+    "imageUrl": "/img/deadmau5.jpg"
   },
   {
     "name": "RAC",
-    "imageUrl": "/img/RAC.png"
+    "imageUrl": "/img/RAC.jpg"
   },
   {
     "name": "3LAU",
-    "imageUrl": "/img/3lau.png"
+    "imageUrl": "/img/Justin Blau.jpg"
+  },
+  {
+    "name": "Shai Ben-David",
+    "imageUrl": "/img/Shai Ben-David.jpg"
   },
   {
     "name": "Adam Goldberg",
-    "imageUrl": "/img/Adam-Goldberg.png"
+    "imageUrl": "/img/Adam Goldberg.jpg"
   },
   {
     "name": "Bing Gordon",
-    "imageUrl": "/img/bing-gordon.png"
+    "imageUrl": "/img/Bing Gordon.jpg"
   },
   {
     "name": "Tom Schmidt",
-    "imageUrl": "/img/tom-schmidt.png"
+    "imageUrl": "/img/Tom Schmidt.jpg"
+  },
+  {
+    "name": "Ray Lee",
+    "imageUrl": "/img/Ray Lee.jpg"
   },
   {
     "name": "Greg Hazel",
-    "imageUrl": "/img/greg-hazel.png"
+    "imageUrl": "/img/Greg Hazel.jpg"
   },
   {
     "name": "Ash Pournouri",
-    "imageUrl": "/img/ash-pournouri.png"
+    "imageUrl": "/img/Ash Pournouri.jpg"
   },
   {
     "name": "Justin Kan",
-    "imageUrl": "/img/justin-kan.png"
+    "imageUrl": "/img/Justin Kan.jpg"
   },
   {
     "name": "Robb McDaniels",
-    "imageUrl": "/img/robb-mcdaniels.png"
+    "imageUrl": "/img/Robb McDaniels.jpg"
   },
   {
     "name": "Jesse Grushack",
-    "imageUrl": "/img/Jesse-Grushack.png"
+    "imageUrl": "/img/Jesse Grushack.jpg"
   },
   {
     "name": "Cooper Turley",
-    "imageUrl": "/img/Cooper-Turley.png"
+    "imageUrl": "/img/Cooper Turley.jpg"
   }
 ]
