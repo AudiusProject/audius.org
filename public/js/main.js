@@ -433,7 +433,35 @@ export default function init() {
         speed = $object.data('parallax') / 10,
         xPos = $object.data('parallax-x') || 0
 
-      $(window).on('scroll resize', function () {
+      $(window).on('resize', function () {
+        objectTop = $object.offset().top,
+        speed = $object.data('parallax') / 10,
+        xPos = $object.data('parallax-x') || 0
+        if ($(window).width() > 1200) {
+          if (!$object.hasClass('parallaxed')) {
+            $object.addClass('parallaxed')
+          }
+
+          var scrollPos = $(window).scrollTop() + $(window).height()
+
+          if (scrollPos > objectTop) {
+            $object.css(
+              'transform',
+              'translate(' +
+                xPos +
+                ', ' +
+                -((scrollPos - objectTop) * speed) +
+                'px)'
+            )
+          }
+        } else {
+          if ($object.hasClass('parallaxed')) {
+            $object.removeClass('parallaxed')
+          }
+        }
+      })
+
+      $(window).on('scroll', function () {
         if ($(window).width() > 1200) {
           if (!$object.hasClass('parallaxed')) {
             $object.addClass('parallaxed')
