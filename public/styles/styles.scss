@@ -6139,11 +6139,14 @@ section.bios .person .headshot .description h5 {
     top: 1680px;
     margin-left: 700px;
   }
-  .team .parallax-sphere.orange,
   .careers .parallax-sphere.orange,
   .security .parallax-sphere.orange {
     top: 1680px;
     margin-left: 700px;
+  }
+  .team .parallax-sphere.orange {
+    top: 1680px;
+    margin-left: 800px;
   }
   .parallax-sphere.orange-opaque {
     z-index: 10;
@@ -6176,11 +6179,14 @@ section.bios .person .headshot .description h5 {
     top: 4120px;
     margin-left: 620px;
   }
-  .team .parallax-sphere.teal,
   .careers .parallax-sphere.teal,
   .security .parallax-sphere.teal {
     top: 4620px;
     margin-left: -920px;
+  }
+  .team .parallax-sphere.teal {
+    top: 4620px;
+    margin-left: -1120px;
   }
   .token .parallax-sphere.teal {
     top: 5020px;
