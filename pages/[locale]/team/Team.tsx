@@ -34,15 +34,15 @@ const Team = () => {
       <section id='leadership' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Leadership</h2>
+            <h2>The Team</h2>
           </div>
-          <div className='row two-columns three-columns leadership'>
+          <div className='row five-columns leadership'>
             {leadership.map((l) => (
               <Bio {...l} key={l.name} />
             ))}
           </div>
 
-          <div className='row three-columns'>
+          <div className='row five-columns'>
             {teamMembers.map((m) => (
               <Bio {...m} key={m.name} />
             ))}
@@ -74,9 +74,9 @@ const Team = () => {
           <div className='header'>
             <h2>{t('team-advisors-headline')}</h2>
           </div>
-          <div className='row three-columns'>
+          <div className='row five-columns'>
             {advisors.map((a) => (
-              <Bio {...a} key={a.name} disableModal hideDescription />
+              <Bio {...a} key={a.name} disableModal />
             ))}
           </div>
         </div>
