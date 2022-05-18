@@ -5975,7 +5975,7 @@ section.bios .person .headshot .photo {
   transform: scale3d(1.01, 1.01, 1.01);
   transform-origin: bottom;
 }
-section.bios .person .headshot .photo:hover {
+section.bios .person .headshot .photo.scale:hover {
   transform: scale3d(1.05, 1.05, 1.05);
 }
 section.bios .person .headshot .description {
@@ -6127,6 +6127,7 @@ section.bios .person .headshot .description h5 {
 @media screen and (min-width: 1020px) {
   #investors {
     margin-top: 60px;
+    margin-bottom: 120px;
   }
   #investors .header {
     margin-bottom: 92px;

@@ -44,7 +44,7 @@ const Bio = ({
               <span>LinkedIn</span>
             </a>
           )}
-          <img className='photo' src={imageUrl} alt={`Photo of ${name}`} />
+          <img className={`photo ${disableModal ? '' : 'scale' }`} src={imageUrl} alt={`Photo of ${name}`} />
           <div className='description'>
             <h4 className='name'>{name}</h4>
             <h5 className='title'>{t(`${nameKey}-title`)}</h5>
