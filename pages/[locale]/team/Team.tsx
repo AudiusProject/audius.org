@@ -34,7 +34,7 @@ const Team = () => {
       <section id='leadership' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>The Team</h2>
+            <h2>Our Team</h2>
           </div>
           <div className='row five-columns leadership'>
             {leadership.map((l) => (
