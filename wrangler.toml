@@ -1,9 +1,9 @@
-name = "audius-org-public-site"
 type = "webpack"
 account_id = "3811365464a8e56b2b27a5590e328e49"
 workers_dev = true
-route = "audius.org/*"
-zone_id = "5a3ccccef96ba8b3380b78451ec164e6"
+
+name = "ray"
+route = "ray.audius.co/*"
 
 [site]
 bucket = "./out"

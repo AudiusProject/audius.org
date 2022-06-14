@@ -3,6 +3,7 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 
 
+import { FadeImage } from 'components/FadeImage'
 import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 import BabyCarriage from 'public/img/baby-carriage.svg'
@@ -35,9 +36,9 @@ const Careers = () => {
         <div className='container'>
           <div className='row two-columns'>
             <div className='column'>
-              <p>Audius is a vibrant, decentralized &amp; open-source community of artists, fans, and developers building a Web3 audio streaming protocol that delivers an unprecedented level of music sharing intimacy and platform ownership.</p>
-              <p>Our team envisions a world where artists and fans build equity in the systems they create and control the tools they use. We&apos;re hiring (remotely) across the US.</p>
-              <p>Come join us!</p>
+              <p>{t('careers-who-1')}</p>
+              <p>{t('careers-who-2')}</p>
+              <p>{t('careers-who-3')}</p>
               <p>
                 <a
                   className='standard-button purple'
@@ -49,39 +50,39 @@ const Careers = () => {
             </div>
             <div className='column'>
               <div className='heroImage'>
-                <img src='/img/tulum-working.jpg' alt='Photo of Audius team' />
+                <FadeImage src='/img/tulum-working.jpg' alt='Photo of Audius team' />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <img src='/img/top-golf-bw.jpg' alt='team dinner' className='hero-image' />
+      <FadeImage src='/img/top-golf-bw.jpg' alt='team dinner' className='hero-image' />
 
       <section id='working-at' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Working At Audius</h2>
-            <p>We&apos;re a remote team building on Web3 and the cutting-edge of what is possible in streaming technology. And while we use it deeply, we see the blockchain not as the product itself, but as the means to building a one-of-a-kind decentralized &amp; creator-first music ecosystem for the modern internet. And while we&apos;ve embraced remote-first work, nothing is more important than the human connection &amp; empathy we build for each other IRL.</p>
+            <h2>{t('careers-working')}</h2>
+            <p>{t('careers-working-1')}</p>
           </div>
           <div className='row two-columns'>
             <div className='column'>
-              <img src='/img/bubblesoccer.jpg' alt='Photo of Audius team' />
-              <p>The teams gets competitive in Bubble Soccer in San Francisco</p>
+              <FadeImage src='/img/bubblesoccer.jpg' alt='Photo of Audius team' />
+              <p className='caption'>{t('careers-working-caption-soccer')}</p>
             </div>
             <div className='column'>
-              <img src='/img/breakfast.jpg' alt='Photo of Audius team' />
-              <p>A breakfast of champions at our Lake Tahoe team retreat</p>
+              <FadeImage src='/img/breakfast.jpg' alt='Photo of Audius team' />
+              <p className='caption'>{t('careers-working-caption-breakfast')}</p>
             </div>
           </div>
           <div className='row two-columns'>
             <div className='column'>
-              <img src='/img/pair-coding.jpg' alt='Photo of Audius team' />
-              <p>KJ &amp; Isaac launch the &quot;Audius NFT profile picture&quot; feature on a retreat in Tulum</p>
+              <FadeImage src='/img/pair-coding.jpg' alt='Photo of Audius team' />
+              <p className='caption'>{t('careers-working-caption-pair')}</p>
             </div>
             <div className='column'>
-              <img src='/img/floral.jpg' alt='Photo of Audius team' />
-              <p>The team gathers remotely for one of our monthly team-building activities -- a floral arrangement course!</p>
+              <FadeImage src='/img/floral.jpg' alt='Photo of Audius team' />
+              <p className='caption'>{t('careers-working-caption-floral')}</p>
             </div>
           </div>
         </div>
@@ -89,8 +90,8 @@ const Careers = () => {
       <section id='working-at' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Community At Audius</h2>
-            <p>Our team publishes a few editorial playlists of &amp; for the community.</p>
+            <h2>{t('careers-community')}</h2>
+            <p>{t('careers-community-1')}</p>
           </div>
           <div className='row two-columns'>
             <div className='column'>
@@ -135,7 +136,7 @@ const Careers = () => {
 
 
 
-      <img src='/img/team-dinner-vegas.jpg' alt='team dinner' className='hero-image' />
+      <FadeImage src='/img/team-dinner-vegas.jpg' alt='team dinner' className='hero-image' />
 
       <section className='simple-callout'>
         <div className='container'>
@@ -161,19 +162,19 @@ const Careers = () => {
           </div>
           <div className='row two-columns'>
             <div className='column'>
-              <p><CoinFront className='icon' />Competitive Salary &amp; Token Equity</p>
-              <p><IslandTropical className='icon' />Unlimited PTO</p>
-              <p><UserDoctorHairLong className='icon' />Health &amp; Dental</p>
-              <p><PiggyBank className='icon' />401K &amp; FSA</p>
-              <p><GuitarElectric className='icon' />Monthly Music Stipend</p>
-              <p><GraduationCap className='icon' />Annual Learning Stipend</p>
+              <p><CoinFront className='icon' />{t('careers-benefits-1')}</p>
+              <p><IslandTropical className='icon' />{t('careers-benefits-2')}</p>
+              <p><UserDoctorHairLong className='icon' />{t('careers-benefits-3')}</p>
+              <p><PiggyBank className='icon' />{t('careers-benefits-4')}</p>
+              <p><GuitarElectric className='icon' />{t('careers-benefits-5')}</p>
+              <p><GraduationCap className='icon' />{t('careers-benefits-6')}</p>
             </div>
             <div className='column'>
-              <p><ChairOffice className='icon' />Home Office Set-Up</p>
-              <p><HeadSideHeart className='icon' />Mental &amp; Physical Wellness Stipend</p>
-              <p><PlaneEngines className='icon' />2x / Year Company Retreats</p>
-              <p><PeopleGroup className='icon' />Budget for Team Meetups</p>
-              <p><BabyCarriage className='icon' />16 Weeks Parental Leave</p>
+              <p><ChairOffice className='icon' />{t('careers-benefits-7')}</p>
+              <p><HeadSideHeart className='icon' />{t('careers-benefits-8')}</p>
+              <p><PlaneEngines className='icon' />{t('careers-benefits-9')}</p>
+              <p><PeopleGroup className='icon' />{t('careers-benefits-10')}</p>
+              <p><BabyCarriage className='icon' />{t('careers-benefits-11')}</p>
             </div>
           </div>
         </div>
@@ -182,11 +183,11 @@ const Careers = () => {
       <section id='job-openings' className='bios'>
         <div className='container'>
           <div className='header'>
-            <h2>Job Openings</h2>
+            <h2>{t('careers-jobs')}</h2>
           </div>
           <div className='row two-columns'>
             <div className='column'>
-              <h2>Engineering</h2>
+              <h2>{t('careers-jobs-engineering')}</h2>
               <a href="https://jobs.lever.co/audius/28d90111-c18d-49ec-a44d-8577fa4e58bc" target="_blank" rel="noreferrer">
                 <p>Software Engineer - Frontend</p>
               </a>
@@ -196,12 +197,15 @@ const Careers = () => {
               <a href="https://jobs.lever.co/audius/fa274c08-181a-439b-9739-52c6c7ba1f44" target="_blank" rel="noreferrer">
                 <p>Software Engineer - Backend</p>
               </a>
+              <a href="https://jobs.lever.co/audius/79c3fed6-e205-4631-88f2-7f14f571b3e6" target="_blank" rel="noreferrer">
+                <p>Software Engineer - Smart Contracts</p>
+              </a>
               <a href="https://jobs.lever.co/audius/43dfeeed-c525-4d84-bbba-683086001342" target="_blank" rel="noreferrer">
-                <p>Software Engineer - Infrastructure &amp; Tooling</p>
+                <p>Software Engineer - Infrastructure</p>
               </a>
             </div>
             <div className='column'>
-              <h2>Design</h2>
+              <h2>{t('careers-jobs-design')}</h2>
               <a href="https://jobs.lever.co/audius/3084c37b-adcd-4a2a-8b8a-0b60605c5f65" target="_blank" rel="noreferrer">
                 <p>Senior Motion Designer</p>
               </a>
@@ -209,6 +213,15 @@ const Careers = () => {
                 <p>Product Designer</p>
               </a>
             </div>
+          </div>
+          <div className='row cta'>
+            <a
+              className='standard-button purple'
+              href="https://jobs.lever.co/audius"
+              target="_blank" rel="noreferrer"
+            >
+              {'All openings'}
+            </a>
           </div>
         </div>
       </section>
@@ -228,7 +241,7 @@ const Careers = () => {
           </div>
         </div>
         <span className='shapes' data-parallax='2' data-parallax-x='-50%'>
-          <img
+          <FadeImage
             src='/img/newsletter-shapes.png'
             alt='Audius newsletter graphic'
             data-rjs='2'

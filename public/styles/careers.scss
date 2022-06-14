@@ -1,5 +1,9 @@
 .careers {
 
+  .hero-image {
+    width: 100%;
+  }
+
   #subpage-intro .container,
   #subpage-intro h1,
   #subpage-intro img {
@@ -41,6 +45,10 @@
 
   #who-we-are .heroImage {
     padding: 0px;
+  }
+
+  #who-we-are .heroImage img {
+    margin-bottom: 16px;
   }
 
   #team-images {
@@ -99,7 +107,7 @@
     overflow: hidden;
     box-shadow: 0px 5px 5px -2px rgba(18, 6, 61, 0.1);
     border-radius: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   #working-at .header p {
@@ -127,8 +135,13 @@
     color: #12063d;
   }
 
+  #working-at p.caption {
+    text-align: center;
+    font-size: 16px;
+  }
+
   #benefits {
-    background-color: rgb(245, 204, 250);
+    background-color: #F2F2F4;
   }
 
   #benefits .container {
@@ -243,7 +256,10 @@
   }
 
   #job-openings {
-    margin-top: 0;
-    padding-top: 100px;
+    scroll-margin-top: 140px;
+  }
+
+  #job-openings .cta {
+    margin-top: 42px;
   }
 }
