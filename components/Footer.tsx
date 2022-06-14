@@ -1,8 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useTranslation } from 'next-i18next'
+import { useTransition, animated, useSpring } from 'react-spring'
 
 import StyledLink from './StyledLink'
+
+const LOCATIONS = [
+  'Atlanta',
+  'Austin',
+  'Boiling Springs',
+  'Boulder',
+  'Brooklyn',
+  'Centreville',
+  'Chantilly',
+  'Dallas',
+  'Jersey City',
+  'Las Vegas',
+  'Los Angeles',
+  'Marin',
+  'Miami',
+  'New York City',
+  'Oakland',
+  'Portland',
+  'Richmond',
+  'San Antonio',
+  'San Francisco',
+  'Seattle',
+  'Walnut Creek',
+]
+
+const RemoteSpace = () => {
+  const [index, setIndex] = useState(Math.floor(Math.random() * LOCATIONS.length))
+  const onMouseMove = () => {
+    setIndex(index => index + 1)
+  }
+  const transitions = useTransition(LOCATIONS[index % LOCATIONS.length], {
+    from: { opacity: 0.6 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0, config: { duration: 0 } }
+  })
+
+  return <span style={{ position: 'relative' }}>
+    {
+      transitions((props, item) => {
+        return (
+          <animated.span
+            onMouseMove={onMouseMove}
+            style={{
+              ...props,
+              position: 'absolute',
+              left: 5,
+              color: '#a116b7',
+              borderBottom: '1px solid #a116b7',
+              whiteSpace: 'nowrap',
+              cursor: 'default'
+            }}
+          >
+            {item}
+          </animated.span>
+        )
+      })
+    }
+  </span>
+}
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -176,7 +236,7 @@ const Footer = () => {
             </span>
             <br />
             <span className='mobile-break'>
-              Made with <span className='love'>love</span> in SF & LA
+              Made with <span className='love'>love</span> in <RemoteSpace />
             </span>
           </p>
         </div>

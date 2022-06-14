@@ -1,4 +1,9 @@
 .careers {
+
+  .hero-image {
+    width: 100%;
+  }
+
   #subpage-intro .container,
   #subpage-intro h1,
   #subpage-intro img {
@@ -10,22 +15,48 @@
     display: inline-flex;
   }
 
-  #who-w-are h2 {
+  @media screen and (min-width: 1019px) {
+    #who-we-are {
+      margin: 148px 32px 240px;
+    }
+  }
+
+  @media screen and (max-width: 1019px) {
+    #who-we-are {
+      margin: 0 0 180px;
+    }
+  }
+
+  #who-we-are h2 {
     margin: 0;
   }
 
   #who-we-are .header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+  }
+
+  #who-we-are .row.two-columns .column {
+    max-width: unset;
   }
 
   #who-we-are p {
     max-width: 1024px;
     margin: 0 auto;
     margin-bottom: 32px;
-    font-size: 23px;
-    line-height: 40px;
-    text-align: center;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: left;
     color: #12063d;
+  }
+
+  #who-we-are .heroImage {
+    padding: 0px;
+  }
+
+  #who-we-are .heroImage img {
+    margin-bottom: 16px;
   }
 
   #team-images {
@@ -44,7 +75,7 @@
     }
   }
 
-  #team-images > * {
+  #team-images>* {
     width: 100%;
   }
 
@@ -53,42 +84,162 @@
     padding: 8px;
   }
 
+  #who-we-are img,
   #team-images img {
     margin: 0 auto;
-    max-width: 504px;
     width: 100%;
     overflow: hidden;
     box-shadow: 0px 5px 5px -2px rgba(18, 6, 61, 0.1);
     border-radius: 16px;
   }
 
-  #about-the-company {
-    margin-bottom: 180px;
+  #who-we-are .heroImage {
+    margin-left: 42px;
   }
 
-  #about-the-company .container {
+  @media screen and (max-width: 1019px) {
+    #who-we-are .heroImage {
+      margin-top: 42px;
+      margin-left: 0;
+    }
+  }
+
+  #team-images img {
+    max-width: 504px;
+  }
+
+  #working-at img {
+    margin: 0 auto;
+    max-width: 504px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px -2px rgba(18, 6, 61, 0.1);
+    border-radius: 16px;
+    margin-bottom: 12px;
+  }
+
+  #working-at .header p {
+    text-align: center;
+  }
+
+  #working-at .row.two-columns {
+    justify-content: center;
+  }
+
+  #working-at .row.two-columns .column {
+    margin-bottom: 48px;
+  }
+
+  @media screen and (max-width: 1019px) {
+    #working-at .row.two-columns .column {
+      height: 400px;
+    }
+  }
+
+  #working-at p {
+    padding: 0 18px;
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #12063d;
+  }
+
+  #working-at p.caption {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  #benefits {
+    background-color: #F2F2F4;
+  }
+
+  #benefits .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 72px 0;
   }
 
-  #about-the-company .header {
-    margin-bottom: 32px;
+  #benefits .header {
+    margin-bottom: 64px;
   }
 
-  #about-the-company h2 {
+  #benefits h2 {
     margin: 0;
-    color: #05bcd4;
   }
 
-  #about-the-company p {
+  #benefits p {
+    display: flex;
+    align-items: center;
     max-width: 1024px;
-    margin: 0 auto 32px;
-    font-size: 23px;
-    line-height: 40px;
-    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: left;
     color: #12063d;
+  }
+
+  .icon {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    margin: 0 24px;
+  }
+
+  .icon path {
+    fill: #12063d;
+  }
+
+  #job-openings {
+    margin-bottom: 180px;
+  }
+
+  #job-openings .container {
+    max-width: 1024px;
+  }
+
+  #job-openings .row.two-columns .column {
+    justify-content: center;
+  }
+
+  #job-openings .header {
+    margin-bottom: 64px;
+  }
+
+  #job-openings h2 {
+    line-height: 40px;
+  }
+
+  #job-openings a {
+    display: block;
+  }
+
+  #job-openings p {
+    display: inline-block;
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #a116b7;
+    transition: all 0.17s ease-in-out;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  #job-openings p:hover {
+    border-bottom: 1px solid #a116b7;
   }
 
   #newsletter .header {
@@ -112,5 +263,17 @@
 
   .learn-more:hover {
     box-shadow: 0 15px 15px -2px rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-image {
+    margin-bottom: 128px;
+  }
+
+  #job-openings {
+    scroll-margin-top: 140px;
+  }
+
+  #job-openings .cta {
+    margin-top: 42px;
   }
 }
