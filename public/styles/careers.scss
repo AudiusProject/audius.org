@@ -15,8 +15,16 @@
     display: inline-flex;
   }
 
-  #who-we-are {
-    margin: 148px 32px 240px;
+  @media screen and (min-width: 1019px) {
+    #who-we-are {
+      margin: 148px 32px 240px;
+    }
+  }
+
+  @media screen and (max-width: 1019px) {
+    #who-we-are {
+      margin: 0 0 180px;
+    }
   }
 
   #who-we-are h2 {
@@ -120,6 +128,12 @@
 
   #working-at .row.two-columns .column {
     margin-bottom: 48px;
+  }
+
+  @media screen and (max-width: 1019px) {
+    #working-at .row.two-columns .column {
+      height: 400px;
+    }
   }
 
   #working-at p {

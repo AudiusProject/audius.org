@@ -6,23 +6,27 @@ import { useTransition, animated, useSpring } from 'react-spring'
 import StyledLink from './StyledLink'
 
 const LOCATIONS = [
-  'San Francisco',
-  'Oakland',
-  'Walnut Creek',
-  'Los Angeles',
-  'New York City',
-  'Brooklyn',
-  'Austin',
-  'Dallas',
-  'San Antonio',
   'Atlanta',
-  'Las Vegas',
-  'Bowling Green',
-  'Richmond',
-  'Portland',
+  'Austin',
+  'Boiling Springs',
+  'Boulder',
+  'Brooklyn',
   'Centreville',
+  'Chantilly',
+  'Dallas',
+  'Jersey City',
+  'Las Vegas',
+  'Los Angeles',
+  'Marin',
   'Miami',
-  'Seattle'
+  'New York City',
+  'Oakland',
+  'Portland',
+  'Richmond',
+  'San Antonio',
+  'San Francisco',
+  'Seattle',
+  'Walnut Creek',
 ]
 
 const RemoteSpace = () => {
