@@ -9,5 +9,5 @@ export const FadeImage = ({ src, alt, className }: { src: string, alt: string, c
     }
     image.src = src
   }, [])
-  return <img className={className} style={{ transition: '1s ease-in-out', opacity: loaded ? 1 : 0 }} src={src} alt={alt} />
+  return <div style={{ transition: '1s ease-in-out', opacity: loaded ? 1 : 0 }} > <img className={className} src={src} alt={alt} /></div>
 }

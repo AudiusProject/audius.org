@@ -2,6 +2,8 @@ import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 
+import { FadeImage } from './FadeImage'
+
 const Investors = () => {
   const { t } = useTranslation()
 
@@ -14,33 +16,33 @@ const Investors = () => {
         <div className='logos'>
           <ul>
             <li>
-              <img
+              <FadeImage
                 className='coinbase'
-                src='/img/logoCoinbase.svg'
+                src='/FadeImage/logoCoinbase.svg'
                 alt='Coinbase'
               />
               <span>Coinbase</span>
             </li>
             <li>
-              <img
+              <FadeImage
                 className='blockchange'
-                src='/img/logoBlockChange@2x.png'
+                src='/FadeImage/logoBlockChange@2x.png'
                 alt='Block Change'
               />
               <span>Block Change</span>
             </li>
             <li>
-              <img
+              <FadeImage
                 className='general'
-                src='/img/general-catalyst.svg'
+                src='/FadeImage/general-catalyst.svg'
                 alt='General Catalyst'
               />
               <span>General Catalyst</span>
             </li>
             <li>
-              <img
+              <FadeImage
                 className='kpcb'
-                src='/img/kleiner-perkins-caufield-byers.png'
+                src='/FadeImage/kleiner-perkins-caufield-byers.png'
                 data-rjs='2'
                 alt='Kleiner Perkins Caufield Byers'
               />
@@ -51,29 +53,29 @@ const Investors = () => {
         <div className='logos'>
           <ul>
             <li>
-              <img
+              <FadeImage
                 className='lightspeed'
-                src='/img/lightspeed.svg'
+                src='/FadeImage/lightspeed.svg'
                 alt='Lightspeed'
               />
               <span>Lightspeed</span>
             </li>
             <li>
-              <img
+              <FadeImage
                 className='multicoin'
-                src='/img/logoMulticoinCapital.svg'
+                src='/FadeImage/logoMulticoinCapital.svg'
                 alt='Multicoin'
               />
               <span>Multicoin Capital</span>
             </li>
             <li>
-              <img className='pantera' src='/img/pantera.png' alt='Pantera' />
+              <FadeImage className='pantera' src='/FadeImage/pantera.png' alt='Pantera' />
               <span>Pantera</span>
             </li>
             <li>
-              <img
+              <FadeImage
                 className='standard'
-                src='/img/logoSandardCrypto.svg'
+                src='/FadeImage/logoSandardCrypto.svg'
                 alt='Standard Crypto'
               />
               <span>Standard Crypto</span>
@@ -83,9 +85,9 @@ const Investors = () => {
         <div className='logos'>
           <ul>
             <li className='last-item'>
-              <img
+              <FadeImage
                 className='binance'
-                src='/img/logoBinance.png'
+                src='/FadeImage/logoBinance.png'
                 alt='Binance'
               />
               <span>Binance</span>

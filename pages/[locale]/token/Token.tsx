@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useTranslation, Trans } from 'next-i18next'
 
+import { FadeImage } from 'components/FadeImage'
 import Head from 'components/Head'
 import Newsletter from 'components/Newsletter'
 import SubpageIntro from 'components/SubpageIntro'
@@ -104,7 +105,7 @@ const Token = () => {
                   </svg>
                 </div>
                 <span className='seal'>
-                  <img src='/img/platformToken@2x.png' data-rjs='2' alt='' />
+                  <FadeImage src='/img/platformToken@2x.png' data-rjs='2' alt='' />
                 </span>
                 <p>{t('token-stake-description')}</p>
               </div>
@@ -120,7 +121,7 @@ const Token = () => {
               <div className='feature'>
                 <div className='icon'>
                   <div>
-                    <img
+                    <FadeImage
                       src='/img/iconNodes@2x.png'
                       alt='Icon for Nodes'
                       data-rjs='2'
@@ -137,7 +138,7 @@ const Token = () => {
               <div className='feature'>
                 <div className='icon'>
                   <div>
-                    <img
+                    <FadeImage
                       src='/img/iconFeatures@2x.png'
                       alt='Icon for Features'
                       data-rjs='2'
@@ -154,7 +155,7 @@ const Token = () => {
               <div className='feature'>
                 <div className='icon'>
                   <div>
-                    <img
+                    <FadeImage
                       src='/img/iconGov@2x.png'
                       alt='Icon for Gov'
                       data-rjs='2'

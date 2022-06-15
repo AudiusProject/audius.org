@@ -125,7 +125,7 @@
     justify-content: center;
   }
 
-  .api > img {
+  .api>img {
     width: 250px;
   }
 
@@ -556,16 +556,19 @@
     box-shadow: 0 15px 15px -2px rgba(0, 0, 0, 0.25);
   }
 
-  .person {
+  section.bios .person {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     transform-origin: 50% 50%;
+    margin: 0;
+    padding-bottom: 32px;
   }
 
   @media screen and (max-width: 1019px) {
     .person {
       width: 100%;
     }
+
     .person:hover {
       transform: scale(1.02);
     }

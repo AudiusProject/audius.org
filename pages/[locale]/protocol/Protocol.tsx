@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 
+import { FadeImage } from 'components/FadeImage'
 import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
@@ -25,8 +26,8 @@ const Protocol = () => {
             <p className='stake'>{t('protocol-call-to-action')}</p>
             <button
               onClick={() =>
-                (window.location.href =
-                  'https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources')
+              (window.location.href =
+                'https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources')
               }
               className='getting-started'
             >
@@ -37,7 +38,7 @@ const Protocol = () => {
 
           <div className='dapp'>
             <div className='background'></div>
-            <img
+            <FadeImage
               src='/img/hedgehogLogoHorizontal.svg'
               className='hedgehogLogo'
               alt='Hedgehog logo'
@@ -61,7 +62,7 @@ const Protocol = () => {
           <div className='contact'>
             <div className='background'></div>
             <span className='shapes' data-parallax='2' data-parallax-x='-50%'>
-              <img src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
+              <FadeImage src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
             </span>
             <h3 className='help'>{t('protocol-onboarding')}</h3>
             <div className='form-container'>

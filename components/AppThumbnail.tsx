@@ -4,6 +4,8 @@ import { useTranslation } from 'next-i18next'
 
 import IconLink from 'public/img/iconLink.svg'
 
+import { FadeImage } from './FadeImage'
+
 type AppThumbnailProps = {
   name: string
   image: string
@@ -27,7 +29,7 @@ const AppThumbnail = ({ name, image, link }: AppThumbnailProps) => {
             <IconLink />
             <span>Link</span>
           </a>
-          <img
+          <FadeImage
             className='photo'
             src={`/img/${image}`}
             alt={`Picture of ${name}`}
