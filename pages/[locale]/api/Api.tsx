@@ -3,6 +3,7 @@ import React, { useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 
 import AppThumbnail from 'components/AppThumbnail'
+import { FadeImage } from 'components/FadeImage'
 import Head from 'components/Head'
 import SubpageIntro from 'components/SubpageIntro'
 import IconCheck from 'public/img/iconCheck.svg'
@@ -106,8 +107,8 @@ const Api = () => {
             <button
               className='button'
               onClick={() =>
-                (window.location.href =
-                  'http://audiusproject.github.io/api-docs')
+              (window.location.href =
+                'http://audiusproject.github.io/api-docs')
               }
             >
               {t('api-docs')}
@@ -144,8 +145,8 @@ const Api = () => {
             </button>
             <p
               onClick={() =>
-                (window.location.href =
-                  'https://audiusproject.github.io/api-docs/')
+              (window.location.href =
+                'https://audiusproject.github.io/api-docs/')
               }
             >
               {t('api-learn-more')}
@@ -184,8 +185,8 @@ const Api = () => {
               <button
                 className='tiny'
                 onClick={() =>
-                  (window.location.href =
-                    'https://audiusproject.github.io/api-docs')
+                (window.location.href =
+                  'https://audiusproject.github.io/api-docs')
                 }
               >
                 {t('api-full-reference')}
@@ -198,15 +199,15 @@ const Api = () => {
       <section id='newsletter'>
         <div className='container'>
           <div className='content'>
-            <img src='../img/apiLogo@2x.png' alt='Audius API logo' />
+            <FadeImage src='../img/apiLogo@2x.png' alt='Audius API logo' />
             <div className='header'>
               <h3>{t('api-conclusion')}</h3>
             </div>
             <button
               className='learn-more'
               onClick={() =>
-                (window.location.href =
-                  'https://audiusproject.github.io/api-docs')
+              (window.location.href =
+                'https://audiusproject.github.io/api-docs')
               }
             >
               {t('api-learn-more-variant')}
@@ -214,7 +215,7 @@ const Api = () => {
           </div>
         </div>
         <span className='shapes' data-parallax='2' data-parallax-x='-50%'>
-          <img src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
+          <FadeImage src='/img/newsletter-shapes.png' alt='' data-rjs='2' />
         </span>
       </section>
     </div>

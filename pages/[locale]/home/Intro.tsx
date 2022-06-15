@@ -2,6 +2,8 @@ import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 
+import { FadeImage } from 'components/FadeImage'
+
 const Intro = () => {
   const { t } = useTranslation()
 
@@ -38,7 +40,7 @@ const Intro = () => {
           <span className='player-description'>{t('home-music-player')}</span>
           <span className='click'>
             {t('click-here')}
-            <img
+            <FadeImage
               alt={t('home-open-music-player')}
               className='icon-open'
               src='/img/iconOpen.svg'

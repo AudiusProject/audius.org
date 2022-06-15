@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 
+import { FadeImage } from 'components/FadeImage'
 import IconLinkedIn from 'public/img/iconLinkedIn.svg'
 
 type BioProps = {
@@ -28,7 +29,7 @@ const Bio = ({
   return (
     <div key={name}>
       <div
-        className={`person ${disableModal ? 'nolink' : '' }`}
+        className={`person ${disableModal ? 'nolink' : ''}`}
         data-modal={!disableModal ? 'person-modal' : undefined}
       >
         <div className='headshot'>
@@ -44,13 +45,13 @@ const Bio = ({
               <span>LinkedIn</span>
             </a>
           )}
-          <img className={`photo ${disableModal ? '' : 'scale' }`} src={imageUrl} alt={`Photo of ${name}`} />
+          <FadeImage className={`photo ${disableModal ? '' : 'scale'}`} src={imageUrl} alt={`Photo of ${name}`} />
           <div className='description'>
             <h4 className='name'>{name}</h4>
             <h5 className='title'>{t(`${nameKey}-title`)}</h5>
-              <div style={{ display: 'none' }} className='bio'>
-                <p>{t(`${nameKey}-description`)}</p>
-              </div>
+            <div style={{ display: 'none' }} className='bio'>
+              <p>{t(`${nameKey}-description`)}</p>
+            </div>
           </div>
         </div>
       </div>
