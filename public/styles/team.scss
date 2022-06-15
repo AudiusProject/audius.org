@@ -23,27 +23,33 @@
     height: 28px;
     padding: 4px;
   }
+
   .blockchange {
     height: 29px;
     padding: 4px;
   }
+
   .multicoin {
     height: 29px;
     padding: 4px;
   }
+
   .standard {
     height: 35px;
     padding: 4px;
   }
+
   .binance {
     height: 29px;
     padding: 4px;
   }
+
   @media screen and (max-width: 1019px) {
     .last-item {
       border-right: none !important;
     }
   }
+
   @media screen and (min-width: 1020px) {
     .last-item {
       border-right: 1px solid #e7e6eb;
