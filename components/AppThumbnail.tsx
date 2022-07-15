@@ -30,6 +30,7 @@ const AppThumbnail = ({ name, image, link }: AppThumbnailProps) => {
             <span>Link</span>
           </a>
           <FadeImage
+            containerClassName='appImageWrapper'
             className='photo'
             src={`/img/${image}`}
             alt={`Picture of ${name}`}
@@ -37,7 +38,9 @@ const AppThumbnail = ({ name, image, link }: AppThumbnailProps) => {
         </div>
         <div className='description'>
           <h4 className='name'>{name}</h4>
-          <h5 className='title'>{t(`${nameKey}-short-description`)}</h5>
+          <div className='title appDescription'>
+            {t(`${nameKey}-short-description`)}
+          </div>
           <div className='bio'>
             <p>{t(`${nameKey}-description`)}</p>
           </div>

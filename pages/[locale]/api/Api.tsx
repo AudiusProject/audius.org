@@ -9,6 +9,8 @@ import SubpageIntro from 'components/SubpageIntro'
 import IconCheck from 'public/img/iconCheck.svg'
 import IconSquiggle from 'public/img/iconSquiggle.svg'
 
+import styles from '../styles/Api.module.css'
+
 import apps from './apps.json'
 
 const frameUrls = {
@@ -107,8 +109,8 @@ const Api = () => {
             <button
               className='button'
               onClick={() =>
-              (window.location.href =
-                'http://audiusproject.github.io/api-docs')
+                (window.location.href =
+                  'http://audiusproject.github.io/api-docs')
               }
             >
               {t('api-docs')}
@@ -132,7 +134,7 @@ const Api = () => {
             <h2>{t('api-built-on-audius')}</h2>
           </div>
 
-          <div id='appContent' className='row three-columns'>
+          <div id='appContent' className='row three-columns api-example-row'>
             {apps.map(AppThumbnail)}
           </div>
 
@@ -145,8 +147,8 @@ const Api = () => {
             </button>
             <p
               onClick={() =>
-              (window.location.href =
-                'https://audiusproject.github.io/api-docs/')
+                (window.location.href =
+                  'https://audiusproject.github.io/api-docs/')
               }
             >
               {t('api-learn-more')}
@@ -185,8 +187,8 @@ const Api = () => {
               <button
                 className='tiny'
                 onClick={() =>
-                (window.location.href =
-                  'https://audiusproject.github.io/api-docs')
+                  (window.location.href =
+                    'https://audiusproject.github.io/api-docs')
                 }
               >
                 {t('api-full-reference')}
@@ -206,8 +208,8 @@ const Api = () => {
             <button
               className='learn-more'
               onClick={() =>
-              (window.location.href =
-                'https://audiusproject.github.io/api-docs')
+                (window.location.href =
+                  'https://audiusproject.github.io/api-docs')
               }
             >
               {t('api-learn-more-variant')}
