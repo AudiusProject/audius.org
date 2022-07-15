@@ -1,20 +1,5 @@
 [
   {
-    "name": "DeFi Land",
-    "image": "defiLand@2x.jpg",
-    "link": "https://defiland.app"
-  },
-  {
-    "name": "Portals",
-    "image": "portals@2x.jpeg",
-    "link": "https://theportal.to"
-  },
-  {
-    "name": "ETH Towers",
-    "image": "ethereumTowers@2x.jpeg",
-    "link": "https://ethereumtowers.com"
-  },
-  {
     "name": "Music Racer",
     "image": "appShowcase_MusicRacer@2x.png",
     "link": "https://store.steampowered.com/app/893030/Music_Racer"
@@ -58,5 +43,20 @@
     "name": "Audis",
     "image": "appShowcase_Audis@2x.png",
     "link": "https://apps.apple.com/us/app/audis/id1535477762"
+  },
+  {
+    "name": "DeFi Land",
+    "image": "defiLand@2x.jpg",
+    "link": "https://defiland.app"
+  },
+  {
+    "name": "Portals",
+    "image": "portals@2x.jpeg",
+    "link": "https://theportal.to"
+  },
+  {
+    "name": "ETH Towers",
+    "image": "ethereumTowers@2x.jpeg",
+    "link": "https://ethereumtowers.com"
   }
 ]
