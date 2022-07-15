@@ -1,8 +1,10 @@
-name = "nikki"
+name = "audius-org-public-site"
 type = "webpack"
 account_id = "3811365464a8e56b2b27a5590e328e49"
 workers_dev = true
-route = "nikki.audius.co/*"
+
+route = "audius.org/*"
+zone_id = "5a3ccccef96ba8b3380b78451ec164e6"
 
 [site]
 bucket = "./out"
