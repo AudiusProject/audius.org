@@ -1,6 +1,16 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
-export const FadeImage = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
+export const FadeImage = ({
+  src,
+  alt,
+  containerClassName,
+  className
+}: {
+  src: string
+  alt: string
+  className?: string
+  containerClassName?: string
+}) => {
   const [loaded, setLoaded] = useState(false)
   useEffect(() => {
     const image = new Image()
@@ -9,5 +19,13 @@ export const FadeImage = ({ src, alt, className }: { src: string, alt: string, c
     }
     image.src = src
   }, [])
-  return <div style={{ transition: '1s ease-in-out', opacity: loaded ? 1 : 0 }} > <img className={className} src={src} alt={alt} /></div>
+  return (
+    <div
+      className={containerClassName}
+      style={{ transition: '1s ease-in-out', opacity: loaded ? 1 : 0 }}
+    >
+      {' '}
+      <img className={className} src={src} alt={alt} />
+    </div>
+  )
 }

@@ -125,7 +125,7 @@
     justify-content: center;
   }
 
-  .api>img {
+  .api > img {
     width: 250px;
   }
 
@@ -353,6 +353,16 @@
     padding: 64px;
   }
 
+  #apps .appImageWrapper {
+    display: flex;
+  }
+
+  #apps #appContent img.photo {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+  }
+
   @media screen and (max-width: 1019px) {
     #apps .container {
       padding: 64px 0;
@@ -387,6 +397,14 @@
 
     color: #6b1dec;
     cursor: pointer;
+  }
+
+  #apps .api-example-row {
+    align-items: stretch;
+  }
+
+  #demo .container {
+    max-width: 1316px;
   }
 
   #demo .content {
@@ -557,6 +575,7 @@
   }
 
   section.bios .person {
+    display: flex;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     transform-origin: 50% 50%;
@@ -580,6 +599,8 @@
 
   .person .content {
     margin: 0 10%;
+    display: flex;
+    flex-direction: column;
   }
 
   .person-link .link {
@@ -595,13 +616,10 @@
     margin-bottom: 8px !important;
     border-radius: unset !important;
     top: 0 !important;
-
-    display: flex;
-    align-items: center;
   }
 
   .person .description {
-    padding: 0 24px;
+    padding: 0 24px 24px;
   }
 
   .person .content {
@@ -619,6 +637,14 @@
     line-height: 28px;
     text-transform: uppercase;
     color: #12063d;
+  }
+
+  .person .description .appDescription {
+    color: #12063d;
+  }
+
+  .person .description .bio {
+    display: none;
   }
 
   @media screen and (max-width: 1019px) {
