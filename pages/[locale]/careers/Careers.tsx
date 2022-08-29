@@ -178,6 +178,9 @@ const Careers = () => {
             </div>
           </div>
         </div>
+          <div className='footnote'>
+            <p>Cigna&nbsp;<a target="_blank" href="https://www.cigna.com/legal/compliance/machine-readable-files" rel="noreferrer">Machine Readable Files</a></p>
+          </div>
       </section>
 
       <section id='job-openings' className='bios'>

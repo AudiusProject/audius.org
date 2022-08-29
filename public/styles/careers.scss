@@ -188,6 +188,18 @@
     color: #12063d;
   }
 
+  #benefits .footnote {
+    position: relative;
+    width: 100%;
+
+    p {
+      position: absolute;
+      right: 48px;
+      font-size: 10px;
+      margin: 0;
+    }
+  }
+
   .icon {
     display: inline-flex;
     width: 20px;
