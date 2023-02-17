@@ -24,7 +24,7 @@ export const FadeImage = ({
       className={containerClassName}
       style={{ transition: '1s ease-in-out', opacity: loaded ? 1 : 0 }}
     >
-      <img className={className} src={src} alt={alt} decoding='sync' />
+      <img className={className} src={src} alt={alt} />
     </div>
   )
 }
