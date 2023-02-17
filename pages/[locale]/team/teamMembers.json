@@ -1,28 +1,13 @@
 [
   {
-    "name": "Sid Sethi",
-    "imageUrl": "/img/sid-sethi.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/sidsethi1"
-  },
-  {
     "name": "Julian Baker",
     "imageUrl": "/img/julian-baker.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/julianbaker"
   },
   {
-    "name": "Hareesh Nagaraj",
-    "imageUrl": "/img/hareesh-nagaraj.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/hareesh-nagaraj"
-  },
-  {
     "name": "Christina Rowland",
     "imageUrl": "/img/christina-rowland.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/christina-rowland-19085a58"
-  },
-  {
-    "name": "Dheeraj Manjunath",
-    "imageUrl": "/img/dheeraj-manjunath.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/dheeraj-manjunath-52268114"
   },
   {
     "name": "Ray Jacobson",
@@ -35,6 +20,11 @@
     "linkedInUrl": "https://www.linkedin.com/in/josephwhan"
   },
   {
+    "name": "Orion Demkiw",
+    "imageUrl": "/img/orion-demkiw.jpg",
+    "linkedInUrl": "https://github.com/endline"
+  },
+  {
     "name": "Michael Piazza",
     "imageUrl": "/img/michael-piazza.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/michael-piazza-87525061"
@@ -43,11 +33,6 @@
     "name": "Clayton Blaha",
     "imageUrl": "/img/clayton-blaha.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/clayton-blaha-350196bb/"
-  },
-  {
-    "name": "Vicky Guan",
-    "imageUrl": "/img/vicky-guan.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/guanvicky/"
   },
   {
     "name": "Cheran Senthilkumar",
@@ -118,5 +103,55 @@
     "name": "Johannes Naylor",
     "imageUrl": "/img/johannes-naylor.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/john-naylor/"
+  },
+  {
+    "name": "Andrew Leontis",
+    "imageUrl": "/img/andrew-leontis.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/andrew-leontis/"
+  },
+  {
+    "name": "Marcus Fernandes",
+    "imageUrl": "/img/marcus-fernandes.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/marcus-fernandes-98ba43184"
+  },
+  {
+    "name": "Dharit Tantiviramanond",
+    "imageUrl": "/img/dharit-tantiviramanond.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/dharittan/"
+  },
+  {
+    "name": "Andrew Mendelsohn",
+    "imageUrl": "/img/andrew-mendelsohn.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/andrew-mendelsohn/"
+  },
+  {
+    "name": "AJ Wolken",
+    "imageUrl": "/img/aj-wolken.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/ajwolken/"
+  },
+  {
+    "name": "Michelle Brier",
+    "imageUrl": "/img/michelle-brier.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/briermichelle/"
+  },
+  {
+    "name": "Sabrina Kiamilev",
+    "imageUrl": "/img/sabrina-kiamilev.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/sabrina-kiamilev-b4a209a7/"
+  },
+  {
+    "name": "Sammie Zonana",
+    "imageUrl": "/img/sammie-zonana.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/sammiezonana/"
+  },
+  {
+    "name": "Teresa Duddy",
+    "imageUrl": "/img/teresa-duddy.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/teresa-duddy-4992a4113/"
+  },
+  {
+    "name": "Alec Savoy",
+    "imageUrl": "/img/alec-savoy.jpg",
+    "linkedInUrl": "https://www.linkedin.com/in/alecsavvy/"
   }
 ]

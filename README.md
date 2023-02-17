@@ -9,13 +9,13 @@ npm run build
 Preview changes:
 
 ```bash
-wrangler preview
+npm run preview
 ```
 
 Publish changes:
 
 ```bash
-wrangler publish
+npm run publish
 ```
 
 ## Description

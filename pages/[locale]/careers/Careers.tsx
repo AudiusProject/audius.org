@@ -194,26 +194,11 @@ const Careers = () => {
               <a href="https://jobs.lever.co/audius/28d90111-c18d-49ec-a44d-8577fa4e58bc" target="_blank" rel="noreferrer">
                 <p>Software Engineer - Frontend</p>
               </a>
-              <a href="https://jobs.lever.co/audius/06e37352-9e96-4932-8ea6-43b4cf8f1a2b" target="_blank" rel="noreferrer">
-                <p>Software Engineer - Full Stack</p>
-              </a>
-              <a href="https://jobs.lever.co/audius/fa274c08-181a-439b-9739-52c6c7ba1f44" target="_blank" rel="noreferrer">
-                <p>Software Engineer - Backend</p>
-              </a>
-              <a href="https://jobs.lever.co/audius/79c3fed6-e205-4631-88f2-7f14f571b3e6" target="_blank" rel="noreferrer">
-                <p>Software Engineer - Smart Contracts</p>
-              </a>
-              <a href="https://jobs.lever.co/audius/43dfeeed-c525-4d84-bbba-683086001342" target="_blank" rel="noreferrer">
-                <p>Software Engineer - Infrastructure</p>
-              </a>
             </div>
             <div className='column'>
-              <h2>{t('careers-jobs-design')}</h2>
-              <a href="https://jobs.lever.co/audius/3084c37b-adcd-4a2a-8b8a-0b60605c5f65" target="_blank" rel="noreferrer">
-                <p>Senior Motion Designer</p>
-              </a>
-              <a href="https://jobs.lever.co/audius/763221b9-2512-492c-9aae-1564b02cc2ed" target="_blank" rel="noreferrer">
-                <p>Product Designer</p>
+              <h2>{t('careers-jobs-operations')}</h2>
+              <a href="https://jobs.lever.co/audius/7fd3b3b5-5056-4c2c-971e-180565fde507" target="_blank" rel="noreferrer">
+                <p>Social Media & Marketing Strategist</p>
               </a>
             </div>
           </div>
