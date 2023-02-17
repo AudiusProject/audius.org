@@ -7037,6 +7037,7 @@ section.bios .person .headshot .description h5 {
   section.bios .person {
     margin: 48px auto;
     border-radius: 32px;
+    transform: translateZ(0);
     overflow: hidden;
     position: relative;
     max-width: 400px;
