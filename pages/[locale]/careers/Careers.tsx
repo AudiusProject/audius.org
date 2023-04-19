@@ -188,13 +188,7 @@ const Careers = () => {
           <div className='header'>
             <h2>{t('careers-jobs')}</h2>
           </div>
-          <div className='row two-columns'>
-            <div className='column'>
-              <h2>{t('careers-jobs-engineering')}</h2>
-              <a href="https://jobs.lever.co/audius/28d90111-c18d-49ec-a44d-8577fa4e58bc" target="_blank" rel="noreferrer">
-                <p>Software Engineer - Frontend</p>
-              </a>
-            </div>
+          <div className='row one-column'>
             <div className='column'>
               <h2>{t('careers-jobs-operations')}</h2>
               <a href="https://jobs.lever.co/audius/7fd3b3b5-5056-4c2c-971e-180565fde507" target="_blank" rel="noreferrer">
