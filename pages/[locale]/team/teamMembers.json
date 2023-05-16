@@ -15,11 +15,6 @@
     "linkedInUrl": "https://www.linkedin.com/in/jacobsonraymond"
   },
   {
-    "name": "Joe Lee",
-    "imageUrl": "/img/joe-lee.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/josephwhan"
-  },
-  {
     "name": "Orion Demkiw",
     "imageUrl": "/img/orion-demkiw.jpg",
     "linkedInUrl": "https://github.com/endline"
@@ -33,11 +28,6 @@
     "name": "Clayton Blaha",
     "imageUrl": "/img/clayton-blaha.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/clayton-blaha-350196bb/"
-  },
-  {
-    "name": "Cheran Senthilkumar",
-    "imageUrl": "/img/cheran-senthilkumar.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/cheran-senthil"
   },
   {
     "name": "Saliou Diallo",
@@ -98,11 +88,6 @@
     "name": "Theo Ilie",
     "imageUrl": "/img/theo-ilie.jpg",
     "linkedInUrl": "https://www.linkedin.com/in/tilie/"
-  },
-  {
-    "name": "Johannes Naylor",
-    "imageUrl": "/img/johannes-naylor.jpg",
-    "linkedInUrl": "https://www.linkedin.com/in/john-naylor/"
   },
   {
     "name": "Andrew Leontis",
