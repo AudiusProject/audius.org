@@ -27,26 +27,12 @@ const Intro = () => {
             {t('home-explore-dashboard')}
           </button>
           <button
-            onClick={() => window.open('https://discord.gg/audius', '_blank')}
+            onClick={() => window.open('https://audius.co', '_blank')}
             className='button discord'
           >
-            {t('home-join-discord')}
+            {t('home-visit-audius-music')}
           </button>
         </div>
-        <button
-          onClick={() => window.open('https://audius.co', '_blank')}
-          className='music-player'
-        >
-          <span className='player-description'>{t('home-music-player')}</span>
-          <span className='click'>
-            {t('click-here')}
-            <FadeImage
-              alt={t('home-open-music-player')}
-              className='icon-open'
-              src='/img/iconOpen.svg'
-            />
-          </span>
-        </button>
       </div>
       <div className='animation'>
         <div id='intro-animation'>
