@@ -6,6 +6,7 @@ import LocalePicker from 'components/LocalePicker'
 import NavPopup from 'components/NavPopup'
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
+import IconDashboard from 'public/img/iconDashboard.svg'
 import IconHedgehog from 'public/img/iconHedgehog.svg'
 import IconKebabHorizontal from 'public/img/iconKebabHorizontal.svg'
 import IconNavigationApi from 'public/img/iconNavigationApi.svg'
@@ -76,7 +77,7 @@ const Header = ({ isClone }: HeaderProps) => {
                       href: '/api'
                     },
                     {
-                      label: t('navigation-3rd-party-docs'),
+                      label: t('navigation-docs'),
                       icon: renderIcon(IconNavigationDocs),
                       href: 'https://docs.audius.org'
                     },
@@ -119,6 +120,11 @@ const Header = ({ isClone }: HeaderProps) => {
                   label={t('navigation-protocol')}
                   items={[
                     {
+                      label: t('navigation-protocol-dashboard'),
+                      icon: renderIcon(IconDashboard),
+                      href: 'https://dashboard.audius.org'
+                    },
+                    {
                       label: t('navigation-running-node'),
                       icon: renderIcon(IconNavigationRunningNode),
                       href: 'https://docs.audius.org/token/running-a-node/introduction'
@@ -126,25 +132,6 @@ const Header = ({ isClone }: HeaderProps) => {
                   ]}
                   isOpen={popupState.protocol}
                   setIsOpen={updatePopupState('protocol')}
-                />
-              </li>
-              <li>
-                <NavPopup
-                  label={t('navigation-about')}
-                  items={[
-                    {
-                      label: t('navigation-careers'),
-                      icon: renderIcon(IconNavigationCareer),
-                      href: '/careers'
-                    },
-                    {
-                      label: t('navigation-team'),
-                      icon: renderIcon(IconNavigationTeam),
-                      href: '/team'
-                    }
-                  ]}
-                  isOpen={popupState.about}
-                  setIsOpen={updatePopupState('about')}
                 />
               </li>
               <li>

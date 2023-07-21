@@ -1079,10 +1079,10 @@ main {
     position: absolute;
     position: absolute;
     z-index: 3;
-    width: 88px;
+    width: 150px;
     height: 99px;
     top: 28px;
-    left: 37px;
+    left: 66px;
   }
 
   .main-header .menu {
@@ -1244,10 +1244,10 @@ main {
 
   .main-header.clone .logo {
     overflow: hidden;
-    width: 53px;
+    width: 100px;
     height: 47px;
     top: 14px;
-    left: 51px;
+    left: 66px;
   }
 
   .main-header.clone .menu {
@@ -3566,11 +3566,31 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
 }
 
 #footer a {
-  color: #12063d;
+  color: #12063D;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#footer svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+#footer .navigation nav {
+  margin: 0 55px;
 }
 
 .no-touchevents #footer a:hover {
   color: #a116b7;
+}
+
+.no-touchevents #footer a:hover path {
+  fill: #a116b7;
 }
 
 #footer a.active {
@@ -3585,66 +3605,13 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
 
 #footer .navigation .social ul {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 #footer .navigation .social ul li a {
   position: relative;
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #12063d;
-}
-
-.no-touchevents #footer .navigation .social ul li a:hover {
-  background-color: #a116b7;
-}
-
-#footer .navigation .social ul li a span {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-#footer .navigation .social ul li a svg {
-  fill: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#footer .navigation .social ul li a svg.twitter {
-  width: 15px;
-  height: 13px;
-}
-
-#footer .navigation .social ul li a svg.telegram {
-  width: 16px;
-  height: 13px;
-}
-
-#footer .navigation .social ul li a svg.linkedin {
-  width: 15px;
-  height: 13px;
-}
-
-#footer .navigation .social ul li a svg.github {
-  width: 17px;
-  height: 16px;
-}
-
-#footer .navigation .social ul li a svg.medium {
-  width: 16px;
-  height: 12px;
+  display: flex;
+  align-items: space-between;
 }
 
 #footer .sign-off {
@@ -3684,6 +3651,7 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
+    width: 240px;
   }
 
   #footer .navigation {
@@ -3692,9 +3660,10 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
   }
 
   #footer .navigation h4 {
-    font-weight: 400;
-    font-size: 15px;
-    margin-bottom: 20px;
+    color: #12063d80;
+    font-size: 14px;
+    font-weight: 700 !important;
+    line-height: 20px;
   }
 
   #footer .navigation .sitemap {
@@ -3709,11 +3678,6 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
   #footer .navigation .social {
     width: 193px;
     margin-right: 20px;
-  }
-
-  #footer .navigation .social ul li {
-    margin-bottom: 19px;
-    width: 33.3%;
   }
 
   #footer .sign-off {
@@ -3765,8 +3729,6 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
     text-align: center;
     margin-top: 44px;
   }
-
-  #footer .sign-off span:not(.love) {}
 }
 
 #subpage-intro h1 {
