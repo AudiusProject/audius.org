@@ -158,7 +158,7 @@ const Footer = () => {
                   <a
                     target='_blank'
                     rel='noopener noreferrer'
-                    href='https://twitter.com/AudiusProject'
+                    href='https://twitter.com/audius'
                   >
                     <svg
                       className='instagram'
@@ -175,7 +175,7 @@ const Footer = () => {
                   <a
                     target='_blank'
                     rel='noopener noreferrer'
-                    href='https://twitter.com/AudiusProject'
+                    href='https://twitter.com/audius'
                   >
                     <svg
                       className='twitter'
