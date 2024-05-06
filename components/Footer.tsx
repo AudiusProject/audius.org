@@ -158,6 +158,7 @@ const Footer = () => {
                   <a
                     target='_blank'
                     rel='noopener noreferrer'
+                    href='https://instagram.com/audius'
                   >
                     <svg
                       className='instagram'
