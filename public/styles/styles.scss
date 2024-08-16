@@ -2056,13 +2056,6 @@ body.modal-active {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1020px) {
-  body.team.modal-active {
-    height: auto;
-    overflow: visible;
-  }
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -3926,23 +3919,6 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
     width: 921px;
     height: 248px;
   }
-
-  .team #subpage-intro {
-    margin-top: 220px;
-  }
-
-  .team #subpage-intro h1 {
-    margin-bottom: 35px;
-    width: 793px;
-    height: 240px;
-    top: 8px;
-    left: 20px;
-  }
-
-  .team #subpage-intro h1 img {
-    width: 793px;
-    height: 240px;
-  }
 }
 
 @media screen and (max-width: 1019px) {
@@ -4123,48 +4099,6 @@ screen and (min-width: 1020px) and (min-resolution: 1.3dppx) {
 
   .about #subpage-intro .squiggle {
     margin-top: 25px;
-    margin-bottom: 19px;
-  }
-
-  .team #subpage-intro {
-    margin-bottom: 60px;
-  }
-
-  .team #subpage-intro h1 {
-    margin-top: 31px;
-    width: 287px;
-    height: 87px;
-    left: 9px;
-  }
-
-  .team #subpage-intro h1 img {
-    width: 287px;
-    height: 87px;
-  }
-
-  .team #subpage-intro .squiggle {
-    margin-top: 20px;
-    margin-bottom: 19px;
-  }
-
-  .careers #subpage-intro {
-    margin-bottom: 60px;
-  }
-
-  .careers #subpage-intro h1 {
-    margin-top: 31px;
-    width: 287px;
-    height: 87px;
-    left: 9px;
-  }
-
-  .careers #subpage-intro h1 img {
-    width: 287px;
-    height: 87px;
-  }
-
-  .careers #subpage-intro .squiggle {
-    margin-top: 20px;
     margin-bottom: 19px;
   }
 }
@@ -7006,139 +6940,6 @@ section.bios .person .headshot .description h5 {
   }
 }
 
-#investors .header {
-  text-align: center;
-}
-
-#investors .header h2 {
-  color: #f98569;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-#investors .logos ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#investors .logos ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#investors .logos ul li img {
-  margin: 0 auto;
-}
-
-#investors .logos ul li span {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-@media screen and (min-width: 1020px) {
-  #investors {
-    margin-top: 60px;
-    margin-bottom: 120px;
-  }
-
-  #investors .header {
-    margin-bottom: 92px;
-  }
-
-  #investors .header h2 {
-    font-size: 24px;
-    letter-spacing: 8px;
-    font-weight: 800;
-  }
-
-  #investors .logos ul li {
-    width: 25%;
-    height: 113px;
-    border-left: 1px solid #e7e6eb;
-    margin-bottom: 139px;
-  }
-
-  #investors .logos ul li:nth-child(4n) {
-    border-right: 1px solid #e7e6eb;
-  }
-
-  #investors .logos ul li img.general {
-    width: 205px;
-    height: 29px;
-  }
-
-  #investors .logos ul li img.kpcb {
-    width: 190;
-    height: 18px;
-  }
-
-  #investors .logos ul li img.lightspeed {
-    width: 150px;
-    height: 31px;
-  }
-
-  #investors .logos ul li img.pantera {
-    width: 152px;
-    height: 12px;
-  }
-}
-
-@media screen and (max-width: 1019px) {
-  #investors .header {
-    margin-bottom: 43px;
-  }
-
-  #investors .header h2 {
-    font-size: 24px;
-    letter-spacing: 8px;
-  }
-
-  #investors .logos ul {
-    margin: 0 -15px;
-  }
-
-  #investors .logos ul li {
-    height: 91px;
-    margin-bottom: 40px;
-    width: 50%;
-  }
-
-  #investors .logos ul li:nth-child(2n + 1) {
-    border-right: 1px solid #e7e6eb;
-  }
-
-  #investors .logos ul li img.general {
-    width: 128px;
-    height: 28px;
-  }
-
-  #investors .logos ul li img.kpcb {
-    width: 148px;
-    height: 14px;
-  }
-
-  #investors .logos ul li img.lightspeed {
-    width: 115px;
-    height: 24px;
-  }
-
-  #investors .logos ul li img.pantera {
-    width: 125px;
-    height: 9px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .parallax-sphere {
     position: absolute;
@@ -7151,15 +6952,9 @@ section.bios .person .headshot .description h5 {
     margin-left: 700px;
   }
 
-  .careers .parallax-sphere.orange,
   .security .parallax-sphere.orange {
     top: 1680px;
     margin-left: 700px;
-  }
-
-  .team .parallax-sphere.orange {
-    top: 1680px;
-    margin-left: 800px;
   }
 
   .parallax-sphere.orange-opaque {
@@ -7171,8 +6966,6 @@ section.bios .person .headshot .description h5 {
     margin-left: 620px;
   }
 
-  .team .parallax-sphere.orange-opaque,
-  .careers .parallax-sphere.orange-opaque,
   .security .parallax-sphere.orange-opaque {
     top: 1680px;
     margin-left: 700px;
@@ -7183,8 +6976,6 @@ section.bios .person .headshot .description h5 {
     margin-left: -1120px;
   }
 
-  .team .parallax-sphere.purple-glow,
-  .careers .parallax-sphere.purple-glow,
   .security .parallax-sphere.purple-glow {
     top: 2320px;
     margin-left: -1120px;
@@ -7200,15 +6991,9 @@ section.bios .person .headshot .description h5 {
     margin-left: 620px;
   }
 
-  .careers .parallax-sphere.teal,
   .security .parallax-sphere.teal {
     top: 4620px;
     margin-left: -920px;
-  }
-
-  .team .parallax-sphere.teal {
-    top: 4620px;
-    margin-left: -1120px;
   }
 
   .token .parallax-sphere.teal {
@@ -7226,8 +7011,6 @@ section.bios .person .headshot .description h5 {
     margin-left: 620px;
   }
 
-  .team .parallax-sphere.teal-opaque,
-  .careers .parallax-sphere.teal-opaque,
   .security .parallax-sphere.teal-opaque {
     top: 4620px;
     margin-left: -900px;
