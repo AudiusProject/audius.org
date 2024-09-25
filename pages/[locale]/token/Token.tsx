@@ -164,9 +164,9 @@ const Token = () => {
                 </div>
                 <div className='description'>
                   <p>
-                    <b>{t('token-stake-reason-2')}</b>
+                    <b>{t('token-stake-reason-3')}</b>
                   </p>
-                  <p>{t('token-stake-reason-2-description')}</p>
+                  <p>{t('token-stake-reason-3-description')}</p>
                 </div>
               </div>
             </div>
