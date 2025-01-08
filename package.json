@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "publish": "npx wrangler publish",
+    "publish": "npx wrangler publish && node upload-assets.js",
     "preview": "npx wrangler preview"
   },
   "repository": {
