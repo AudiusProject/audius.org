@@ -1,3 +1,4 @@
+compatibility_date = "2024-10-25"
 name = "audius-org-public-site"
 type = "webpack"
 account_id = "3811365464a8e56b2b27a5590e328e49"
