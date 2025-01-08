@@ -6,6 +6,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "publish": "wrangler publish",
     "preview": "wrangler preview"
   },

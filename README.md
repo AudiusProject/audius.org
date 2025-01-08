@@ -1,8 +1,19 @@
 # audius.org
 
+## Setup
+
+This project requires Node.js 16. If you use nvm, the correct version will be automatically selected via the `.nvmrc` file:
+
+```bash
+nvm use
+npm install
+```
+
+## Build & Deploy
+
 Build:
 
-```
+```bash
 npm run build
 ```
 

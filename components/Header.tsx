@@ -11,6 +11,7 @@ import IconHedgehog from 'public/img/iconHedgehog.svg'
 import IconKebabHorizontal from 'public/img/iconKebabHorizontal.svg'
 import IconNavigationApi from 'public/img/iconNavigationApi.svg'
 import IconNavigationDocs from 'public/img/iconNavigationDocs.svg'
+import IconNavigationGrants from 'public/img/iconNavigationGrants.svg'
 import IconNavigationRunningNode from 'public/img/iconNavigationRunningNode.svg'
 import IconNavigationStaking from 'public/img/iconNavigationStaking.svg'
 import IconNavigationTokenomics from 'public/img/iconNavigationTokenomics.svg'
@@ -83,6 +84,11 @@ const Header = ({ isClone }: HeaderProps) => {
                       label: t('hedgehog'),
                       icon: renderIcon(IconHedgehog),
                       href: 'https://hedgehog.audius.org'
+                    },
+                    {
+                      label: t('grants'),
+                      icon: renderIcon(IconNavigationGrants),
+                      href: 'https://blog.audius.co/article/reintroducing-the-audius-grants-program-supporting-innovation-in-web3-music'
                     }
                   ]}
                   isOpen={popupState.developers}
