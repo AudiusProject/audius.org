@@ -26,7 +26,8 @@ function uploadToKV(filePath, kvKey) {
 async function processDirectory(directory) {
   const items = fs.readdirSync(directory);
   
-  const promises = items.map(async (item) => {
+  // Process items sequentially using for...of loop instead of Promise.all
+  for (const item of items) {
     const fullPath = path.join(directory, item)
     
     if (fs.statSync(fullPath).isDirectory()) {
@@ -38,9 +39,7 @@ async function processDirectory(directory) {
       kvKey = kvKey.replace('[', '%5B').replace(']', '%5D')
       await uploadToKV(fullPath, kvKey)
     }
-  })
-
-  await Promise.all(promises)
+  }
 }
 
 // Start processing from the static directory
