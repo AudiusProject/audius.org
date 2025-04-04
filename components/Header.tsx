@@ -88,7 +88,7 @@ const Header = ({ isClone }: HeaderProps) => {
                     {
                       label: t('grants'),
                       icon: renderIcon(IconNavigationGrants),
-                      href: 'https://blog.audius.co/article/reintroducing-the-audius-grants-program-supporting-innovation-in-web3-music'
+                      href: 'https://link.audius.co/OAFGrantsProgram'
                     }
                   ]}
                   isOpen={popupState.developers}
