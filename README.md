@@ -20,12 +20,14 @@ npm run build
 Preview changes:
 
 ```bash
+nvm use 20
 npm run preview
 ```
 
 Publish changes:
 
 ```bash
+nvm use 20
 npm run publish
 ```
 
