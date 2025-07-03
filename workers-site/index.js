@@ -30,6 +30,15 @@ addEventListener('fetch', (event) => {
 })
 
 async function handleEvent(event) {
+  // Redirect URL-encoded bracket paths to literal bracket paths
+  const url = new URL(event.request.url)
+  if (url.pathname.includes('%5B') || url.pathname.includes('%5D')) {
+    const decodedPath = url.pathname.replace(/%5B/g, '[').replace(/%5D/g, ']')
+    const redirectUrl = new URL(event.request.url)
+    redirectUrl.pathname = decodedPath
+    return Response.redirect(redirectUrl.toString(), 301)
+  }
+
   let options = {}
 
   const languageHeader = event.request.headers.get('Accept-Language')
@@ -61,6 +70,15 @@ async function handleEvent(event) {
   }
 
   options.mapRequestToAsset = (request) => {
+    const url = new URL(request.url)
+    
+    // For _next paths, preserve URL encoding by not decoding the path
+    if (url.pathname.startsWith('/_next/')) {
+      // Create a new request with the exact same URL-encoded path
+      return new Request(request.url, request)
+    }
+    
+    // For all other paths, use the normal getUrl logic
     return mapRequestToAsset(new Request(getUrl(request.url), request))
   }
 
