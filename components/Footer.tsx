@@ -113,6 +113,20 @@ const Footer = () => {
                     {t('navigation-privacy-policy')}
                   </StyledLink>
                 </li>
+                <li>
+                  <StyledLink href='/open-music-license.pdf'>
+                    {t('navigation-open-music-license')}
+                  </StyledLink>
+                </li>
+                <li>
+                  <a
+                    href='https://audius.co/legal/api-terms'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {t('navigation-api-terms')}
+                  </a>
+                </li>
               </ul>
             </nav>
             <nav className='audius-links'>
