@@ -1,4 +1,4 @@
-# audius.org
+# openaudiofoundation.org
 
 ## Setup
 

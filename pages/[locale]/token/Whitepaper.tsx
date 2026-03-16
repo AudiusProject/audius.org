@@ -2,8 +2,6 @@ import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 
-import { FadeImage } from 'components/FadeImage'
-
 const Whitepaper = () => {
   const { t } = useTranslation()
 
@@ -27,13 +25,6 @@ const Whitepaper = () => {
         </div>
       </section>
 
-      <section id='distribution' className='bios'>
-        <div className='container'>
-          <div className='content'>
-            <FadeImage src='../img/circulatingSupply@2x.png' alt='distribution' />
-          </div>
-        </div>
-      </section>
     </>
   )
 }

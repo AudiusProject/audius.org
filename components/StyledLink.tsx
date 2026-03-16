@@ -8,6 +8,7 @@ import Link from 'components/Link'
 type StyledLinkProps = LinkProps & {
   activeClassName?: string
   children: ReactNode
+  className?: string
 }
 /**
  * A wrapper around Link that applies an active className
@@ -15,17 +16,18 @@ type StyledLinkProps = LinkProps & {
 const StyledLink = ({
   activeClassName = 'active',
   children,
+  className,
   ...props
 }: StyledLinkProps) => {
   const router = useRouter()
+  const active = router.pathname === `/[locale]${props.href}`
+  const mergedClassName = [className, active ? activeClassName : '']
+    .filter(Boolean)
+    .join(' ')
 
   return (
     <Link {...props}>
-      <a
-        className={
-          router.pathname === `/[locale]${props.href}` ? activeClassName : ''
-        }
-      >
+      <a className={mergedClassName || undefined}>
         {children}
       </a>
     </Link>

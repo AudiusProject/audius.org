@@ -19,21 +19,20 @@ const Intro = () => {
         </div>
         <div className='button-options'>
           <button
-            onClick={() =>
-              window.open('https://dashboard.audius.org', '_blank')
-            }
-            className='button dashboard'
+            onClick={() => window.open('https://openaudio.org', '_blank')}
+            className='button black'
           >
-            {t('home-explore-dashboard')}
+            openaudio.org
           </button>
           <button
             onClick={() => window.open('https://audius.co', '_blank')}
-            className='button discord'
+            className='button purple'
           >
-            {t('home-visit-audius-music')}
+            audius.co
           </button>
         </div>
       </div>
+      <div className='intro-film' aria-hidden='true' />
       <div className='animation'>
         <div id='intro-animation'>
           <span className='wave-bg'></span>

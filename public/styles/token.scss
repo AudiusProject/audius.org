@@ -1,9 +1,14 @@
 .token {
+  #subpage-intro h1 .sphere {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+  }
+
   @media screen and (min-width: 1020px) {
     #non-fungible ul li:not(:last-child):after {
       content: '+';
       position: absolute;
-      color: #6d00e8;
+      color: rgb(127, 106, 214);
       font-size: 30px;
       right: -78px;
       top: 48px;
@@ -24,7 +29,7 @@
   }
 
   .simple-callout .copy p em {
-    color: #b031e7;
+    color: rgb(127, 106, 214);
     font-style: normal;
     font-weight: 1000;
   }
@@ -55,7 +60,7 @@
     font-size: 23px;
     line-height: 40px;
     text-align: center;
-    color: #12063d;
+    color: #3B2A86;
   }
 
   #audius-features .column,

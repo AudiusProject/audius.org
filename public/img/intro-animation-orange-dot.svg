@@ -9,7 +9,7 @@
 <defs>
 </defs>
 <radialGradient id="SVGID_1_" cx="47.5" cy="47.5" r="47.5" gradientUnits="userSpaceOnUse">
-	<stop  offset="0" style="stop-color:#FA366B;stop-opacity:0.7"/>
+	<stop  offset="0" style="stop-color:#7F6AD6;stop-opacity:0.7"/>
 	<stop  offset="0.1332" style="stop-color:#FA3A69;stop-opacity:0.74"/>
 	<stop  offset="0.2743" style="stop-color:#FA4762;stop-opacity:0.7823"/>
 	<stop  offset="0.4191" style="stop-color:#FB5C57;stop-opacity:0.8257"/>

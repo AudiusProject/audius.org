@@ -5,19 +5,19 @@
 	 xml:space="preserve">
 <style type="text/css">
 	.st0{opacity:0.58;fill:url(#SVGID_1_);}
-	.st1{fill:#5612A7;}
-	.st2{fill:#F419F4;}
+	.st1{fill:#5B44B8;}
+	.st2{fill:rgb(127, 106, 214);}
 	.st3{opacity:0.58;fill:url(#SVGID_2_);}
 </style>
 <defs>
 </defs>
 <radialGradient id="SVGID_1_" cx="36.2844" cy="70.251" r="30.6514" gradientTransform="matrix(0.9834 0 0 0.9834 -5.5397 -38.9439)" gradientUnits="userSpaceOnUse">
-	<stop  offset="0" style="stop-color:#FA366B;stop-opacity:0.7"/>
-	<stop  offset="0.1265" style="stop-color:#F03273;stop-opacity:0.738"/>
-	<stop  offset="0.343" style="stop-color:#D5298A;stop-opacity:0.8029"/>
-	<stop  offset="0.623" style="stop-color:#A819AF;stop-opacity:0.8869"/>
-	<stop  offset="0.9528" style="stop-color:#6B03E2;stop-opacity:0.9858"/>
-	<stop  offset="1" style="stop-color:#6200EA"/>
+	<stop  offset="0" style="stop-color:#7F6AD6;stop-opacity:0.7"/>
+	<stop  offset="0.1265" style="stop-color:rgb(127, 106, 214);stop-opacity:0.738"/>
+	<stop  offset="0.343" style="stop-color:#7D2FDB;stop-opacity:0.8029"/>
+	<stop  offset="0.623" style="stop-color:#5B44B8;stop-opacity:0.8869"/>
+	<stop  offset="0.9528" style="stop-color:#4F159E;stop-opacity:0.9858"/>
+	<stop  offset="1" style="stop-color:#3B2A86"/>
 </radialGradient>
 <circle class="st0" cx="30.1" cy="30.1" r="30.1"/>
 <g>

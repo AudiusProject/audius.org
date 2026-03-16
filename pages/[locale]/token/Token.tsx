@@ -4,7 +4,6 @@ import { useTranslation, Trans } from 'next-i18next'
 
 import { FadeImage } from 'components/FadeImage'
 import Head from 'components/Head'
-import Newsletter from 'components/Newsletter'
 import SubpageIntro from 'components/SubpageIntro'
 import TokenAnimation from 'components/TokenAnimation'
 import IconArrowDown from 'public/img/iconArrowDown.svg'
@@ -26,7 +25,7 @@ const Token = () => {
             <div className='copy'>
               <p>
                 <Trans i18nKey='token-introduction'>
-                  Introducing <em>$AUDIO</em>, The Audius Platform Token
+                  &nbsp;<em>$AUDIO</em>, The Open Audio Platform Token
                 </Trans>
               </p>
             </div>
@@ -105,7 +104,11 @@ const Token = () => {
                   </svg>
                 </div>
                 <span className='seal'>
-                  <FadeImage src='/img/platformToken@2x.png' data-rjs='2' alt='' />
+                  <FadeImage
+                    src='/img/platformToken@2x.png'
+                    data-rjs='2'
+                    alt=''
+                  />
                 </span>
                 <p>{t('token-stake-description')}</p>
               </div>
@@ -175,7 +178,6 @@ const Token = () => {
       </section>
 
       <WhitepaperCallout />
-      <Newsletter />
 
       <span
         className='parallax-sphere sphere purple-glow'

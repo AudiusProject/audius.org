@@ -3,14 +3,12 @@ import React from 'react'
 import Head from 'components/Head'
 
 import Intro from './Intro'
-import Value from './Value'
 
 const Home = () => {
   return (
     <div className='home'>
       <Head />
       <Intro />
-      <Value />
 
       <span className='parallax-sphere sphere orange' data-parallax='3'></span>
       <span

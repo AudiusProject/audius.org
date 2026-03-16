@@ -6,19 +6,7 @@ import LocalePicker from 'components/LocalePicker'
 import NavPopup from 'components/NavPopup'
 import StyledLink from 'components/StyledLink'
 import IconClose from 'public/img/iconClose.svg'
-import IconDashboard from 'public/img/iconDashboard.svg'
-import IconHedgehog from 'public/img/iconHedgehog.svg'
 import IconKebabHorizontal from 'public/img/iconKebabHorizontal.svg'
-import IconNavigationApi from 'public/img/iconNavigationApi.svg'
-import IconNavigationDocs from 'public/img/iconNavigationDocs.svg'
-import IconNavigationGrants from 'public/img/iconNavigationGrants.svg'
-import IconNavigationRunningNode from 'public/img/iconNavigationRunningNode.svg'
-import IconNavigationStaking from 'public/img/iconNavigationStaking.svg'
-import IconNavigationTokenomics from 'public/img/iconNavigationTokenomics.svg'
-import IconNavigationWhitepaper from 'public/img/iconNavigationWhitepaper.svg'
-
-const renderIcon = (Icon: any) => () =>
-  <Icon height={21} width={21} className='icon' />
 
 type HeaderProps = {
   // The clone is the sticky version of the header
@@ -26,9 +14,6 @@ type HeaderProps = {
 }
 
 const initialPopupState = {
-  developers: false,
-  token: false,
-  protocol: false,
   about: false,
   localePicker: false
 }
@@ -59,84 +44,31 @@ const Header = ({ isClone }: HeaderProps) => {
       <header className={`main-header ${isClone ? 'clone' : ''}`}>
         <h1 className='logo'>
           <StyledLink href='/home'>
-            <img src='/img/audius.png' data-rjs='2' alt='Audius' />
-            <span>Audius</span>
+            <img
+              src='/img/audius.png'
+              data-rjs='2'
+              alt='Open Audio Foundation'
+            />
+            <span>Open Audio Foundation</span>
           </StyledLink>
         </h1>
         <nav className='menu'>
           <div>
             <ul>
               <li>
-                <NavPopup
-                  label={t('navigation-developers')}
-                  items={[
-                    {
-                      label: t('navigation-api'),
-                      icon: renderIcon(IconNavigationApi),
-                      href: '/api'
-                    },
-                    {
-                      label: t('navigation-docs'),
-                      icon: renderIcon(IconNavigationDocs),
-                      href: 'https://docs.audius.org'
-                    },
-                    {
-                      label: t('hedgehog'),
-                      icon: renderIcon(IconHedgehog),
-                      href: 'https://hedgehog.audius.org'
-                    },
-                    {
-                      label: t('grants'),
-                      icon: renderIcon(IconNavigationGrants),
-                      href: 'https://link.audius.co/OAFGrantsProgram'
-                    }
-                  ]}
-                  isOpen={popupState.developers}
-                  setIsOpen={updatePopupState('developers')}
-                />
+                <a
+                  className='menu-item'
+                  href='https://whitepaper.audius.co'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {t('navigation-whitepaper')}
+                </a>
               </li>
               <li>
-                <NavPopup
-                  label={t('navigation-token')}
-                  items={[
-                    {
-                      label: t('navigation-whitepaper'),
-                      icon: renderIcon(IconNavigationWhitepaper),
-                      href: 'https://whitepaper.audius.co'
-                    },
-                    {
-                      label: t('navigation-tokenomics'),
-                      icon: renderIcon(IconNavigationTokenomics),
-                      href: '/token'
-                    },
-                    {
-                      label: t('navigation-staking'),
-                      icon: renderIcon(IconNavigationStaking),
-                      href: 'https://docs.audius.org/token/staking'
-                    }
-                  ]}
-                  isOpen={popupState.token}
-                  setIsOpen={updatePopupState('token')}
-                />
-              </li>
-              <li>
-                <NavPopup
-                  label={t('navigation-protocol')}
-                  items={[
-                    {
-                      label: t('navigation-protocol-dashboard'),
-                      icon: renderIcon(IconDashboard),
-                      href: 'https://dashboard.audius.org'
-                    },
-                    {
-                      label: t('navigation-running-node'),
-                      icon: renderIcon(IconNavigationRunningNode),
-                      href: 'https://docs.audius.org/token/running-a-node/introduction'
-                    }
-                  ]}
-                  isOpen={popupState.protocol}
-                  setIsOpen={updatePopupState('protocol')}
-                />
+                <StyledLink href='/token' className='menu-item'>
+                  {t('navigation-tokenomics')}
+                </StyledLink>
               </li>
               <li>
                 <LocalePicker
@@ -147,7 +79,7 @@ const Header = ({ isClone }: HeaderProps) => {
               <li>
                 <a
                   className='standard-button menu-item purple'
-                  href='https://docs.audius.org'
+                  href='https://docs.openaudio.org/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
