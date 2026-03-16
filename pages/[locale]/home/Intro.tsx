@@ -20,17 +20,17 @@ const Intro = () => {
         <div className='button-options'>
           <button
             onClick={() =>
-              window.open('https://dashboard.audius.org', '_blank')
+              window.open('https://openaudio.org', '_blank')
             }
-            className='button dashboard'
+            className='button black'
           >
-            {t('home-explore-dashboard')}
+            openaudio.org
           </button>
           <button
             onClick={() => window.open('https://audius.co', '_blank')}
-            className='button discord'
+            className='button purple'
           >
-            {t('home-visit-audius-music')}
+            audius.co
           </button>
         </div>
       </div>

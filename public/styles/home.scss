@@ -166,20 +166,21 @@
     transform: scale3d(0.99, 0.99, 0.99);
   }
 
-  .button-options .button.dashboard {
-    background: linear-gradient(93.46deg, #dd0cf3 0%, #e44cf4 100%);
-    border: 3px solid #cd3bdc;
+  .button-options .button.black {
+    background: #12063d;
+    border: 3px solid #12063d;
     box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.15);
     border-radius: 30.5px;
     margin-top: 10px;
   }
 
-  .button-options .button.dashboard:hover {
-    background-color: #a116b7;
+  .button-options .button.black:hover {
+    background: #1e0a5e;
+    border-color: #1e0a5e;
     box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.15);
   }
 
-  .button-options .button.discord {
+  .button-options .button.purple {
     background: linear-gradient(93.46deg, #8d11ee 0%, #a246eb 100%);
     border: 3px solid #903dd4;
     box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.15);
@@ -187,7 +188,7 @@
     margin-top: 10px;
   }
 
-  .button-options .button.discord:hover {
+  .button-options .button.purple:hover {
     background-color: #a116b7;
     box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.15);
   }
