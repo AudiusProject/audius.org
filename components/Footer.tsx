@@ -116,6 +116,11 @@ const Footer = () => {
                     {t('navigation-open-music-license')}
                   </StyledLink>
                 </li>
+                <li>
+                  <StyledLink href='/privacy-policy.pdf'>
+                    {t('navigation-privacy-policy')}
+                  </StyledLink>
+                </li>
               </ul>
             </nav>
             <nav className='audius-links'>
@@ -156,11 +161,6 @@ const Footer = () => {
                   >
                     {'Blog'}
                   </a>
-                </li>
-                <li>
-                  <StyledLink href='/privacy-policy.pdf'>
-                    {t('navigation-privacy-policy')}
-                  </StyledLink>
                 </li>
                 <li>
                   <a
