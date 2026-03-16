@@ -3656,42 +3656,89 @@ body.modal-active {
     background-color: #000000;
   }
 
+  #footer .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   #footer .boilerplate {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
+    width: 100%;
   }
 
   #footer .boilerplate .logo {
     width: 54px;
     height: 56px;
-    margin: 0 auto 27px auto;
+    margin: 0 0 27px 0;
   }
 
   #footer .boilerplate h3 {
-    text-align: center;
+    text-align: left;
+  }
+
+  #footer .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40px;
   }
 
   #footer .navigation h4 {
-    display: none;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 8px 0;
+    text-align: left;
   }
 
-  #footer .navigation .sitemap {
-    display: none;
+  #footer .navigation nav {
+    margin: 0;
+    width: 100%;
+  }
+
+  #footer .navigation .foundation-links ul,
+  #footer .navigation .audius-links ul,
+  #footer .navigation .social ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #footer .navigation .foundation-links li,
+  #footer .navigation .audius-links li,
+  #footer .navigation .social li {
+    margin: 0 0 8px 0;
   }
 
   #footer .navigation .social ul {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 16px;
   }
 
   #footer .navigation .social ul li {
-    margin: 11px;
+    margin: 0;
+  }
+
+  #footer .navigation .social ul li a {
+    justify-content: flex-start;
+  }
+
+  #footer a {
+    justify-content: flex-start;
+    margin-bottom: 10px;
   }
 
   #footer .sign-off {
-    text-align: center;
+    text-align: left;
     margin-top: 44px;
+    width: 100%;
   }
 }
 
