@@ -47,7 +47,7 @@ const SecuritiesNotice = () => {
                   fontSize: 23,
                   lineHeight: '40px',
                   textAlign: 'center',
-                  color: '#12063D',
+                  color: '#3B2A86',
                   padding: '0px 30px'
                 }}
               >

@@ -9,12 +9,12 @@
 <defs>
 </defs>
 <radialGradient id="SVGID_1_" cx="49.1679" cy="89.3223" r="30.6514" gradientTransform="matrix(1.5497 0 0 1.5497 -28.6946 -90.9212)" gradientUnits="userSpaceOnUse">
-	<stop  offset="0" style="stop-color:#FA366B;stop-opacity:0.7"/>
-	<stop  offset="0.1265" style="stop-color:#F03273;stop-opacity:0.738"/>
-	<stop  offset="0.343" style="stop-color:#D5298A;stop-opacity:0.8029"/>
-	<stop  offset="0.623" style="stop-color:#A819AF;stop-opacity:0.8869"/>
-	<stop  offset="0.9528" style="stop-color:#6B03E2;stop-opacity:0.9858"/>
-	<stop  offset="1" style="stop-color:#6200EA"/>
+	<stop  offset="0" style="stop-color:rgb(127, 106, 214);stop-opacity:0.7"/>
+	<stop  offset="0.1265" style="stop-color:rgb(127, 106, 214);stop-opacity:0.738"/>
+	<stop  offset="0.343" style="stop-color:#7D2FDB;stop-opacity:0.8029"/>
+	<stop  offset="0.623" style="stop-color:#5B44B8;stop-opacity:0.8869"/>
+	<stop  offset="0.9528" style="stop-color:#4F159E;stop-opacity:0.9858"/>
+	<stop  offset="1" style="stop-color:#3B2A86"/>
 </radialGradient>
 <circle class="st0" cx="47.5" cy="47.5" r="47.5"/>
 </svg>

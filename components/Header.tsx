@@ -44,8 +44,12 @@ const Header = ({ isClone }: HeaderProps) => {
       <header className={`main-header ${isClone ? 'clone' : ''}`}>
         <h1 className='logo'>
           <StyledLink href='/home'>
-            <img src='/img/audius.png' data-rjs='2' alt='Audius' />
-            <span>Audius</span>
+            <img
+              src='/img/audius.png'
+              data-rjs='2'
+              alt='Open Audio Foundation'
+            />
+            <span>Open Audio Foundation</span>
           </StyledLink>
         </h1>
         <nav className='menu'>

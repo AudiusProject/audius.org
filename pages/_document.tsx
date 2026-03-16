@@ -27,27 +27,27 @@ class MyDocument extends Document {
           <link
             rel='apple-touch-icon'
             sizes='180x180'
-            href='/favicons/apple-touch-icon.png'
+            href='/favicons/oaf.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='32x32'
-            href='/favicons/favicon-32x32.png'
+            href='/favicons/oaf.png'
           />
           <link
             rel='icon'
             type='image/png'
             sizes='16x16'
-            href='/favicons/favicon-16x16.png'
+            href='/favicons/oaf.png'
           />
           <link rel='manifest' href='/favicons/site.webmanifest' />
           <link
             rel='mask-icon'
             href='/favicons/safari-pinned-tab.svg'
-            color='#a116b7'
+            color='rgb(127, 106, 214)'
           />
-          <link rel='shortcut icon' href='/favicons/favicon.ico' />
+          <link rel='shortcut icon' href='/favicons/oaf.png' />
           <meta name='msapplication-TileColor' content='#ffffff' />
           <meta
             name='msapplication-config'

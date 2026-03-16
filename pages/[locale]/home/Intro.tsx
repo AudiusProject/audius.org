@@ -19,9 +19,7 @@ const Intro = () => {
         </div>
         <div className='button-options'>
           <button
-            onClick={() =>
-              window.open('https://openaudio.org', '_blank')
-            }
+            onClick={() => window.open('https://openaudio.org', '_blank')}
             className='button black'
           >
             openaudio.org
@@ -34,6 +32,7 @@ const Intro = () => {
           </button>
         </div>
       </div>
+      <div className='intro-film' aria-hidden='true' />
       <div className='animation'>
         <div id='intro-animation'>
           <span className='wave-bg'></span>

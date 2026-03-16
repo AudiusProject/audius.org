@@ -4,7 +4,7 @@
   }
 
   .main-header .menu > div > ul > li > a:not(.standard-button) {
-    color: #12063d;
+    color: #000000;
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 1.4px;
@@ -16,8 +16,7 @@
     width: 158.3px;
     border: 0 solid #ffffff;
     border-radius: 30px;
-    background-color: #12063d;
-
+    background-color: #000000;
     color: #ffffff;
     font-size: 16px;
     font-weight: 800;
@@ -25,23 +24,24 @@
   }
 
   .main-header .menu > div > ul > li > a.standard-button:hover {
-    color: #ffffff;
-    background-color: #a116b7;
+    color: #000000;
+    background-color: rgb(127, 106, 214);
   }
 
   .sticky-menu .main-header .menu > div > ul > li > a:not(.standard-button) {
-    color: #16172b;
+    color: #000000;
     font-weight: 700;
   }
 
   .sticky-menu .main-header .menu > div > ul > li > a.standard-button {
     color: #ffffff;
-    background-color: #12063d;
+    background-color: #000000;
     font-weight: 700;
   }
 
   .sticky-menu .main-header .menu > div > ul > li > a.standard-button:hover {
-    background-color: #a116b7;
+    color: #000000;
+    background-color: rgb(127, 106, 214);
   }
 
   .sticky-menu .small-logo {
@@ -54,9 +54,23 @@
   #intro {
     /* overflow: hidden; */
     min-height: 920px;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+  }
+
+  #intro .intro-film {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.65);
   }
 
   #intro .header {
+    position: relative;
+    z-index: 3;
     top: 240px;
     width: 100%;
     display: inline-flex;
@@ -79,17 +93,14 @@
     font-size: 96px;
     line-height: 110px;
     text-align: right;
-    background-image: linear-gradient(315deg, #5b23e1 2.04%, #a22feb 100%);
-    text-shadow: 0px 4px 10px rgba(126, 27, 204, 0.1);
+    color: #000000;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     user-select: none;
-
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
   }
 
   #intro .divider {
     margin: 0px 48px;
-    border-right: 4px solid #e7e6eb;
+    border-right: 2px solid #000;
     height: 192px;
   }
 
@@ -126,7 +137,7 @@
     line-height: 44px;
     display: flex;
     align-items: center;
-    color: #858199;
+    color: #000000;
   }
 
   #video-modal {
@@ -148,7 +159,7 @@
   }
 
   .button-options .button {
-    transition: all 0.07s ease-in-out;
+    transition: all 0.17s ease-in-out;
     margin: 8px 12px;
     padding: 14px 0;
     border-radius: 30.5px;
@@ -167,29 +178,29 @@
   }
 
   .button-options .button.black {
-    background: #12063d;
-    border: 3px solid #12063d;
+    background: #000000;
+    border: 3px solid #000000;
     box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.15);
     border-radius: 30.5px;
     margin-top: 10px;
   }
 
   .button-options .button.black:hover {
-    background: #1e0a5e;
-    border-color: #1e0a5e;
+    background: #1a1a1a;
+    border-color: #1a1a1a;
     box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.15);
   }
 
   .button-options .button.purple {
-    background: linear-gradient(93.46deg, #8d11ee 0%, #a246eb 100%);
-    border: 3px solid #903dd4;
+    background: rgb(127, 106, 214);
+    border: 3px solid rgb(127, 106, 214);
+    color: #ffffff;
     box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.15);
     border-radius: 30.5px;
     margin-top: 10px;
   }
 
   .button-options .button.purple:hover {
-    background-color: #a116b7;
     box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.15);
   }
 
@@ -199,7 +210,7 @@
   }
 
   .view-code:hover {
-    border: 2px solid #a116b7;
+    border: 2px solid rgb(127, 106, 214);
   }
 
   .music-player {
@@ -231,7 +242,7 @@
   }
 
   .music-player .click {
-    color: #b031e7;
+    color: rgb(127, 106, 214);
     display: inline-flex;
     align-items: center;
   }
@@ -242,6 +253,20 @@
 
   .icon-open {
     margin-left: 16px;
+  }
+
+  #intro {
+    position: relative;
+  }
+
+  #intro .animation {
+    position: absolute;
+    height: 1002px;
+    bottom: -355px;
+  }
+
+  #value {
+    padding-top: 500px;
   }
 
   @media screen and (max-width: 1019px) {
@@ -260,72 +285,63 @@
     }
 
     #intro {
-      overflow: hidden;
-      height: calc(100vh - 115px);
-      min-height: 615px;
+      min-height: 100vh !important;
+      height: 100vh !important;
     }
 
     #intro .header {
-      top: 32px;
-      height: calc(100vh - 115px);
+      position: relative !important;
+      top: 0 !important;
+      height: auto !important;
+      min-height: 0 !important;
+      padding: 16px 24px 24px;
+      display: block;
     }
 
     #intro .header .main-content {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 40px;
+      display: block;
+      margin-bottom: 24px;
     }
 
     #intro .header .main-content h2 {
-      flex: 1 0;
+      font-size: 36px;
+      line-height: 1.2;
       text-align: center;
-      font-size: 48px;
-      line-height: inherit;
+      max-width: 100%;
       margin-bottom: 12px;
+    }
+
+    #intro .header .description {
+      margin-top: 0;
+      margin-bottom: 16px;
     }
 
     #intro .divider {
       display: none;
     }
 
-    #intro .background {
-      background: url('../img/hero-background-1.png');
-      background-repeat: repeat-x;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100vh - 115px);
-    }
-
-    #intro .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: calc(100vh - 115px);
-    }
-
     #intro .description {
-      max-width: 100%;
       text-align: center;
-      padding: 0px 32px;
     }
 
     #intro .description p {
-      line-height: inherit;
-      font-size: 24px;
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: center;
+      display: block;
     }
 
-    .button-options {
+    #intro .header .button-options {
+      display: flex;
       flex-wrap: wrap;
-      margin-bottom: 32px;
-      flex: inherit;
+      justify-content: center;
+      gap: 8px;
+      margin: 0;
     }
     .button-options .button {
       font-size: 16px;
+      width: 100%;
+      max-width: 280px;
     }
 
     .music-player {
@@ -337,15 +353,15 @@
       height: 16px;
       margin-left: 4px;
     }
-  }
 
-  @media screen and (min-width: 1020px) {
     #intro .animation {
-      bottom: -520px;
+      height: 450px !important;
+      bottom: 0 !important;
+      top: auto !important;
     }
 
-    #value {
-      padding-top: 500px;
+    #intro #intro-animation {
+      height: 450px !important;
     }
   }
 }
