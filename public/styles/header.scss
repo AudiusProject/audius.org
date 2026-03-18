@@ -25,6 +25,7 @@ $mobile-breakpoint: 1020px;
     @media screen and (min-width: $mobile-breakpoint) {
       color: black;
       justify-content: start;
+      padding: 0 12px;
     }
   }
 
