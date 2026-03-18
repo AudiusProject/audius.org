@@ -1,0 +1,65 @@
+From 4593de6756e842d40290058348f16f01f6f54cf3 Mon Sep 17 00:00:00 2001
+From: Cursor Agent <cursoragent@cursor.com>
+Date: Mon, 9 Mar 2026 22:59:21 +0000
+Subject: [PATCH] Fix private playlist creation bug
+
+- Changed collection metadata schema default for is_private from true to false
+- Removed hardcoded is_private = true in playlist/album optimistic saves
+- Playlists and albums now respect the is_private value from form fields
+
+This fixes the issue where users couldn't create playlists successfully because:
+1. Schema defaulted to is_private: true
+2. Optimistic save hardcoded is_private: true
+3. This caused all new playlists to be created as private
+4. Private playlists have different visibility/persistence behavior
+5. Users experienced playlists that appeared to be creating but never completed
+6. On refresh, playlists would disappear (404)
+
+Now playlists default to public (is_private: false) and respect user's
+visibility choice through the UI's VisibilityField component.
+---
+ packages/common/src/schemas/metadata.ts                         | 2 +-
+ .../web/src/common/store/cache/collections/createAlbumSaga.ts   | 1 -
+ .../src/common/store/cache/collections/createPlaylistSaga.ts    | 1 -
+ 3 files changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/packages/common/src/schemas/metadata.ts b/packages/common/src/schemas/metadata.ts
+index ef55246934..ab57be5324 100644
+--- a/packages/common/src/schemas/metadata.ts
++++ b/packages/common/src/schemas/metadata.ts
+@@ -100,7 +100,7 @@ export const newTrackMetadata = (
+ const collectionMetadataSchema = {
+   is_album: false,
+   is_current: true,
+-  is_private: true,
++  is_private: false,
+   tags: null,
+   genre: null,
+   mood: null,
+diff --git a/packages/web/src/common/store/cache/collections/createAlbumSaga.ts b/packages/web/src/common/store/cache/collections/createAlbumSaga.ts
+index 386b2cc0e3..fc11ca4385 100644
+--- a/packages/web/src/common/store/cache/collections/createAlbumSaga.ts
++++ b/packages/web/src/common/store/cache/collections/createAlbumSaga.ts
+@@ -104,7 +104,6 @@ function* optimisticallySaveAlbum(
+   const initTrackOwner = yield* queryUser(initTrack?.owner_id)
+ 
+   album.playlist_owner_id = user_id
+-  album.is_private = true
+   album.playlist_contents = {
+     track_ids: initTrack
+       ? [
+diff --git a/packages/web/src/common/store/cache/collections/createPlaylistSaga.ts b/packages/web/src/common/store/cache/collections/createPlaylistSaga.ts
+index 808ff4c189..3b67a2c379 100644
+--- a/packages/web/src/common/store/cache/collections/createPlaylistSaga.ts
++++ b/packages/web/src/common/store/cache/collections/createPlaylistSaga.ts
+@@ -118,7 +118,6 @@ function* optimisticallySavePlaylist(
+   const initTrackOwner = yield* queryUser(initTrack?.owner_id)
+ 
+   playlist.playlist_owner_id = user_id
+-  playlist.is_private = true
+   playlist.playlist_contents = {
+     track_ids: initTrack
+       ? [
+-- 
+2.43.0
+
